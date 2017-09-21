@@ -1,5 +1,5 @@
 <template>
-  <div class="page-whitepaper-nav mobile-only">
+  <div class="page-whitepaper-nav ">
     <overlay-btns>
       <locale-menu
         path="whitepaper"
@@ -10,7 +10,7 @@
         @click.native="tocVisible(true)"
         icon="list-ol">
       </overlay-btn>
-      <overlay-btn
+      <overlay-btn class="mobile-only"
         v-show="whitepaperTocVisible"
         @click.native="tocVisible(false)"
         icon="times">
@@ -83,3 +83,9 @@ export default {
   }
 }
 </script>
+<style lang="stylus">
+  .page-whitepaper-nav
+    i
+      line-height : 3rem
+
+</style>
