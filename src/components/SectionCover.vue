@@ -10,10 +10,8 @@ section.section-home-cover
     .btns
       form-email-signup
       btn(type='anchor', href='https://cosmos.rocket.chat', size='lg', icon='comments-o', theme='alpha-black', target='_blank', value='Chat on Rocket')
-    p.source
-      i.fa.fa-github
-      |  View source code on 
-      a(href='https://github.com/cosmos', target='_blank') GitHub
+    a.source(href="https://github.com/cosmos" target="_blank")
+      | #[i.fa.fa-github] View source code on #[strong GitHub]
 </template>
 
 <script>
@@ -80,11 +78,11 @@ export default {
       max-width 21rem
       margin 0 0 0.5rem
 
-  .source
+  a.source
     color hsl(0,0,50%)
     i.fa
       padding-right 0.25rem
-    a
+    strong
       color hsl(0,0,75%)
       font-weight 500
 

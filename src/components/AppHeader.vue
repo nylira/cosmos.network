@@ -14,7 +14,7 @@ header.app-header
         router-link(to='/events', @click.native='close', exact='') Events
         router-link(to='/about', @click.native='close', exact='') About
       nav.nav-external
-        a(href='https://tendermint.com/careers', @click.native='close', target='_blank')
+        // a(href='https://tendermint.com/careers', @click.native='close', target='_blank')
           | Careers #[i.fa.fa-external-link]
         a(href='https://blog.cosmos.network' @click.native='close' target='_blank')
           | Blog #[i.fa.fa-medium]
