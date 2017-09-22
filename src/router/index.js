@@ -1,5 +1,5 @@
 import VueRouter from 'vue-router'
-function r (page) { return require('../components/Page' + page) }
+function r (page) { return () => import('../components/Page' + page) }
 
 const routes = [
   { path: '/', component: r('Index') },
