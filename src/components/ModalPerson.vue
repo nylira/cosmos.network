@@ -4,7 +4,7 @@
       <img class="avatar" :src="avatarSrc">
       <div class="text">
         <div class="name">{{ person.name }}</div>
-        <div class="title">{{ person.title }}</div>
+        <div class="title">{{ person.groups[group] }}</div>
         <div class="bio">{{ person.bio }}</div>
       </div>
       <div class="links">
@@ -57,7 +57,7 @@ export default {
   beforeDestroy () {
     disableScroll.off()
   },
-  props: ['person']
+  props: ['person', 'group']
 }
 </script>
 
