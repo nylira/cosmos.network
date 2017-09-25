@@ -1,5 +1,12 @@
 [
   {
+    "title": "M-0",
+    "date": "Oct 17-18, 2017",
+    "href": "https://m-0.melonport.com",
+    "details":"Sunny Aggarwal, Research Scientist at Tendermint will be speaking at M-0 about Cosmos. Find him at Park Hotel in Zug, Switzerland.",
+    "img":"M-0.jpg"
+  },
+  {
     "title": "CESC 2017",
     "date": "October 2-3, 2017",
     "href": "https://cesc.io/",
@@ -13,4 +20,5 @@
     "details":"The Cosmos team will be at Devcon3. Find our booth at the Cancún International Convention Center (ICC), Cancún, Mexico.",
     "img":"cancun.jpg"
   }
+
 ]
