@@ -8,9 +8,9 @@ header.app-header
       img(src='../assets/images/cosmos-logo-black-alpha.png', alt='Cosmos Logo')
     menu.menu-popup.menu-app(v-if='activeMenuApp || desktop')
       nav.nav-app
-        router-link(to='/plan', @click.native='close', exact='') Plan
         router-link(to='/whitepaper', @click.native='close', exact='') Whitepaper
         router-link(to='/faq', @click.native='close', exact='') FAQ
+        router-link(to='/hackatom', @click.native='close', exact='') HackAtom
         router-link(to='/events', @click.native='close', exact='') Events
         router-link(to='/about', @click.native='close', exact='') About
       nav.nav-external
