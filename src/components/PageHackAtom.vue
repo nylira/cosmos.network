@@ -133,11 +133,7 @@
       <div class="ha-container">
         <header>Judging</header>
         <main>
-          <p>We’re looking for a high level of professionalism and quality, and have invited experienced hackers and entrepreneurs to influence the competition right from the start. You’ll be rewarded by the judges and the community.</p>
-          <div class="judges">
-            <card-person-mini v-for="p in ppl('hackatom')" :person="p" :key="p.id">
-            </card-person-mini>
-          </div>
+          <p>We’re looking for a high level of professionalism and quality, and have invited experienced hackers and entrepreneurs to influence the competition right from the start. You’ll be rewarded by the judges and the community. Your project will be judged by members of the Interchain Foundation.</p>
         </main>
       </div>
     </section>
@@ -168,7 +164,6 @@
 <script>
 import { mapGetters } from 'vuex'
 import ModalAgreement from './ModalAgreement'
-import CardPersonMini from './CardPersonMini'
 import LocaleMenu from './PageHackAtomLocaleMenu'
 import NiSection from './NiSection'
 import PageHeader from '@nylira/vue-page-header'
@@ -177,7 +172,6 @@ export default {
   name: 'page-hackatom',
   components: {
     Btn,
-    CardPersonMini,
     LocaleMenu,
     ModalAgreement,
     NiSection,
@@ -196,7 +190,7 @@ export default {
     }
   },
   methods: {
-    ppl (tag) { return this.allPeople.filter(p => p.tags.includes(tag)) },
+    ppl (tag) { return this.allPeople.filter(p => p.groups[tag]) },
     setModal (value) {
       this.$store.commit('setHackAtomModal', value)
     }

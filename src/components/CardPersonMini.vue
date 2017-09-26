@@ -7,7 +7,7 @@
     </div>
     <div class="text">
       <div class="name">{{ person.name }}</div>
-      <div class="title">{{ person.title }}</div>
+      <div class="title">{{ person.groups['aib'] }}</div>
     </div>
   </div>
   <div class="card-person-mini-footer">
