@@ -76,18 +76,6 @@
     }
   },
   {
-    "slug": "jim-yang",
-    "name": "Jim Yang",
-    "bio": "Jim Yang co-founded Identyx, where he served as CEO until its acquisition by Red Hat. Identyx developed an open source enterprise identity management software.",
-    "ids": {
-      "linkedin": "jimyang"
-    },
-    "groups": {
-      "aib": "Strategy Officer",
-      "icf": "Advisor"
-    }
-  },
-  {
     "slug": "adrian-brink",
     "name": "Adrian Brink",
     "bio": "Adrian is a software engineer that aims to bring the cryptocurrency revolution to the masses. Broad adoption and ubiquitousness will drive the change we want to see.",
@@ -375,6 +363,18 @@
     },
     "groups": {
       "aib": "Advisor"
+    }
+  },
+  {
+    "slug": "jim-yang",
+    "name": "Jim Yang",
+    "bio": "Jim Yang co-founded Identyx, where he served as CEO until its acquisition by Red Hat. Identyx developed an open source enterprise identity management software.",
+    "ids": {
+      "linkedin": "jimyang"
+    },
+    "groups": {
+      "aib": "Strategy",
+      "icf": "Advisor"
     }
   },
   {
