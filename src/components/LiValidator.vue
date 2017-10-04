@@ -1,5 +1,5 @@
 <template lang="pug">
-.li-validator
+.li-validator(v-if="!validator.disabled")
   .avatar: i.fa.fa-user
   .text
     .company-name {{ validator.companyName }}

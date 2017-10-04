@@ -50,6 +50,7 @@
     ]
   },
   {
+    "disabled": "true",
     "companyName": "F4RM",
     "website": "http://bitfury.com",
     "contacts": [
