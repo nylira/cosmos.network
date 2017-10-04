@@ -5,9 +5,9 @@
       <div class="image"></div>
       <div class="ha-container">
         <main>
-          <a class="alert" href="https://blog.cosmos.network/announcing-the-cosmos-hackatom-winners-9fc083098da" target="_blank">
+          <a class="alert" href="https://blog.cosmos.network/announcement-hackatom-2-winners-d31fe584b70b" target="_blank">
             <span class="key"><i class="fa fa-exclamation-circle"></i> Update:</span>
-            <span class="value">Announcing the 1st Cosmos HackAtom Winners &rarr;</span>
+            <span class="value">Announcing the 2nd Cosmos HackAtom Winners &rarr;</span>
           </a>
           <h1><strong>Hack</strong>Atom 2017 #2</h1>
           <ul>

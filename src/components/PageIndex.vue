@@ -1,7 +1,6 @@
 <template>
   <div class="page-index">
     <section-cover></section-cover>
-    <section-media></section-media>
     <!--<section-recent-posts></section-recent-posts>-->
     <section class="section-home sh-video">
       <h2>What is Cosmos?</h2>
@@ -71,6 +70,7 @@
       </div>
     </div>
   </section>
+  <section-media></section-media>
 </div>
 </template>
 

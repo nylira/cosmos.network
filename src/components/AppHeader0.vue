@@ -8,28 +8,41 @@ header.app-header
       img(src='../assets/images/cosmos-logo-black-alpha.png', alt='Cosmos Logo')
     menu.menu-popup.menu-app(v-if='activeMenuApp || desktop')
       nav.nav-app
-        router-link(to='/whitepaper', @click.native='close' exact='') Whitepaper
-        router-link(to='/events', @click.native='close' exact='') Conferences
-        router-link(to='/hackatom', @click.native='close' exact='') Hackathon
-        router-link(to='/about', @click.native='close', exact='') About
-        // router-link(to='/validators', @click.native='close', exact='') Validator Program
-      nav(v-if='!desktop')
-        a(href='https://blog.cosmos.network' @click.native='close' target='_blank') Blog
-    a.header-item.header-item-alert(href='https://blog.cosmos.network' @click.native='close' target='_blank')
-      i.fa.fa-medium
-      span.label(v-if='desktop') Blog
+        router-link(to='/whitepaper', @click.native='close', exact='') Whitepaper
+        router-link(to='/events', @click.native='close', exact='') Conferences
+        router-link(to='/hackatom', @click.native='close', exact='') Hackathon
+      nav.nav-external
+        // a(href='https://tendermint.com/careers', @click.native='close', target='_blank')
+          | Careers #[i.fa.fa-external-link]
+        a(href='https://blog.cosmos.network' @click.native='close' target='_blank')
+          | Blog #[i.fa.fa-medium]
+        // a(href='https://github.com/cosmos/cosmos' @click.native='close' target='_blank')
+          | GitHub #[i.fa.fa-github]
+    router-link.header-item(to="/validators")
+      i.fa.fa-check
+      span.label(v-if='desktop') Validator Program
+    // .header-item.header-item-alert(@click='toggleMenuFundraiser')
+      i.fa.fa-hourglass-end(v-if='!activeMenuFundraiser')
+      i.fa.fa-times(v-else='')
+      span.label(v-if='desktop') Fundraiser
+    // menu-fundraiser(:status='fundraiserStatus', v-if='activeMenuFundraiser', @click.native='toggleMenuFundraiser')
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
 import disableScroll from 'disable-scroll'
+// import MenuFundraiser from './MenuFundraiser'
 export default {
   name: 'app-header',
+  components: {
+    // MenuFundraiser
+  },
   computed: {
     ...mapGetters(['config'])
   },
   data: () => ({
     activeMenuApp: false,
+    activeMenuFundraiser: false,
     desktop: false
   }),
   methods: {
@@ -147,6 +160,24 @@ export default {
     &:hover
       i.fa, .label
         color link
+
+  #nav-fundraiser
+    display flex
+    justify-content space-between
+    align-items center
+    span
+      padding 0 0.375rem
+      border 1px solid link
+      border-radius 0.125rem
+      font-size 0.875rem
+      height 1.5rem
+      display flex
+      align-items center
+      color link
+
+    &.soon
+      cursor not-allowed
+      color light
 
   .menu-app
     nav

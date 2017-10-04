@@ -33,7 +33,7 @@ export default {
   data () {
     return {
       metadata: {
-        title: 'Events',
+        title: 'Conferences',
         desc: 'Meet up with our team and community members at blockchain conferences around the world.'
       }
     }

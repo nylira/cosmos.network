@@ -10,11 +10,11 @@
       <p><strong>Whoops!</strong> The page you visited either does not exist or has been moved in a website reshuffle. We're sorry for the inconvenience. Try visiting one of these pages below:</p>
       <ul>
         <li><router-link :to="'/'">Home</router-link></li>
-        <li><router-link :to="'/plan'">Plan</router-link></li>
         <li><router-link :to="'/whitepaper'">Whitepaper</router-link></li>
-        <li><router-link :to="'/faq'">FAQ</router-link></li>
+        <li><router-link :to="'/events'">Conferences</router-link></li>
+        <li><router-link :to="'/hackatom'">Hackathon</router-link></li>
+        <!--<li><router-link :to="'/validators'">Validator Program</router-link></li>-->
         <li><a href="https://blog.cosmos.network" target="_blank">Blog</a></li>
-        <li><router-link :to="'/about'">About</router-link></li>
       </ul>
       <p>Please notify us at <a href="mailto:hello@tendermint.com">hello@tendermint.com</a> and we will fix this error as soon as we can. Thank you for your patience.</p>
     </article-body>

@@ -4,18 +4,16 @@
   footer.app-footer
     .sections
       section.copyright
-        span © {{ new Date().getFullYear() }} Interchain Foundation
+        span &copy; {{ new Date().getFullYear() }} Interchain Foundation
         span.address
           p c/o Gubelstrasse 11
           p 6300 Zug, Switzerland
       section
-        header Other Projects
+        header Foundation
         nav
-          router-link(to="/") Cosmos
-          a(href='https://ethermint.network') Ethermint
-          a(href='https://tendermint.com') Tendermint
-          span &mdash;
-          router-link(to='/privacy') Privacy
+          router-link(to='/about', @click.native='close', exact='') About
+          router-link(to='/faq', @click.native='close', exact='') FAQ
+          router-link(to='/fundraiser') Fundraiser
       section
         header Community
         a(href='https://bitcointalk.org/index.php?topic=1607111.0')
