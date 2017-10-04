@@ -11,3 +11,5 @@ export const config = state => state.config
 export const hackatom = state => state.hackatom
 
 export const docs = state => state.docs
+
+export const validators = state => state.validators
