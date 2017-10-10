@@ -1,9 +1,7 @@
 <template>
   <div class="card-events">
     <div class="flexlist" v-for="item in events">
-      <div class="img-box">
-        <img :src="'./static/events/'+item.img">
-      </div>
+      <div class="img-box"><img :src="image('events', item.location, 'jpg')"></div>
       <div class="title">{{item.title}}</div>
       <div class="date">{{item.date}}</div>
       <div class="details">{{item.details}}</div>
@@ -15,10 +13,14 @@
 </template>
 
 <script>
-  export default {
-    name: 'card-events',
-    props: ['events']
-  }
+import { image } from '../scripts/cdn.js'
+export default {
+  name: 'card-events',
+  data: () => ({
+    image: image
+  }),
+  props: ['events']
+}
 </script>
 
 <style lang="stylus">

@@ -7,28 +7,27 @@
       type="split">
     </page-header>
     <ni-section>
-      <card-events :events="allEvent">
-      </card-events>
+      <card-event :events="allEvents"></card-event>
   </ni-section>
 </page-split>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
-import CardEvents from './CardEvents'
+import CardEvent from './CardEvent'
 import NiSection from './NiSection'
 import PageHeader from '@nylira/vue-page-header'
 import PageSplit from '@nylira/vue-page-split'
 export default {
   name: 'page-events',
   components: {
-    CardEvents,
+    CardEvent,
     NiSection,
     PageSplit,
     PageHeader
   },
   computed: {
-    ...mapGetters(['allEvent'])
+    ...mapGetters(['allEvents'])
   },
   data () {
     return {

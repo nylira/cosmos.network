@@ -1,7 +1,7 @@
 <template>
   <div class="modal-wrapper">
     <div class="modal-person">
-      <img class="avatar" :src="avatarSrc">
+      <img class="avatar" :src="portrait(person.slug)">
       <div class="text">
         <div class="name">{{ person.name }}</div>
         <div class="title">{{ person.groups[group] }}</div>
@@ -39,6 +39,7 @@
 </template>
 
 <script>
+import { portrait } from '../scripts/cdn.js'
 import disableScroll from 'disable-scroll'
 import CardPerson from './CardPerson'
 export default {
@@ -46,11 +47,9 @@ export default {
   components: {
     CardPerson
   },
-  computed: {
-    avatarSrc () {
-      return require('../assets/images/people/' + this.person.slug + '.jpg')
-    }
-  },
+  data: () => ({
+    portrait: portrait
+  }),
   mounted () {
     disableScroll.on()
   },
@@ -61,8 +60,8 @@ export default {
 }
 </script>
 
-<style lang="stylus">
-@import '../styles/variables.styl'
+<style scoped lang="stylus">
+@import '~@/styles/variables.styl'
 
 .modal-wrapper
   position fixed

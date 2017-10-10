@@ -136,10 +136,6 @@
         <header>评审</header>
         <main>
           <p>我们期待的是高水平的专业性和质量，因此从一开始就邀请了经验丰富的黑客和企业家来影响本次竞赛。你将会获得来自社区与评审员的专业评审。</p>
-          <div class="judges">
-            <card-person-mini v-for="p in ppl('hackatom')" :person="p" :key="p.id">
-            </card-person-mini>
-          </div>
         </main>
       </div>
     </section>
@@ -170,7 +166,6 @@
 <script>
 import { mapGetters } from 'vuex'
 import Btn from '@nylira/vue-button'
-import CardPersonMini from './CardPersonMini'
 import LocaleMenu from './PageHackAtomLocaleMenu'
 import NiSection from './NiSection'
 import PageHeader from '@nylira/vue-page-header'
@@ -178,7 +173,6 @@ export default {
   name: 'page-hackatom',
   components: {
     Btn,
-    CardPersonMini,
     LocaleMenu,
     NiSection,
     PageHeader
@@ -473,9 +467,6 @@ export default {
   .ha-section main .judges
     display flex
     margin 0 -0.5rem
-    .card-person-mini
-      flex 1
-      margin 0.5rem
 
 @media screen and (min-width: 1200px)
   .ha-header

@@ -2,7 +2,7 @@
   <router-link class="cover-alert" to="/events">
     <span class="key">EVENT:</span>
     <span class="value">
-      We'll be at Zug, Switzerland on October 17-18 for the M-0 conference. Come join us!
+      We'll be at Waterloo, Canada on October 13-15 for ETHWaterloo conference. Come join us!
     </span>
     <i class="fa fa-angle-double-right" aria-hidden="true"></i>
   </router-link>
