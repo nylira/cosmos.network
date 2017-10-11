@@ -15,6 +15,22 @@ Rocket Chat
 Meetups
 Email
 
+Cosmos Companies
+  Partners
+  Bianjie (Cosmos China)
+  Bitfury
+  Plasma.io
+  OmiseGo
+  CITA
+  ReslientTx (Zaki’s org)
+
+
+  Validators
+  Wancloud/Wanchain
+
+  Community
+  Ethfans
+
 Developer Resources
 Questions about Cosmos? FAQ
 Read the Whitepaper
