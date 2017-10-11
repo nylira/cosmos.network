@@ -1,3 +1,31 @@
+# cosmos.network 2.0 outline
+
+Homepage
+Brief description of Cosmos
+Download CosmosUI
+Explanation of Cosmos through graphics and text
+Recent Tweets
+
+Community
+Blog
+Twitter
+YouTube
+Reddit
+Rocket Chat
+Meetups
+Email
+
+Developer Resources
+Questions about Cosmos? FAQ
+Read the Whitepaper
+Source code on GitHub
+Read the documentation (Read the docs Cosmos SDK)
+
+Press
+Inquiries
+Logo Assets
+Photos for media
+
 # 2016-09-19
 * Removed the dependency on jQuery in favor of vanilla js, reduzing size of vendor.js from 435 kB -> 359 kB
 * Enabled the creation of gzipped files when you run `npm run build`. Sample file size improvements:
