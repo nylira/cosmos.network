@@ -13,6 +13,7 @@
         nav
           router-link(to='/about', @click.native='close', exact='') About
           router-link(to='/faq', @click.native='close', exact='') FAQ
+          router-link(to='/assets') Logo Assets
           router-link(to='/fundraiser') Fundraiser
       section
         header Community
