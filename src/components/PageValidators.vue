@@ -173,9 +173,6 @@ export default {
       width 33vw + 33vh
       max-width 14rem
 
-  .ni-btn
-    width 16rem
-
 .v-section
   border-top 1px solid bc
 
@@ -198,7 +195,7 @@ export default {
 
   .ni-btn
     width 100%
-    max-width 16rem
+    max-width 17rem
     margin-bottom 1.5rem
 
   p, .phase, ul, ol

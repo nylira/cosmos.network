@@ -20,6 +20,7 @@ const routes = [
 
   // redirects
   { path: '/whitepaper/en-US', redirect: '/whitepaper' },
+  { path: '/validator', redirect: '/validators' },
   { path: '/blog/:entry', redirect: '/blog' },
 
   // wildcards
