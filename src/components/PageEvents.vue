@@ -1,15 +1,8 @@
-<template>
-  <page-split>
-    <page-header
-      :title="metadata.title"
-      :subtitle="metadata.desc"
-      slot="header"
-      type="split">
-    </page-header>
-    <ni-section>
-      <card-event :events="allEvents"></card-event>
-  </ni-section>
-</page-split>
+<template lang="pug">
+page-split
+  page-header(:title='metadata.title', :subtitle='metadata.desc', slot='header', type='split')
+  ni-section
+    card-event(:events='allEvents')
 </template>
 
 <script>

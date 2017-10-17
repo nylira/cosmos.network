@@ -35,4 +35,4 @@ npm run dev
 
 ## Contributing 
 
-See `./CONTRIBUTING.md`
+TODO
