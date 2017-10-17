@@ -154,7 +154,7 @@
     </section>
     <section class="ha-section ha-section-hashtag">
       <div class="ha-container">
-        <header><a href="https://twitter.com/intent/tweet?text=I'm%20going%20to%20%23hackatom2017%20@cosmos_hq"><i class="fa fa-twatter"></i> #hackatom2017</a></header>
+        <header><a href="https://twitter.com/intent/tweet?text=I'm%20going%20to%20%23hackatom2017%20@cosmos"><i class="fa fa-twatter"></i> #hackatom2017</a></header>
       </div>
     </section>
     <modal-agreement v-if='hackatom.modal'></modal-agreement>

@@ -29,7 +29,7 @@
         a(href='https://cosmos.rocket.chat')
           i.fa.fa-rocket
           | Chat on Rocket
-        a(href='https://twitter.com/cosmos_hq')
+        a(href='https://twitter.com/cosmos')
           i.fa.fa-twatter
           | Twitter
       section

@@ -36,10 +36,10 @@ export default {
         { n: 'description', c: 'Cosmos is a project with an ambitious mission: To create a network of distributed ledgers that will solve long-standing problems in the cryptocurrency community.' },
 
         { n: 'twitter:card', c: 'summary' },
-        { n: 'twitter:site', c: '@cosmos_hq' },
+        { n: 'twitter:site', c: '@cosmos' },
         { n: 'twitter:title', c: 'Cosmos - Internet of Blockchains' },
         { n: 'twitter:description', c: 'Cosmos is a project with an ambitious mission: To create a network of distributed ledgers that will solve long-standing problems in the cryptocurrency community.' },
-        { n: 'twitter:creator', c: '@cosmos_hq' },
+        { n: 'twitter:creator', c: '@cosmos' },
         { p: 'twitter:image', c: require('./assets/favicon/apple-icon-180x180.png') },
 
         { p: 'og:title', c: 'Cosmos - Internet of Blockchains' },
