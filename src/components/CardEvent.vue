@@ -3,7 +3,7 @@
     <div class="flexlist" v-for="item in events">
       <div class="img-box"><img :src="image('events', item.location, 'jpg')"></div>
       <div class="title">{{item.title}}</div>
-      <div class="date">{{item.date}}</div>
+      <div class="date">{{item.dates.start}} to {{ item.dates.end }}</div>
       <div class="details">{{item.details}}</div>
       <div class="href">
         <a :href="item.href" target="_blank">Visit event website -></a>

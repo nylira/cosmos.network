@@ -2,10 +2,15 @@
 page-split
   page-header(:title='metadata.title', :subtitle='metadata.desc', slot='header', type='split')
   ni-section
-    card-event(:events='allEvents')
+    div(slot="title") Upcoming Events
+    card-event(:events='eventsUpcoming')
+  ni-section
+    div(slot="title") Past Events
+    card-event(:events='eventsPast')
 </template>
 
 <script>
+import moment from 'moment'
 import { mapGetters } from 'vuex'
 import CardEvent from './CardEvent'
 import NiSection from './NiSection'
@@ -20,7 +25,13 @@ export default {
     PageHeader
   },
   computed: {
-    ...mapGetters(['allEvents'])
+    ...mapGetters(['allEvents']),
+    eventsPast () {
+      return this.allEvents.filter(i => moment(i.dates.end).isBefore(moment()))
+    },
+    eventsUpcoming () {
+      return this.allEvents.filter(i => moment(i.dates.end).isAfter(moment()))
+    }
   },
   data () {
     return {
