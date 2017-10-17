@@ -16,7 +16,7 @@ const routes = [
   { path: '/hackatom', name: 'hackatom-en-us', component: r('HackAtom') },
   { path: '/hackatom/zh-cn', name: 'hackatom-zh-cn', component: r('HackAtomZhCn') },
   { path: '/assets', name: 'assets', component: r('Assets') },
-  // { path: '/validators', name: 'validators', component: r('Validators') },
+  { path: '/validators', name: 'validators', component: r('Validators') },
 
   // redirects
   { path: '/whitepaper/en-US', redirect: '/whitepaper' },
