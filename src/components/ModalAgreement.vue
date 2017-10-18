@@ -12,6 +12,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import MarkdownContent from '../../content/en-US/participation-agreement.md'
 import Btn from '@nylira/vue-button'
 import Modal from './Modal'
@@ -24,13 +25,13 @@ export default {
     MarkdownContent,
     Modal
   },
-  data: () => ({
-    link: 'http://www.hackathon.io/cosmos-hackathon'
-  }),
+  computed: {
+    ...mapGetters(['links'])
+  },
   methods: {
     yes () {
       this.$store.commit('setHackAtomAgreed', true)
-      window.location.href = this.link
+      window.location.href = this.links.cosmos.hackathon.two
     },
     no () {
       this.$store.commit('setHackAtomModal', false)

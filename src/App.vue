@@ -23,9 +23,7 @@ export default {
   components: {
     AppHeader,
     AppFooter,
-    Notifications,
-    enRss: require('./assets/rss/en.xml'),
-    koRss: require('./assets/rss/ko.xml')
+    Notifications
   },
   computed: {
     ...mapGetters(['notifications'])
@@ -56,7 +54,6 @@ export default {
       ]
     },
     link: [
-      { r: 'alternate', t: 'application/rss+xml', h: require('./assets/rss/en.xml') },
       { r: 'apple-touch-icon', sz: '57x57', h: require('./assets/favicon/apple-icon-57x57.png') },
       { r: 'apple-touch-icon', sz: '60x60', h: require('./assets/favicon/apple-icon-60x60.png') },
       { r: 'apple-touch-icon', sz: '72x72', h: require('./assets/favicon/apple-icon-72x72.png') },

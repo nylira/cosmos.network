@@ -34,7 +34,7 @@
         target="_blank"
         size="lg"
         type="anchor"
-        href="https://riot.im/app/#/room/#cosmos_validators:matrix.org"
+        :href="links.cosmos.validators.chat"
         icon="comments-o"
         value="Join #cosmos_validators")
 
@@ -53,12 +53,12 @@
         target="_blank"
         size="lg"
         type="anchor"
-        href="https://github.com/cosmos/gaia/blob/master/README.md"
+        :href="links.cosmos.validators.tutorials.text"
         icon="book"
         value="Read the tutorial")
 
-      // TODO: Video Tutorial
-      // p See video tutorial to walk you through the steps here: Link to video tutorial. 
+      iframe.youtube(:src="links.cosmos.validators.tutorials.video" frameborder="0" allowfullscreen)
+
       p Note that this is a learning opportunity. It will not guarantee your placement in the validator set upon mainnet launch or at any future time. 
 
       h3 3. Independent attestation (optional)
@@ -85,7 +85,7 @@
         target="_blank"
         size="lg"
         type="anchor"
-        href="https://riot.im/app/#/room/#cosmos_validators:matrix.org"
+        :href="links.cosmos.validators.chat"
         icon="comments-o"
         value="Join #cosmos_validators")
 
@@ -97,18 +97,18 @@
 </template>
 
 <script>
-// import { mapGetters } from 'vuex'
+import { mapGetters } from 'vuex'
 import Btn from '@nylira/vue-button'
-// import LiValidator from './LiValidator'
+import LiValidator from './LiValidator'
 export default {
   name: 'page-validators',
   components: {
-    Btn
-    // LiValidator
+    Btn,
+    LiValidator
   },
-  /* computed: {
-    ...mapGetters(['validators'])
-  }, */
+  computed: {
+    ...mapGetters(['validators', 'links'])
+  },
   head: {
     title () {
       return {
@@ -198,7 +198,13 @@ export default {
     max-width 17rem
     margin-bottom 1.5rem
 
-  p, .phase, ul, ol
+  .youtube
+    display block
+    width 100vw
+    height 56.25vw
+    margin-left -1rem
+
+  p, iframe, ul, ol, blockquote
     margin-bottom 1.5rem
     &:last-child
       margin-bottom 0
@@ -210,22 +216,6 @@ export default {
       margin-bottom 0.5rem
       &:last-of-type
         margin-bottom 0
-
-  .phase
-    border 1px solid bc
-    .phase-header
-      font-weight bold
-      border-bottom 1px solid bc
-      background c-app-fg
-      line-height 2rem
-      padding 0 0.5rem
-
-    ul
-      li
-        border-bottom 1px dotted bc
-        padding 0.5rem
-        &:last-of-type
-          border-bottom none
 
 @media screen and (min-width: 768px)
   .v-page-header .v-container
@@ -256,6 +246,12 @@ export default {
 
     .v-section-main
       padding 3rem
+      
+    .youtube
+      display block
+      width 42rem
+      height 23.625rem
+      margin-left 0
 
 @media screen and (min-width: 1024px)
   .v-section .v-container
@@ -263,7 +259,7 @@ export default {
 
     .v-section-header
       padding 3rem
-      flex 0 0 320px
+      flex 0 0 19rem
 
     .v-section-main
       padding 3rem 3rem 3rem 0

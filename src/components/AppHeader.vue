@@ -10,13 +10,13 @@ header.app-header
       nav.nav-app
         router-link(to='/whitepaper' @click.native='close') Whitepaper
         router-link(to='/events' @click.native='close') Conferences
-        router-link(to='/hackatom' @click.native='close') Hackathon
+        router-link(to='/hackatom' @click.native='close') HackAtom
         router-link(to='/validators' @click.native='close') Validators
         router-link(to='/about' @click.native='close',) About
         // router-link(to='/validators' @click.native='close',) Validator Program
       nav(v-if='!desktop')
-        a(href='https://blog.cosmos.network' @click.native='close' target='_blank') Blog
-    a.header-item.header-item-alert(href='https://blog.cosmos.network' @click.native='close' target='_blank')
+        a(:href='links.cosmos.blog' @click.native='close' target='_blank') Blog
+    a.header-item.header-item-alert(:href='links.cosmos.blog' @click.native='close' target='_blank')
       i.fa.fa-medium
       span.label(v-if='desktop') Blog
 </template>
@@ -27,7 +27,7 @@ import disableScroll from 'disable-scroll'
 export default {
   name: 'app-header',
   computed: {
-    ...mapGetters(['config'])
+    ...mapGetters(['config', 'links'])
   },
   data: () => ({
     activeMenuApp: false,

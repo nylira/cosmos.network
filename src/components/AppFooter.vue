@@ -14,30 +14,30 @@
           router-link(to='/about', @click.native='close', exact='') About
           router-link(to='/faq', @click.native='close', exact='') FAQ
           router-link(to='/assets') Logo Assets
-          router-link(to='/fundraiser') Fundraiser
+          a(:href='links.cosmos.fundraiser' target="_blank") Fundraiser
       section
         header Community
-        a(href='https://bitcointalk.org/index.php?topic=1607111.0')
+        a(:href='links.cosmos.bitcointalk' target="_blank")
           i.fa.fa-btc
           | BitcoinTalk
-        a(href='http://webchat.freenode.net/?channels=%23cosmos_network')
+        a(:href='links.cosmos.irc' target="_blank")
           i.fa.fa-commenting-o
           | IRC
-        a(href='https://www.reddit.com/r/cosmosnetwork')
+        a(:href='links.cosmos.reddit' target="_blank")
           i.fa.fa-reddit
           | Reddit
-        a(href='https://cosmos.rocket.chat')
-          i.fa.fa-rocket
-          | Chat on Rocket
-        a(href='https://twitter.com/cosmos')
+        a(:href='links.cosmos.chat' target="_blank")
+          i.fa.fa-comments-o
+          | Chat
+        a(:href='links.cosmos.twitter' target="_blank")
           i.fa.fa-twatter
           | Twitter
       section
         header Developers
-        a(href='https://github.com/tendermint/tendermint/wiki/Contributing' target='_blank') Contributing
-        a(href='https://tendermint.com/careers' target='_blank') Work at Tendermint
-        a(href='https://github.com/cosmos' target='_blank') GitHub (Cosmos)
-        a(href='https://github.com/tendermint' target='_blank') GitHub (Tendermint)
+        a(:href='links.cosmos.github.organization' target='_blank') Cosmos on GitHub
+        a(:href='links.cosmos.github.sdk' target='_blank') Cosmos SDK
+        a(:href='links.cosmos.github.ui' target='_blank') Cosmos UI
+        a(:href='links.tm.careers' target='_blank') Work at Tendermint
 </template>
 
 <script>
@@ -49,10 +49,7 @@ export default {
     SectionBottom
   },
   computed: {
-    ...mapGetters([
-      'faqTocVisible',
-      'whitepaperTocVisible'
-    ]),
+    ...mapGetters([ 'faqTocVisible', 'whitepaperTocVisible', 'links' ]),
     tocVisible () {
       let name = this.$route.name
       let visible = false

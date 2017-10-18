@@ -9,7 +9,7 @@ section.section-home-cover
       form-email-signup
       btn(
         type='anchor'
-        href='https://cosmos.rocket.chat'
+        :href='links.cosmos.chat'
         size='lg'
         icon='comments-o'
         target='_blank'
@@ -17,6 +17,7 @@ section.section-home-cover
 </template>
 
 <script>
+import {mapGetters} from 'vuex'
 import SectionCoverAlert from './SectionCoverAlert'
 import FormEmailSignup from './FormEmailSignup'
 import Btn from '@nylira/vue-button'
@@ -25,7 +26,8 @@ export default {
     Btn,
     FormEmailSignup,
     SectionCoverAlert
-  }
+  },
+  computed: { ...mapGetters(['links']) }
 }
 </script>
 

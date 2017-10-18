@@ -15,7 +15,7 @@
           target="_blank"
           :href="config.FUNDRAISER_URL">
         </btn>
-        <div class="section-cta-description">Join <a href="https://cosmos.rocket.chat">#general</a> on Rocket to chat.</div>
+        <div class="section-cta-description">Join our <a :href="links.cosmos.chat">community chat</a>.</div>
       </main>
     </div>
   </div>
@@ -32,7 +32,7 @@ export default {
     FormEmailSignup
   },
   computed: {
-    ...mapGetters(['config'])
+    ...mapGetters(['config', 'links'])
   },
   data: () => ({
     amountRaised: '$17 million',

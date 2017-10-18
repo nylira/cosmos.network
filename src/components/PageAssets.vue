@@ -4,14 +4,15 @@ page-split
   article-body
     h2 Visual Identity Guide
     p Please read and follow the Cosmos Visual Identity Guide.
-    a(href="https://github.com/tendermint/aib-data/raw/master/assets/cosmos-visual-identity.pdf") Download Guide (741 KB)
+    a(:href="links.cosmos.assets.visualIdentity") Download Guide (741 KB)
     h2 Download Logo Assets
     p Download the Cosmos Logo Assets to get access to our logo in vector, alpha, and high resolution formats.
-    a(href="https://github.com/tendermint/aib-data/raw/master/assets/cosmos-logo-assets.zip") Download Assets (3.5 MB)
+    a(:href="links.cosmos.assets.logoAssets") Download Assets (3.5 MB)
 
 </template>
 
 <script>
+import {mapGetters} from 'vuex'
 import PageSplit from '@nylira/vue-page-split'
 import PageHeader from '@nylira/vue-page-header'
 import ArticleBody from '@nylira/vue-article-body'
@@ -22,6 +23,7 @@ export default {
     PageHeader,
     ArticleBody
   },
+  computed: { ...mapGetters(['links']) },
   mounted () {
     document.title = 'Logo - Cosmos - Internet of Blockchains'
   }

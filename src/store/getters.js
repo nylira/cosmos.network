@@ -9,3 +9,4 @@ export const whitepaperTocVisible = state => state.toc.whitepaper.tocVisible
 export const notifications = state => state.notifications
 export const config = state => state.config
 export const hackatom = state => state.hackatom
+export const links = state => state.links.data
