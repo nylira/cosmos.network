@@ -9,10 +9,11 @@ header.app-header
     menu.menu-popup.menu-app(v-if='activeMenuApp || desktop')
       nav.nav-app
         router-link(to='/whitepaper' @click.native='close') Whitepaper
+        // router-link(to='/roadmap' @click.native='close') Roadmap
         router-link(to='/events' @click.native='close') Conferences
         router-link(to='/hackatom' @click.native='close') HackAtom
         router-link(to='/validators' @click.native='close') Validators
-        router-link(to='/about' @click.native='close',) About
+        // router-link(to='/about' @click.native='close',) About
         // router-link(to='/validators' @click.native='close',) Validator Program
       nav(v-if='!desktop')
         a(:href='links.cosmos.blog' @click.native='close' target='_blank') Blog
