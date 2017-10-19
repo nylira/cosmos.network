@@ -3,44 +3,73 @@
   header.v-page-header
     .v-container
       .title
-        h2 Cosmos Roadmap
-        h1 The Road to Success
+        h2 Cosmos 
+        h1 Roadmap
 
   section.v-section: .v-container
-    header.v-section-header Adoption
+    header.v-section-header 2017-2018
     main.v-section-main
-      h3 1. OmiseGo DEX
-      p This will be the first big application that is launched on top of Cosmos and will provide a usable zone that users can use. Our main problem is that we are not building user facing application and hence we rely on others to use our infrastructure to provide end user value.
-
-      h3 2. Ethermint
-      p Our goal is to scale token launches. Currently Ethereum’s main activity comes from token launches and with Ethermint we need to make it as easy to launch your own token. A token launch on Ethermint is the easiest way to stand up a new zone with a separate validator set.
-
-      h3 3. Ethereum Peg Zone
-      p Allowing the movement of ERC20 tokens and Ethers through a peg zone into the Cosmos hub will enable a huge amount of value transfer and usability. It is paramount to achieve this, since decentralised finance is one of the biggest use cases of blockchains. Furthermore, this will enhance the value of the DEX massively as well as make launching a token on Ethermint much more feasible.
-
-      h3 4. Developer Adoption
-      p We are not building end user applications and hence we are not competing for users directly. We are building infrastructure and one of the only metrics in our long-term success is whether we can attract promising (and hopefully successful) projects onto Cosmos. The Cosmos ecosystem needs to become the default choice for new entrants to the blockchain space. Some people started with Bitcoin, I started with Ethereum and from now on our goal is that everyone starts with Cosmos.
-
+      .roadmap
+        .month
+          h3 October 2017
+          ul
+            li Alpha testnet for the Cosmos hub (just staking, no ibc or governance)
+            li Translation of whitepaper into Chinese
+        .month
+          h3 November 2017
+          ul
+            li Public testnet for the Cosmos hub
+            li Alpha testnet for Ethermint
+            li Beta version of the Cosmos SDK
+            li Translation of whitepaper into Dutch and French
+        .month
+          h3 December 2017
+          ul
+            li Public testnet for Ethermint
+            li Alpha Ethereum peg zone
+            li Alpha OmiseGo DEX zone
+            li Stable version of the Cosmos SDK
+            li Translation of whitepaper into Spanish and Korean
+        .month
+          h3 January 2018
+          ul
+            li Live Cosmos hub
+            li Public testnet Ethereum peg zone
+            li IBC connection between Ethermint and Cosmos hub on testnets
+            li Public testnet for OmiseGo DEX zone
+            li OpenMined launches on Ethermint testnet 
+        .month
+          h3 February 2018
+          ul
+            li Live Ethermint network
+            li Connect Ethermint to hub with IBC
+            li Live OmiseGo DEX zone with IBC
+            li BlockFinance goes live with fiat-crypto gateway
+        .month
+          h3 March 2018
+          ul
+            li OpenMined launches on live Ethermint
+            li First token launches are conducted on Ethermint to create new zones
+        .month
+          h3 April 2018
+          ul
+            li Bitcoin peg zone
+            li Incubator zone to bootstrap projects that do not have the resources to launch their own validator set
+        .month
+          h3 May 2018
+          ul
+            li Work on arbitrary data transfer
+        .month
+          h3 June 2018
+          ul
+            li Identity zone launches on Cosmos to enable anonymous and decentralised KYC
 
   section.v-section: .v-container
-    header.v-section-header Core
+    header.v-section-header Ongoing Research
     main.v-section-main
-      h3 5. Gaia
-      p We need a solid hub that allows zones to move tokens between each other.
-      h3 6. Tendermint Core
-      p Everything builds on top of Tendermint Core and hence this software stack has to be rock solid.
-      h3 7. Cosmos-sdk
-      p The sdk is what most developers use to build their own zone. It allows developers to write awesome light clients through mobile bindings.
-
-  section.v-section: .v-container
-    header.v-section-header Glue
-    main.v-section-main
-      h3 8. Validators
-      p These members form the backbone of the Cosmos hub and the security of the entire network.
-      h3 9. Governance
-      p The community needs a voice in order to affect change across the Cosmos ecosystem
-      h3 10. Economics
-      p Validators are not nice people. They need a crypto-economic incentive not to cheat and to continuously validate the network.
+      ul
+        li Multiple apps protected by the same validator set
+        li IBC
 </template>
 
 <script>
@@ -65,4 +94,28 @@ export default {
 <style lang="stylus">
 @require '~@/styles/variables.styl'
 
+.roadmap
+  .month
+    margin-left 1rem
+    border-left 0.25rem solid bc
+    padding-left 2rem
+    position relative
+    &:before
+      box-sizing border-box
+      display block
+      content ''
+      background c-app-bg
+
+      width 2rem
+      height 2rem
+
+      border 0.25rem solid link
+      border-radius 2rem
+
+      position absolute
+      top 0
+      left -1rem
+      margin-left -0.125rem
+    ul
+      padding-bottom 2rem
 </style>

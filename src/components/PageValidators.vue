@@ -209,7 +209,7 @@ export default {
     &:last-child
       margin-bottom 0
 
-  > ul
+  ul
     list-style square
     padding-left 1.5rem
     li
