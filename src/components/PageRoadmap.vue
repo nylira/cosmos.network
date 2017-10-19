@@ -13,12 +13,12 @@
         .month
           h3 October 2017
           ul
-            li Alpha testnet for the Cosmos hub (just staking, no ibc or governance)
-            li Translation of whitepaper into Chinese
+            li Alpha testnet for the Cosmos Hub (just staking, no ibc or governance)
+            li Translation of Whitepaper into Chinese
         .month
           h3 November 2017
           ul
-            li Public testnet for the Cosmos hub
+            li Public testnet for the Cosmos Hub
             li Alpha testnet for Ethermint
             li Beta version of the Cosmos SDK
             li Translation of whitepaper into Dutch and French
@@ -27,28 +27,28 @@
           ul
             li Public testnet for Ethermint
             li Alpha Ethereum peg zone
-            li Alpha OmiseGo DEX zone
+            // li Alpha OmiseGo DEX zone
             li Stable version of the Cosmos SDK
-            li Translation of whitepaper into Spanish and Korean
+            li Translation of Whitepaper into Spanish and Korean
         .month
           h3 January 2018
           ul
-            li Live Cosmos hub
+            li Live Cosmos Hub
             li Public testnet Ethereum peg zone
-            li IBC connection between Ethermint and Cosmos hub on testnets
-            li Public testnet for OmiseGo DEX zone
-            li OpenMined launches on Ethermint testnet 
+            li IBC connection between Ethermint and Cosmos Hub on testnets
+            // li Public testnet for OmiseGo DEX zone
+            // li OpenMined launches on Ethermint testnet 
         .month
           h3 February 2018
           ul
             li Live Ethermint network
-            li Connect Ethermint to hub with IBC
-            li Live OmiseGo DEX zone with IBC
-            li BlockFinance goes live with fiat-crypto gateway
+            li Connect Ethermint to Cosmos Hub with IBC
+            // li Live OmiseGo DEX zone with IBC
+            // li BlockFinance goes live with fiat-crypto gateway
         .month
           h3 March 2018
           ul
-            li OpenMined launches on live Ethermint
+            // li OpenMined launches on live Ethermint
             li First token launches are conducted on Ethermint to create new zones
         .month
           h3 April 2018
@@ -64,7 +64,7 @@
           ul
             li Identity zone launches on Cosmos to enable anonymous and decentralised KYC
 
-  section.v-section: .v-container
+  // section.v-section: .v-container
     header.v-section-header Ongoing Research
     main.v-section-main
       ul
