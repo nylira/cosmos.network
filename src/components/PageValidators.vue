@@ -11,7 +11,7 @@
     header.v-section-header What are Cosmos validators?
     main.v-section-main
       h3 Role
-      p Validators are responsible for committing new blocks in the blockchain. These validators participate in the consensus protocol by broadcasting votes which contain cryptographic signatures signed by each validator's public key. Validators have a cryptographic key-pair for signing and have some amount of “voting power” in proportion to the number of staked ATOMs.
+      p Validators are responsible for committing new blocks in the blockchain. These validators participate in the consensus protocol by broadcasting votes which contain cryptographic signatures signed by each validator's private key. Validators have a cryptographic key-pair for signing and have some amount of “voting power” in proportion to the number of staked ATOMs.
       p Some Proof-of-Stake consensus algorithms aim to create a completely decentralized system where all stakeholders &ndash; even those who are not always online &ndash; participate in committing blocks. Tendermint has a different approach to block creation&mdash;Cosmos validator nodes need to be able to demonstrate 100% uptime. Maintaining high availability potentially involves multiple ISPs, redundant server power, and backup hosting locations.
 
       h3 Economics
