@@ -1,8 +1,8 @@
 <template>
   <router-link class="cover-alert" to="/events">
-    <span class="key">EVENT:</span>
+    <span class="key">DEVCON3:</span>
     <span class="value">
-      Our team will be at Cancún, Mexico on November 1-4 for Devcon3. Come visit our booth!
+      Our team will be at Cancún, Mexico on November 1-4 for Devcon3. Talk to us at our booth!
     </span>
     <i class="fa fa-angle-double-right" aria-hidden="true"></i>
   </router-link>

@@ -25,8 +25,9 @@ const routes = [
   { path: '/blog/:entry', redirect: '/blog' },
   { path: '/riot',
     beforeEnter: () => {
-      location.assign('https://riot.im/app/#/room/#cosmos:matrix.org')
-  }},
+      window.location.assign('https://riot.im/app/#/room/#cosmos:matrix.org')
+    }
+  },
 
   // wildcards
   { path: '/404', component: r('404') },
