@@ -15,12 +15,12 @@ page-split
       :anchor='links.cosmos.community.irc')
     card-community(
       dt='Matrix'
-      dd='Use riot.im to chat with us in the the #cosmos:matrix.org room.'
+      dd='Join the #cosmos:matrix.org room to join our developer chat.'
       icon='comments-o'
       :anchor='links.cosmos.community.matrix')
     card-community(
       dt='Telegram'
-      dd='Join the `cosmosproject` Telegram group to chat with us.'
+      dd='Join the `cosmosproject` group to join our community chat.'
       icon='telegram'
       :anchor='links.cosmos.community.telegram')
   ni-section
