@@ -4,7 +4,7 @@ page-split
   ni-section
     div(slot="title") Discuss & Chat
     card-community(
-      dt='Discourse'
+      dt='Forum'
       dd='Read the latest developer updates and join community discussions.'
       icon='university'
       :anchor='links.cosmos.community.discourse')
@@ -26,6 +26,11 @@ page-split
   ni-section
     div(slot="title") Social Media
     card-community(
+      dt='Twitter'
+      dd='Follow @cosmos, our official Twitter account.'
+      icon='twatter'
+      :anchor='links.cosmos.community.twitter')
+    card-community(
       dt='BitcoinTalk'
       dd='Keep up with updates on our thread in the BitcoinTalk forum.'
       icon='bitcoin'
@@ -40,11 +45,6 @@ page-split
       dd='Subscribe to /r/cosmosnetwork to get news on your Reddit homepage.'
       icon='raddit'
       :anchor='links.cosmos.community.reddit')
-    card-community(
-      dt='Twitter'
-      dd='Follow @cosmos, our official Twitter account.'
-      icon='twatter'
-      :anchor='links.cosmos.community.twitter')
 </template>
 
 <script>
