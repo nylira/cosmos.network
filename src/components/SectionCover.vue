@@ -80,9 +80,9 @@ export default {
     justify-content flex-start
     > *
       width 100%
-
-    form
-      margin 0 0 1rem
+      margin-bottom 0.5rem
+      &:last-child
+        margin 0
 
 @media screen and (min-width: 360px)
   .section-home-cover
@@ -106,8 +106,8 @@ export default {
     menu
       flex-flow row
       max-width 48rem
-      form
-        margin 0 1rem 0 0 
+      > *
+        margin 0 0.5rem 0 0
 
 @media screen and (min-width: 1024px)
   .section-home-cover
@@ -133,8 +133,8 @@ export default {
     menu
       flex-flow row
       max-width 48rem
-      form
-        margin 0 1rem 0 0 
+      > *
+        margin 0 1rem 0 0
 
 @media screen and (min-width: 1680px)
   .section-home-cover
