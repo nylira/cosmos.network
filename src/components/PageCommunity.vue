@@ -9,20 +9,21 @@ page-split
       icon='university'
       :anchor='links.cosmos.community.discourse')
     card-community(
-      dt='IRC'
-      dd='Join the #cosmos_network channel on the irc.freenode.net server.'
-      icon='hashtag'
-      :anchor='links.cosmos.community.irc')
+      dt='Community Chat (Telegram)'
+      dd='Join the `cosmosproject` group to join our community chat.'
+      icon='telegram'
+      :anchor='links.cosmos.community.telegram')
     card-community(
-      dt='Matrix'
+      dt='Developer Chat (Matrix)'
       dd='Join the #cosmos:matrix.org room to join our developer chat.'
       icon='comments-o'
       :anchor='links.cosmos.community.matrix')
     card-community(
-      dt='Telegram'
-      dd='Join the `cosmosproject` group to join our community chat.'
-      icon='telegram'
-      :anchor='links.cosmos.community.telegram')
+      dt='IRC'
+      dd='Join the #cosmos_network channel on the irc.freenode.net server.'
+      icon='hashtag'
+      :anchor='links.cosmos.community.irc')
+
   ni-section
     div(slot="title") Social Media
     card-community(
