@@ -29,7 +29,7 @@
     main.v-section-main
       h3 1. Join our Validator Working Group
       p The goal of the Validator Working Group (VWG) is to join a community of validators to learn the best practices of running an effective validator node. Join our Matrix chat channel:
-      
+
       btn(
         target="_blank"
         size="lg"
@@ -42,12 +42,14 @@
 
       p The Tendermint team and a few independent security experts will lead weekly roundtables where validators can share their hard lessons, best practices and experiences. Since this is an open-source community, validators are encouraged to create pull requests to the Cosmos Validator Guide repository (coming soon) where best practices are pooled. Remote roundtables where the VWG convenes will be held in our Matrix chat channel.
 
-      h3 2. Become a validator on our testnet 
+      h3 2. Become a validator on our testnet
 
-      p The goal of the Validator Working Group is to build a robust network of validators before we launch the Cosmos Hub in December 2017, You can learn how to properly set up and secure a full validator node.
+      p The goal of the Validator Working Group is to build a robust network of validators before we launch the Cosmos Hub in December 2017.
+
+      p Anyone can become a Cosmos Validator if they have enough ATOMs. Here's a guide we made explaining how to stake tokens on our testnet:
 
       // TODO: Gaia Testnet Tutorial
-      // p Confirm with Rige to finalize this doc: https://github.com/cosmos/gaia/pull/22 URL link to ATLAS-GAIA-TESTNET TUTORIAL. 
+      // p Confirm with Rige to finalize this doc: https://github.com/cosmos/gaia/pull/22 URL link to ATLAS-GAIA-TESTNET TUTORIAL.
 
       btn(
         target="_blank"
@@ -59,7 +61,7 @@
 
       iframe.youtube(:src="links.cosmos.validators.tutorials.video" frameborder="0" allowfullscreen)
 
-      p Note that this is a learning opportunity. It will not guarantee your placement in the validator set upon mainnet launch or at any future time. 
+      p Note that this is a learning opportunity. It will not guarantee your placement in the validator set upon mainnet launch or at any future time.
 
       h3 3. Independent attestation (optional)
 
@@ -73,10 +75,10 @@
         li #[strong Secure Hardware: ] introducing hardware into the validator network requires those hardware to be undeniably secure. Taking measures like purchasing server components in person, observing hardware assembly and auditing of hardware by security experts are expected.
         li #[strong Physical Attack Mitigation: ] servers should be located in physically secure facilities with access controls.
 
-      p Stay tuned for follow-up information about the Validator Working Group as we near mainnet launch in December. 
+      p Stay tuned for follow-up information about the Validator Working Group as we near mainnet launch in December.
 
   section.v-section: .v-container
-    header.v-section-header Join Cosmos VWG 
+    header.v-section-header Join Cosmos VWG
     main.v-section-main
       h3 Chat with us to learn more
       p Get more information and discuss the finer details of being a Validator on our community chat:
@@ -246,7 +248,7 @@ export default {
 
     .v-section-main
       padding 3rem
-      
+
     .youtube
       display block
       width 42rem
