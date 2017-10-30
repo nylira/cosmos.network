@@ -27,20 +27,26 @@ export default {
   computed: {
     ...mapGetters(['allEvents']),
     eventsPast () {
-      return this.allEvents.filter(i => moment(i.dates.end).isBefore(moment()))
+      if (this.allEvents && this.allEvents.length > 0) {
+        return this.allEvents.filter(i => moment(i.dates.end).isBefore(moment()))
+      } else {
+        return []
+      }
     },
     eventsUpcoming () {
-      return this.allEvents.filter(i => moment(i.dates.end).isAfter(moment()))
-    }
-  },
-  data () {
-    return {
-      metadata: {
-        title: 'Conferences',
-        desc: 'Meet up with our team and community members at blockchain conferences around the world.'
+      if (this.allEvents && this.allEvents.length > 0) {
+        return this.allEvents.filter(i => moment(i.dates.end).isAfter(moment()))
+      } else {
+        return []
       }
     }
   },
+  data: () => ({
+    metadata: {
+      title: 'Conferences',
+      desc: 'Meet up with our team and community members at blockchain conferences around the world.'
+    }
+  }),
   head: {
     title () {
       return {

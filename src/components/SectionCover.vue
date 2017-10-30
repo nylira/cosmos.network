@@ -9,11 +9,18 @@ section.section-home-cover
       form-email-signup
       btn(
         type='anchor'
-        :href='links.cosmos.chat'
+        :href='links.cosmos.community.telegram'
+        size='lg'
+        icon='telegram'
+        target='_blank'
+        value='Community Chat')
+      btn(
+        type='anchor'
+        :href='links.cosmos.community.matrix'
         size='lg'
         icon='comments-o'
         target='_blank'
-        value='Community Chat')
+        value='Developer Chat')
 </template>
 
 <script>
