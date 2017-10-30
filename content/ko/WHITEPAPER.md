@@ -7,6 +7,8 @@
 Jae Kwon [jae@tendermint.com](mailto:jae@tendermint.com)<br>
 Ethan Buchman [ethan@tendermint.com](mailto:ethan@tendermint.com)
 
+For discussions, [join our community chat](https://riot.im/app/#/room/#cosmos:matrix.org)!
+
 **번역 및 제작:**
 
 한승환, 이승민, 김기현, 윤승완, HJ Kim(금마), 김석현
