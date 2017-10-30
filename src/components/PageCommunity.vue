@@ -32,7 +32,7 @@ page-split
       :anchor='links.cosmos.community.bitcointalk')
     card-community(
       dt='Facebook'
-      dd='Like our page to get updates in your Facebook feed.'
+      dd='Like the `cosmosproject` page to get updates in your Facebook feed.'
       icon='footbook'
       :anchor='links.cosmos.community.facebook')
     card-community(
