@@ -10,11 +10,11 @@ header.app-header
       nav.nav-app
         router-link(to='/whitepaper' @click.native='close') Whitepaper
         // router-link(to='/roadmap' @click.native='close') Roadmap
+        router-link(to='/community' @click.native='close') Community
         router-link(to='/events' @click.native='close') Conferences
-        router-link(to='/hackatom' @click.native='close') HackAtom
+        // router-link(to='/hackatom' @click.native='close') HackAtom
         router-link(to='/validators' @click.native='close') Validators
         // router-link(to='/about' @click.native='close',) About
-        // router-link(to='/validators' @click.native='close',) Validator Program
       nav(v-if='!desktop')
         a(:href='links.cosmos.blog' @click.native='close' target='_blank') Blog
     a.header-item.header-item-alert(:href='links.cosmos.blog' @click.native='close' target='_blank')
@@ -87,7 +87,6 @@ export default {
   background alpha(#fff, 95%)
   backdrop-filter blur(0.125rem)
   shadow()
-  font-weight 400
 
   .container
     max-width 1024px
@@ -156,7 +155,6 @@ export default {
         display flex
         align-items center
         cursor pointer
-        font-weight 400
 
   .menu-popup
     z-index 101

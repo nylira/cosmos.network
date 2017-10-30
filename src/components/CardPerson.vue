@@ -73,9 +73,6 @@ export default {
       bottom 0
       right 0
 
-  .name
-    font-weight 400
-
   .title
     color light
     font-size 0.875rem

@@ -20,9 +20,6 @@
         a(:href='links.cosmos.bitcointalk' target="_blank")
           i.fa.fa-btc
           | BitcoinTalk
-        a(:href='links.cosmos.irc' target="_blank")
-          i.fa.fa-commenting-o
-          | IRC
         a(:href='links.cosmos.reddit' target="_blank")
           i.fa.fa-reddit
           | Reddit

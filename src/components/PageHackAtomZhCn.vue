@@ -156,8 +156,6 @@ export default {
       font-size 0.75rem
     .value
       color link
-      font-weight 400
-      
 
   h1
     font-size 3em
