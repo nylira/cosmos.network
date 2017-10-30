@@ -46,10 +46,7 @@
 
       p The goal of the Validator Working Group is to build a robust network of validators before we launch the Cosmos Hub in December 2017.
 
-      p Anyone can become a Cosmos Validator if they have enough ATOMs. Here's a guide we made explaining how to stake tokens on our testnet:
-
-      // TODO: Gaia Testnet Tutorial
-      // p Confirm with Rige to finalize this doc: https://github.com/cosmos/gaia/pull/22 URL link to ATLAS-GAIA-TESTNET TUTORIAL.
+      p Anyone can become a Cosmos Validator if they have enough ATOMs. Here's a guide that explains how to get started with the Cosmos Validator program:
 
       btn(
         target="_blank"
