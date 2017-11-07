@@ -24,7 +24,7 @@ export default {
   .avatar
     width 48px
     height 48px
-    background #ddd
+    background app-fg
     display flex
     align-items center
     justify-content center

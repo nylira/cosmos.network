@@ -81,7 +81,7 @@ export default {
 .modal-person
   max-width 360px
   width 100%
-  background c-app-fg
+  background app-fg
   box-shadow hsla(0,0,0,0.25) 0 0.25rem 0.5rem
   border-radius 0.5rem
   margin 0 0.5rem
@@ -149,7 +149,7 @@ export default {
       &:last-of-type
         border-right none
       &:hover
-        color mcolor
+        color mc
 
       .label
         display none

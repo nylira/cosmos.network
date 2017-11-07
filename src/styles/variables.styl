@@ -1,65 +1,75 @@
-//=========================================================================
-// colors
-//=========================================================================
+//==============================================================================
+// variables
 
-mhue = 208
-msat = 100%
-mlit = 25%
-mcolor = hsl(mhue,msat,mlit)
+// main colors
+mhue = 210
+msat = 80%
+mlit = 20%
+mc = hsl(mhue,msat,mlit)
+accent1 = hsl(60,38%,70%)
+accent2 = hsl(345,85%,49%)
 
-ibc = #ccc
-bc = hsl(0,0,95%)
-bc-dim = hsl(0,0,97%)
-c-app-bg = #fff
-c-app-fg = hsl(0,0%,98%)
+// app colors
+app-bg = #070b0f
+app-bg-alpha = alpha(app-bg, 92%)
+app-fg = hsla(mhue,25%,60%,0.125)
 
-// type colors
-txt = #000
-dim = #666
-light = #999
-subtle = lighten(light,50%)
-faint = lighten(bc,75%)
-placeholder-color = light
+// text colors
+bright = hsl(mhue, 32%, 86%)
+txt = hsl(mhue, 32%, 70%)
+dim = hsl(mhue, 32%, 50%)
+faint = hsl(mhue,32%, 30%)
 
-link = hsl(mhue,msat,45%)
-anchor = link
+// anchor
+link = hsl(mhue,75%,65%)
 
-alert-color = hsl(330,100%,45%)
+// border color
+bc-bright = hsl(mhue, 16%, 68%)
+bc-vivid = hsl(mhue, 41%, 49%)
+bc = hsl(mhue, 26%, 36%)
+bc-dim = hsl(mhue, 22%, 24%)
+bc-faint = hsl(mhue, 18%, 12%)
+ 
+// background colors
+input-bg = transparent
+input-bc = bc
 
-primary-gradient = linear-gradient(top, lighten(mcolor,10%), darken(mcolor,10%))
-primary-gradient-hover = linear-gradient(top, lighten(mcolor,15%), darken(mcolor,8%))
-subtle-gradient = linear-gradient(top, hsl(0,0,99%), hsl(0,0,95%))
-subtle-gradient-hover = linear-gradient(top, hsl(0,0,100%), hsl(0,0,95%))
-
-// button colors
-btn-red-color = hsl(0,100%,40%)
-btn-green-color = hsl(120,100%,40%)
-
-eth-color = rgb(201,157,102)
-btc-color = rgb(255,153,0)
-dash-color = rgb(30,115,90)
-xmr-color = rgb(255,102,0)
-maid-color = rgb(85,146,215)
-doge-color = rgb(186,159,51)
-
-//=========================================================================
 // typography
-//=========================================================================
-
 x = 16px
-sans = system, -apple-system, BlinkMacSystemFont, "Roboto", "Seogue UI", "Helvetica Neue", "Lucida Grande", sans-serif
-mono = Consolas, 'Deja Vu Sans Mono', 'Andale Sans Mono', monospace
+px = 0.0625rem
+sans = -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif
+mono = Consolas, Monaco, monospace
+
+// sizes
+width-main = 100%
+width-side = 16rem
+
+// alert colors
+alert-success = hsl(120,100%,50%)
+alert-info = txt
+alert-warning = hsl(60,100%,50%)
+alert-danger = hsl(0,100%,50%)
+
+//==============================================================================
+// methods
 
 df()
   font-size x
   line-height 1.5
   font-family sans
   color txt
-  font-weight 400
 
 mono()
   font-family Consolas, Monaco, monospace
   font-weight normal
 
+font-label()
+  font-size 0.75rem
+  font-weight 500
+  white-space nowrap
+  text-overflow ellipsis
+  overflow hidden
+  color bright
+
 shadow()
-  box-shadow hsla(0,0,0,0.1) 0 1px 3px
+  box-shadow hsla(0,0,0,0.5) 0 3px 5px
