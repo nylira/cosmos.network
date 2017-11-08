@@ -63,7 +63,7 @@ export default {
 .section-media
   background c-app-fg
   padding 2rem 0
-  border-bottom 1px solid bc
+  border-top 1px solid bc
 
 .sm-container
   margin 0 auto

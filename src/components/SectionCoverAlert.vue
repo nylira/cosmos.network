@@ -1,8 +1,8 @@
 <template>
   <router-link class="cover-alert" to="/events">
-    <span class="key">EVENT:</span>
+    <span class="key">DEVCON3:</span>
     <span class="value">
-      We will be at UC Berkeley on October 2-3 for the Crypto Economics Security Conference (CESC 2017). Come join us!
+      Our team will be at Cancún, Mexico on November 1-4 for Devcon3. Talk to us at our booth!
     </span>
     <i class="fa fa-angle-double-right" aria-hidden="true"></i>
   </router-link>
@@ -22,14 +22,13 @@ export default {
 
 .cover-alert
   display block
-  border 1px solid hsl(0,0,15%)
+  width 100%
+  max-width 1024px
+  border 1px solid bc
   padding 0.4375rem 0.75rem
-  margin-bottom 2rem
   font-size 0.75rem
   position relative
   overflow hidden
-  &:hover
-    border-color hsl(0,0,35%)
 
   .ni-time-remaining
     display inline
@@ -41,25 +40,20 @@ export default {
     right 0.25rem
     font-size 3rem
     line-height 1
-    color hsl(0,0,45%)
     z-index -1
+    color subtle
 
   .key
     text-transform uppercase
-    color #fff
     font-weight 500
-    color hsl(0,0,90%)
+    color txt
   .value
-    color hsl(0,0,70%)
+    color dim
 
 @media screen and (min-width:360px)
   .cover-alert
     font-size 0.875rem
-    margin-bottom 2.5rem
 @media screen and (min-width:400px)
   .cover-alert
     font-size 1rem
-@media screen and (min-width:1200px)
-  .cover-alert
-    margin-bottom 3rem
 </style>

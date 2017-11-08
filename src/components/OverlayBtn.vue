@@ -30,6 +30,8 @@ export default {
   backdrop-filter blur(0.125rem)
   shadow()
 
+  cursor pointer
+
   i.fa
     font-size 1rem
 

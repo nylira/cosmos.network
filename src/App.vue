@@ -23,9 +23,7 @@ export default {
   components: {
     AppHeader,
     AppFooter,
-    Notifications,
-    enRss: require('./assets/rss/en.xml'),
-    koRss: require('./assets/rss/ko.xml')
+    Notifications
   },
   computed: {
     ...mapGetters(['notifications'])
@@ -36,10 +34,10 @@ export default {
         { n: 'description', c: 'Cosmos is a project with an ambitious mission: To create a network of distributed ledgers that will solve long-standing problems in the cryptocurrency community.' },
 
         { n: 'twitter:card', c: 'summary' },
-        { n: 'twitter:site', c: '@cosmos_hq' },
+        { n: 'twitter:site', c: '@cosmos' },
         { n: 'twitter:title', c: 'Cosmos - Internet of Blockchains' },
         { n: 'twitter:description', c: 'Cosmos is a project with an ambitious mission: To create a network of distributed ledgers that will solve long-standing problems in the cryptocurrency community.' },
-        { n: 'twitter:creator', c: '@cosmos_hq' },
+        { n: 'twitter:creator', c: '@cosmos' },
         { p: 'twitter:image', c: require('./assets/favicon/apple-icon-180x180.png') },
 
         { p: 'og:title', c: 'Cosmos - Internet of Blockchains' },
@@ -56,7 +54,6 @@ export default {
       ]
     },
     link: [
-      { r: 'alternate', t: 'application/rss+xml', h: require('./assets/rss/en.xml') },
       { r: 'apple-touch-icon', sz: '57x57', h: require('./assets/favicon/apple-icon-57x57.png') },
       { r: 'apple-touch-icon', sz: '60x60', h: require('./assets/favicon/apple-icon-60x60.png') },
       { r: 'apple-touch-icon', sz: '72x72', h: require('./assets/favicon/apple-icon-72x72.png') },

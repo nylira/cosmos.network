@@ -15,6 +15,11 @@
         @click.native="tocVisible(false)"
         icon="times">
       </overlay-btn>
+      <overlay-btn
+        class="print-btn"
+        @click.native="download()"
+        icon="file-pdf-o">
+      </overlay-btn>
     </overlay-btns>
   </div>
 </template>
@@ -40,6 +45,9 @@ export default {
     ...mapGetters(['whitepaperTocVisible', 'whitepaperElementsVisible'])
   },
   methods: {
+    download () {
+      window.location.href = 'https://github.com/tendermint/aib-data/raw/master/pdf/cosmos-whitepaper.pdf'
+    },
     setTocVisOnWidth () {
       let width = document.documentElement.clientWidth
       if (width >= 1024) {
@@ -84,8 +92,7 @@ export default {
 }
 </script>
 <style lang="stylus">
-  .page-whitepaper-nav
-    i
-      line-height : 3rem
-
+.page-whitepaper-nav
+  i
+    line-height : 3rem
 </style>

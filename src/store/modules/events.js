@@ -1,4 +1,4 @@
-let url = 'https://raw.githubusercontent.com/tendermint/aib-data/master/json/people.json'
+let url = 'https://raw.githubusercontent.com/tendermint/aib-data/master/json/events.json'
 
 fetch(url)
   .then(response => response.json())

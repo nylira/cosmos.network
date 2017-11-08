@@ -96,7 +96,6 @@ export default {
           li
             a
               padding-left 4.5em
-              font-weight 300
 
 @media screen and (min-width: 360px)
   .minimal-toc

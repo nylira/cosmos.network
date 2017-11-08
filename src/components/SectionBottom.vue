@@ -9,7 +9,7 @@
       size="lg"
       icon="file-text-o"
       value="Whitepaper")
-  section.section-bottom
+  section.section-bottom.newsletter
     h2 Get Newsletter
     form-email-signup
 </template>
@@ -37,10 +37,11 @@ export default {
 .section-bottom
   padding 2rem 1rem
   border-top 1px solid bc
-  border-bottom 1px solid bc
   display flex
   flex-flow column
   justify-content center
+  &.newsletter
+    border-bottom 1px solid bc
   h2
     font-weight 500
     font-size 1.25rem
@@ -54,6 +55,8 @@ export default {
     max-width 18rem
 
 @media screen and (min-width: 768px)
+  .section-bottom
+    border-bottom 1px solid bc
   .section-bottom-container
     display flex
     flex-flow row wrap

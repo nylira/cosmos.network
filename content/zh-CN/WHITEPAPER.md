@@ -5,7 +5,7 @@
 Jae Kwon [jae@tendermint.com](mailto:jae@tendermint.com)<br>
 Ethan Buchman [ethan@tendermint.com](mailto:ethan@tendermint.com)
 
-加入我们的 [Rocket](https://cosmos.rocket.chat)一起讨论吧！
+加入我们的 [Matrix](https://riot.im/app/#/room/#cosmos:matrix.org)一起讨论吧！
 
 _注意：我们会对内容进行定期更新，您可以随时进行查阅，谢谢！_
 

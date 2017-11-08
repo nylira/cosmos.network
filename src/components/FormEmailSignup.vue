@@ -10,8 +10,7 @@
     </field>
     <btn
       type="submit"
-      icon="newspaper-o"
-      value="Subscribe"
+      icon="envelope-o"
       size="lg"
       id="mc-embedded-subscribe">
     </btn>

@@ -1,196 +1,119 @@
-<template>
-  <div class="page-hackatom">
-    <locale-menu></locale-menu>
-    <header class="ha-header">
-      <div class="image"></div>
-      <div class="ha-container">
-        <main>
-          <a class="alert" href="https://medium.com/cosmos-blockchain/cosmos-hackatom-is-underway-52c6032f6a61" target="_blank">
-            <span class="key"><i class="fa fa-exclamation-circle"></i> 更新：</span>
-            <span class="value">CosmosHackAtom正在进行 &rarr;</span>
-          </a>
-          <h1><strong>Hack</strong>Atom 2017</h1>
-          <ul>
-            <li>6月9日-7月9日</li>
-            <li>来自世界各地的参与者</li>
-            <li>5万美元的奖金等待您的获取</li>
-          </ul>
-          <p><strong>HackAtom</strong>正在全球范围内寻找个人或者团队来参加总奖金高达5万美金的黑客马拉松活动。活动时间从6月9日至7月9日。参与者将创新的想法转化为可运行的应用程序，就能从Cosmos社区赢取奖金。</p>
-          <p>HackAtom大赛为期四周，期间您将创建一个真正的产品。加密和区块链社区会观赛并投票，选出他们满意的项目。说出你创新想法背后的故事，并把它变成一个有用的产品。同时，带动大家一起参与，共同打造超酷的东西。</p>
-        </main>
-      </div>
-    </header>
+<template lang="pug">
+.page-hackatom
+  locale-menu
+  header.ha-header
+    .image
+    .ha-container
+      main
+        a.alert(href='https://medium.com/cosmos-blockchain/cosmos-hackatom-is-underway-52c6032f6a61', target='_blank')
+          span.key
+            i.fa.fa-exclamation-circle
+            |  更新： 
+          span.value CosmosHackAtom正在进行 →
+        h1
+          strong Hack
+          | Atom 2017
+        ul
+          li 6月9日-7月9日
+          li 来自世界各地的参与者
+          li 5万美元的奖金等待您的获取
+        p
+          strong HackAtom
+          | 正在全球范围内寻找个人或者团队来参加总奖金高达5万美金的黑客马拉松活动。活动时间从6月9日至7月9日。参与者将创新的想法转化为可运行的应用程序，就能从Cosmos社区赢取奖金。
+        p
+          | HackAtom大赛为期四周，期间您将创建一个真正的产品。加密和区块链社区会观赛并投票，选出他们满意的项目。说出你创新想法背后的故事，并把它变成一个有用的产品。同时，带动大家一起参与，共同打造超酷的东西。
+          a(@click='setModal(true)') 注册!
+  section.ha-section.judging
+    .ha-container
+      header 奖品
+      main
+        p 活动奖金是价值5万美金的以太币（ETH）。奖金对获奖应用的分配方案如下：
+        ul.prizes
+          li.grand
+            i.fa.fa-trophy
+            .key 大奖
+            .value 价值2万美金的以太币
+          li.second
+            i.fa.fa-trophy
+            .key 第二名
+            .value 价值 1万美金的以太币
+          li.third
+            i.fa.fa-trophy
+            .key 第三名
+            .value 价值6000美金的以太币
+          li.fourth
+            i.fa.fa-trophy
+            .key 第四名
+            .value 价值4000美金的以太币
+        p 还有5份（每份价值2千美金的以太币）奖品，奖励给那些我们认可的在活动期间辛苦工作的志愿者。
+  section.ha-section.participate
+    .ha-container
+      header 从世界各地参与
+      main
+        p 想要参与黑客马拉松（hackathon），你需做到以下几点：
+        ol.participation-steps
+          li
+            .key 1.
+            .value 注册
+              a(@click='setModal(true)') 注册
+          li
+            .key 2.
+            .value 构建你的应用
+          li
+            .key 3.
+            .value 于太平洋时间七月九日上午十时前提交
+  section.ha-section.meetup
+    .ha-container
+      header 与Cosmonauts聚会
+      main
+        p 2017年6月9日当地时间下午7:00，我们将在世界各地举办HackAtom聚会。如果你在附近，请来加入我们！在构建应用时，请与我们联系，以获取免费提示和支持。
+        meetup-locations
 
-    <section class="ha-section judging">
-      <div class="ha-container">
-        <header>奖品</header>
-        <main>
-          <p>活动奖金是价值5万美金的以太币（ETH）。奖金对获奖应用的分配方案如下：</p>
-          <ul class="prizes">
-            <li class="grand">
-              <i class="fa fa-trophy"></i>
-              <div class="key">大奖</div>
-              <div class="value">价值2万美金的以太币</div>
-            </li>
-            <li class="second">
-              <i class="fa fa-trophy"></i>
-              <div class="key">第二名</div>
-              <div class="value">价值 1万美金的以太币</div>
-            </li>
-            <li class="third">
-              <i class="fa fa-trophy"></i>
-              <div class="key">第三名</div>
-              <div class="value">价值6000美金的以太币</div>
-            </li>
-            <li class="fourth">
-              <i class="fa fa-trophy"></i>
-              <div class="key">第四名</div>
-              <div class="value">价值4000美金的以太币</div>
-            </li>
-          </ul>
-          <P>还有5份（每份价值2千美金的以太币）奖品，奖励给那些我们认可的在活动期间辛苦工作的志愿者。</p>
-        </main>
-      </div>
-    </section>
-
-    <section class="ha-section participate">
-      <div class="ha-container">
-        <header>从世界各地参与</header>
-        <main>
-          <p>想要参与黑客马拉松（hackathon），你需做到以下几点：</p>
-          <ol class="participation-steps">
-            <li>
-              <div class="key">1.</div>
-              <div class="value">注册</div>
-            </li>
-            <li>
-              <div class="key">2.</div>
-              <div class="value">构建你的应用</div>
-            </li>
-            <li>
-              <div class="key">3.</div>
-              <div class="value">于太平洋时间七月九日上午十时前提交</div>
-            </li>
-          </ol>
-        </main>
-      </div>
-    </section>
-
-    <section class="ha-section meetup">
-      <div class="ha-container">
-        <header>与Cosmonauts聚会</header>
-        <main>
-          <p>2017年6月9日当地时间下午7:00，我们将在世界各地举办HackAtom聚会。如果你在附近，请来加入我们！在构建应用时，请与我们联系，以获取免费提示和支持。</p>
-          <ul class="locations">
-            <li><a href="https://www.meetup.com/Cosmos-Berlin/" target="_blank">
-              <img src="../assets/images/hackatom/loc-berlin.jpg">
-              <div class="kv">
-                <div class="key">HackAtom Meetup</div>
-                <div class="value">Berlin</div>
-              </div>
-            </a></li>
-            <li><a href="https://www.meetup.com/Cosmos-NYC/" target="_blank">
-              <img src="../assets/images/hackatom/loc-nyc.jpg">
-              <div class="kv">
-                <div class="key">HackAtom Meetup</div>
-                <div class="value">New York City</div>
-              </div>
-            </a></li>
-            <li><a href="https://www.meetup.com/Cosmos-Toronto/" target="_blank">
-              <img src="../assets/images/hackatom/loc-toronto.jpg">
-              <div class="kv">
-                <div class="key">HackAtom Meetup</div>
-                <div class="value">Toronto</div>
-              </div>
-            </a></li>
-            <li><a href="https://www.meetup.com/Cosmos-SanFrancisco/" target="_blank">
-              <img src="../assets/images/hackatom/loc-san-francisco.jpg">
-              <div class="kv">
-                <div class="key">HackAtom Meetup</div>
-                <div class="value">San Francisco</div>
-              </div>
-            </a></li>
-            <li><a href="https://www.meetup.com/Cosmos-Seoul/events/240518515/" target="_blank">
-              <img src="../assets/images/hackatom/loc-seoul.jpg">
-              <div class="kv">
-                <div class="key">HackAtom Meetup</div>
-                <div class="value">Seoul</div>
-              </div>
-            </a></li>
-            <!--
-            <li><a href="https://www.meetup.com/Cosmos-Shanghai/events/240518574/" target="_blank">
-              <img src="../assets/images/hackatom/loc-shanghai.jpg">
-              <div class="kv">
-                <div class="key">HackAtom Meetup</div>
-                <div class="value">Shanghai</div>
-              </div>
-            </a></li>
-            -->
-          </ul>
-        </main>
-      </div>
-    </section>
-
-    <section class="ha-section judging">
-      <div class="ha-container">
-        <header>评审</header>
-        <main>
-          <p>我们期待的是高水平的专业性和质量，因此从一开始就邀请了经验丰富的黑客和企业家来影响本次竞赛。你将会获得来自社区与评审员的专业评审。</p>
-          <div class="judges">
-            <card-person-mini v-for="p in ppl('hackatom')" :person="p" :key="p.id">
-            </card-person-mini>
-          </div>
-        </main>
-      </div>
-    </section>
-    <section class="ha-section ha-section-join">
-      <div class="ha-container">
-        <header>报名参加</header>
-        <main>
-          <p>在表单中，填写你的详细信息，并提交，以参与CosmosHackAtom。您将收到关于如何比赛的进一步说明。</p>
-          <btn
-            type="anchor"
-            :href="hackathonLink"
-            size="lg"
-            icon="clock-o"
-            value="注册参与HackAtom">
-          </btn>
-          <p>想要咨询黑客马拉松活动，请通过邮件与我们联系：<a href="mailto:hello@tendermint.com">hello@tendermint.com</a>。</p>
-        </main>
-      </div>
-    </section>
-    <section class="ha-section ha-section-hashtag">
-      <div class="ha-container">
-        <header><a href="https://twitter.com/intent/tweet?text=I'm%20going%20to%20%23hackatom2017%20@cosmos_hq"><i class="fa fa-twatter"></i> #hackatom2017</a></header>
-      </div>
-    </section>
-  </div>
+  section.ha-section.judging
+    .ha-container
+      header 评审
+      main
+        p 我们期待的是高水平的专业性和质量，因此从一开始就邀请了经验丰富的黑客和企业家来影响本次竞赛。你将会获得来自社区与评审员的专业评审。
+  section.ha-section.ha-section-join
+    .ha-container
+      header 报名参加
+      main
+        p 在表单中，填写你的详细信息，并提交，以参与CosmosHackAtom。您将收到关于如何比赛的进一步说明。
+        btn(@click.native='setModal(true)', size='lg', icon='clock-o', value='Sign Up for HackAtom')
+        p
+          | 想要咨询黑客马拉松活动，请通过邮件与我们联系：
+          a(:href="'mailto:' + links.cosmos.email") {{links.cosmos.email}}
+          | 。
+  section.ha-section.ha-section-hashtag
+    .ha-container
+      header
+        a(href="https://twitter.com/intent/tweet?text=I'm%20going%20to%20%23hackatom2017%20@cosmos")
+          i.fa.fa-twatter
+          |  #hackatom2017
+  modal-agreement(v-if='hackatom.modal')
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
 import Btn from '@nylira/vue-button'
-import CardPersonMini from './CardPersonMini'
 import LocaleMenu from './PageHackAtomLocaleMenu'
+import MeetupLocations from './MeetupLocations'
+import ModalAgreement from './ModalAgreement'
 import NiSection from './NiSection'
 import PageHeader from '@nylira/vue-page-header'
 export default {
   name: 'page-hackatom',
   components: {
     Btn,
-    CardPersonMini,
     LocaleMenu,
+    MeetupLocations,
+    ModalAgreement,
     NiSection,
     PageHeader
   },
   computed: {
-    ...mapGetters(['allPeople'])
+    ...mapGetters(['allPeople', 'hackatom', 'links'])
   },
-  data: () => ({
-    hackathonLink: 'http://www.hackathon.io/cosmos-hackathon',
-    formLink: 'https://docs.google.com/forms/d/e/1FAIpQLSfLjR9_0W6AatYgbxYSVcsOx3Pw16GdV9kZDP_NgplOFHa-bA/viewform?usp=sf_link',
-    mapKey: 'AIzaSyCw3IcF-q9yY_33PAFDPP4gJGfJQphN8M0'
-  }),
   head: {
     title () {
       return {
@@ -201,7 +124,10 @@ export default {
     }
   },
   methods: {
-    ppl (tag) { return this.allPeople.filter(p => p.tags.includes(tag)) }
+    ppl (tag) { return this.allPeople.filter(p => p.tags.includes(tag)) },
+    setModal (value) {
+      this.$store.commit('setHackAtomModal', value)
+    }
   }
 }
 </script>
@@ -230,8 +156,6 @@ export default {
       font-size 0.75rem
     .value
       color link
-      font-weight 400
-      
 
   h1
     font-size 3em
@@ -473,9 +397,6 @@ export default {
   .ha-section main .judges
     display flex
     margin 0 -0.5rem
-    .card-person-mini
-      flex 1
-      margin 0.5rem
 
 @media screen and (min-width: 1200px)
   .ha-header

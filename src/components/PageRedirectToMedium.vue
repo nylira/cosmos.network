@@ -5,11 +5,13 @@
 </template>
 
 <script>
+import {mapGetters} from 'vuex'
 export default {
   name: 'page-redirect-to-medium',
+  computed: { ...mapGetters(['links']) },
   mounted () {
     document.title = 'Redirecting to Medium - Cosmos - Internet of Blockchains'
-    window.location.replace('https://blog.cosmos.network')
+    window.location.replace(this.links.cosmos.blog)
   }
 }
 </script>
