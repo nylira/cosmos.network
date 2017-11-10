@@ -1,28 +1,23 @@
 <template lang="pug">
-page-split
-  page-header(:title='metadata.title', :subtitle='metadata.desc', slot='header', type='split')
-  ni-section
-    div(slot="title") Upcoming Events
-    card-event(:events='eventsUpcoming')
-  ni-section
-    div(slot="title") Past Events
-    card-event(:events='eventsPast')
+page(:title="metadata.title" :subtitle="metadata.desc")
+  part(title='Upcoming Events' v-if="eventsUpcoming.length > 0")
+    events(:events='eventsUpcoming')
+  part(title='Past Events')
+    events(:events='eventsPast' v-if="eventsPast.length > 0")
 </template>
 
 <script>
 import moment from 'moment'
 import { mapGetters } from 'vuex'
-import CardEvent from './CardEvent'
-import NiSection from './NiSection'
-import PageHeader from '@nylira/vue-page-header'
-import PageSplit from '@nylira/vue-page-split'
+import Events from './Events'
+import Page from './common/NiPage'
+import Part from './common/NiPart'
 export default {
   name: 'page-events',
   components: {
-    CardEvent,
-    NiSection,
-    PageSplit,
-    PageHeader
+    Events,
+    Page,
+    Part
   },
   computed: {
     ...mapGetters(['allEvents']),

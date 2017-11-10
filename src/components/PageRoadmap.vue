@@ -104,7 +104,7 @@ export default {
       box-sizing border-box
       display block
       content ''
-      background c-app-bg
+      background app-bg
 
       width 2rem
       height 2rem

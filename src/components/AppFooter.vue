@@ -64,7 +64,7 @@ export default {
 .app-footer
   .sections
     padding 1rem 0
-    color c-app-fg
+    color app-fg
     margin 0 auto
 
     display flex
@@ -77,7 +77,7 @@ export default {
     header
       padding 0.25rem 0.5rem
 
-      color light
+      color dim
 
       font-size 0.75rem
       font-weight bold
@@ -93,11 +93,14 @@ export default {
         text-align center
         width 1.5rem
         margin-right 0.5rem
+    a
+      &:hover
+        color link
     &.copyright
       .address
         margin-top 0.5rem
         font-size 0.75rem
-        color light
+        color dim
 
 @media screen and (min-width: 360px)
   .app-footer

@@ -120,9 +120,10 @@ export default {
   .name
     font-weight bold
     font-size 1.25rem
+    color bright
 
   .title
-    color light
+    color dim
     font-size 0.75rem
     margin-bottom 0.75rem
 
@@ -145,7 +146,7 @@ export default {
       align-items center
       justify-content center
 
-      color light
+      color dim
       &:last-of-type
         border-right none
       &:hover

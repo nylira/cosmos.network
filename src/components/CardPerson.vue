@@ -1,22 +1,13 @@
-<template>
-<div class="person-wrapper">
-  <div class="card-person" @click="setPopup(true)">
-    <div class="avatar">
-      <img :src="portrait(person.slug)">
-      <i class="fa fa-search"></i>
-    </div>
-    <div class="text">
-      <div class="name">{{ person.name }}</div>
-      <div class="title">{{ person.groups[group] }}</div>
-    </div>
-  </div>
-  <modal-person
-    :group="group"
-    :person="person"
-    v-if="activePopup"
-    @click.native="setPopup(false)">
-  </modal-person>
-</div>
+<template lang="pug">
+.person-wrapper
+  .card-person(@click='setPopup(true)')
+    .avatar
+      img(:src='portrait(person.slug)')
+      i.material-icons search
+    .text
+      .name {{ person.name }}
+      .title {{ person.groups[group] }}
+  modal-person(:group='group', :person='person', v-if='activePopup', @click.native='setPopup(false)')
 </template>
 
 <script>
@@ -56,8 +47,8 @@ export default {
     img
       width 3rem
       border-radius 2.5rem
-    i.fa
-      background alpha(c-app-fg, 80%)
+    i.material-icons
+      background app-fg
       border-radius 1rem
       width 1.25rem
       height 1.25rem
@@ -66,22 +57,23 @@ export default {
       align-items center
       justify-content center
 
-      color mcolor
-      font-size 0.66rem
+      color txt
+      font-size 0.875rem
 
       position absolute
       bottom 0
       right 0
 
   .title
-    color light
+    color dim
     font-size 0.875rem
 
   &:hover
-    background alpha(mcolor, 5%)
-    .avatar i.fa
-      background link
-      color c-app-fg
+    background app-bg-hover
+    .name
+      color link
+    .avatar i.material-icons
+      color link
 
 @media screen and (min-width:360px)
   .card-person

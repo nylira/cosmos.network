@@ -21,23 +21,21 @@ export default {
 
 .card-community
   display flex
-  border 1px solid bc
+  border-bottom 1px solid bc-dim
 
   .icon
-    flex 0 0 3rem
+    flex 0 0 4rem
     display flex
     align-items center
     justify-content center
 
-    border-right 1px solid bc
     i.fa
       font-size 1.5rem
       color link
 
   .text
-    padding 0.5rem 0.75rem
+    padding 0.5rem 0.75rem 0.75rem 0
     .dt
-      font-weight 500
       color txt
     .dd
       color dim

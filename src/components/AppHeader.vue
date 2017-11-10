@@ -5,16 +5,16 @@ header.app-header
       i.fa.fa-bars(v-if='!activeMenuApp')
       i.fa.fa-times(v-else='')
     router-link.header-item(to='/')
-      img(src='../assets/images/cosmos-logo-black-alpha.png', alt='Cosmos Logo')
+      img(src='../assets/images/cosmos-logo-white-alpha.png', alt='Cosmos Logo')
     menu.menu-popup.menu-app(v-if='activeMenuApp || desktop')
       nav.nav-app
         router-link(to='/whitepaper' @click.native='close') Whitepaper
         // router-link(to='/roadmap' @click.native='close') Roadmap
         router-link(to='/community' @click.native='close') Community
         router-link(to='/events' @click.native='close') Conferences
-        // router-link(to='/hackatom' @click.native='close') HackAtom
         router-link(to='/validators' @click.native='close') Validators
-        // router-link(to='/about' @click.native='close',) About
+        router-link(to='/hackatom' @click.native='close') HackAtom
+        router-link(to='/about' @click.native='close',) About
       nav(v-if='!desktop')
         a(:href='links.cosmos.blog' @click.native='close' target='_blank') Blog
     a.header-item.header-item-alert(:href='links.cosmos.blog' @click.native='close' target='_blank')
@@ -75,7 +75,7 @@ export default {
 </script>
 
 <style lang="stylus">
-@require '../styles/variables.styl'
+@require '~@/styles/variables.styl'
 
 .app-header
   position fixed
@@ -84,9 +84,9 @@ export default {
   z-index 100
   width 100%
 
-  background alpha(#fff, 95%)
+  background app-bg-alpha
   backdrop-filter blur(0.125rem)
-  shadow()
+  border-bottom 1px solid bc
 
   .container
     max-width 1024px
@@ -169,7 +169,7 @@ export default {
     bottom 0
     width 100vw
 
-    background c-app-fg
+    background app-fg
     user-select none
 
     nav
@@ -186,7 +186,7 @@ export default {
         justify-content space-between
         user-select none
         &.disabled
-          color light
+          color dim
           cursor not-allowed
         &:hover
           color link
@@ -194,13 +194,13 @@ export default {
           display flex
           align-items center
           background link
-          color c-app-fg
+          color app-fg
           font-size 0.75rem
           padding 0 0.5rem
           border-radius 0.25rem
           height 1.5rem
           i.fa
-            color c-app-fg
+            color app-fg
           i.fa + .ni-time-left
             margin-left 0.25rem
       > p

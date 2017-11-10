@@ -63,7 +63,7 @@ export default {
     &:hover
       color link
     &.router-link-active
-      color light
+      color dim
     &:last-of-type
       border-bottom none
 @media screen and (min-width:1024px)

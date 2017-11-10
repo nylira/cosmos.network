@@ -1,28 +1,17 @@
 <template lang="pug">
-.page-hackatom
+page(title="HackAtom #2" subtitle="")
   locale-menu
-  header.ha-header
-    .image
+
+  div(slot="subtitle") $50k to be won. Participate from anywhere. Aug 5 - Sep 14, 2017. #[a(href='https://blog.cosmos.network/announcement-hackatom-2-winners-d31fe584b70b', target='_blank') Update: Winners!]
+   
+  section.ha-section.judging
     .ha-container
+      header Intro
       main
-        a.alert(href='https://blog.cosmos.network/announcement-hackatom-2-winners-d31fe584b70b', target='_blank')
-          span.key
-            i.fa.fa-exclamation-circle
-            |  Update: 
-          span.value Announcing the 2nd Cosmos HackAtom Winners →
-        h1
-          strong Hack
-          | Atom 2017 #2
-        ul
-          li August 5 – September 14
-          li $50k to be won
-          li Participate from anywhere
-        p
-          strong HackAtom
-          |  is seeking individuals and teams worldwide for a $50k open-source hackathon from August 5 – September 14, 2017. Participants will turn innovative ideas into working applications, with rewards from the Cosmos community.
-        p
-          | HackAtom is four weeks long. You'll build a real product while the crypto and blockchain communities watch and cast their vote on the project that captures their imagination. Tell the story behind your innovative idea, turn it into a working product, get other members to join, and build something cool! 
-          a(@click='setModal(true)') Sign up now!
+        p HackAtom is seeking individuals and teams worldwide for a $50k open-source hackathon from August 5 – September 14, 2017. Participants will turn innovative ideas into working applications, with rewards from the Cosmos community.
+        p HackAtom is four weeks long. You'll build a real product while the crypto and blockchain communities watch and cast their vote on the project that captures their imagination. Tell the story behind your innovative idea, turn it into a working product, get other members to join, and build something cool! 
+        a(@click='setModal(true)') Sign up now!
+
   section.ha-section.judging
     .ha-container
       header Prizes
@@ -92,9 +81,7 @@
   section.ha-section.ha-section-hashtag
     .ha-container
       header
-        a(href="https://twitter.com/intent/tweet?text=I'm%20going%20to%20%23hackatom2017%20@cosmos")
-          i.fa.fa-twatter
-          |  #hackatom2017
+        a(href="https://twitter.com/intent/tweet?text=I'm%20going%20to%20%23hackatom2017%20@cosmos") #hackatom2017
   modal-agreement(v-if='hackatom.modal')
 </template>
 
@@ -104,7 +91,7 @@ import MeetupLocations from './MeetupLocations'
 import ModalAgreement from './ModalAgreement'
 import LocaleMenu from './PageHackAtomLocaleMenu'
 import NiSection from './NiSection'
-import PageHeader from '@nylira/vue-page-header'
+import Page from './common/NiPage'
 import Btn from '@nylira/vue-button'
 export default {
   name: 'page-hackatom',
@@ -114,7 +101,7 @@ export default {
     MeetupLocations,
     ModalAgreement,
     NiSection,
-    PageHeader
+    Page
   },
   computed: {
     ...mapGetters(['allPeople', 'hackatom', 'links'])
@@ -184,7 +171,7 @@ export default {
       margin-bottom 0
 
 .ha-section
-  border-top 1px solid bc
+  border-bottom 1px solid bc
   header
     font-weight 600
     font-size 1.25em
@@ -255,7 +242,7 @@ export default {
         flex 0 0 11rem
         height 11rem
         border 1px solid bc
-        background c-app-fg
+        background app-fg
         margin 0.5rem
 
         display flex
@@ -275,6 +262,7 @@ export default {
 
           color light
           font-size 2rem
+          background app-bg
         .key
           font-weight 600
         .value
@@ -284,6 +272,7 @@ export default {
           background url(../assets/images/hackatom/atom-avatar.png) center center no-repeat
           background-size cover
           color transparent
+          box-shadow inset bc 0 0 0 1px
         &.second i.fa
           color hsl(51,100%,50%)
         &.third i.fa
@@ -298,7 +287,7 @@ export default {
       li
         display flex
         border 1px solid bc
-        background c-app-fg
+        background app-fg
         align-items center
         .key, .value
           padding 0.75rem 1rem

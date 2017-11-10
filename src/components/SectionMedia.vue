@@ -61,7 +61,7 @@ export default {
 @import '../styles/variables.styl'
 
 .section-media
-  background c-app-fg
+  background app-fg
   padding 2rem 0
   border-top 1px solid bc
 

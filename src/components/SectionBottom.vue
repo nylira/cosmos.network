@@ -7,8 +7,8 @@
       type="link"
       to="/whitepaper"
       size="lg"
-      icon="file-text-o"
-      value="Whitepaper")
+      icon="description"
+      value="Read Whitepaper")
   section.section-bottom.newsletter
     h2 Get Newsletter
     form-email-signup
@@ -32,7 +32,7 @@ export default {
 @require '../styles/variables.styl'
 
 .section-bottom-container
-  background c-app-bg
+  background app-bg
 
 .section-bottom
   padding 2rem 1rem

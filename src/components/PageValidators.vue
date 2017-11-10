@@ -1,12 +1,5 @@
 <template lang="pug">
-.page-validators
-  header.v-page-header
-    .v-container
-      .title
-        h2 Cosmos
-        h1 Validator Working Group (VWG)
-      .validator-icon: img(src="../assets/images/cosmos-validator-small.png")
-
+page(title="Validator Working Group" subtitle="Learn about and join the VWG.")
   section.v-section: .v-container
     header.v-section-header What are Cosmos validators?
     main.v-section-main
@@ -35,7 +28,7 @@
         size="lg"
         type="anchor"
         :href="links.cosmos.validators.chat"
-        icon="comments-o"
+        icon="chat"
         value="Join #cosmos_validators")
 
       p The VWG can act as resource and source of support for those running validating nodes on a full-time basis. The learning curve for setting up secure validating nodes and infrastructure monitoring can be steep and the pitfalls various. To bootstrap initial validators and provide ongoing support, a community-driven effort is critical for a self-sustaining ecosystem of expert validators securing the Cosmos network.
@@ -53,7 +46,7 @@
         size="lg"
         type="anchor"
         :href="links.cosmos.validators.tutorials.text"
-        icon="book"
+        icon="description"
         value="Read the tutorial")
 
       iframe.youtube(:src="links.cosmos.validators.tutorials.video" frameborder="0" allowfullscreen)
@@ -85,7 +78,7 @@
         size="lg"
         type="anchor"
         :href="links.cosmos.validators.chat"
-        icon="comments-o"
+        icon="chat"
         value="Join #cosmos_validators")
 
   // section.v-section: .v-container
@@ -99,11 +92,13 @@
 import { mapGetters } from 'vuex'
 import Btn from '@nylira/vue-button'
 import LiValidator from './LiValidator'
+import Page from './common/NiPage'
 export default {
   name: 'page-validators',
   components: {
     Btn,
-    LiValidator
+    LiValidator,
+    Page
   },
   computed: {
     ...mapGetters(['validators', 'links'])
@@ -123,57 +118,8 @@ export default {
 <style lang="stylus">
 @require '~@/styles/variables.styl'
 
-.prerelease
-  position fixed
-  bottom 0.5rem
-  right 0.5rem
-  border 2px solid #f00
-  line-height 2rem
-  font-weight bold
-  padding 0 0.5rem
-  color #f00
-
-.v-container
-  max-width 1024px
-  margin 0 auto
-
-.v-page-header
-  .v-container
-    position relative
-    z-index 10
-    padding 1.5rem
-    display flex
-    flex-flow column nowrap
-    align-items center
-
-  .title
-    margin-bottom 0.75rem
-    display flex
-    flex-flow column nowrap
-    align-items flex-start
-    width 100%
-    h2
-      text-transform uppercase
-      font-weight 600
-      letter-spacing 0.1rem
-      margin-bottom 0.25rem
-
-    h1
-      font-size 2.5rem
-      line-height 1.25
-      font-weight 300
-
-  .validator-icon
-    display flex
-    align-items center
-    justify-content center
-    margin-bottom 1rem
-    img
-      width 33vw + 33vh
-      max-width 14rem
-
 .v-section
-  border-top 1px solid bc
+  border-bottom 1px solid bc
 
 .v-section-header
   padding 1.5rem 1rem 0

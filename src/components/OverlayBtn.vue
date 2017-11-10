@@ -26,7 +26,7 @@ export default {
   text-align center
   color txt
 
-  background alpha(c-app-fg, 90%)
+  background alpha(app-fg, 90%)
   backdrop-filter blur(0.125rem)
   shadow()
 

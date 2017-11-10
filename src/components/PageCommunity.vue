@@ -1,8 +1,6 @@
 <template lang="pug">
-page-split
-  page-header(title='Community' subtitle='Join and contribute to the vibrant Cosmos community.' type='split' slot='header')
-  ni-section
-    div(slot="title") Discuss & Chat
+page(title="Community" subtitle="Join and contribute to the vibrant Cosmos community.")
+  part(title='Discuss & Chat')
     card-community(
       dt='Forum'
       dd='Read the latest developer updates and join community discussions.'
@@ -24,8 +22,7 @@ page-split
       icon='hashtag'
       :anchor='links.cosmos.community.irc')
 
-  ni-section
-    div(slot="title") Social Media
+  part(title='Social Media')
     card-community(
       dt='Twitter'
       dd='Follow @cosmos, our official Twitter account.'
@@ -51,16 +48,14 @@ page-split
 <script>
 import {mapGetters} from 'vuex'
 import CardCommunity from './CardCommunity'
-import NiSection from './NiSection'
-import PageHeader from '@nylira/vue-page-header'
-import PageSplit from '@nylira/vue-page-split'
+import Page from './common/NiPage'
+import Part from './common/NiPart'
 export default {
   name: 'page-community',
   components: {
     CardCommunity,
-    NiSection,
-    PageHeader,
-    PageSplit
+    Page,
+    Part
   },
   computed: {
     ...mapGetters(['links'])

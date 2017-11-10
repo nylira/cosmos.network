@@ -23,7 +23,7 @@
         </div>
         <btn
           type="link"
-          icon="file-text-o"
+          icon="description"
           to="/whitepaper"
           value="Read Whitepaper"
           size="lg">
@@ -70,7 +70,7 @@
       </div>
     </div>
   </section>
-  <section-media></section-media>
+  <!--<section-media></section-media>-->
 </div>
 </template>
 
@@ -119,11 +119,11 @@ export default {
       width 100%
       margin 2rem auto 0
   &:nth-of-type(2n)
-    background c-app-fg
+    background app-fg
 
   &.sh-video
     padding 3rem 0
-    background c-app-fg
+    background app-fg
     iframe
       width 100vw
       height 56.25vw

@@ -11,7 +11,7 @@
           class="section-cta-btn"
           size="lg"
           value="Fundraiser Ended"
-          icon="external-link"
+          icon="assessment"
           target="_blank"
           :href="config.FUNDRAISER_URL">
         </btn>
@@ -45,8 +45,7 @@ export default {
 @import '../styles/variables.styl'
 
 .section-cta
-  border-top 1px solid bc
-  background c-app-fg
+  background app-fg
 
 .section-cta-container
   max-width 40rem
@@ -77,10 +76,6 @@ export default {
   font-size 0.875rem
   &:last-of-type
     margin-bottom 0
-
-  a
-    color txt
-    text-decoration underline
 
 .section-cta-btn.ni-btn
   max-width 20rem

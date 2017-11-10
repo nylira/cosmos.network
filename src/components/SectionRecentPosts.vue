@@ -49,7 +49,7 @@ export default {
     font-weight 500
     flex 1
   .date
-    color light
+    color dim
 
 .sh-updates .section-content
   display flex

@@ -56,7 +56,7 @@ export default {
 
       a.active
         position relative
-        color light
+        color dim
         &:before
           width 1.5rem
           height 2rem
@@ -71,7 +71,7 @@ export default {
 
           content '\f0da'
           font-family FontAwesome
-          color light
+          color dim
   > ul
     > li
       &:last-of-type
@@ -107,7 +107,7 @@ export default {
 
 @media screen and (max-width: 1023px)
   .minimal-toc
-    background c-app-bg
+    background app-bg
     top 3rem
     left 0
     right 0

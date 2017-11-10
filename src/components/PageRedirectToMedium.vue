@@ -37,7 +37,7 @@ export default {
   i.fa
     font-size 3rem
     margin-bottom 1rem
-    color light
+    color dim
   p
     font-size 1.5rem
     color txt

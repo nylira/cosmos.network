@@ -23,14 +23,14 @@
     border-bottom none
 
   &.ni-section-dark
-    background mcolor
-    border-bottom-color lighten(mcolor, 10%)
+    background mc
+    border-bottom-color lighten(mc, 10%)
 
     .ni-section-title, .key, a
-      color lighten(mcolor,93%) !important
+      color lighten(mc,93%) !important
 
     .ni-section-main p, .value
-      color lighten(mcolor,70%)
+      color lighten(mc,70%)
 
 .ni-section-container
 .ni-section-header
@@ -74,7 +74,7 @@
 
   .ni-section-dark
     .ni-section-header
-      border-bottom 1px solid lighten(mcolor, 10%)
+      border-bottom 1px solid lighten(mc, 10%)
 
   .ni-section-title
     font-size 1.25rem
