@@ -7,7 +7,6 @@ const routes = [
   { path: '/assets', name: 'assets', component: r('Assets') },
   { path: '/blog', component: r('RedirectToMedium') },
   { path: '/community', component: r('Community') },
-  { path: '/design', component: r('Design') },
   { path: '/events', name: 'events', component: r('Events') },
   { path: '/faq', name: 'faq', component: r('Faq') },
   { path: '/hackatom', name: 'hackatom-en-us', component: r('HackAtom') },

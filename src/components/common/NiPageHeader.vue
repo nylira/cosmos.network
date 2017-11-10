@@ -59,14 +59,15 @@ export default {
   margin-top 0.25rem
 
 
+@media screen and (min-width: 768px)
+  .ni-page-header
+    padding 3rem
+
 @media screen and (max-width: 1023px)
   .ni-page-header-menu
     display none
 
 @media screen and (min-width: 1024px)
-  .ni-page-header
-    padding 1.5rem 1rem
-
   .ni-page-header-container
     flex 1
     display flex

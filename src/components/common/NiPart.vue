@@ -59,4 +59,10 @@ export default {
 
 .ni-part-title
   flex 1
+
+@media screen and (min-width: 1024px)
+  .ni-part-main
+    .ni-article-body
+      width 704px
+      margin-left 320px
 </style>

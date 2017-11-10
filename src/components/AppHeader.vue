@@ -44,7 +44,6 @@ export default {
       this.close()
       // console.log('going to', route)
       this.$router.push(route)
-      return
     },
     toggleMenuApp () {
       this.activeMenuApp = !this.activeMenuApp
@@ -64,7 +63,6 @@ export default {
         return
       }
       this.desktop = false
-      return
     }
   },
   mounted () {
