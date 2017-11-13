@@ -58,7 +58,6 @@ export default {
       justify-content center
 
       color txt
-      font-size 0.875rem
 
       position absolute
       bottom 0
@@ -66,22 +65,16 @@ export default {
 
   .title
     color dim
-    font-size 0.875rem
 
   &:hover
-    background app-bg-hover
+    background hover-bg
     .name
-      color link
-    .avatar i.material-icons
-      color link
+      color bright
 
 @media screen and (min-width:360px)
   .card-person
     .avatar img
       width 3.5rem
-
-    .title
-      font-size 1rem
 
 @media screen and (min-width:400px)
   .card-person

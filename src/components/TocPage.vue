@@ -31,7 +31,6 @@ export default {
   font-family sans
   overflow hidden
   position fixed
-  font-size 0.875rem
   display none
 
   a
@@ -96,10 +95,6 @@ export default {
           li
             a
               padding-left 4.5em
-
-@media screen and (min-width: 360px)
-  .minimal-toc
-    font-size 1rem
 
 @media screen and (min-width: 768px)
   .minimal-toc

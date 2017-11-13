@@ -147,17 +147,14 @@ export default {
         max-width 26rem
 
   h2
-    font-size 1.5rem
     margin-bottom 1rem
     text-align center
-    font-weight 500
 
   h2 + .section-content
   h2 + iframe
     margin-top 2rem
 
   h3
-    font-size 1.25rem
     margin-bottom 0.5rem
 
   p
@@ -170,11 +167,7 @@ export default {
 
 @media screen and (min-width: 768px)
   .section-home
-    h2
-      font-size 2rem
-
     h3
-      font-size 1.5rem
       margin-bottom 1rem
 
     &.sh-video

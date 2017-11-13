@@ -2,8 +2,8 @@
   <div class="section-cta">
     <div class="section-cta-container">
       <header class="section-cta-header">
-        <h2 class="section-cta-title">Cosmos Fundraiser</h2>
-        <div class="section-cta-subtitle">raised {{ amountRaised }} in half an hour</div>
+        <div class="section-cta-title h2">Cosmos Fundraiser</div>
+        <div class="section-cta-subtitle h3">raised {{ amountRaised }} in half an hour</div>
       </header>
       <main class="section-cta-main">
         <btn
@@ -45,7 +45,7 @@ export default {
 @import '../styles/variables.styl'
 
 .section-cta
-  background app-fg
+  border-top 1px solid bc
 
 .section-cta-container
   max-width 40rem
@@ -57,13 +57,6 @@ export default {
 .section-cta-header, .section-cta-description
   margin-bottom 1.5rem
 
-.section-cta-title
-  font-size 1.5rem
-  font-weight 600
-
-.section-cta-subtitle
-  font-size 1.375rem
-
 .section-cta-form
   margin-bottom 1.5rem
   margin-left auto
@@ -73,7 +66,6 @@ export default {
   margin-left auto
   margin-right auto
   max-width 24rem
-  font-size 0.875rem
   &:last-of-type
     margin-bottom 0
 
@@ -90,16 +82,7 @@ export default {
   .section-cta-header
     margin-bottom 2rem
 
-  .section-cta-title
-    font-size 2rem
-
-  .section-cta-subtitle
-    font-size 1.66rem
-
   .section-cta-form, .section-cta-btn.ni-btn,
   .section-cta-description
     margin-bottom 2.25rem
-
-  .section-cta-description
-    font-size 1rem
 </style>

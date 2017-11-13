@@ -58,18 +58,18 @@ export default {
 
 .ni-li
   display block
-  border-bottom 1px solid bc-dim
+  border-bottom 1px solid bc
   height 3rem
   max-width width-main
   &:hover
-    background app-bg-hover
+    background hover-bg
 
   &.router-link-exact-active
     .ni-li-title
-      color accent1
+      color mc
     .ni-li-icon
       i.material-icons
-        color accent1
+        color mc
       .inactive
         display none
       .active
@@ -115,7 +115,7 @@ export default {
     line-height 1.25
   .ni-li-subtitle
     color dim
-    font-size 0.66666rem
+    font-size xs
     line-height 1.25
 
 // type: dl definition list
@@ -153,7 +153,7 @@ export default {
 
   flex 3
   line-height 1.25
-  font-size 0.875rem
+  font-size sm
   color dim
 
   &.ni-li-dd-flush
@@ -163,7 +163,7 @@ export default {
     height 3rem - px
 
 a.ni-li-dd
-  color accent1
+  color mc
   cursor pointer
 
 .ni-li-icon

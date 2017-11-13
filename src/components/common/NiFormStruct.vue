@@ -65,7 +65,7 @@ export default {
 .ni-form-main
   flex 1
   p
-    font-size 0.75rem
+    font-size sm
     line-height 1rem
     margin 0.5rem 0.5rem 0
 
@@ -83,7 +83,7 @@ export default {
 
 .ni-form-subtitle
   color dim
-  font-size 0.666rem
+  font-size sm
   line-height 1rem
 
 .ni-form-footer
@@ -103,7 +103,7 @@ export default {
     margin-bottom 0.5rem
 
   .ni-form-subtitle
-    font-size 0.875rem
+    font-size m
 
   .ni-form-main
     p

@@ -2,13 +2,14 @@
 header.app-header
   .container
     .header-item(@click='toggleMenuApp', v-if='!desktop')
-      i.fa.fa-bars(v-if='!activeMenuApp')
-      i.fa.fa-times(v-else='')
+      i.material-icons(v-if='!activeMenuApp') menu
+      i.material-icons(v-else='') close
     router-link.header-item(to='/')
       img(src='../assets/images/cosmos-logo-white-alpha.png', alt='Cosmos Logo')
     menu.menu-popup.menu-app(v-if='activeMenuApp || desktop')
       nav.nav-app
         router-link(to='/whitepaper' @click.native='close') Whitepaper
+        router-link(to='/faq' @click.native='close') FAQ
         // router-link(to='/roadmap' @click.native='close') Roadmap
         router-link(to='/community' @click.native='close') Community
         router-link(to='/events' @click.native='close') Conferences
@@ -18,7 +19,7 @@ header.app-header
       nav(v-if='!desktop')
         a(:href='links.cosmos.blog' @click.native='close' target='_blank') Blog
     a.header-item.header-item-alert(:href='links.cosmos.blog' @click.native='close' target='_blank')
-      i.fa.fa-medium
+      i.material-icons rss_feed
       span.label(v-if='desktop') Blog
 </template>
 
@@ -104,18 +105,11 @@ export default {
     &:hover
       color link
 
-    i.fa
-      width 1rem
-      text-align center
-      position relative
-    i.fa + .label
-      margin-left 0.5rem
-    i.fa, .label
-      color txt
-
     .label
       user-select none
 
+    i
+      margin-right 0.5rem
     img
       display block
       height 1.125rem
@@ -124,27 +118,8 @@ export default {
     &.header-item-flush
       padding 0
 
-    &.header-item-alert
-      justify-content flex-end
-      .alert
-        df()
-        font-size 0.5rem
-        font-weight 600
-        line-height 1
-        color #fff
-        display flex
-        align-items center
-        justify-content center
-
-        width 0.666rem
-        height 0.666rem
-        border-radius 0.333rem
-        background #f00
-        position absolute
-        bottom -0.3rem
-        right -0.3rem
     &:hover
-      i.fa, .label
+      .label
         color link
 
   .menu-app
@@ -188,19 +163,6 @@ export default {
           cursor not-allowed
         &:hover
           color link
-        .alert
-          display flex
-          align-items center
-          background link
-          color app-fg
-          font-size 0.75rem
-          padding 0 0.5rem
-          border-radius 0.25rem
-          height 1.5rem
-          i.fa
-            color app-fg
-          i.fa + .ni-time-left
-            margin-left 0.25rem
       > p
         .ni-time-left
           display inline
@@ -212,33 +174,43 @@ export default {
 
 @media screen and (min-width: 1024px)
   .app-header
+    border-bottom none
+    border-bottom 3px solid darken(app-bg, 20%)
     .container
       .header-item
         width 8rem
+        &:last-of-type
+          justify-content flex-end
+          color dim
 
   .menu-popup.menu-app
     display flex
     padding 0 1rem
+
     .container
       display flex
+
     nav
       display flex
       flex-flow row
       align-items center
+
       > a
         padding 0 1rem
-        color txt
+        color dim
         line-height 3rem
-        i.fa
-          color alpha(txt, 50%)
-          margin-left 0.5rem
+        height 3rem + 3*px
+        border-bottom 3px solid transparent
+        margin-bottom -3px
+
         &:hover
           color link
-          i.fa
-            color link
+
         &.router-link-active
-          background linear-gradient(top, hsl(0,0,96%), hsl(0,0,98%))
           cursor default
+          user-select none
+          color bright
+          border-color mc
           &:hover
-            color txt
+            color bright
 </style>

@@ -58,7 +58,7 @@ export default {
   height 3rem
   padding 0.5rem
   background mc
-  border-top 1px solid bc-dim
+  border-top 1px solid bc
   .ni-field
     margin-right 0.5rem
     background app-bg

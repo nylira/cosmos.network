@@ -71,7 +71,7 @@ export default {
     .inner-wrapper
       width 20rem
       background app-bg-alpha
-      border 1px solid bc-dim
+      border 1px solid bc
       border-bottom none
       shadow()
 </style>

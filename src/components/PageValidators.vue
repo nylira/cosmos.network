@@ -1,6 +1,6 @@
 <template lang="pug">
 page(title="Validator Working Group" subtitle="Learn about and join the VWG.")
-  part(title="Introduction"): article-body
+  part(title="Introduction"): text-container
     h2 What are Cosmos Validators?
     h3 Role
     p Validators are responsible for committing new blocks in the blockchain. These validators participate in the consensus protocol by broadcasting votes which contain cryptographic signatures signed by each validator's private key. Validators have a cryptographic key-pair for signing and have some amount of “voting power” in proportion to the number of staked ATOMs.
@@ -15,7 +15,7 @@ page(title="Validator Working Group" subtitle="Learn about and join the VWG.")
     p The validator bears the burden of securing the Cosmos network and is in return rewarded for “good” behavior as defined by protocol rules. The philosophy of acting as responsible stewards to the network is a goal that Tendermint seeks to meet through well-defined economic incentives for rational actors.
     p While validator candidacy is determined by the weight of their staked tokens, in Tendermint Proof-of-Stake, the incentives for whales and users alike are more closely aligned than in Proof-of-Work blockchains because whales with staked tokens now hold stake in the network security itself, not just in the value of the token. Pumping a token for the sake of inflating the price becomes a disincentive for the staked token holder because: 1) a significant portion of their tokens are bonded for a long period of time (>2 months), and 2) introducing unstable growth to the network will make their work of securing the network more difficult.
 
-  part(title="Process"): article-body
+  part(title="Process"): text-container
     h2 What's the process of becoming a validator?
     h3 1. Join our Validator Working Group
     p The goal of the Validator Working Group (VWG) is to join a community of validators to learn the best practices of running an effective validator node. Join our Matrix chat channel:
@@ -64,8 +64,9 @@ page(title="Validator Working Group" subtitle="Learn about and join the VWG.")
 
     p Stay tuned for follow-up information about the Validator Working Group as we near mainnet launch in December.
 
-  part(title="Join the VWG"): article-body
-    h2 Chat with us to learn more
+  part(title="Join the VWG"): text-container
+    h2 Join Us
+    h3 Chat with us to learn more
     p Get more information and discuss the finer details of being a Validator on our community chat:
 
     btn(
@@ -76,7 +77,7 @@ page(title="Validator Working Group" subtitle="Learn about and join the VWG.")
       icon="chat"
       value="Join #cosmos_validators")
 
-  // part(title="Candidates List"): article-body
+  // part(title="Candidates List"): text-container
     h2 Validator Candidates
     p This list shows the companies and individuals who have joined the Validator Program.
     li-validator(v-for="i in validators" key="i.companyName" :validator="i")
@@ -85,18 +86,16 @@ page(title="Validator Working Group" subtitle="Learn about and join the VWG.")
 <script>
 import { mapGetters } from 'vuex'
 import Btn from '@nylira/vue-button'
-import LiValidator from './LiValidator'
 import Page from './common/NiPage'
 import Part from './common/NiPart'
-import ArticleBody from '@nylira/vue-article-body'
+import TextContainer from './common/NiTextContainer'
 export default {
   name: 'page-validators',
   components: {
-    ArticleBody,
     Btn,
-    LiValidator,
     Page,
-    Part
+    Part,
+    TextContainer
   },
   computed: {
     ...mapGetters(['validators', 'links'])

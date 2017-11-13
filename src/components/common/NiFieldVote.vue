@@ -38,7 +38,7 @@ export default {
 
 .ni-field-vote-container
   height 3rem
-  border-bottom 1px solid bc-dim
+  border-bottom 1px solid bc
   display flex
   position relative
 
@@ -60,7 +60,7 @@ export default {
 .ni-field-vote-label
   flex 1
   position relative
-  border-left 1px solid bc-dim
+  border-left 1px solid bc
 
 .ni-field-vote-dl
   position relative

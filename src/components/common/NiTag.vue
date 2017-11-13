@@ -41,16 +41,16 @@ export default {
     border none
 
     vertical-align text-top
-    font-size 0.75rem
+    font-size sm
     line-height 1.25rem
     height 1.25rem
     padding 0 0.25rem
 
   &.pro
-    color accent1
-    border-color accent1
+    color #0f0
+    border-color #0f0
 
   &.con
-    color accent2
-    border-color accent2
+    color #f00
+    border-color #f00
 </style>

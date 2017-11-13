@@ -35,6 +35,5 @@ export default {
 
 @media screen and (min-width: 768px)
   .ni-field-addon
-    font-size 1rem
     padding 0 0.75rem
 </style>

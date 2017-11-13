@@ -1,33 +1,33 @@
-<template>
-  <toc-page :toc-visible="faqTocVisible">
-    <page-nav slot="nav"></page-nav>
-      <text-content></text-content>
-  </toc-page>
+<template lang="pug">
+page(:title="metadata.title" :subtitle="metadata.desc")
+  part(title='Questions + Answers')
+    text-container: text-content
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
-import PageNav from './PageFaqNav'
+import Page from './common/NiPage'
+import Part from './common/NiPart'
 import TextContent from '../../content/en-US/FAQ.md'
-import TocPage from './TocPage'
+// import ArticleBody from '@nylira/vue-article-body'
+import TextContainer from './common/NiTextContainer.vue'
 export default {
   name: 'page-faq',
   components: {
-    PageNav,
-    TextContent,
-    TocPage
+    Page,
+    Part,
+    TextContainer,
+    TextContent
   },
   computed: {
     ...mapGetters(['faqTocVisible'])
   },
-  data () {
-    return {
-      metadata: {
-        title: 'FAQ',
-        desc: 'Read the answers to frequently asked questions about Cosmos: The Internet of Blockchains.'
-      }
+  data: () => ({
+    metadata: {
+      title: 'FAQ',
+      desc: 'Answers to frequently asked questions.'
     }
-  },
+  }),
   head: {
     title () {
       return {
@@ -44,11 +44,6 @@ export default {
         { p: 'og:title', c: this.metadata.title },
         { p: 'og:description', c: this.metadata.desc }
       ]
-    }
-  },
-  mounted () {
-    if (document.documentElement.clientWidth < 1024) {
-      this.$store.commit('setFaqTocVisible', false)
     }
   }
 }

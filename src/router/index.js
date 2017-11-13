@@ -5,7 +5,6 @@ const routes = [
   { path: '/', component: r('Index') },
   { path: '/about', name: 'about', component: r('About') },
   { path: '/assets', name: 'assets', component: r('Assets') },
-  { path: '/blog', component: r('RedirectToMedium') },
   { path: '/community', component: r('Community') },
   { path: '/events', name: 'events', component: r('Events') },
   { path: '/faq', name: 'faq', component: r('Faq') },
@@ -23,6 +22,11 @@ const routes = [
   { path: '/whitepaper/en-US', redirect: '/whitepaper' },
   { path: '/validator', redirect: '/validators' },
   { path: '/blog/:entry', redirect: '/blog' },
+  { path: '/blog',
+    beforeEnter: () => {
+      window.location.assign('https://blog.cosmos.network')
+    }
+  },
   { path: '/riot',
     beforeEnter: () => {
       window.location.assign('https://riot.im/app/#/room/#cosmos:matrix.org')

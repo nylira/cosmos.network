@@ -23,7 +23,7 @@ export default {
 
 .ni-form-group
   padding 1rem 1rem 1rem - px
-  border-bottom 1px solid bc-dim
+  border-bottom 1px solid bc
 
   input
     width 100%

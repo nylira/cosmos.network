@@ -27,7 +27,7 @@ export default {
   justify-content space-between
   align-items center
 
-  border-top 1px solid bc-dim
+  border-top 1px solid bc
   background app-bg-alpha
 
   a
@@ -47,7 +47,7 @@ export default {
     cursor pointer
 
     i.material-icons
-      font-size 1.5rem
+      font-size xl
 
     .label
       display none

@@ -2,8 +2,8 @@
   <div class="events-container">
     <div class="event" v-for="item in events">
       <div class="thumbnail"><img :src="image('events', item.location, 'jpg')"></div>
-      <div class="title">{{item.title}}</div>
-      <div class="date">{{item.dates.start}} to {{ item.dates.end }}</div>
+      <div class="title h3">{{item.title}}</div>
+      <div class="date h4">{{item.dates.start}} to {{ item.dates.end }}</div>
       <div class="details">
         {{item.details}}
         <a :href="item.href" target="_blank">Event website&nbsp;&rsaquo;</a>
@@ -39,7 +39,7 @@ export default {
     .thumbnail
       height 20vh
       overflow hidden
-      margin-bottom 1rem
+      margin-bottom 1.5rem
 
     .thumbnail img
       position relative
@@ -47,15 +47,9 @@ export default {
       top 50%
       transform translateY(-50%)
 
-    .title
-      font-size 1.125rem
-      color txt
-
     .date
       color dim
-      margin-bottom 0.5rem
-      padding-bottom 0.5rem
-      border-bottom 1px dotted bc
+      margin-top -0.5rem
 
     .details
       margin-bottom 1rem

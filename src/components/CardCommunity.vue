@@ -1,6 +1,6 @@
 <template lang="pug">
 a.card-community(:href='anchor' target='_blank')
-  .icon: i(:class="'fa fa-' + icon")
+  .icon: i.h3.material-icons {{ icon }}
   .text
     .dt {{ dt }}
     .dd {{ dd }}
@@ -21,7 +21,7 @@ export default {
 
 .card-community
   display flex
-  border-bottom 1px solid bc-dim
+  border-bottom 1px solid bc
 
   .icon
     flex 0 0 4rem
@@ -29,8 +29,7 @@ export default {
     align-items center
     justify-content center
 
-    i.fa
-      font-size 1.5rem
+    i
       color link
 
   .text
@@ -39,20 +38,12 @@ export default {
       color txt
     .dd
       color dim
-      font-size 0.75rem
 
   &:hover
-    background-color alpha(link, 3%)
-    .text .dt
-      color link
+    background hover-bg
 
 @media screen and (min-width: 768px)
   .card-community
     .icon
       flex 0 0 4rem
-      i.fa
-        font-size 1.75rem
-    .text
-      .dd
-        font-size 1rem
 </style>

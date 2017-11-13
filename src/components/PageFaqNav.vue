@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import Ps from 'perfect-scrollbar'
+import PerfectScrollbar from 'perfect-scrollbar'
 import watchTocClicks from '../scripts/watchTocClicks.js'
 import inViewport from '../scripts/inViewport.js'
 import visibleTocActivate from '../scripts/visibleTocActivate.js'
@@ -33,6 +33,9 @@ export default {
   computed: {
     ...mapGetters(['faqTocVisible', 'faqElementsVisible'])
   },
+  data: () => ({
+    ps: {}
+  }),
   methods: {
     setTocVisOnWidth () {
       let width = document.documentElement.clientWidth
@@ -52,7 +55,7 @@ export default {
       }
     },
     initToc () {
-      Ps.initialize(document.querySelector('.minimal-toc'))
+      this.ps = new PerfectScrollbar('.minimal-toc')
       this.$store.commit('setFaqTocVisible', true)
 
       watchTocClicks(this.tocVisible)
@@ -61,7 +64,7 @@ export default {
       percentageScrolling()
     },
     destroyToc () {
-      Ps.destroy(document.querySelector('.minimal-toc'))
+      this.ps.destroy()
       this.$store.commit('setFaqTocVisible', false)
     }
   },

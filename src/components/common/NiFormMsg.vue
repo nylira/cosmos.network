@@ -8,7 +8,7 @@ div(:class='cssClass')
 export default {
   computed: {
     cssClass () {
-      let value = 'ni-form-msg'
+      let value = 'ni-form-msg sm'
       if (this.type) {
         value += ' ni-form-msg-error'
       } else {
@@ -60,7 +60,6 @@ export default {
 
 .ni-form-msg
   line-height 2rem
-  font-size 0.75rem
   display flex
   margin 0 !important
  

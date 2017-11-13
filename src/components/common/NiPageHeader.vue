@@ -6,7 +6,7 @@ header.ni-page-header
       .h1.ni-page-header-title.break-lines
         i.material-icons(v-if="icon") {{ icon }}
         slot(name='title')
-      .ni-page-header-subtitle.break-lines
+      .h4.ni-page-header-subtitle.break-lines
         slot(name='subtitle')
     nav.ni-page-header-menu
       slot(name='menu')
@@ -24,7 +24,7 @@ export default {
 
 .ni-page-header
   min-height 3rem
-  border-bottom 1px solid bc-dim
+  border-bottom 1px solid bc
   padding 1rem
   display flex
   align-items center
@@ -44,7 +44,6 @@ export default {
     display none
 
   > i.material-icons
-    font-size 1.375rem
     padding-right 0.375rem
 
 .ni-page-header-title > div
@@ -58,10 +57,9 @@ export default {
 .ni-page-header-title + .ni-page-header-subtitle
   margin-top 0.25rem
 
-
 @media screen and (min-width: 768px)
   .ni-page-header
-    padding 3rem
+    padding 2rem 1rem
 
 @media screen and (max-width: 1023px)
   .ni-page-header-menu
@@ -75,10 +73,7 @@ export default {
     align-items center
     .text
       flex 1
-      margin-right 0.5rem
-
-  .ni-page-header-title > div
-    padding 0.25rem 0
+      margin-right 1rem
 
   .ni-page-header-menu
     display block

@@ -32,9 +32,6 @@ export default {
 
   cursor pointer
 
-  i.fa
-    font-size 1rem
-
 @media screen and (min-width: 360px)
   .overlay-btn
     width 3em

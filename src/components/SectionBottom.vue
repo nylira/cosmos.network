@@ -1,26 +1,26 @@
 <template lang='pug'>
-.section-bottom-container
-  section-call-to-action
-  section.section-bottom
-    h2 Get Started
-    btn#whitepaper-btn(
-      type="link"
-      to="/whitepaper"
-      size="lg"
-      icon="description"
-      value="Read Whitepaper")
-  section.section-bottom.newsletter
-    h2 Get Newsletter
-    form-email-signup
+.section-bottom
+  .sb-container
+    part(title="Get Started")
+      btn#whitepaper-btn(
+        type="link"
+        to="/whitepaper"
+        size="lg"
+        icon="description"
+        value="Read Whitepaper")
+    part(title="Get Newsletter")
+      form-email-signup
 </template>
 
 <script>
 import SectionCallToAction from './SectionCallToAction'
 import FormEmailSignup from './FormEmailSignup'
 import Btn from '@nylira/vue-button'
+import Part from './common/NiPart'
 export default {
   name: 'section-bottom',
   components: {
+    Part,
     FormEmailSignup,
     Btn,
     SectionCallToAction
@@ -31,54 +31,49 @@ export default {
 <style lang="stylus">
 @require '../styles/variables.styl'
 
-.section-bottom-container
-  background app-bg
-
-.section-bottom
-  padding 2rem 1rem
+.section-bottom 
   border-top 1px solid bc
-  display flex
-  flex-flow column
-  justify-content center
-  &.newsletter
+  border-bottom 1px solid bc
+  width 100%
+  position relative
+  &:before
+    display block
+    content ''
+    height 2rem - px
+    background app-fg
+    width 100vw
+    position absolute
+    top 0
+    left 0
     border-bottom 1px solid bc
-  h2
-    font-weight 500
-    font-size 1.25rem
-    text-align center
-    line-height 1
-    margin-bottom 1.5rem
-  
-  #whitepaper-btn, form
-    margin 0 auto
-    width 100%
-    max-width 18rem
 
-@media screen and (min-width: 768px)
-  .section-bottom
+.sb-container
+  max-width 1024px
+  margin 0 auto
+
+  .ni-part
     border-bottom 1px solid bc
-  .section-bottom-container
-    display flex
-    flex-flow row wrap
-    .section-cta
+
+  .ni-part-main
+    padding 1rem
+
+    .ni-btn:only-child
       width 100%
-    .section-bottom
-      padding-top 3rem
-      padding-bottom 3rem
+      max-width 20rem
+
+    .form-email-signup
+      max-width 20rem
+      margin 0
+
+@media screen and (min-width:768px)
+  .sb-container
+    display flex
+    flex-flow row nowrap
+
+    .ni-part
       flex 1
+      border-bottom none
 
-@media screen and (min-width: 1024px)
-  .section-bottom-container
-    .section-bottom
-      h2
-        font-size 1.5rem
-        margin-bottom 2rem
-    .section-bottom:last-of-type
-      border-left 1px solid bc
-
-@media screen and (min-width: 1200px)
-  .section-bottom-container
-    .section-bottom
-      padding-top 4rem
-      padding-bottom 4rem
+      &:first-child
+        border-right 1px solid bc
 </style>

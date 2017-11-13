@@ -68,7 +68,7 @@ export default {
       background app-fg
       margin-bottom 0.25rem
       i.material-icons
-        font-size 1.25rem
+        font-size lg
 
     .value
       text-align center
@@ -92,15 +92,15 @@ export default {
     .value
       width 1.5rem
       text-align center
-      font-size 0.75rem
+      font-size sm
       font-weight bold
 
   &.ni-votes-voted
     .btn-vote, .value
-      color accent1
+      color mc
 
   &:not(.ni-votes-voted):hover
     .btn-vote
-      background accent1
+      background mc
       color app-bg
 </style>

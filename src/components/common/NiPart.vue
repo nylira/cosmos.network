@@ -3,7 +3,7 @@ section.ni-part
   .ni-part-container
     header.ni-part-header(v-if="$slots['title'] || title")
       .ni-part-header-container
-        .ni-part-title.h6
+        .ni-part-title.h5
           template(v-if='title') {{ title }}
           slot(name='title', v-else='')
         menu.ni-part-menu
@@ -40,7 +40,7 @@ export default {
   // margin-top 1rem
   height 2rem
   padding 0 1rem
-  border-bottom 1px solid bc-dim
+  border-bottom 1px solid bc
   background app-fg
 
 .ni-part-header-container
@@ -50,8 +50,8 @@ export default {
 
 .ni-part-title
 .ni-part-menu
-  font-label()
   color dim
+  margin 0
 
   a
     color link
@@ -59,10 +59,5 @@ export default {
 
 .ni-part-title
   flex 1
-
-@media screen and (min-width: 1024px)
-  .ni-part-main
-    .ni-article-body
-      width 704px
-      margin-left 320px
+  color bright
 </style>

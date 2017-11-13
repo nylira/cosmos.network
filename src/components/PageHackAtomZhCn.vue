@@ -6,9 +6,7 @@
     .ha-container
       main
         a.alert(href='https://medium.com/cosmos-blockchain/cosmos-hackatom-is-underway-52c6032f6a61', target='_blank')
-          span.key
-            i.fa.fa-exclamation-circle
-            |  更新： 
+          span.key 更新：
           span.value CosmosHackAtom正在进行 →
         h1
           strong Hack
@@ -30,19 +28,19 @@
         p 活动奖金是价值5万美金的以太币（ETH）。奖金对获奖应用的分配方案如下：
         ul.prizes
           li.grand
-            i.fa.fa-trophy
+            i.material-icons monetization_on
             .key 大奖
             .value 价值2万美金的以太币
           li.second
-            i.fa.fa-trophy
+            i.material-icons monetization_on
             .key 第二名
             .value 价值 1万美金的以太币
           li.third
-            i.fa.fa-trophy
+            i.material-icons monetization_on
             .key 第三名
             .value 价值6000美金的以太币
           li.fourth
-            i.fa.fa-trophy
+            i.material-icons monetization_on
             .key 第四名
             .value 价值4000美金的以太币
         p 还有5份（每份价值2千美金的以太币）奖品，奖励给那些我们认可的在活动期间辛苦工作的志愿者。
@@ -84,12 +82,6 @@
           | 想要咨询黑客马拉松活动，请通过邮件与我们联系：
           a(:href="'mailto:' + links.cosmos.email") {{links.cosmos.email}}
           | 。
-  section.ha-section.ha-section-hashtag
-    .ha-container
-      header
-        a(href="https://twitter.com/intent/tweet?text=I'm%20going%20to%20%23hackatom2017%20@cosmos")
-          i.fa.fa-twatter
-          |  #hackatom2017
   modal-agreement(v-if='hackatom.modal')
 </template>
 
@@ -99,7 +91,6 @@ import Btn from '@nylira/vue-button'
 import LocaleMenu from './PageHackAtomLocaleMenu'
 import MeetupLocations from './MeetupLocations'
 import ModalAgreement from './ModalAgreement'
-import NiSection from './NiSection'
 import PageHeader from '@nylira/vue-page-header'
 export default {
   name: 'page-hackatom',
@@ -108,7 +99,6 @@ export default {
     LocaleMenu,
     MeetupLocations,
     ModalAgreement,
-    NiSection,
     PageHeader
   },
   computed: {

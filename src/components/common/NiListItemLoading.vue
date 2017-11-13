@@ -18,7 +18,7 @@ export default {
 @require '~@/styles/variables.styl'
 
 .li-loading
-  border-bottom 1px solid bc-dim
+  border-bottom 1px solid bc
   padding 0.75rem 1rem 0.75rem - px
   display flex
   position relative
@@ -47,17 +47,17 @@ export default {
     margin-bottom 0.5rem
 
     .tag
-      font-size 0.75rem
+      font-size sm
       line-height 1rem - 2*px
       display inline-block
       padding 0 0.25rem
       margin-left 0.25rem
       vertical-align middle
-      color bc-faint
+      color bc
 
   .meta
     display flex
-    font-size 0.75rem
+    font-size sm
     color darken(dim, 50%)
     a.author 
       padding-left 0.33rem
