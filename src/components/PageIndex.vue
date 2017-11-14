@@ -1,7 +1,6 @@
 <template>
   <div class="page-index">
     <section-cover></section-cover>
-    <!--<section-recent-posts></section-recent-posts>-->
     <section class="section-home sh-video">
       <h2>What is Cosmos?</h2>
       <iframe :src="links.cosmos.intro.video" width="1024" height="576" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
@@ -70,24 +69,17 @@
       </div>
     </div>
   </section>
-  <!--<section-media></section-media>-->
 </div>
 </template>
 
 <script>
 import {mapGetters} from 'vuex'
 import SectionCover from './SectionCover'
-import SectionRecentPosts from './SectionRecentPosts'
-import SectionMedia from './SectionMedia'
-import SectionCallToAction from './SectionCallToAction'
 import Btn from '@nylira/vue-button'
 export default {
   name: 'page-index',
   components: {
     SectionCover,
-    SectionCallToAction,
-    SectionMedia,
-    SectionRecentPosts,
     Btn
   },
   computed: { ...mapGetters(['links']) },

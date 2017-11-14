@@ -1,7 +1,12 @@
 <template lang="pug">
 page(:title="metadata.title")
   div(slot="subtitle")
-    p Cosmos is run by the Interchain Foundation (ICF). The Tendermint team has been contracted by the ICF to develop the Cosmos Essential Software Services (CESS). #[a(href='https://tendermint.com/careers' target='_blank') Tendermint is hiring!]
+    p Cosmos is run by the Interchain Foundation (ICF). The Tendermint team has been contracted by the ICF to develop the Cosmos Essential Software Services (CESS).
+
+  div(slot="menu")
+    btn(type="link" to="/assets" value="Media Assets")
+    btn(type="anchor" href="https://tendermint.com/careers" value="Work at Tendermint" target="_blank")
+
   part(title='Interchain Foundation')
     .people
       card-person(group='icf', v-for="person in ppl('icf')", :key='person.slug', :person='person')
@@ -12,12 +17,14 @@ page(:title="metadata.title")
 
 <script>
 import { mapGetters } from 'vuex'
+import Btn from '@nylira/vue-button'
 import CardPerson from './CardPerson'
 import Page from './common/NiPage'
 import Part from './common/NiPart'
 export default {
   name: 'page-about',
   components: {
+    Btn,
     CardPerson,
     Page,
     Part

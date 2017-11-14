@@ -22,6 +22,8 @@ export default {
 .card-community
   display flex
   border-bottom 1px solid bc
+  &:last-child
+    border-bottom none
 
   .icon
     flex 0 0 4rem

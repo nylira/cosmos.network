@@ -1,62 +1,67 @@
 <template lang="pug">
-page(title="HackAtom #2" subtitle="")
+.page
   locale-menu
-
-  div(slot="subtitle") $50k to be won. Participate from anywhere. Aug 5 - Sep 14, 2017. #[a(href='https://blog.cosmos.network/announcement-hackatom-2-winners-d31fe584b70b', target='_blank') Update: Winners!]
    
-  part(title="HackAtom: The Month-Long Hackathon"): text-container
+  part(title="HackAtom #2 Has Ended")
+    div(slot="menu"): a(href='https://blog.cosmos.network/announcement-hackatom-2-winners-d31fe584b70b', target='_blank') Winners for HackAtom #2
 
-    h2 Introduction
-    p HackAtom is seeking individuals and teams worldwide for a $50k open-source hackathon from August 5 – September 14, 2017. Participants will turn innovative ideas into working applications, with rewards from the Cosmos community.
-    p HackAtom is four weeks long. You'll build a real product while the crypto and blockchain communities watch and cast their vote on the project that captures their imagination. Tell the story behind your innovative idea, turn it into a working product, get other members to join, and build something cool. 
+    text-container
+      h2 What is HackAtom?
+      ul
+        li $50k to be won
+        li Particpate for anywhere
+        li Aug 5 - Sept 14, 2017
 
-    h2 Prizes
-    p There is $50,000 USD worth of ETH to be won. The prizes for the best open source apps are as follows:
-    .prizes
-      .prize.grand
-        i.material-icons monetization_on
-        .key Grand Prize
-        .value $20k worth of ETH
-      .prize.second
-        i.material-icons monetization_on
-        .key 2nd Place
-        .value $10k worth of ETH
-      .prize.third
-        i.material-icons monetization_on
-        .key 3rd Place
-        .value $6k worth of ETH
-      .prize.fourth
-        i.material-icons monetization_on
-        .key 4th Place
-        .value $4k worth of ETH
-    p Five prizes of $2,000 worth of ETH will also be awarded to recognize the hardworking volunteers who help us during HackAtom.
+      p HackAtom is seeking individuals and teams worldwide for a $50k open-source hackathon from August 5 – September 14, 2017. Participants will turn innovative ideas into working applications, with rewards from the Cosmos community.
+      p HackAtom is four weeks long. You'll build a real product while the crypto and blockchain communities watch and cast their vote on the project that captures their imagination. Tell the story behind your innovative idea, turn it into a working product, get other members to join, and build something cool. 
 
-    h2 Participate
-    p To participate in the hackathon, all you need to do is:
-    .participation-steps
-      .step
-        .key 1
-        .value
-          a(@click='setModal(true)') Sign up
-      .step
-        .key 2
-        .value Build your open source app
-      .step
-        .key 3
-        .value Submit by September 14 at 10:00 AM PDT
+      h2 Prizes
+      p There is $50,000 USD worth of ETH to be won. The prizes for the best open source apps are as follows:
+      .prizes
+        .prize.grand
+          i.material-icons monetization_on
+          .key Grand Prize
+          .value $20k worth of ETH
+        .prize.second
+          i.material-icons monetization_on
+          .key 2nd Place
+          .value $10k worth of ETH
+        .prize.third
+          i.material-icons monetization_on
+          .key 3rd Place
+          .value $6k worth of ETH
+        .prize.fourth
+          i.material-icons monetization_on
+          .key 4th Place
+          .value $4k worth of ETH
+      p Five prizes of $2,000 worth of ETH will also be awarded to recognize the hardworking volunteers who help us during HackAtom.
 
-    h2 Meetup with Cosmonauts
-    p
-      | We're having HackAtom meetups around the world. If you're located nearby—please do come join us! Meet us to get free tips and support while building your app.
-    meetup-locations
+      h2 Participate
+      p To participate in the hackathon, all you need to do is:
+      .participation-steps
+        .step
+          .key 1
+          .value
+            a(@click='setModal(true)') Sign up
+        .step
+          .key 2
+          .value Build your open source app
+        .step
+          .key 3
+          .value Submit by September 14 at 10:00 AM PDT
 
-    h2 Judging
-    p We’re looking for a high level of professionalism and quality, and have invited experienced hackers and entrepreneurs to influence the competition right from the start. You’ll be rewarded by the judges and the community. Your project will be judged by members of the Interchain Foundation.
+      h2 Meetup with Cosmonauts
+      p
+        | We're having HackAtom meetups around the world. If you're located nearby—please do come join us! Meet us to get free tips and support while building your app.
+      meetup-locations
 
-    h2 Sign Up 
-    p Enter your details in the form to participate in Cosmos HackAtom. You’ll receive further instructions on how to compete.
-    btn(@click.native='setModal(true)', size='lg', icon='done', value='Sign Up for HackAtom')
-    p For inquiries about hackathon, please contact us at #[a(:href="'mailto:' + links.cosmos.email") {{links.cosmos.email}}].
+      h2 Judging
+      p We’re looking for a high level of professionalism and quality, and have invited experienced hackers and entrepreneurs to influence the competition right from the start. You’ll be rewarded by the judges and the community. Your project will be judged by members of the Interchain Foundation.
+
+      h2 Sign Up 
+      p Enter your details in the form to participate in Cosmos HackAtom. You’ll receive further instructions on how to compete.
+      btn(@click.native='setModal(true)', size='lg', icon='done', value='Sign Up for HackAtom')
+      p For inquiries about hackathon, please contact us at #[a(:href="'mailto:' + links.cosmos.email") {{links.cosmos.email}}].
 
   modal-agreement(v-if='hackatom.modal')
 </template>

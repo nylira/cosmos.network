@@ -1,51 +1,77 @@
-<template lang='pug'>
-.app-bottom(v-bind:class="{ 'toc-visible': tocVisible }")
-  section-bottom
-  footer.app-footer
-    .sections
-      section.copyright
-        span &copy; {{ new Date().getFullYear() }} Interchain Foundation
-        span.address
-          p c/o Gubelstrasse 11
-          p 6300 Zug, Switzerland
-      section
-        header.h6 Foundation
-        nav
-          router-link(to='/about', @click.native='close', exact='') About
-          router-link(to='/faq', @click.native='close', exact='') FAQ
-          router-link(to='/assets') Logo Assets
-          a(:href='links.cosmos.fundraiser' target="_blank") Fundraiser
-      section
-        header.h6 Community
-        a(:href='links.cosmos.bitcointalk' target="_blank") BitcoinTalk
-        a(:href='links.cosmos.reddit' target="_blank") Reddit
-        a(:href='links.cosmos.chat' target="_blank") Chat
-        a(:href='links.cosmos.twitter' target="_blank") Twitter
-      section
-        header.h6 Developers
-        a(:href='links.cosmos.github.organization' target='_blank') Cosmos on GitHub
-        a(:href='links.cosmos.github.sdk' target='_blank') Cosmos SDK
-        a(:href='links.cosmos.github.ui' target='_blank') Cosmos UI
-        a(:href='links.tm.careers' target='_blank') Work at Tendermint
+<template lang="pug">
+.app-footer: .app-footer-container
+  .app-footer-row.actions
+    part(title="Get Started")
+      btn#whitepaper-btn(
+        type="link"
+        to="/intro"
+        size="lg"
+        icon="description"
+        value="Read Introduction")
+    part(title="Get Newsletter")
+      form-email-signup
+  .app-footer-row
+    part(title='Discuss & Chat')
+      card-community(
+        dt='Forum'
+        dd='Read and discuss the latest developer updates.'
+        icon='forum'
+        :anchor='links.cosmos.community.discourse')
+      card-community(
+        dt='Community Chat (Telegram)'
+        dd='Join the `cosmosproject` group on Telegram.'
+        icon='chat'
+        :anchor='links.cosmos.community.telegram')
+      card-community(
+        dt='Developer Chat (Matrix)'
+        dd='Join the #cosmos:matrix.org room with Riot.'
+        icon='chat'
+        :anchor='links.cosmos.community.matrix')
+      card-community(
+        dt='IRC'
+        dd='Join #cosmos_network on irc.freenode.net.'
+        icon='chat'
+        :anchor='links.cosmos.community.irc')
+    part(title='Social Media')
+      card-community(
+        dt='Twitter'
+        dd='Follow @cosmos, our official Twitter account.'
+        icon='chat'
+        :anchor='links.cosmos.community.twitter')
+      card-community(
+        dt='BitcoinTalk'
+        dd='Keep up with our thread on BitcoinTalk.'
+        icon='forum'
+        :anchor='links.cosmos.community.bitcointalk')
+      card-community(
+        dt='Facebook'
+        dd='Like the `cosmosproject` page.'
+        icon='people'
+        :anchor='links.cosmos.community.facebook')
+      card-community(
+        dt='Reddit'
+        dd='Subscribe to /r/cosmosnetwork.'
+        icon='forum'
+        :anchor='links.cosmos.community.reddit')
+  .app-footer-copyright &copy; {{ new Date().getFullYear() }} Interchain Foundation
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-import SectionBottom from './SectionBottom'
+import {mapGetters} from 'vuex'
+import Btn from '@nylira/vue-button'
+import CardCommunity from './CardCommunity'
+import FormEmailSignup from './FormEmailSignup'
+import Part from './common/NiPart'
 export default {
-  name: 'app-footer',
+  name: 'page-community',
   components: {
-    SectionBottom
+    Btn,
+    CardCommunity,
+    FormEmailSignup,
+    Part
   },
   computed: {
-    ...mapGetters([ 'faqTocVisible', 'whitepaperTocVisible', 'links' ]),
-    tocVisible () {
-      let name = this.$route.name
-      let visible = false
-      if (name === 'faq' && this.faqTocVisible) { visible = true }
-      if (name === 'whitepaper' && this.whitepaperTocVisible) { visible = true }
-      return visible
-    }
+    ...mapGetters(['links'])
   }
 }
 </script>
@@ -54,65 +80,44 @@ export default {
 @require '../styles/variables.styl'
 
 .app-footer
-  .sections
-    padding 1rem 0
-    color app-fg
-    margin 0 auto
+  border-top 1px solid bc
 
-    display flex
-    flex-flow row wrap
+.app-footer-container
+  max-width 1024px
+  margin 0 auto
 
-  section
-    flex 0 0 50%
-    padding 1rem 0.5rem
+.app-footer-row
+  width 100%
 
-    header
-      padding 0.25rem 0.5rem
+.actions
+  .ni-part
+    border-bottom 1px solid bc
 
-      color dim
+  .ni-part-main
+    padding 1rem
 
-    a, span
-      color txt
-      display block
-      padding 0.25rem 0.5rem
+    .ni-btn:only-child
+      width 100%
+      max-width 20rem
 
-    a
-      &:hover
-        color hover
+    .form-email-signup
+      max-width 20rem
+      margin 0
 
-    &.copyright
-      .address
-        margin-top 0.5rem
-        color dim
-
-@media screen and (min-width: 360px)
-  .app-footer
-    .sections
-      padding 1rem 0.5rem
-    .section
-      padding 1rem
-
-@media screen and (min-width: 414px)
-  .app-footer
-    .sections
-      padding 1rem
+.app-footer-copyright
+  border-top 1px solid bc
+  padding 1rem
+  color dim
+  text-align center
 
 @media screen and (min-width: 768px)
-  .app-footer
-    .sections
-      padding 2rem 0
-    section
-      flex 0 0 25%
-      header
-        margin-bottom 1rem
+  .app-footer-row
+    display flex
+    flex-flow row nowrap
 
-@media screen and (min-width: 1024px)
-  .app-bottom.toc-visible
-    margin-left 20rem
+    .ni-part
+      flex 1
 
-  .app-footer
-    .sections
-      max-width 1024px
-    section
-      flex 0 0 25%
+    .ni-part:first-child
+      border-right 1px solid bc
 </style>

@@ -236,7 +236,7 @@ sbw = 21.3333rem
     h2 + h3
       margin-top 0
 
-    h2 + p
+    h2 + p, h2 + ul, h2 + ol, h2 + blockquote, h2 + pre
       border-top 1px solid bc
       padding-top 1.5rem
 
@@ -244,6 +244,12 @@ sbw = 21.3333rem
     h3, h4, h5, h6, p, ul, ol, pre, blockquote, .ni-btn, iframe, > div
       margin-left sbw
       padding-left 0
+
+      ul, ol
+        margin-left 2rem
+      p
+        margin-left 0
+
     h3, h4, h5, h6, p, ul, ol
       padding-right 0.5rem
 </style>

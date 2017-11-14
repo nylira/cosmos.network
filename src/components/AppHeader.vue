@@ -8,13 +8,9 @@ header.app-header
       img(src='../assets/images/cosmos-logo-white-alpha.png', alt='Cosmos Logo')
     menu.menu-popup.menu-app(v-if='activeMenuApp || desktop')
       nav.nav-app
-        router-link(to='/whitepaper' @click.native='close') Whitepaper
-        router-link(to='/faq' @click.native='close') FAQ
-        // router-link(to='/roadmap' @click.native='close') Roadmap
-        router-link(to='/community' @click.native='close') Community
-        router-link(to='/events' @click.native='close') Conferences
+        router-link(to='/intro' @click.native='close') Introduction
+        router-link(to='/dev' @click.native='close') Developers
         router-link(to='/validators' @click.native='close') Validators
-        router-link(to='/hackatom' @click.native='close') HackAtom
         router-link(to='/about' @click.native='close',) About
       nav(v-if='!desktop')
         a(:href='links.cosmos.blog' @click.native='close' target='_blank') Blog

@@ -1,5 +1,5 @@
 <template lang="pug">
-page(title="Validator Working Group" subtitle="Learn about and join the VWG.")
+page(title="Validator Working Group" subtitle="Learn how to run a validator node for voting power and staking income.")
   part(title="Introduction"): text-container
     h2 What are Cosmos Validators?
     h3 Role
