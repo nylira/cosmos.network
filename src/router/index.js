@@ -38,10 +38,13 @@ const routes = [
   { path: '/validators', name: 'validators', component: r('Validators') },
 
   // redirects
-  { path: '/whitepaper', redirect: '/intro/whitepaper' },
-  { path: '/whitepaper/en-US', redirect: '/intro/whitepaper' },
   { path: '/faq', redirect: '/intro/faq' },
   { path: '/roadmap', redirect: '/intro/roadmap' },
+
+  { path: '/hackatom', redirect: '/dev/hackatom' },
+  { path: '/whitepaper', redirect: '/dev/whitepaper' },
+  { path: '/whitepaper/en-US', redirect: '/dev/whitepaper' },
+
   { path: '/validator', redirect: '/validators' },
   { path: '/blog/:entry', redirect: '/blog' },
   { path: '/blog',
