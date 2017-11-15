@@ -14,7 +14,7 @@ header.app-header
         router-link(to='/about' @click.native='close',) About
       nav(v-if='!desktop')
         a(:href='links.cosmos.blog' @click.native='close' target='_blank') Blog
-    a.header-item.header-item-alert(:href='links.cosmos.blog' @click.native='close' target='_blank')
+    a.header-item(:href='links.cosmos.blog' @click.native='close' target='_blank')
       i.material-icons rss_feed
       span.label(v-if='desktop') Blog
 </template>
@@ -98,14 +98,13 @@ export default {
 
     color txt
     cursor pointer
-    &:hover
-      color link
 
     .label
       user-select none
 
     i
       margin-right 0.5rem
+
     img
       display block
       height 1.125rem
@@ -115,8 +114,8 @@ export default {
       padding 0
 
     &:hover
-      .label
-        color link
+      i.material-icons, .label
+        color hover
 
   .menu-app
     nav
@@ -158,15 +157,11 @@ export default {
           color dim
           cursor not-allowed
         &:hover
-          color link
+          color hover
       > p
         .ni-time-left
           display inline
           font-weight bold
-        a
-          color link
-          &:hover
-            text-decoration underline
 
 @media screen and (min-width: 1024px)
   .app-header
@@ -177,7 +172,6 @@ export default {
         width 8rem
         &:last-of-type
           justify-content flex-end
-          color dim
 
   .menu-popup.menu-app
     display flex
@@ -193,14 +187,14 @@ export default {
 
       > a
         padding 0 1rem
-        color dim
+        color txt
         line-height 3rem
         height 3rem + 3*px
         border-bottom 3px solid transparent
         margin-bottom -3px
 
         &:hover
-          color link
+          color hover
 
         &.router-link-active
           cursor default

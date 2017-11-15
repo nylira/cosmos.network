@@ -83,9 +83,13 @@ export default {
       display none
     img
       margin-bottom 0
-  .youtube
+
+  iframe
     display block
-    margin-bottom 1.5em
+    width 100vw
+    height 56.25vw
+    margin 0 -1rem 1.5rem
+
   .left
     float left !important
     padding-right 2.5em !important
@@ -188,12 +192,14 @@ export default {
     pre
       margin-left 0
       margin-right 0
-    iframe
-      &.iframe-video
-        max-width 48rem
-        max-height 27rem
 
-sbw = 21.3333rem
+    iframe
+      margin-left 0
+      margin-right 0
+      max-width 44rem
+      max-height 24.75rem
+
+sbw = 20rem
 
 @media screen and (min-width: 1024px)
   .ni-text-container

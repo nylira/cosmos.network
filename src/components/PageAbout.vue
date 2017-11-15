@@ -5,7 +5,7 @@ page(:title="metadata.title")
 
   div(slot="menu")
     btn(type="link" to="/assets" value="Media Assets")
-    btn(type="anchor" href="https://tendermint.com/careers" value="Work at Tendermint" target="_blank")
+    btn(type="anchor" href="https://tendermint.com/careers" value="Careers" target="_blank")
 
   part(title='Interchain Foundation')
     .people
