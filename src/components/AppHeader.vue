@@ -79,9 +79,7 @@ export default {
   z-index 100
   width 100%
 
-  background app-bg-alpha
-  backdrop-filter blur(0.125rem)
-  border-bottom 1px solid bc
+  background app-bg
 
   .container
     max-width 1024px
@@ -137,7 +135,7 @@ export default {
     bottom 0
     width 100vw
 
-    background app-fg
+    background app-bg
     user-select none
 
     nav
@@ -166,7 +164,7 @@ export default {
 @media screen and (min-width: 1024px)
   .app-header
     border-bottom none
-    border-bottom 3px solid darken(app-bg, 20%)
+
     .container
       .header-item
         width 8rem

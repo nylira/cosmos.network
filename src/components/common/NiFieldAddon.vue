@@ -19,7 +19,7 @@ export default {
   z-index 1
 
 .ni-field-addon
-  background c-app-bg
+  background app-bg
   border 1px solid bc
   display flex
   align-items center

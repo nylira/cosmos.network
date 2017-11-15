@@ -1,7 +1,7 @@
 <template lang="pug">
 page(title="Introduction" subtitle="Get started with an overview of Cosmos.")
   div(slot="menu")
-    btn(type="link" to="/intro" value="Brief")
+    btn(type="link" to="/intro" value="Overview")
     btn(type="link" to="/intro/faq" value="FAQ")
     btn(type="link" to="/intro/roadmap" value="Roadmap")
   router-view

@@ -24,7 +24,6 @@ export default {
 
 .ni-page-header
   min-height 3rem
-  border-bottom 1px solid bc
   padding 1rem
   display flex
   align-items center

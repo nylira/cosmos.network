@@ -71,8 +71,7 @@ export default {
   max-width 360px
   width 100%
   background app-fg
-  box-shadow hsla(0,0,0,0.25) 0 0.25rem 0.5rem
-  border-radius 0.5rem
+  shadow()
   margin 0 0.5rem
 
   display flex
@@ -120,24 +119,19 @@ export default {
     text-align left
 
   .links
-    border-top 1px dotted bc
     width 100%
     height 3rem
-
     display flex
     justify-content center
+    background app-bg
     a
       flex 1
-      border-right 1px dotted bc
 
       display flex
       align-items center
       justify-content center
 
       color link
-
-      &:last-of-type
-        border-right none
 
       &:hover
         color mc

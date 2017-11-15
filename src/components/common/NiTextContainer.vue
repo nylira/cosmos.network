@@ -17,7 +17,6 @@ export default {
 @require '~@/styles/variables.styl'
 
 .ni-text
-  background app-bg
   hr
     border none
     border-top 1px solid bc
@@ -98,6 +97,20 @@ export default {
     padding-left 2.5em !important
   img
     max-width 100%
+
+  .image
+    display flex
+    align-items center
+    justify-content center
+    margin-bottom 1.5rem
+    background app-fg
+    padding 1rem
+    border-top 1px solid bc
+    img
+      max-height 75vh
+      max-width 75vh
+      margin 0
+
   h1
     margin-top 1.5rem
   h2:not(:first-child)
@@ -124,6 +137,7 @@ export default {
       font-weight 600
       background app-fg
       color dim
+
   blockquote
     padding 0.75rem 1rem
     background app-fg
@@ -193,6 +207,11 @@ export default {
       margin-left 0
       margin-right 0
 
+    .image
+      img
+        max-height 33.33vh
+        max-width 33.333vh
+
     iframe
       margin-left 0
       margin-right 0
@@ -258,4 +277,5 @@ sbw = 20rem
 
     h3, h4, h5, h6, p, ul, ol
       padding-right 0.5rem
+
 </style>

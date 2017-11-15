@@ -8,10 +8,9 @@
         size="lg"
         icon="description"
         value="Read Introduction")
-    part(title="Get Newsletter")
-      form-email-signup
+    part(title="Get Newsletter"): form-email-signup
   .app-footer-row
-    part(title='Discuss & Chat')
+    part(title='Discuss & Chat'): .community-cards
       card-community(
         dt='Forum'
         dd='Read and discuss the latest developer updates.'
@@ -32,7 +31,7 @@
         dd='Join #cosmos_network on irc.freenode.net.'
         icon='chat'
         :anchor='links.cosmos.community.irc')
-    part(title='Social Media')
+    part(title='Social Media'): .community-cards
       card-community(
         dt='Twitter'
         dd='Follow @cosmos, our official Twitter account.'
@@ -58,6 +57,7 @@
 
 <script>
 import {mapGetters} from 'vuex'
+import Cards from './common/NiCards'
 import Btn from '@nylira/vue-button'
 import CardCommunity from './CardCommunity'
 import FormEmailSignup from './FormEmailSignup'
@@ -66,6 +66,7 @@ export default {
   name: 'page-community',
   components: {
     Btn,
+    Cards,
     CardCommunity,
     FormEmailSignup,
     Part
@@ -80,7 +81,8 @@ export default {
 @require '../styles/variables.styl'
 
 .app-footer
-  border-top 1px solid bc
+  background darken(app-bg, 12.5%)
+  padding-top 1.5rem
 
 .app-footer-container
   max-width 1024px
@@ -88,13 +90,13 @@ export default {
 
 .app-footer-row
   width 100%
+  margin-bottom 1rem
 
 .actions
-  .ni-part
-    border-bottom 1px solid bc
-
   .ni-part-main
     padding 1rem
+    background app-fg
+    margin-top 0.25rem
 
     .ni-btn:only-child
       width 100%
@@ -105,19 +107,22 @@ export default {
       margin 0
 
 .app-footer-copyright
-  border-top 1px solid bc
   padding 1rem
   color dim
-  text-align center
 
 @media screen and (min-width: 768px)
+  .app-footer
+    padding 3rem 0 1.5rem
+
   .app-footer-row
     display flex
     flex-flow row nowrap
 
+    .ni-part:first-child
+      margin-right 0.5rem
+    .ni-part:last-child
+      margin-left 0.5rem
+
     .ni-part
       flex 1
-
-    .ni-part:first-child
-      border-right 1px solid bc
 </style>

@@ -1,6 +1,6 @@
 <template lang="pug">
-.person-wrapper
-  .card-person(@click='setPopup(true)')
+.ni-card-person
+  .person-container(@click='setPopup(true)')
     .avatar
       img(:src='portrait(person.slug)')
       i.material-icons search
@@ -14,7 +14,7 @@
 import { portrait } from '../scripts/cdn.js'
 import ModalPerson from './ModalPerson'
 export default {
-  name: 'card-person',
+  name: 'person-container',
   components: {
     ModalPerson
   },
@@ -34,11 +34,13 @@ export default {
 <style scoped lang="stylus">
 @import '~@/styles/variables.styl'
 
-.card-person
+.person-container
+  background app-fg
   padding 0.5rem
   display flex
   align-items center
   cursor pointer
+  margin 0.125rem
 
   .avatar
     display block
@@ -72,14 +74,18 @@ export default {
       color bright
 
 @media screen and (min-width:360px)
-  .card-person
+  .person-container
     .avatar img
       width 3.5rem
 
 @media screen and (min-width:400px)
-  .card-person
+  .person-container
     .avatar img
       width 4rem
     .name
       font-weight 500
+
+@media screen and (min-width:768px)
+  .person-container
+    padding 1rem
 </style>

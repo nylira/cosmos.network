@@ -40,7 +40,6 @@ export default {
   // margin-top 1rem
   height 2rem
   padding 0 1rem
-  border-bottom 1px solid bc
   background app-fg
 
 .ni-part-header-container
@@ -55,9 +54,11 @@ export default {
 
   a
     color link
-    border-bottom 1px dotted bc
+    &:hover
+      color hover
 
 .ni-part-title
   flex 1
   color bright
+  font-weight 400
 </style>

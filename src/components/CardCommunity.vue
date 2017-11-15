@@ -16,14 +16,11 @@ export default {
 <style lang="stylus">
 @require '../styles/variables.styl'
 
-.card-community + .card-community
-  border-top none
-
 .card-community
+  flex 1
   display flex
-  border-bottom 1px solid bc
-  &:last-child
-    border-bottom none
+  background app-fg
+  margin-top 0.25rem
 
   .icon
     flex 0 0 4rem
@@ -35,7 +32,8 @@ export default {
       color link
 
   .text
-    padding 0.5rem 0.75rem 0.75rem 0
+    padding 0.75rem
+    padding-left 0
     .dt
       color txt
     .dd
@@ -48,4 +46,7 @@ export default {
   .card-community
     .icon
       flex 0 0 4rem
+    .text
+      padding 1rem
+      padding-left 0
 </style>

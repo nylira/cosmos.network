@@ -8,10 +8,10 @@ page(:title="metadata.title")
     btn(type="anchor" href="https://tendermint.com/careers" value="Careers" target="_blank")
 
   part(title='Interchain Foundation')
-    .people
+    cards.people
       card-person(group='icf', v-for="person in ppl('icf')", :key='person.slug', :person='person')
   part(title='Tendermint Team')
-    .people
+    cards.people
       card-person(group='aib', v-for="person in ppl('aib')", :key='person.slug', :person='person')
 </template>
 
@@ -19,12 +19,14 @@ page(:title="metadata.title")
 import { mapGetters } from 'vuex'
 import Btn from '@nylira/vue-button'
 import CardPerson from './CardPerson'
+import Cards from './common/NiCards'
 import Page from './common/NiPage'
 import Part from './common/NiPart'
 export default {
   name: 'page-about',
   components: {
     Btn,
+    Cards,
     CardPerson,
     Page,
     Part
@@ -65,22 +67,18 @@ export default {
 </script>
 
 <style lang="stylus">
-@import '../styles/variables.styl'
+@import '~@/styles/variables.styl'
 
 .people
-  max-width 1024px
+  margin-bottom 1rem
 
 @media screen and (min-width: 768px)
   .people
-    display flex
-    flex-flow row wrap
-
-    .person-wrapper
+    .ni-card-person
       flex 0 0 50%
 
-@media screen and (min-width: 1280px)
+@media screen and (min-width: 1024px)
   .people
-    margin 0 auto
-    .person-wrapper
+    .ni-card-person
       flex 0 0 33.333%
 </style>
