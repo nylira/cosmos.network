@@ -1,11 +1,11 @@
 <template>
-  <router-link class="cover-alert" to="/events">
-    <span class="key">DEVCON3:</span>
+  <a class="cover-alert" href="http://tokensummit.com" target="_blank">
+    <span class="key">Token Summit II:</span>
     <span class="value">
-      Our team will be at Cancún, Mexico on November 1-4 for Devcon3. Talk to us at our booth!
+      We will be in San Francisco on December 4-5 for Token Summit II.
     </span>
     <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-  </router-link>
+  </a>
 </template>
 
 <script>

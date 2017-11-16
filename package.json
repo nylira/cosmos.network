@@ -21,7 +21,7 @@
   "devDependencies": {
     "@nylira/vue-article-body": "^2.2.13",
     "@nylira/vue-button": "^3.3.2",
-    "@nylira/vue-input": "^3.3.0",
+    "@nylira/vue-input": "^3.4.0",
     "@nylira/vue-notifications": "1.0.4",
     "@nylira/vue-page-header": "2.1.8",
     "@nylira/vue-page-split": "2.1.1",
