@@ -1,6 +1,6 @@
 <template lang="pug">
 .parts
-  part(title='What is Cosmos?'): text-container
+  part(title=' '): text-container
     h2 Building an Internet of Blockchains
     h3 Purpose
     p Cosmos is a project with an ambitious mission: To create a network of distributed ledgers that will solve long-standing problems in the cryptocurrency and blockchain communities.

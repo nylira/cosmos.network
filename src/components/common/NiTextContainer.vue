@@ -253,10 +253,7 @@ sbw = 20rem
         height 0.1875rem
       &:before
         width 4rem
-        background mc
-      &:after
-        width 1rem
-        background mc
+        background link
 
     h2 + h3
       margin-top 0
