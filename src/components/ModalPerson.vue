@@ -94,7 +94,7 @@ export default {
     font-family 'Material Icons'
     font-size h3
     cursor pointer
-    color hover
+    color link
 
   .avatar
     display block
@@ -134,7 +134,7 @@ export default {
       color link
 
       &:hover
-        color mc
+        color hover
 
       i.material-icons
         font-size h4

@@ -2,7 +2,7 @@
 .page
   locale-menu
    
-  part(title="HackAtom #2 Has Ended")
+  part(title=" ")
     div(slot="menu"): a(href='https://blog.cosmos.network/announcement-hackatom-2-winners-d31fe584b70b', target='_blank') Winners for HackAtom #2
 
     text-container

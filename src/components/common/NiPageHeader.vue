@@ -49,6 +49,7 @@ export default {
   display flex
   align-items center
   color bright
+  font-weight 500
 
 .ni-page-header-subtitle > div
   color dim
@@ -58,7 +59,7 @@ export default {
 
 @media screen and (min-width: 768px)
   .ni-page-header
-    padding 2rem 1rem
+    padding 3rem 1rem
 
 @media screen and (max-width: 1023px)
   .ni-page-header-menu

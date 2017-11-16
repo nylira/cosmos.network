@@ -1,5 +1,5 @@
 <template lang="pug">
-part(title='Questions + Answers'): text-container: text-content
+part(title=' '): text-container: text-content
 </template>
 
 <script>

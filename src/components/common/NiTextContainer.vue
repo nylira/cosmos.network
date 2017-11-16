@@ -242,7 +242,6 @@ sbw = 20rem
       font-weight 500
 
       &:before
-      &:after
         position absolute
         top 0
         left 0
@@ -251,9 +250,8 @@ sbw = 20rem
         display block
 
         height 0.1875rem
-      &:before
         width 4rem
-        background link
+        background accent
 
     h2 + h3
       margin-top 0

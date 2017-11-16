@@ -1,5 +1,5 @@
 <template lang="pug">
-part(title="Cosmos Roadmap"): text-container
+part(title=" "): text-container
   h2 2017 Roadmap
 
   h3 October

@@ -1,7 +1,7 @@
 <template lang="pug">
 // toc-page(:toc-visible='whitepaperTocVisible')
   //page-nav(slot='nav')
-part(title="Cosmos Whitepaper")
+part(title=" ")
   div(slot="menu"): a(@click.native="download()") Download PDF
 
   text-container
