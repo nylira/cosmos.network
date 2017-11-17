@@ -34,7 +34,7 @@
         target="_blank"
         size="lg"
         type="anchor"
-        :href="https://github.com/cosmos/gaia/blob/master/README.md"
+        href="https://github.com/cosmos/gaia/blob/master/README.md"
         icon="github"
         value="Guidelines to Run a Validating Node")
 
