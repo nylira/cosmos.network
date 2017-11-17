@@ -45,7 +45,6 @@ export default {
   code
     mono()
     margin-bottom 1.5rem
-    font-size 0.875rem
     background app-fg
     font-weight bold
     padding 0 0.25rem
@@ -63,7 +62,6 @@ export default {
     background app-fg
     color txt
     & + figcaption
-      font-size 0.875rem
       margin-top -1.5rem
       background app-fg
       border 1px solid #eee

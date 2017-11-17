@@ -50,10 +50,10 @@ export default {
       width 3rem
       border-radius 2.5rem
     i.material-icons
-      background app-fg
+      background link
       border-radius 1rem
-      width 1.25rem
-      height 1.25rem
+      width 1rem
+      height 1rem
 
       display flex
       align-items center
@@ -62,14 +62,21 @@ export default {
       color txt
 
       position absolute
-      bottom 0
-      right 0
+      bottom 0.25rem
+      right 0.25rem
+      font-size sm
 
+  .name
+    font-weight 500
   .title
     color dim
 
   &:hover
     background hover-bg
+    .avatar
+      i.material-icons
+        background hover
+        color bright
     .name
       color bright
 
@@ -82,8 +89,6 @@ export default {
   .person-container
     .avatar img
       width 4rem
-    .name
-      font-weight 500
 
 @media screen and (min-width:768px)
   .person-container

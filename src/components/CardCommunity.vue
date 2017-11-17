@@ -21,6 +21,7 @@ export default {
   display flex
   background app-fg
   margin-top 0.25rem
+  margin-bottom 0.25rem
 
   .icon
     flex 0 0 4rem
@@ -36,11 +37,17 @@ export default {
     padding-left 0
     .dt
       color txt
+      font-weight 500
     .dd
       color dim
 
   &:hover
     background hover-bg
+    .icon i
+      color hover
+
+    .text .dt
+      color bright
 
 @media screen and (min-width: 768px)
   .card-community
