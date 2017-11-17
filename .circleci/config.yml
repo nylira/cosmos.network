@@ -17,14 +17,9 @@ jobs:
       # Download and cache dependencies
       - restore_cache:
           keys:
-          - v1-dependencies-root-{{ checksum "package.json" }}
+          - v1-dependencies-{{ checksum "package.json" }}
           # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-root-
-      - restore_cache:
-          keys:
-          - v1-dependencies-app-{{ checksum "app/package.json" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-app-
+          - v1-dependencies-
 
       - run: yarn
 
@@ -32,12 +27,7 @@ jobs:
           paths:
             - yarn.lock
             - node_modules
-          key: v1-dependencies-root-{{ checksum "package.json" }}
-      - save_cache:
-          paths:
-            - app/yarn.lock
-            - app/node_modules
-          key: v1-dependencies-app-{{ checksum "app/package.json" }}
+          key: v1-dependencies-{{ checksum "package.json" }}
         
       - run: yarn lint
-      - run: xvfb-run -e /dev/stdout -a npm run build
+      - run: npm run build
