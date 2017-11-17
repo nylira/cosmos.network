@@ -1,6 +1,6 @@
 <template lang="pug">
 a.card-community(:href='anchor' target='_blank')
-  .icon: i.h3.material-icons {{ icon }}
+  .icon: i.fa(:class="'fa-' + icon")
   .text
     .dt {{ dt }}
     .dd {{ dd }}
@@ -29,8 +29,9 @@ export default {
     align-items center
     justify-content center
 
-    i
+    i.fa
       color link
+      font-size xl
 
   .text
     padding 0.75rem
@@ -53,6 +54,7 @@ export default {
   .card-community
     .icon
       flex 0 0 4rem
+
     .text
       padding 1rem
       padding-left 0

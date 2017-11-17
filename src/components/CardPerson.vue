@@ -48,6 +48,7 @@ export default {
     position relative
     img
       width 3rem
+      height 3rem
       border-radius 2.5rem
     i.material-icons
       background link
@@ -84,11 +85,13 @@ export default {
   .person-container
     .avatar img
       width 3.5rem
+      height 3.5rem
 
 @media screen and (min-width:400px)
   .person-container
     .avatar img
       width 4rem
+      height 4rem
 
 @media screen and (min-width:768px)
   .person-container

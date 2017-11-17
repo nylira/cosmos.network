@@ -46,14 +46,21 @@ export default {
 
     cursor pointer
 
+    border-bottom 0.25rem solid transparent
+
     i.material-icons
       font-size xl
 
     .label
       display none
     
+    &.router-link-active
+      border-color mc
+      color bright
+
     &:hover:not([disabled])
       color bright
+
     &[disabled]
       color dim
       cursor default

@@ -14,43 +14,43 @@
       card-community(
         dt='Forum'
         dd='Read and discuss the latest developer updates.'
-        icon='forum'
+        icon='university'
         :anchor='links.cosmos.community.discourse')
       card-community(
         dt='Community Chat (Telegram)'
         dd='Join the `cosmosproject` group on Telegram.'
-        icon='chat'
+        icon='telegram'
         :anchor='links.cosmos.community.telegram')
       card-community(
         dt='Developer Chat (Matrix)'
         dd='Join the #cosmos:matrix.org room with Riot.'
-        icon='chat'
+        icon='comments-o'
         :anchor='links.cosmos.community.matrix')
       card-community(
         dt='IRC'
         dd='Join #cosmos_network on irc.freenode.net.'
-        icon='chat'
+        icon='hashtag'
         :anchor='links.cosmos.community.irc')
     part(title='Social Media'): .community-cards
       card-community(
         dt='Twitter'
         dd='Follow @cosmos, our official Twitter account.'
-        icon='chat'
+        icon='twatter'
         :anchor='links.cosmos.community.twitter')
       card-community(
         dt='BitcoinTalk'
         dd='Keep up with our thread on BitcoinTalk.'
-        icon='forum'
+        icon='bitcoin'
         :anchor='links.cosmos.community.bitcointalk')
       card-community(
         dt='Facebook'
         dd='Like the `cosmosproject` page.'
-        icon='people'
+        icon='footbook'
         :anchor='links.cosmos.community.facebook')
       card-community(
         dt='Reddit'
         dd='Subscribe to /r/cosmosnetwork.'
-        icon='forum'
+        icon='raddit'
         :anchor='links.cosmos.community.reddit')
   .app-footer-copyright &copy; {{ new Date().getFullYear() }} Interchain Foundation
 </template>

@@ -15,7 +15,7 @@ header.app-header
       nav(v-if='!desktop')
         a(:href='links.cosmos.blog' @click.native='close' target='_blank') Blog
     a.header-item(:href='links.cosmos.blog' @click.native='close' target='_blank')
-      i.material-icons rss_feed
+      i.fa.fa-medium
       span.label(v-if='desktop') Blog
 </template>
 
