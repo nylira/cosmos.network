@@ -164,6 +164,7 @@ export default {
 @media screen and (min-width: 1024px)
   .app-header
     border-bottom none
+    border-top bw solid darken(app-bg, 50%)
 
     .container
       .header-item
@@ -188,8 +189,8 @@ export default {
         color txt
         line-height 3rem
         height 3rem + 3*px
-        border-bottom 3px solid transparent
-        margin-bottom -3px
+        border-top bw solid transparent
+        margin-top -1 * bw
 
         &:hover
           color bright
@@ -199,6 +200,7 @@ export default {
           user-select none
           color bright
           border-color mc
+          background app-fg
           &:hover
             color bright
 </style>

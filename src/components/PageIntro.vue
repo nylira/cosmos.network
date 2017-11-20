@@ -2,9 +2,9 @@
 page(title="Introduction" subtitle="Get started with an overview of Cosmos.")
   // toolbar desktop
   div(slot="menu")
-    btn(type="link" to="/intro" value="Overview")
-    btn(type="link" to="/intro/faq" value="FAQ")
-    btn(type="link" to="/intro/roadmap" value="Roadmap")
+    router-link(to="/intro") Overview
+    router-link(to="/intro/faq") FAQ
+    router-link(to="/intro/roadmap") Roadmap
 
   // toolbar mobile
   tool-bar
