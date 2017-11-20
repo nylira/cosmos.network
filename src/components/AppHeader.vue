@@ -112,8 +112,8 @@ export default {
       padding 0
 
     &:hover
-      i.material-icons, .label
-        color hover
+      i, .label
+        color bright
 
   .menu-app
     nav
@@ -192,7 +192,7 @@ export default {
         margin-bottom -3px
 
         &:hover
-          color hover
+          color bright
 
         &.router-link-active
           cursor default
