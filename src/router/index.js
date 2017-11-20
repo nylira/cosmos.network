@@ -16,6 +16,7 @@ const routes = [
   { path: '/privacy', name: 'privacy', component: r('Privacy') },
   { path: '/roadmap', name: 'roadmap', component: r('Roadmap') },
   { path: '/validators', name: 'validators', component: r('Validators') },
+  { path: '/validators/faq', name: 'validators', component: r('ValidatorsFaq') },
   { path: '/whitepaper', name: 'whitepaper', component: r('Whitepaper') },
   { path: '/whitepaper/:locale', name: 'whitepaper-localized', component: r('Whitepaper') },
 

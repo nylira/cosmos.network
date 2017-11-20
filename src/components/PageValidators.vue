@@ -23,6 +23,17 @@
       p The validator bears the burden of securing the Cosmos network and is in return rewarded for “good” behavior as defined by protocol rules. The philosophy of acting as responsible stewards to the network is a goal that Tendermint seeks to meet through well-defined economic incentives for rational actors.
       p While validator candidacy is determined by the weight of their staked tokens, in Tendermint Proof-of-Stake, the incentives for whales and users alike are more closely aligned than in Proof-of-Work blockchains because whales with staked tokens now hold stake in the network security itself, not just in the value of the token. Pumping a token for the sake of inflating the price becomes a disincentive for the staked token holder because: 1) a significant portion of their tokens are bonded for a long period of time (>2 months), and 2) introducing unstable growth to the network will make their work of securing the network more difficult.
 
+  section.v-section: .v-container
+    header.v-section-header Read the FAQ
+    main.v-section-main
+      p Have general questions about Cosmos Validators? Start with the FAQ.
+      btn(
+        target="_blank"
+        size="lg"
+        type="link"
+        to="/validators/faq"
+        icon="question-circle"
+        value="Validators FAQ")
 
   section.v-section: .v-container
     header.v-section-header What's the process of becoming a validator?
@@ -87,12 +98,6 @@
         :href="links.cosmos.validators.chat"
         icon="comments-o"
         value="Join #cosmos_validators")
-
-  // section.v-section: .v-container
-    header.v-section-header Validator Candidates
-    main.v-section-main
-      p This list shows the companies and individuals who have joined the Validator Program.
-      li-validator(v-for="i in validators" key="i.companyName" :validator="i")
 </template>
 
 <script>
@@ -111,7 +116,7 @@ export default {
   head: {
     title () {
       return {
-        inner: 'Validator Program',
+        inner: 'Validator Working Group',
         separator: '-',
         complement: 'Cosmos - Internet of Blockchains'
       }
@@ -122,16 +127,6 @@ export default {
 
 <style lang="stylus">
 @require '~@/styles/variables.styl'
-
-.prerelease
-  position fixed
-  bottom 0.5rem
-  right 0.5rem
-  border 2px solid #f00
-  line-height 2rem
-  font-weight bold
-  padding 0 0.5rem
-  color #f00
 
 .v-container
   max-width 1024px
