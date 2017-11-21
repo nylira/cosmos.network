@@ -1,6 +1,6 @@
 <template lang="pug">
 page(title="Validator Working Group" subtitle="Learn how to run a validator node for voting power and staking income.")
-  part(title=" "): text-container
+  text-container
     h2 What are Cosmos Validators?
     h3 Role
     p Validators are responsible for committing new blocks in the blockchain. These validators participate in the consensus protocol by broadcasting votes which contain cryptographic signatures signed by each validator's private key. Validators have a cryptographic key-pair for signing and have some amount of “voting power” in proportion to the number of staked ATOMs.
@@ -81,9 +81,9 @@ page(title="Validator Working Group" subtitle="Learn how to run a validator node
 <script>
 import { mapGetters } from 'vuex'
 import Btn from '@nylira/vue-button'
-import Page from './common/NiPage'
-import Part from './common/NiPart'
-import TextContainer from './common/NiTextContainer'
+import Page from 'common/NiPage'
+import Part from 'common/NiPart'
+import TextContainer from 'common/NiTextContainer'
 export default {
   name: 'page-validators',
   components: {

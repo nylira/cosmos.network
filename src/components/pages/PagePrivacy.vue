@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import MarkdownContent from '../../content/en-US/privacy-policy.md'
+import MarkdownContent from 'content/en-US/privacy-policy.md'
 import PageHeader from '@nylira/vue-page-header'
 import PageSplit from '@nylira/vue-page-split'
 import ArticleBody from '@nylira/vue-article-body'

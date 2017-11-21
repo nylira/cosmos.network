@@ -20,7 +20,7 @@ export default {
 </script>
 
 <style lang="stylus">
-@require '~@/styles/variables.styl'
+@require '~variables'
 
 .ni-page-header
   min-height 3rem
@@ -79,21 +79,4 @@ export default {
     display block
     .ni-btn
       margin-left 0.5rem
-    a:not(.ni-btn)
-      padding 0 1rem 0 1rem - bw
-      display inline-block
-      line-height 3rem
-      border-left bw solid app-bg
-
-      color txt
-
-      &:hover
-        color bright
-
-      &.router-link-exact-active
-        background app-fg
-        color bright
-        border-color mc
-
-
 </style>

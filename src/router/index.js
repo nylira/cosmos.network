@@ -1,9 +1,8 @@
 import VueRouter from 'vue-router'
-function r (page) { return require('../components/Page' + page) }
+function r (page) { return require('../components/pages/Page' + page) }
 
 const routes = [
   { path: '/', component: r('Index') },
-  { path: '/assets', name: 'assets', component: r('Assets') },
   { path: '/events', name: 'events', component: r('Events') },
 
   // INTRODUCTION
@@ -29,7 +28,13 @@ const routes = [
   },
 
   // ABOUT
-  { path: '/about', name: 'about', component: r('About') },
+  { path: '/about',
+    component: r('About'),
+    children: [
+      { path: '/', name: 'about', component: r('AboutIndex') },
+      { path: 'assets', name: 'assets', component: r('AboutAssets') }
+    ]
+  },
 
   // OTHERS
   { path: '/plan', name: 'plan', component: r('Plan') },

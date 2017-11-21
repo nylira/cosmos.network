@@ -88,9 +88,9 @@
 <script>
 import { mapGetters } from 'vuex'
 import Btn from '@nylira/vue-button'
-import LocaleMenu from './PageHackAtomLocaleMenu'
-import MeetupLocations from './MeetupLocations'
-import ModalAgreement from './ModalAgreement'
+import LocaleMenu from 'comp/LocaleMenu'
+import MeetupLocations from 'comp/MeetupLocations'
+import ModalAgreement from 'comp/ModalAgreement'
 import PageHeader from '@nylira/vue-page-header'
 export default {
   name: 'page-hackatom',

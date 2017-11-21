@@ -16,10 +16,10 @@ page(icon="view_list" title="All Discussions")
 
 <script>
 import {mapGetters} from 'vuex'
-import AppTableOfContents from './AppTableOfContents'
+import AppTableOfContents from 'comp/AppTableOfContents'
 import Btn from '@nylira/vue-button'
-import Page from '../common/NiPage'
-import ToolBar from '../common/NiToolBar'
+import Page from 'common/NiPage'
+import ToolBar from 'common/NiToolBar'
 export default {
   name: 'page-index',
   components: {

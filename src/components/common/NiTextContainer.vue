@@ -106,7 +106,7 @@ export default {
     border-top 1px solid bc
     img
       max-height 75vh
-      max-width 75vh
+      max-width 87.5vw
       margin 0
 
   h1

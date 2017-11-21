@@ -9,9 +9,9 @@ page(:title="metadata.title" :subtitle="metadata.desc")
 <script>
 import moment from 'moment'
 import { mapGetters } from 'vuex'
-import Events from './Events'
-import Page from './common/NiPage'
-import Part from './common/NiPart'
+import Events from 'comp/Events'
+import Page from 'common/NiPage'
+import Part from 'common/NiPart'
 export default {
   name: 'page-events',
   components: {

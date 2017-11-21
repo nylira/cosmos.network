@@ -8,7 +8,7 @@
 
 <script>
 import ArticleBody from '@nylira/vue-article-body'
-import TextEnUs from '../../content/en-US/PLAN.md'
+import TextEnUs from 'content/en-US/PLAN.md'
 export default {
   name: 'page-plan',
   components: {

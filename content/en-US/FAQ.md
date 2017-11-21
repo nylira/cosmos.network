@@ -1,4 +1,4 @@
-## FAQ
+## Overview
 
 ### Who is the team developing Cosmos?
 

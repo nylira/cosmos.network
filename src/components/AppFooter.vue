@@ -63,7 +63,7 @@ import CardCommunity from './CardCommunity'
 import FormEmailSignup from './FormEmailSignup'
 import Part from './common/NiPart'
 export default {
-  name: 'page-community',
+  name: 'app-footer',
   components: {
     Btn,
     Cards,
