@@ -3,7 +3,7 @@
   page-menu
     router-link(to="/intro") Overview
     router-link(to="/intro/faq") FAQ
-    router-link(to="/intro/roadmap") Roadmap
+    // router-link(to="/intro/roadmap") Roadmap
   router-view
 </template>
 
