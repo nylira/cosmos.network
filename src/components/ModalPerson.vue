@@ -1,41 +1,30 @@
-<template>
-  <div class="modal-wrapper">
-    <div class="modal-person">
-      <img class="avatar" :src="portrait(person.slug)">
-      <div class="text">
-        <div class="name">{{ person.name }}</div>
-        <div class="title">{{ person.groups[group] }}</div>
-        <div class="bio">{{ person.bio }}</div>
-      </div>
-      <div class="links">
-        <a v-if="person.ids.email"
-          :href="'mailto:' + person.ids.email + '@tendermint.com'" target="_blank">
-          <i class="fa fa-envelope"></i>
-          <span class="label">{{ person.ids.email }}@tendermint.com</span>
-        </a>
-        <a v-if="person.ids.github" :href="'https://github.com/' + person.ids.github" target="_blank">
-          <i class="fa fa-github-alt"></i>
-          <span class="label">github.com/{{ person.ids.github }}</span>
-        </a>
-        <a v-if="person.ids.keybase" :href="'https://keybase.io/' + person.ids.keybase" target="_blank">
-          <i class="fa fa-key"></i>
-          <span class="label">keybase.io/{{ person.ids.keybase }}</span>
-        </a>
-        <a v-if="person.ids.linkedin" :href="'https://www.linkedin.com/in/' + person.ids.linkedin" target="_blank">
-          <i class="fa fa-linkedout"></i>
-          <span class="label">{{ person.name }}</span>
-        </a>
-        <a v-if="person.ids.twitter" :href="'https://twitter.com/' + person.ids.twitter" target="_blank">
-          <i class="fa fa-twatter"></i>
-          <span class="label">@{{ person.ids.twitter }}</span>
-        </a>
-        <a v-if="person.ids.website" :href="'http://' + person.ids.website" target="_blank">
-          <i class="fa fa-globe"></i>
-          <span class="label">{{ person.ids.website }}</span>
-        </a>
-      </div>
-    </div>
-  </div>
+<template lang="pug">
+.modal-wrapper
+  .modal-person
+    img.avatar(:src='portrait(person.slug)')
+    .text
+      .name {{ person.name }}
+      .title {{ person.groups[group] }}
+      .bio {{ person.bio }}
+    .links
+      a(v-if='person.ids.email', :href="'mailto:' + person.ids.email + '@tendermint.com'", target='_blank')
+        i.material-icons mail_outline
+        span.label {{ person.ids.email }}@tendermint.com
+      a(v-if='person.ids.github', :href="'https://github.com/' + person.ids.github", target='_blank')
+        i.material-icons code
+        span.label github.com/{{ person.ids.github }}
+      a(v-if='person.ids.keybase', :href="'https://keybase.io/' + person.ids.keybase", target='_blank')
+        i.material-icons vpn_key
+        span.label keybase.io/{{ person.ids.keybase }}
+      a(v-if='person.ids.linkedin', :href="'https://www.linkedin.com/in/' + person.ids.linkedin", target='_blank')
+        i.material-icons contact_mail
+        span.label {{ person.name }}
+      a(v-if='person.ids.twitter', :href="'https://twitter.com/' + person.ids.twitter", target='_blank')
+        i.material-icons question_answer
+        span.label @{{ person.ids.twitter }}
+      a(v-if='person.ids.website', :href="'http://' + person.ids.website", target='_blank')
+        i.material-icons web
+        span.label {{ person.ids.website }}
 </template>
 
 <script>
@@ -81,9 +70,8 @@ export default {
 .modal-person
   max-width 360px
   width 100%
-  background c-app-fg
-  box-shadow hsla(0,0,0,0.25) 0 0.25rem 0.5rem
-  border-radius 0.5rem
+  background app-fg
+  shadow()
   margin 0 0.5rem
 
   display flex
@@ -96,16 +84,17 @@ export default {
     top 0
     right 0
 
-    width 3rem
-    height 3rem
+    width 4rem
+    height 4rem
     display flex
     align-items center
     justify-content center
 
-    content '\f057'
-    font-family FontAwesome
-    color bc
-    font-size 1.25rem
+    content 'close'
+    font-family 'Material Icons'
+    font-size h3
+    cursor pointer
+    color link
 
   .avatar
     display block
@@ -118,39 +107,37 @@ export default {
     padding 1rem 1.5rem 1.25rem
 
   .name
-    font-weight bold
-    font-size 1.25rem
+    color bright
+    font-size h3
 
   .title
-    color light
-    font-size 0.75rem
+    font-size h5
+    color dim
     margin-bottom 0.75rem
 
   .bio
-    font-size 0.75rem
     text-align left
 
   .links
-    border-top 1px dotted bc
     width 100%
     height 3rem
-
     display flex
     justify-content center
+    background app-bg
     a
       flex 1
-      border-right 1px dotted bc
 
       display flex
       align-items center
       justify-content center
 
-      color light
-      &:last-of-type
-        border-right none
-      &:hover
-        color mcolor
+      color link
 
+      &:hover
+        color hover
+
+      i.material-icons
+        font-size h4
       .label
         display none
 
@@ -160,25 +147,14 @@ export default {
     .avatar
       width 9rem
 
-    .name
-      font-size 1.375rem
-
-    .title, .bio
-      font-size 0.875rem
-
 @media screen and (min-width: 400px)
   .modal-person
     .avatar
       width 10rem
 
-    .name
-      font-size 1.5rem
-
     .title
       margin-bottom 1.25rem
 
-    .title, .bio
-      font-size 1rem
     .links a
       flex 0 0 60px
 </style>

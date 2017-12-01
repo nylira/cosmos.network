@@ -31,7 +31,6 @@ export default {
   font-family sans
   overflow hidden
   position fixed
-  font-size 0.875rem
   display none
 
   a
@@ -56,7 +55,7 @@ export default {
 
       a.active
         position relative
-        color light
+        color dim
         &:before
           width 1.5rem
           height 2rem
@@ -71,7 +70,7 @@ export default {
 
           content '\f0da'
           font-family FontAwesome
-          color light
+          color dim
   > ul
     > li
       &:last-of-type
@@ -97,17 +96,13 @@ export default {
             a
               padding-left 4.5em
 
-@media screen and (min-width: 360px)
-  .minimal-toc
-    font-size 1rem
-
 @media screen and (min-width: 768px)
   .minimal-toc
     padding 3rem
 
 @media screen and (max-width: 1023px)
   .minimal-toc
-    background c-app-bg
+    background app-bg
     top 3rem
     left 0
     right 0

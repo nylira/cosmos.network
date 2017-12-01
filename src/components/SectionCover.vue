@@ -3,22 +3,21 @@ section.section-home-cover
   .section-container
     section-cover-alert
     .cosmos
-      .cosmos-logo: img(src='../assets/images/cosmos-logo-alpha.png')
-      .cosmos-text: img(src='../assets/images/cosmos-text-alpha.png')
+      img(src="../assets/images/cosmos-logo-large.png")
     menu
       form-email-signup
       btn(
         type='anchor'
         :href='links.cosmos.community.telegram'
         size='lg'
-        icon='telegram'
+        icon='chat'
         target='_blank'
         value='Community Chat')
       btn(
         type='anchor'
         :href='links.cosmos.community.matrix'
         size='lg'
-        icon='comments-o'
+        icon='code'
         target='_blank'
         value='Developer Chat')
 </template>
@@ -39,37 +38,30 @@ export default {
 </script>
 
 <style lang="stylus">
-@require '../styles/variables.styl'
+@require '~variables'
 
 .section-home-cover
   position relative
   border-bottom 1px solid bc
-  margin-top -3rem
+  background app-fg
 
   .section-container
-    margin-top 3rem
-    padding 1.5rem
+    padding 1rem
     position relative
     z-index 5
 
     display flex
     flex-flow column nowrap
     align-items center
+    height 90vh
 
   .cosmos
-    margin 2.5rem 0
+    flex 1
     display flex
-    flex-flow column nowrap
     align-items center
-
-  .cosmos-logo img
-    margin 0 0 1rem
-    width 40vw
-    max-width 320px
-
-  .cosmos-text img
-    width 55vw
-    max-width 320px
+    img
+      width 87.5vw
+      max-width 320px
 
   menu
     width 100%
@@ -84,24 +76,13 @@ export default {
       &:last-child
         margin 0
 
-@media screen and (min-width: 360px)
-  .section-home-cover
-    .section-container
-      padding 2rem
-
-    .cosmos-logo img
-      margin-bottom 1.25rem
-
 @media screen and (min-width: 768px)
   .section-home-cover
     .section-container
-      padding 3rem 3rem
+      padding 1rem 3rem 3rem
 
-    .cosmos
-      margin 8rem 0
-
-    .cosmos-logo img
-      margin 0 0 3rem
+    .cosmos img
+      max-width 400px
 
     menu
       flex-flow row
@@ -112,32 +93,12 @@ export default {
 @media screen and (min-width: 1024px)
   .section-home-cover
     .section-container
-      padding 1rem 3rem 3rem
       height 90vh
 
-    .cosmos
-      flex 1
-      margin 0
-      display flex
-      align-items center
-      flex-flow column nowrap
-      justify-content center
-
-    .cosmos-logo img
-      margin 0 0 4vh
-
-    .cosmos-logo img
-    .cosmos-text img
-      max-width 30vh
+    .cosmos img
+      max-width 320px
 
     menu
-      flex-flow row
-      max-width 48rem
       > *
         margin 0 1rem 0 0
-
-@media screen and (min-width: 1680px)
-  .section-home-cover
-    .section-container
-      padding 3rem
 </style>

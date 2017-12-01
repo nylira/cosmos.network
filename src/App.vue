@@ -20,6 +20,7 @@ import store from './store/index.js'
 import { mapGetters } from 'vuex'
 
 export default {
+  name: 'app',
   components: {
     AppHeader,
     AppFooter,
