@@ -84,7 +84,7 @@ export default {
         display block
 
 .ni-modal-container
-  background app-fg
+  background c-app-fg
   box-shadow hsla(0,0,0,0.25) 0 0.25rem 1rem
 
   max-width 30rem

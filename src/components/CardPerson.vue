@@ -1,20 +1,29 @@
-<template lang="pug">
-.ni-card-person
-  .person-container(@click='setPopup(true)')
-    .avatar
-      img(:src='portrait(person.slug)')
-      i.material-icons search
-    .text
-      .name {{ person.name }}
-      .title {{ person.groups[group] }}
-  modal-person(:group='group', :person='person', v-if='activePopup', @click.native='setPopup(false)')
+<template>
+<div class="person-wrapper">
+  <div class="card-person" @click="setPopup(true)">
+    <div class="avatar">
+      <img :src="portrait(person.slug)">
+      <i class="fa fa-search"></i>
+    </div>
+    <div class="text">
+      <div class="name">{{ person.name }}</div>
+      <div class="title">{{ person.groups[group] }}</div>
+    </div>
+  </div>
+  <modal-person
+    :group="group"
+    :person="person"
+    v-if="activePopup"
+    @click.native="setPopup(false)">
+  </modal-person>
+</div>
 </template>
 
 <script>
 import { portrait } from '../scripts/cdn.js'
 import ModalPerson from './ModalPerson'
 export default {
-  name: 'person-container',
+  name: 'card-person',
   components: {
     ModalPerson
   },
@@ -34,13 +43,11 @@ export default {
 <style scoped lang="stylus">
 @import '~@/styles/variables.styl'
 
-.person-container
-  background app-fg
+.card-person
   padding 0.5rem
   display flex
   align-items center
   cursor pointer
-  margin 0.125rem
 
   .avatar
     display block
@@ -48,52 +55,46 @@ export default {
     position relative
     img
       width 3rem
-      height 3rem
       border-radius 2.5rem
-    i.material-icons
-      background link
+    i.fa
+      background alpha(c-app-fg, 80%)
       border-radius 1rem
-      width 1rem
-      height 1rem
+      width 1.25rem
+      height 1.25rem
 
       display flex
       align-items center
       justify-content center
 
-      color txt
+      color mcolor
+      font-size 0.66rem
 
       position absolute
-      bottom 0.25rem
-      right 0.25rem
-      font-size sm
+      bottom 0
+      right 0
 
-  .name
-    font-weight 500
   .title
-    color dim
+    color light
+    font-size 0.875rem
 
   &:hover
-    background hover-bg
-    .avatar
-      i.material-icons
-        background hover
-        color bright
-    .name
-      color bright
+    background alpha(mcolor, 5%)
+    .avatar i.fa
+      background link
+      color c-app-fg
 
 @media screen and (min-width:360px)
-  .person-container
+  .card-person
     .avatar img
       width 3.5rem
-      height 3.5rem
+
+    .title
+      font-size 1rem
 
 @media screen and (min-width:400px)
-  .person-container
+  .card-person
     .avatar img
       width 4rem
-      height 4rem
-
-@media screen and (min-width:768px)
-  .person-container
-    padding 1rem
+    .name
+      font-weight 500
 </style>

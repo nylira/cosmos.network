@@ -1,40 +1,40 @@
 <template lang="pug">
-.locations
-  .loc
+ul.locations
+  li
     a(:href='links.cosmos.meetups.berlin' target='_blank')
       img(src='../assets/images/hackatom/loc-berlin.jpg')
       .kv
-        .key Cosmos
+        .key HackAtom Meetup
         .value Berlin
-  .loc
+  li
     a(:href='links.cosmos.meetups.nyc' target='_blank')
       img(src='../assets/images/hackatom/loc-nyc.jpg')
       .kv
-        .key Cosmos
+        .key HackAtom Meetup
         .value New York City
-  .loc
+  li
     a(:href='links.cosmos.meetups.toronto' target='_blank')
       img(src='../assets/images/hackatom/loc-toronto.jpg')
       .kv
-        .key Cosmos
+        .key HackAtom Meetup
         .value Toronto
-  .loc
+  li
     a(:href='links.cosmos.meetups.sf' target='_blank')
       img(src='../assets/images/hackatom/loc-san-francisco.jpg')
       .kv
-        .key Cosmos
+        .key HackAtom Meetup
         .value San Francisco
-  .loc
+  li
     a(:href='links.cosmos.meetups.seoul' target='_blank')
       img(src='../assets/images/hackatom/loc-seoul.jpg')
       .kv
-        .key Cosmos
+        .key HackAtom Meetup
         .value Seoul
-  .loc
+  li
     a(:href='links.cosmos.meetups.shanghai' target='_blank')
       img(src='../assets/images/hackatom/loc-shanghai.jpg')
       .kv
-        .key Cosmos
+        .key HackAtom Meetup
         .value Shanghai
 </template>
 
@@ -47,71 +47,3 @@ export default {
   }
 }
 </script>
-<style lang="stylus">
-@require '~@/styles/variables.styl'
-
-.locations
-  display flex
-  flex-flow column nowrap
-  margin 0 0 0.5rem
-
-.locations .loc
-  margin-bottom 1rem
-  display flex
-  background app-fg
-  a
-    position relative
-    flex 1
-    min-width 0
-    margin 0
-    &:before
-      content ''
-      top 0
-      left 0
-      right 0
-      bottom 0
-      background transparent
-      border 0.25rem solid transparent
-      position absolute
-      display block
-
-    img
-      width 100%
-      display block
-      margin 0
-
-    .kv
-      position absolute
-      bottom 0
-      left 0
-      padding 0.5rem
-      background hsla(0,0,0,0.75)
-      width 8rem
-      height 3rem
-      .key, .value
-        line-height 1
-      .key
-        margin-bottom 0.375rem
-        font-size 0.625rem
-        text-transform uppercase
-        font-weight bold
-        letter-spacing 0.05em
-        color dim
-      .value
-        font-size 0.875rem
-        color bright
-
-    &:hover:before
-      border-color hsla(0,0,0,0.75)
-
-@media screen and (min-width: 768px)
-  .locations
-    flex-flow row wrap
-    align-items center
-    justify-content center
-    margin 0 0 1.5rem
-    .loc
-      flex 0 0 50%
-      text-align left
-      margin 0
-</style>

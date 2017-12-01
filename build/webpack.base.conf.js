@@ -13,7 +13,7 @@ var markdown = require('markdown-it')({
   html: true,
   typographer: true,
   linkify: true,
-  preprocess: function (markdownIt, source) {
+  preprocess: function(markdownIt, source) {
     return source
   }
 })
@@ -36,14 +36,9 @@ module.exports = {
       : config.dev.assetsPublicPath
   },
   resolve: {
-    extensions: ['.js', '.vue', '.json', '.md', '.png', '.jpg'],
+    extensions: ['.js', '.vue', '.json'],
     alias: {
-      '@': resolve('src'),
-      assets: resolve('src/assets'),
-      comp: resolve('src/components'),
-      common: resolve('src/components/common'),
-      content: resolve('content'),
-      variables: resolve('src/styles/variables.styl')
+      '@': resolve('src')
     }
   },
   module: {

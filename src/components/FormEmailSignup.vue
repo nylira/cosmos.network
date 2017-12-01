@@ -10,7 +10,7 @@
     </field>
     <btn
       type="submit"
-      icon="email"
+      icon="envelope-o"
       size="lg"
       id="mc-embedded-subscribe">
     </btn>
@@ -22,7 +22,7 @@
 
 <script>
 import Btn from '@nylira/vue-button'
-import Field from '@nylira/vue-field'
+import Field from '@nylira/vue-input'
 export default {
   components: {
     Btn,
@@ -42,8 +42,7 @@ export default {
 
 .ni-btn#mc-embedded-subscribe
   .ni-btn-container
-    border-left-width 1px
-    border-radius 0 0.25rem 0.25rem 0
+    border-left none
 
     .ni-btn-value
       display none

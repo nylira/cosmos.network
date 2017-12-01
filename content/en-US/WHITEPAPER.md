@@ -1,6 +1,5 @@
-## Cosmos
-
-### A Network of Distributed Ledgers
+# Cosmos
+**A Network of Distributed Ledgers**
 
 Jae Kwon [jae@tendermint.com](mailto:jae@tendermint.com)<br/>
 Ethan Buchman [ethan@tendermint.com](mailto:ethan@tendermint.com)
