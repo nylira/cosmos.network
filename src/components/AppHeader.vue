@@ -39,7 +39,6 @@ export default {
     },
     goto (route) {
       this.close()
-      // console.log('going to', route)
       this.$router.push(route)
     },
     toggleMenuApp () {
