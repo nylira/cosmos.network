@@ -9,8 +9,8 @@
     <div id="load-container">
       <div id="load-title">Cosmos</div>
       <div id="load-main">
-        <p class="green">app is loading&hellip;</p>
-        <p>taking forever? disable noscript</p>
+        <p>website is loading&hellip;</p>
+        <p>disable noscript</p>
         <p>need help? <a href="mailto:hello@tendermint.com">email us</a></p>
       </div>
     </div>
@@ -20,56 +20,46 @@
 <style>
 body { margin: 0; }
 #load {
-  position: fixed;
-  top: 0;
-  left: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100vw;
   height: 100vh;
-  background: hsl(0,0%,98%);
+  background: hsl(233, 36%, 13%);
 }
 #load-container {
   font: 16px/1.5 system, -apple-system, BlinkMacSystemFont, "Roboto", "Seogue UI", "Helvetica Neue", "Lucida Grande", sans-serif;
   margin: 0 auto;
-  text-align: center;
   width: 18rem;
-  height: 18rem;
   display: flex;
   flex-flow: column nowrap;
-  align-items: center;
   justify-content: center;
   box-sizing: border-box;
 }
 #load-title {
   font-size: 1.5rem;
-  font-weight: 500;
-  width: 100%;
-  text-transform: lowercase;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  color: #fff;
+  margin-bottom: 1rem;
+  padding: 0 0.5rem;
 }
 #load-main {
-  padding: 1rem 0 0;
 }
+
 #load-main p {
   font-size: 1rem;
+  line-height: 2rem;
   font-weight: 300;
-  color: #666;
-  margin-bottom: 1em;
-}
-#load-main p.green {
-  color: hsl(120,100%,30%);
+  padding: 0 0.5rem;
+  color: hsl(226, 13%, 50%);
+  background: hsl(233, 33%, 16%);
+  margin: 0 0 1px;
 }
 #load-main a {
   text-decoration: none;
+  color: hsl(233, 96%, 70%);
 }
 </style>
-
-<script>
-if (!Object.defineProperty) {
-  window.alert('The Cosmos website does not support Internet Explorer 8 and below. Please update your browser to a modern version of Chrome, Firefox, or Safari.')
-}
-if (window.location.hostname== "cosmos.github.io") {
-   window.location.href = 'https://cosmos.network'
-}
-</script>
