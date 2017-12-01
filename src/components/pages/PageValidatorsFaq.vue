@@ -1,5 +1,8 @@
 <template lang="pug">
-page(title="Validator FAQ" subtitle="Frequently asked questions about Cosmos Validators.")
+page(
+  title="Validator FAQ"
+  subtitle="Frequently asked questions about Cosmos Validators."
+  splash="validator")
   text-container: body-text
 </template>
 

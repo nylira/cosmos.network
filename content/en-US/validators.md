@@ -27,7 +27,8 @@ Be familiar with all the responsibilities of a validator by reading our <router-
 Actively participate in the testnet. By the end of 2017 you should be able to maintain a validator node with constant uptime on the testnet. Below you will find instructions on how to become a validator in our testnet.
 
 * [Tutorial](https://github.com/cosmos/gaia/blob/master/README.md)
-* [Video Tutorial](https://www.youtube.com/watch?v=B-shjoqvnnY)
+
+<iframe class="youtube" src="https://www.youtube.com/embed/B-shjoqvnnY" frameborder="0" allowfullscreen></iframe>
 
 Tutorial and faucet maintained by community member [Michael Yuan](http://cosmosvalidators.com)
 
@@ -45,7 +46,7 @@ Validators should expect to equip their datacenter location with redundant power
 
 We anticipate that network requirements will be low initially. The current testnet requires minimal resources. Then bandwidth, CPU and memory requirements will rise as the network grows. Large hard drives are recommended for storing years of blockchain history.
 
-##### 5. Key management - HSM
+#### 5. Key management - HSM
 
 It is mission critical that an attacker cannot steal a validator's key. If this is possible, it puts the entire stake delegated to the compromised validator at risk. Hardware security modules are an important strategy for mitigating this risk.
 
