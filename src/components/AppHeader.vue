@@ -57,9 +57,9 @@ export default {
       if (w >= 1024) {
         this.close()
         this.desktop = true
-        return
+      } else {
+        this.desktop = false
       }
-      this.desktop = false
     }
   },
   mounted () {
