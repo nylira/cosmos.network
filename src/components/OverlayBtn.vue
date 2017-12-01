@@ -26,11 +26,14 @@ export default {
   text-align center
   color txt
 
-  background alpha(app-fg, 90%)
+  background alpha(c-app-fg, 90%)
   backdrop-filter blur(0.125rem)
   shadow()
 
   cursor pointer
+
+  i.fa
+    font-size 1rem
 
 @media screen and (min-width: 360px)
   .overlay-btn

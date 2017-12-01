@@ -2,19 +2,22 @@
 header.app-header
   .container
     .header-item(@click='toggleMenuApp', v-if='!desktop')
-      i.material-icons(v-if='!activeMenuApp') menu
-      i.material-icons(v-else='') close
+      i.fa.fa-bars(v-if='!activeMenuApp')
+      i.fa.fa-times(v-else='')
     router-link.header-item(to='/')
-      img(src='../assets/images/cosmos-logo-white-alpha.png', alt='Cosmos Logo')
+      img(src='../assets/images/cosmos-logo-black-alpha.png', alt='Cosmos Logo')
     menu.menu-popup.menu-app(v-if='activeMenuApp || desktop')
       nav.nav-app
-        router-link(to='/intro' @click.native='close') Introduction
-        router-link(to='/dev' @click.native='close') Developers
+        router-link(to='/whitepaper' @click.native='close') Whitepaper
+        router-link(to='/faq' @click.native='close') FAQ
+        router-link(to='/community' @click.native='close') Community
+        // router-link(to='/events' @click.native='close') Conferences
+        // router-link(to='/hackatom' @click.native='close') HackAtom
         router-link(to='/validators' @click.native='close') Validators
         router-link(to='/about' @click.native='close',) About
       nav(v-if='!desktop')
         a(:href='links.cosmos.blog' @click.native='close' target='_blank') Blog
-    a.header-item(:href='links.cosmos.blog' @click.native='close' target='_blank')
+    a.header-item.header-item-alert(:href='links.cosmos.blog' @click.native='close' target='_blank')
       i.fa.fa-medium
       span.label(v-if='desktop') Blog
 </template>
@@ -39,7 +42,9 @@ export default {
     },
     goto (route) {
       this.close()
+      // console.log('going to', route)
       this.$router.push(route)
+      return
     },
     toggleMenuApp () {
       this.activeMenuApp = !this.activeMenuApp
@@ -56,9 +61,10 @@ export default {
       if (w >= 1024) {
         this.close()
         this.desktop = true
-      } else {
-        this.desktop = false
+        return
       }
+      this.desktop = false
+      return
     }
   },
   mounted () {
@@ -69,7 +75,7 @@ export default {
 </script>
 
 <style lang="stylus">
-@require '~@/styles/variables.styl'
+@require '../styles/variables.styl'
 
 .app-header
   position fixed
@@ -78,7 +84,9 @@ export default {
   z-index 100
   width 100%
 
-  background app-bg
+  background alpha(#fff, 95%)
+  backdrop-filter blur(0.125rem)
+  shadow()
 
   .container
     max-width 1024px
@@ -95,12 +103,20 @@ export default {
 
     color txt
     cursor pointer
+    &:hover
+      color link
+
+    i.fa
+      width 1rem
+      text-align center
+      position relative
+    i.fa + .label
+      margin-left 0.5rem
+    i.fa, .label
+      color txt
 
     .label
       user-select none
-
-    i
-      margin-right 0.5rem
 
     img
       display block
@@ -110,9 +126,28 @@ export default {
     &.header-item-flush
       padding 0
 
+    &.header-item-alert
+      justify-content flex-end
+      .alert
+        df()
+        font-size 0.5rem
+        font-weight 600
+        line-height 1
+        color #fff
+        display flex
+        align-items center
+        justify-content center
+
+        width 0.666rem
+        height 0.666rem
+        border-radius 0.333rem
+        background #f00
+        position absolute
+        bottom -0.3rem
+        right -0.3rem
     &:hover
-      i, .label
-        color bright
+      i.fa, .label
+        color link
 
   .menu-app
     nav
@@ -134,7 +169,7 @@ export default {
     bottom 0
     width 100vw
 
-    background app-bg
+    background c-app-fg
     user-select none
 
     nav
@@ -151,55 +186,61 @@ export default {
         justify-content space-between
         user-select none
         &.disabled
-          color dim
+          color light
           cursor not-allowed
         &:hover
-          color hover
+          color link
+        .alert
+          display flex
+          align-items center
+          background link
+          color c-app-fg
+          font-size 0.75rem
+          padding 0 0.5rem
+          border-radius 0.25rem
+          height 1.5rem
+          i.fa
+            color c-app-fg
+          i.fa + .ni-time-left
+            margin-left 0.25rem
       > p
         .ni-time-left
           display inline
           font-weight bold
+        a
+          color link
+          &:hover
+            text-decoration underline
 
 @media screen and (min-width: 1024px)
   .app-header
-    border-bottom none
-    border-top bw solid darken(app-bg, 50%)
-
     .container
       .header-item
         width 8rem
-        &:last-of-type
-          justify-content flex-end
 
   .menu-popup.menu-app
     display flex
     padding 0 1rem
-
     .container
       display flex
-
     nav
       display flex
       flex-flow row
       align-items center
-
       > a
         padding 0 1rem
         color txt
         line-height 3rem
-        height 3rem + 3*px
-        border-top bw solid transparent
-        margin-top -1 * bw
-
+        i.fa
+          color alpha(txt, 50%)
+          margin-left 0.5rem
         &:hover
-          color bright
-
+          color link
+          i.fa
+            color link
         &.router-link-active
+          background linear-gradient(top, hsl(0,0,96%), hsl(0,0,98%))
           cursor default
-          user-select none
-          color bright
-          border-color mc
-          background app-fg
           &:hover
-            color bright
+            color txt
 </style>
