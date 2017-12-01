@@ -53,6 +53,7 @@ export default {
     display flex
     flex-flow column nowrap
     align-items center
+    height 90vh
 
   .cosmos
     flex 1
@@ -78,12 +79,10 @@ export default {
 @media screen and (min-width: 768px)
   .section-home-cover
     .section-container
-      padding 3rem 3rem
+      padding 1rem 3rem 3rem
 
-    .cosmos
-      margin 5rem 0
-      img
-        max-width 480px
+    .cosmos img
+      max-width 400px
 
     menu
       flex-flow row
@@ -93,13 +92,13 @@ export default {
 
 @media screen and (min-width: 1024px)
   .section-home-cover
-    .cosmos
-      margin 3rem 0
-      img
-        max-width 360px
+    .section-container
+      height 90vh
+
+    .cosmos img
+      max-width 320px
+
     menu
-      flex-flow row
-      max-width 48rem
       > *
         margin 0 1rem 0 0
 </style>

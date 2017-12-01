@@ -92,3 +92,14 @@ h6, .h6
   100%
     -webkit-transform: rotate(359deg)
     transform: rotate(359deg)
+
+.mobile
+  visibility visible
+
+.desktop
+  visibility collapse
+@media screen and (min-width: 768px)
+  .mobile
+    visibility collapse
+  .desktop
+    visibility visible

@@ -18,19 +18,23 @@ export default {
 </script>
 
 <style lang="stylus">
-@require '../styles/variables.styl'
+@require '~variables'
 
 .cover-alert
   display block
   width 100%
   max-width 1024px
-  border 1px solid bc
-  padding 0.4375rem 0.75rem
+  border px solid bc
+  padding 0.5rem
   position relative
   overflow hidden
 
   .ni-time-remaining
     display inline
+
+  .key, .value
+    font-size sm
+    line-height 1.2
 
   .key
     text-transform uppercase
