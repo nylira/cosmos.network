@@ -34,23 +34,14 @@ export default {
   position relative
   overflow hidden
 
-.ni-page-header-backdrop img
-  position fixed
-  bottom -5vw
-  left -5vw
-  opacity 0.00666
-  width 66.66vw
-  height 66.66vw
-  z-index -1
-
 .ni-page-header-splash
   position absolute
   top 50%
   margin-top -12.5vw
   right 0
   img
-    width 33.33vw
-    height 33.33vw
+    width 25vw
+    height 25vw
     opacity 0.25
 
 .ni-page-header-container
@@ -100,6 +91,7 @@ export default {
     border-bottom 1px solid bc
 
   .ni-page-header-menu
+  .ni-page-header-backdrop
     display none
 
 @media screen and (min-width: 1024px)
@@ -116,4 +108,13 @@ export default {
     display block
     .ni-btn
       margin-left 0.5rem
+
+  .ni-page-header-backdrop img
+    position fixed
+    bottom -5vw
+    left -5vw
+    opacity 0.00666
+    width 66.66vw
+    height 66.66vw
+    z-index -1
 </style>
