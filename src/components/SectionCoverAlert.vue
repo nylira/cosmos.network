@@ -4,7 +4,6 @@
   <span class="value">
     We will be in San Francisco on December 4-5 for Token Summit II.
   </span>
-  <i class="fa fa-angle-double-right" aria-hidden="true"></i>
 </a>
 </template>
 
@@ -24,10 +23,10 @@ export default {
   display block
   width 100%
   max-width 1024px
-  border px solid bc
-  padding 0.5rem
+  padding 0.5rem 1rem
   position relative
   overflow hidden
+  background app-bg
 
   .ni-time-remaining
     display inline
@@ -42,4 +41,9 @@ export default {
     color txt
   .value
     color dim
+  &:hover
+    .key
+      color link
+    .value
+      color hover
 </style>

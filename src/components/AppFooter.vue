@@ -81,7 +81,8 @@ export default {
 @require '../styles/variables.styl'
 
 .app-footer
-  background darken(app-bg, 12.5%)
+  border-top bw solid app-fg
+  margin-top 3rem
   padding-top 1.5rem
 
 .app-footer-container
@@ -119,9 +120,9 @@ export default {
     flex-flow row nowrap
 
     .ni-part:first-child
-      margin-right 0.5rem
+      margin-right 2px
     .ni-part:last-child
-      margin-left 0.5rem
+      margin-left 2px
 
     .ni-part
       flex 1

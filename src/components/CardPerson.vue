@@ -32,7 +32,7 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-@import '~@/styles/variables.styl'
+@import '~variables'
 
 .person-container
   background app-fg
