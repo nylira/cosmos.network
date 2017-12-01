@@ -1,9 +1,3 @@
-# FAQ
-
-Frequently asked questions &amp; answers about Cosmos.
-
-[[toc]]
-
 ## Overview
 
 ### Who is the team developing Cosmos?
@@ -13,13 +7,10 @@ Its development is being led primarily by the [Tendermint](https://tendermint.co
 
 ### What's the difference between Tendermint, the Cosmos Network, the Cosmos Hub, and Atoms?
 
-- [Tendermint](https://tendermint.com): a general purpose blockchain engine that uses a Byzantine-fault tolerant consensus protocol and allows applications to be written in any programming language.
-
-- The Cosmos Network: a heterogenous network of Proof-of-Stake blockchains that can interoperate with one-another.
-
-- The Cosmos Hub: The first Proof-of-Stake blockchain to be launched by the Cosmos Network; it uses Tendermint consensus, contains a built in governance protocol, and serves as co-ordinater for interoperability between other blockchains.
-
-- Atoms: The native cryptocurrency on the Cosmos Hub. Atoms are necessary for participating in the consensus protocol and transacting on the network.
+* [Tendermint](https://tendermint.com): a general purpose blockchain engine that uses a Byzantine-fault tolerant consensus protocol and allows applications to be written in any programming language.
+* The Cosmos Network: a heterogenous network of Proof-of-Stake blockchains that can interoperate with one-another.
+* The Cosmos Hub: The first Proof-of-Stake blockchain to be launched by the Cosmos Network; it uses Tendermint consensus, contains a built in governance protocol, and serves as co-ordinater for interoperability between other blockchains.
+* Atoms: The native cryptocurrency on the Cosmos Hub. Atoms are necessary for participating in the consensus protocol and transacting on the network.
 
 ### When will the Cosmos Network launch?
 
@@ -267,7 +258,7 @@ And so on.
 ### Is consensus configurable?  
 
 Cosmos can accomodate other PoS consensus mechanisms as long as they have a very
-clean and consise light-client verification protocol.  One promising protocol is HoneyBadgerBFT.
+clean and concise light-client verification protocol.  One promising protocol is HoneyBadgerBFT.
 Tendermint itself can also be upgraded to support additional features.  
 It will be up to the Cosmos Network Foundation and the Cosmos governance to decide whether to support them.  
 It isn't necessary if there can be adapter zones.  That's what a Bitcoin peg zone is -- an adapter

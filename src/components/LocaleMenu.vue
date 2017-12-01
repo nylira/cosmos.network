@@ -1,55 +1,28 @@
 <template>
-  <div class="locale-menu-container">
-    <overlay-btn @click.native="toggle(true)" icon="times" v-if="maximized"></overlay-btn>
-    <overlay-btn @click.native="toggle(true)" icon="globe" v-else></overlay-btn>
-    <menu class="locale-menu" v-show="maximized">
-      <template v-for="lang in languages">
-        <router-link
-          :to="dir"
-          v-if="lang.code === 'en-US'"
-          @click.native="set(false)"
-          exact>
-          {{ lang.name }}
-        </router-link>
-        <router-link
-          :to="dir + lang.code"
-          @click.native="set(false)"
-          v-else>
-          {{ lang.name }}
-        </router-link>
-      </template>
+  <div class="hackatom-locale-menu-container">
+    <overlay-btns>
+      <overlay-btn @click.native="toggle(true)" icon="times" v-if="maximized"></overlay-btn>
+      <overlay-btn @click.native="toggle(true)" icon="globe" v-else></overlay-btn>
+    </overlay-btns>
+    <menu class="hackatom-locale-menu" v-show="maximized">
+      <router-link to="/hackatom" exact>English</router-link>
+      <router-link to="/hackatom/zh-cn">简体中文</router-link>
     </menu>
   </div>
 </template>
 
 <script>
 import OverlayBtn from './OverlayBtn'
+import OverlayBtns from './OverlayBtns'
 export default {
-  name: 'locale-menu',
+  name: 'hackatom-locale-menu',
   components: {
-    OverlayBtn
+    OverlayBtn,
+    OverlayBtns
   },
-  computed: {
-    dir () {
-      return '/' + this.path + '/'
-    },
-    languages () {
-      let enabledCodes = this.langs
-      return this.allLanguages.filter(l => enabledCodes.includes(l.code))
-    }
-  },
-  data () {
-    return {
-      maximized: false,
-      allLanguages: [
-        { name: 'English', code: 'en-US' },
-        { name: 'Português', code: 'pt' },
-        { name: '日本語', code: 'ja' },
-        { name: '한국어', code: 'ko' },
-        { name: '简体中文', code: 'zh-CN' }
-      ]
-    }
-  },
+  data: () => ({
+    maximized: false
+  }),
   methods: {
     toggle (value) {
       this.maximized = !this.maximized
@@ -65,20 +38,18 @@ export default {
 <style lang="stylus">
 @import '../styles/variables.styl'
 
-.locale-menu-container
-  position relative
+.hackatom-locale-menu-container
+  position absolute
 
-.locale-menu
+.hackatom-locale-menu
   background alpha(#fff, 95%)
   backdrop-filter blur(0.125rem)
   shadow()
 
-.locale-menu
-  position absolute
-  bottom 3em
-  right -0.5em
-  width 100vw
-  max-width 20rem
+  position fixed
+  bottom 4em
+  right 0
+  width 20rem
   z-index 100
 
   a
@@ -92,10 +63,10 @@ export default {
     &:hover
       color link
     &.router-link-active
-      color light
+      color dim
     &:last-of-type
       border-bottom none
 @media screen and (min-width:1024px)
-  .locale-menu-container
+  .hackatom-locale-menu-container
     bottom 0.5rem
 </style>

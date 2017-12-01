@@ -1,6 +1,6 @@
 <template lang="pug">
 a.card-community(:href='anchor' target='_blank')
-  .icon: i(:class="'fa fa-' + icon")
+  .icon: i.fa(:class="'fa-' + icon")
   .text
     .dt {{ dt }}
     .dd {{ dd }}
@@ -16,45 +16,46 @@ export default {
 <style lang="stylus">
 @require '../styles/variables.styl'
 
-.card-community + .card-community
-  border-top none
-
 .card-community
+  flex 1
   display flex
-  border 1px solid bc
+  background app-fg
+  margin-top 0.25rem
+  margin-bottom 0.25rem
 
   .icon
-    flex 0 0 3rem
+    flex 0 0 4rem
     display flex
     align-items center
     justify-content center
 
-    border-right 1px solid bc
     i.fa
-      font-size 1.5rem
       color link
+      font-size xl
 
   .text
-    padding 0.5rem 0.75rem
+    padding 0.75rem
+    padding-left 0
     .dt
-      font-weight 500
       color txt
+      font-weight 500
     .dd
       color dim
-      font-size 0.75rem
 
   &:hover
-    background-color alpha(link, 3%)
+    background hover-bg
+    .icon i
+      color hover
+
     .text .dt
-      color link
+      color bright
 
 @media screen and (min-width: 768px)
   .card-community
     .icon
       flex 0 0 4rem
-      i.fa
-        font-size 1.75rem
+
     .text
-      .dd
-        font-size 1rem
+      padding 1rem
+      padding-left 0
 </style>
