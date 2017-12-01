@@ -258,7 +258,7 @@ And so on.
 ### Is consensus configurable?  
 
 Cosmos can accomodate other PoS consensus mechanisms as long as they have a very
-clean and consise light-client verification protocol.  One promising protocol is HoneyBadgerBFT.
+clean and concise light-client verification protocol.  One promising protocol is HoneyBadgerBFT.
 Tendermint itself can also be upgraded to support additional features.  
 It will be up to the Cosmos Network Foundation and the Cosmos governance to decide whether to support them.  
 It isn't necessary if there can be adapter zones.  That's what a Bitcoin peg zone is -- an adapter
