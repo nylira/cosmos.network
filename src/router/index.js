@@ -27,6 +27,15 @@ const routes = [
     ]
   },
 
+  // VALIDATORS
+  { path: '/validators',
+    component: r('Validators'),
+    children: [
+      { path: '/', name: 'validators', component: r('ValidatorsIndex') },
+      { path: 'faq', name: 'validators-faq', component: r('ValidatorsFaq') }
+    ]
+  },
+
   // ABOUT
   { path: '/about',
     component: r('About'),
