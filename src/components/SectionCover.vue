@@ -38,16 +38,15 @@ export default {
 </script>
 
 <style lang="stylus">
-@require '../styles/variables.styl'
+@require '~variables'
 
 .section-home-cover
   position relative
   border-bottom 1px solid bc
-  margin-top -3rem
+  background app-fg
 
   .section-container
-    margin-top 3rem
-    padding 1.5rem
+    padding 1rem
     position relative
     z-index 5
 
@@ -76,11 +75,6 @@ export default {
       &:last-child
         margin 0
 
-@media screen and (min-width: 360px)
-  .section-home-cover
-    .section-container
-      padding 2rem
-
 @media screen and (min-width: 768px)
   .section-home-cover
     .section-container
@@ -99,18 +93,13 @@ export default {
 
 @media screen and (min-width: 1024px)
   .section-home-cover
-    .section-container
-      padding 1rem 3rem 3rem
-      height 90vh
-
+    .cosmos
+      margin 3rem 0
+      img
+        max-width 360px
     menu
       flex-flow row
       max-width 48rem
       > *
         margin 0 1rem 0 0
-
-@media screen and (min-width: 1680px)
-  .section-home-cover
-    .section-container
-      padding 3rem
 </style>
