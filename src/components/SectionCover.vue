@@ -42,7 +42,6 @@ export default {
 
 .section-home-cover
   position relative
-  border-bottom 1px solid bc
   background app-fg
 
   .section-container

@@ -50,7 +50,7 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-@import '~@/styles/variables.styl'
+@import '~variables'
 
 .modal-wrapper
   position fixed
@@ -64,7 +64,7 @@ export default {
   align-items center
   justify-content center
 
-  background hsla(0,0,0,0.1)
+  background hsla(0,0,0,0.5)
   backdrop-filter blur(0.5rem)
 
 .modal-person
