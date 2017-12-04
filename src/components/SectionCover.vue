@@ -3,9 +3,8 @@ section.section-home-cover
   .section-container
     section-cover-alert
     .cosmos
-      img(src="../assets/images/cosmos-logo-large.png")
+      img(src="~assets/images/logos/cosmos-brandmark.png")
     menu
-      form-email-signup
       btn(
         type='anchor'
         :href='links.cosmos.community.telegram'
@@ -85,7 +84,7 @@ export default {
 
     menu
       flex-flow row
-      max-width 48rem
+      max-width 32rem
       > *
         margin 0 0.5rem 0 0
 
@@ -95,7 +94,8 @@ export default {
       height 90vh
 
     .cosmos img
-      max-width 320px
+      width 31.25vw
+      max-width 32rem
 
     menu
       > *
