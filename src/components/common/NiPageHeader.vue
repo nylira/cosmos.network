@@ -1,9 +1,9 @@
 <template lang='pug'>
 header.ni-page-header
-  .ni-page-header-backdrop: img(src="../../assets/images/cosmos-validator-small.png")
+  .ni-page-header-backdrop: img(src="~assets/images/logos/cosmos-logo.png")
   .ni-page-header-splash
     img(v-if="splash === 'validator'"
-      src="../../assets/images/cosmos-validator-small.png")
+      src="~assets/images/logos/cosmos-validator.png")
   .ni-page-header-container
     slot(name="votes")
     .text
@@ -113,7 +113,7 @@ export default {
     position fixed
     bottom -5vw
     left -5vw
-    opacity 0.00666
+    opacity 0.02
     width 66.66vw
     height 66.66vw
     z-index -1

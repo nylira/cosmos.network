@@ -5,7 +5,7 @@ header.app-header
       i.material-icons(v-if='!activeMenuApp') menu
       i.material-icons(v-else='') close
     router-link.header-item(to='/')
-      img(src='../assets/images/cosmos-logo-white-alpha.png', alt='Cosmos Logo')
+      img(src='~assets/images/logos/cosmos-wordmark.png', alt='Cosmos Logo')
     menu.menu-popup.menu-app(v-if='activeMenuApp || desktop')
       nav.nav-app
         router-link(to='/intro' @click.native='close') Introduction
