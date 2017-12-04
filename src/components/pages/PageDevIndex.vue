@@ -11,7 +11,7 @@ page(title="Developers" subtitle="Learn how to bootstrap your blockchain with Co
   h3 Ethermint
   p Ethermint is a blazing fast Proof-of-Stake implementation of Ethereum that is built on top of Tendermint using the ABCI protocol. Ethermint lets you use the full power of the Ethereum Virtual Machine in connection to other blockchains (with IBC) on the Cosmos Network.
   ul
-    li: a(href="https://ethermint.network") Ethermint Website
+    li: a(href="https://ethermint.zone") Ethermint Website
     li: a(href="https://github.com/tendermint/ethermint") Ethermint on GitHub
 
   h3 Lotion
