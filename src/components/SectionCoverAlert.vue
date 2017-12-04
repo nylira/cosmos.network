@@ -1,6 +1,6 @@
 <template>
 <a class="cover-alert" href="http://tokensummit.com" target="_blank">
-  <span class="key">Token Summit II:</span>
+  <span class="key">Meetup!</span>
   <span class="value">
     We will be in San Francisco on December 4-5 for Token Summit II.
   </span>
@@ -23,27 +23,29 @@ export default {
   display block
   width 100%
   max-width 1024px
-  padding 0.5rem 1rem
   position relative
   overflow hidden
-  background app-bg
+
+  font-size sm
 
   .ni-time-remaining
     display inline
 
-  .key, .value
-    font-size sm
-    line-height 1.2
-
   .key
-    text-transform uppercase
-    font-weight 500
-    color txt
+    font-weight bold
+
   .value
     color dim
+
   &:hover
-    .key
-      color link
-    .value
+    background app-fg
+    .key, .value
       color hover
+
+@media screen and (min-width: 768px)
+  .cover-alert
+    text-align center
+    width auto
+    margin 0.5rem 0
+    font-size x
 </style>
