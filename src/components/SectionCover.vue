@@ -93,6 +93,10 @@ export default {
     .section-container
       height 90vh
 
+    .cosmos img
+      width 31.25vw
+      max-width 32rem
+
     menu
       > *
         margin 0 1rem 0 0
