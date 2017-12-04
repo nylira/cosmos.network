@@ -4,7 +4,7 @@ header.app-header
     .header-item(@click='toggleMenuApp', v-if='!desktop')
       i.material-icons(v-if='!activeMenuApp') menu
       i.material-icons(v-else='') close
-    router-link.header-item(to='/')
+    router-link.header-item.header-item-link(to='/')
       img(src='~assets/images/logos/cosmos-wordmark.png', alt='Cosmos Logo')
     menu.menu-popup.menu-app(v-if='activeMenuApp || desktop')
       nav.nav-app
@@ -107,9 +107,6 @@ export default {
       height 1.125rem
       width auto
 
-    &.header-item-flush
-      padding 0
-
     &:hover
       i, .label
         color bright
@@ -167,9 +164,19 @@ export default {
 
     .container
       .header-item
-        width 8rem
+        border-top bw solid transparent
+        margin-top -1 * bw
+        height 3rem + bw
         &:last-of-type
           justify-content flex-end
+
+        &:hover
+          color bright
+          border-color hover
+
+        &.header-item-link.router-link-exact-active
+          background app-fg
+          border-top bw solid mc
 
   .menu-popup.menu-app
     display flex
@@ -193,6 +200,7 @@ export default {
 
         &:hover
           color bright
+          border-color hover
 
         &.router-link-active
           cursor default
