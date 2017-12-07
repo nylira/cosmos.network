@@ -3,7 +3,7 @@
 ### Who is the team developing Cosmos?
 
 The Cosmos Network is the first project by the Interchain Foundation.
-Its development is being led primarily by the [Tendermint](https://tendermint.com) team. Learn more [about the team](/about). For greater insight into current development, see the [Tendermint](https://github.com/tendermint/tendermint) and [Basecoin](https://github.com/tendermint/basecoin) repositories on GitHub.
+Its development is being led primarily by the [Tendermint](https://tendermint.com) team. Learn more [about the team](/about). For greater insight into current development, see the [Tendermint](https://github.com/tendermint/tendermint) and [Cosmos SDK](https://github.com/cosmos/cosmos-sdk) repositories on GitHub.
 
 ### What's the difference between Tendermint, the Cosmos Network, the Cosmos Hub, and Atoms?
 
@@ -14,7 +14,7 @@ Its development is being led primarily by the [Tendermint](https://tendermint.co
 
 ### When will the Cosmos Network launch?
 
-We are targetting Q4 2017. Atoms will not be tradeable until then.
+We are targetting Q1 2018. Atoms will not be tradeable until then.
 
 ## Atoms
 
@@ -46,14 +46,14 @@ The Interchain Foundation will suggest that 5% of the Atoms go to its initial do
 ### When is the Fundraiser?
 
 The Interchain Foundation has already raised some funds from private individuals, but is not accepting any more.
-It will host a public fundraising event beginning on April 6, 2017 at 6AM PDT.
-Both Ether and Bitcoin will be accepted in the fundraiser.
+It has hosted a public fundraising event on April 6, 2017 from 6AM - 6:27AM PDT.
+Both Ether and Bitcoin were accepted in the fundraiser.
 The security of the fundraising process has been vetted extremely carefully.
 
 ### How do I get Atoms?
 
-If you participated in the fundraiser, you can check your suggested atom balance at https://fundraiser.cosmos.network.
-If not, you must wait until the Cosmos Network launches (expected Q4 2017) and Atoms are traded on exchanges.
+If you participated in the fundraiser, you can check your suggested atom balance at [fundraiser.cosmos.network](https://fundraiser.cosmos.network).
+If not, you must wait until the Cosmos Network launches (expected Q1 2018) and Atoms are traded on exchanges.
 
 ### Which exchanges will Atoms trade on?
 
