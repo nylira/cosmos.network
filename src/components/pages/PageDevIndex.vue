@@ -1,10 +1,24 @@
 <template lang="pug">
 page(title="Developers" subtitle="Learn how to bootstrap your blockchain with Cosmos."): text-container
+  h2 Cosmos Hub
+
+  h3 Gaia
+  p Gaia is the testing version of the Cosmos Hub. When the Hub is complete, it will contain the Tendermint consensus engine, wallet, staking, and governing components. We're currently working hard on getting the components ready for public release by the end of February, 2018.
+
+  p Gaia is a testnet designed to get validators acquainted with staking concepts and procedures. For testing purposes, the Gaia validator set is determined as validators with the top 100 bonded atoms. The validator set is undated every block. All bonding and unbonding is instantaneous (no queue). Absent features: delegation, validator rewards, and the unbonding wait period.
+
+  ul
+    li: a(href="https://github.com/cosmos/cosmos-sdk") Gaia on GitHub
+    li: router-link(to="/validators") Learn about Cosmos Validators
+
   h2 Blockchain Frameworks
 
   h3 Cosmos SDK
   p The Cosmos SDK affords you all the tools you need to rapidly develop robust blockchains and blockchain applications which are interoperable with the Cosmos Hub. It is a blockchain development 'starter-pack' of common blockchain modules while not enforcing their use thus giving maximum flexibility for application customization. For example, does your app require fees, how do you want to log messages, do you enable IBC, do you even have a cryptocurrency? In this way, the Cosmos SDK is the #[strong "Rails" of cryptocurrencies].
-  ul
+
+  p NOTE: The Cosmos SDK is under heavy development and it's not yet ready for release. Keep up to date with Cosmos SDK news #[a(href="https://blog.cosmos.network") on our blog].
+
+  // ul
     li: a(href="https://github.com/cosmos/cosmos-sdk") Cosmos SDK on GitHub
     li: a(href="http://cosmos-sdk.readthedocs.io/en/latest/") Cosmos SDK Documentation
 
