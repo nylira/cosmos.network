@@ -8,7 +8,7 @@ page(title="Developers" subtitle="Learn how to bootstrap your blockchain with Co
   p Gaia is a testnet designed to get validators acquainted with staking concepts and procedures. For testing purposes, the Gaia validator set is determined as validators with the top 100 bonded atoms. The validator set is undated every block. All bonding and unbonding is instantaneous (no queue). Absent features: delegation, validator rewards, and the unbonding wait period.
 
   ul
-    li: a(href="https://github.com/cosmos/cosmos-sdk") Gaia on GitHub
+    li: a(href="https://github.com/cosmos/gaia") Gaia on GitHub
     li: router-link(to="/validators") Learn about Cosmos Validators
 
   h2 Blockchain Frameworks
