@@ -1,9 +1,10 @@
 <template lang="pug">
 .page
   page-menu
-    router-link(to="/intro") Overview
-    router-link(to="/intro/faq") FAQ
-    // router-link(to="/intro/roadmap") Roadmap
+    router-link(to="/about") Introduction
+    router-link(to="/about/faq") FAQ
+    router-link(to="/about/whitepaper") Whitepaper
+    // router-link(to="/about/roadmap") Roadmap
   router-view
 </template>
 

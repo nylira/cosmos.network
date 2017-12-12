@@ -2,7 +2,6 @@
 .page
   page-menu
     router-link(to="/dev") Overview
-    router-link(to="/dev/whitepaper") Whitepaper
     router-link(to="/dev/hackatom") HackAtom
   router-view
 </template>

@@ -5,12 +5,23 @@ const routes = [
   { path: '/', component: r('Index') },
   { path: '/events', name: 'events', component: r('Events') },
 
-  // INTRODUCTION
-  { path: '/intro',
+  // ABOUT
+  { path: '/about',
     component: r('Intro'),
     children: [
       { path: '/', name: 'intro', component: r('IntroIndex') },
       { path: 'faq', name: 'faq', component: r('IntroFaq') },
+      { path: 'whitepaper', name: 'whitepaper', component: r('Whitepaper') },
+      { path: 'whitepaper/:locale', name: 'whitepaper-localized', component: r('Whitepaper') }
+    ]
+  },
+
+  // INTRODUCTION
+  { path: '/team',
+    component: r('About'),
+    children: [
+      { path: '/', name: 'about', component: r('AboutIndex') },
+      { path: 'assets', name: 'assets', component: r('AboutAssets') },
       { path: 'roadmap', name: 'roadmap', component: r('IntroRoadmap') }
     ]
   },
@@ -21,9 +32,7 @@ const routes = [
     children: [
       { path: '/', name: 'dev', component: r('DevIndex') },
       { path: 'hackatom', name: 'hackatom-en-us', component: r('HackAtom') },
-      { path: 'hackatom/zh-cn', name: 'hackatom-zh-cn', component: r('HackAtomZhCn') },
-      { path: 'whitepaper', name: 'whitepaper', component: r('Whitepaper') },
-      { path: 'whitepaper/:locale', name: 'whitepaper-localized', component: r('Whitepaper') }
+      { path: 'hackatom/zh-cn', name: 'hackatom-zh-cn', component: r('HackAtomZhCn') }
     ]
   },
 
@@ -33,15 +42,6 @@ const routes = [
     children: [
       { path: '/', name: 'validators', component: r('ValidatorsIndex') },
       { path: 'faq', name: 'validators-faq', component: r('ValidatorsFaq') }
-    ]
-  },
-
-  // ABOUT
-  { path: '/about',
-    component: r('About'),
-    children: [
-      { path: '/', name: 'about', component: r('AboutIndex') },
-      { path: 'assets', name: 'assets', component: r('AboutAssets') }
     ]
   },
 

@@ -5,10 +5,10 @@
     part(title="Get Started")
       btn(
         type="link"
-        to="/intro"
+        to="/about/whitepaper"
         size="lg"
         icon="description"
-        value="Read Introduction")
+        value="Read Whitepaper")
     part(title="Get Newsletter"): form-email-signup
   .app-footer__row
     part(title='Discuss & Chat'): .community-cards

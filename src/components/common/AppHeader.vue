@@ -8,15 +8,17 @@ header.app-header
       img(src='~assets/images/logos/cosmos-logo.png', alt='Cosmos Logo')
     menu.menu-popup.menu-app(v-if='activeMenuApp || desktop')
       nav.nav-app
-        router-link(to='/intro' @click.native='close') Introduction
+        router-link(to='/about' @click.native='close') About
         router-link(to='/dev' @click.native='close') Developers
         router-link(to='/validators' @click.native='close') Validators
-        router-link(to='/about' @click.native='close',) About
+        a.header-item(:href='links.cosmos.blog' @click.native='close' target='_blank')
+          i.fa.fa-medium
+          span.label(v-if='desktop') Blog
+        a.header-item(:href='links.cosmos.github' @click.native='close' target='_blank')
+          i.fa.fa-github
+          span.label(v-if='desktop') Github
       nav(v-if='!desktop')
         a(:href='links.cosmos.blog' @click.native='close' target='_blank') Blog
-    a.header-item(:href='links.cosmos.blog' @click.native='close' target='_blank')
-      i.fa.fa-medium
-      span.label(v-if='desktop') Blog
 </template>
 
 <script>
