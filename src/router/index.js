@@ -49,7 +49,6 @@ const routes = [
   { path: '/plan', name: 'plan', component: r('Plan') },
   { path: '/plan/:locale', name: 'plan-localized', component: r('Plan') },
   { path: '/privacy', name: 'privacy', component: r('Privacy') },
-  { path: '/validators', name: 'validators', component: r('Validators') },
 
   // redirects
   { path: '/faq', redirect: '/intro/faq' },
