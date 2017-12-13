@@ -1,75 +1,38 @@
 <template lang="pug">
-.app-footer: .app-footer-container
-  .app-footer-row.actions
-    part(title="Get Started")
-      btn#whitepaper-btn(
-        type="link"
-        to="/intro"
-        size="lg"
-        icon="description"
-        value="Read Introduction")
-    part(title="Get Newsletter"): form-email-signup
-  .app-footer-row
-    part(title='Discuss & Chat'): .community-cards
-      card-community(
-        dt='Forum'
-        dd='Read and discuss the latest developer updates.'
-        icon='university'
-        :anchor='links.cosmos.community.discourse')
-      card-community(
-        dt='Community Chat (Telegram)'
-        dd='Join the `cosmosproject` group on Telegram.'
-        icon='telegram'
-        :anchor='links.cosmos.community.telegram')
-      card-community(
-        dt='Developer Chat (Matrix)'
-        dd='Join the #cosmos:matrix.org room with Riot.'
-        icon='comments-o'
-        :anchor='links.cosmos.community.matrix')
-      card-community(
-        dt='IRC'
-        dd='Join #cosmos_network on irc.freenode.net.'
-        icon='hashtag'
-        :anchor='links.cosmos.community.irc')
-    part(title='Social Media'): .community-cards
-      card-community(
-        dt='Twitter'
-        dd='Follow @cosmos, our official Twitter account.'
-        icon='twatter'
-        :anchor='links.cosmos.community.twitter')
-      card-community(
-        dt='BitcoinTalk'
-        dd='Keep up with our thread on BitcoinTalk.'
-        icon='bitcoin'
-        :anchor='links.cosmos.community.bitcointalk')
-      card-community(
-        dt='Facebook'
-        dd='Like the `cosmosproject` page.'
-        icon='footbook'
-        :anchor='links.cosmos.community.facebook')
-      card-community(
-        dt='Reddit'
-        dd='Subscribe to /r/cosmosnetwork.'
-        icon='raddit'
-        :anchor='links.cosmos.community.reddit')
-  .app-footer-copyright &copy; {{ new Date().getFullYear() }} Interchain Foundation
+.app-footer
+  section-community
+  .footbot: .footbot__container
+    .footbot__brandmark
+      img.footbot__img(src="~assets/images/logos/cosmos-brandmark.png")
+    .footbot-menu
+      .footbot-menu__title Cosmos
+      .footbot-menu__items
+        router-link(to="/").footbot-menu__item About
+        router-link(to="/").footbot-menu__item Careers
+        router-link(to="/").footbot-menu__item FAQ
+        router-link(to="/").footbot-menu__item Fundraiser
+    .footbot-menu
+      .footbot-menu__title Downloads
+      .footbot-menu__items
+        router-link(to="/").footbot-menu__item Whitepaper
+        router-link(to="/").footbot-menu__item Visual Assets
+    .footbot-menu
+      .footbot-menu__title Cosmos
+      .footbot-menu__items
+        router-link(to="/").footbot-menu__item Cosmos GitHub
+        router-link(to="/").footbot-menu__item Cosmos SDK
+        router-link(to="/").footbot-menu__item Cosmos UI
+        router-link(to="/").footbot-menu__item Tendermint
+        router-link(to="/").footbot-menu__item Validators
 </template>
 
 <script>
 import {mapGetters} from 'vuex'
-import Cards from './common/NiCards'
-import Btn from '@nylira/vue-button'
-import CardCommunity from './CardCommunity'
-import FormEmailSignup from './FormEmailSignup'
-import Part from './common/NiPart'
+import SectionCommunity from 'sections/SectionCommunity'
 export default {
   name: 'app-footer',
   components: {
-    Btn,
-    Cards,
-    CardCommunity,
-    FormEmailSignup,
-    Part
+    SectionCommunity
   },
   computed: {
     ...mapGetters(['links'])
@@ -78,52 +41,56 @@ export default {
 </script>
 
 <style lang="stylus">
-@require '../styles/variables.styl'
+@require '~variables'
 
-.app-footer
-  border-top bw solid app-fg
-  margin-top 3rem
-  padding-top 1.5rem
-
-.app-footer-container
+.footbot__container
   max-width 1024px
   margin 0 auto
 
-.app-footer-row
-  width 100%
-  margin-bottom 1rem
+.footbot
+  background app-fg
 
-.actions
-  .ni-part-main
-    padding 1rem
-    background app-fg
-    margin-top 0.25rem
+.footbot__container
+  display flex
+  flex-flow row wrap
+  max-width 1024px
+  margin 0 auto
 
-    .ni-btn:only-child
-      width 100%
-      max-width 20rem
+.footbot__brandmark
+  padding 0
+  flex 0 0 50%
 
-    .form-email-signup
-      max-width 20rem
-      margin 0
+.footbot__img
+  max-width 50vw
 
-.app-footer-copyright
-  padding 1rem
-  color dim
+.footbot-menu
+  padding 1.5rem
+  flex 0 0 50%
+
+.footbot-menu__title
+  color bright
+  line-height 2rem
+
+.footbot-menu__items
+  display flex
+  flex-flow column nowrap
+
+.footbot-menu__item
+  line-height 2rem
 
 @media screen and (min-width: 768px)
-  .app-footer
-    padding 3rem 0 1.5rem
+  .footbot__container
+    padding 1.5rem 0
 
-  .app-footer-row
-    display flex
-    flex-flow row nowrap
+  .footbot__brandmark
+    flex 0 0 40%
+    
+  .footbot__img
+    max-width 14rem
 
-    .ni-part:first-child
-      margin-right 2px
-    .ni-part:last-child
-      margin-left 2px
+  .footbot-menu
+    flex 0 0 20%
 
-    .ni-part
-      flex 1
+  .footbot-menu__title
+    margin-bottom 1rem
 </style>

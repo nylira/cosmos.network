@@ -1,0 +1,112 @@
+<template lang="pug">
+.section-home: .section-home__container
+  .section-home__header Join the Cosmos network!
+  .app-footer__row.app-footer__row-actions
+    part(title="Get Started")
+      btn#whitepaper-btn(
+        type="link"
+        to="/intro"
+        size="lg"
+        icon="description"
+        value="Read Introduction")
+    part(title="Get Newsletter"): form-email-signup
+  .app-footer__row
+    part(title='Discuss & Chat'): .community-cards
+      card-community(
+        dt='Forum'
+        dd='Read and discuss the latest developer updates.'
+        icon='university'
+        :anchor='links.cosmos.community.discourse')
+      card-community(
+        dt='Community Chat (Telegram)'
+        dd='Join the `cosmosproject` group on Telegram.'
+        icon='telegram'
+        :anchor='links.cosmos.community.telegram')
+      card-community(
+        dt='Developer Chat (Matrix)'
+        dd='Join the #cosmos:matrix.org room with Riot.'
+        icon='comments-o'
+        :anchor='links.cosmos.community.matrix')
+      card-community(
+        dt='IRC'
+        dd='Join #cosmos_network on irc.freenode.net.'
+        icon='hashtag'
+        :anchor='links.cosmos.community.irc')
+    part(title='Social Media'): .community-cards
+      card-community(
+        dt='Twitter'
+        dd='Follow @cosmos, our official Twitter account.'
+        icon='twatter'
+        :anchor='links.cosmos.community.twitter')
+      card-community(
+        dt='BitcoinTalk'
+        dd='Keep up with our thread on BitcoinTalk.'
+        icon='bitcoin'
+        :anchor='links.cosmos.community.bitcointalk')
+      card-community(
+        dt='Facebook'
+        dd='Like the `cosmosproject` page.'
+        icon='footbook'
+        :anchor='links.cosmos.community.facebook')
+      card-community(
+        dt='Reddit'
+        dd='Subscribe to /r/cosmosnetwork.'
+        icon='raddit'
+        :anchor='links.cosmos.community.reddit')
+</template>
+
+<script>
+import {mapGetters} from 'vuex'
+import Cards from 'common/NiCards'
+import Btn from '@nylira/vue-button'
+import CardCommunity from 'comp/CardCommunity'
+import FormEmailSignup from 'comp/FormEmailSignup'
+import Part from 'common/NiPart'
+export default {
+  name: 'app-footer',
+  components: {
+    Btn,
+    Cards,
+    CardCommunity,
+    FormEmailSignup,
+    Part
+  },
+  computed: {
+    ...mapGetters(['links'])
+  }
+}
+</script>
+
+<style lang="stylus">
+@require '~variables'
+
+.app-footer__row
+  margin 0 1rem 0.25rem
+
+.app-footer__row-actions
+  .ni-part-main
+    padding 1rem
+    background app-fg
+    margin-top 0.25rem
+
+    .ni-btn:only-child
+      width 100%
+      max-width 20rem
+
+    .form-email-signup
+      max-width 20rem
+      margin 0
+
+@media screen and (min-width: 768px)
+  .app-footer__row
+    display flex
+    flex-flow row nowrap
+
+    .ni-part:first-child
+      margin-right 2px
+    .ni-part:last-child
+      margin-left 2px
+
+    .ni-part
+      flex 1
+</style>
