@@ -9,7 +9,7 @@ header.app-header
     menu.menu-popup.menu-app(v-if='activeMenuApp || desktop')
       nav.nav-app
         router-link(to='/about' @click.native='close') About
-        router-link(to='/dev' @click.native='close') Developers
+        router-link(to='/developers' @click.native='close') Developers
         router-link(to='/validators' @click.native='close') Validators
         a.header-item(:href='links.cosmos.blog' @click.native='close' target='_blank')
           i.fa.fa-medium

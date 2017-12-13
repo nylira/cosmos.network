@@ -7,32 +7,32 @@ const routes = [
 
   // ABOUT
   { path: '/about',
-    component: r('Intro'),
+    component: r('About'),
     children: [
-      { path: '/', name: 'intro', component: r('IntroIndex') },
-      { path: 'faq', name: 'faq', component: r('IntroFaq') },
+      { path: '/', name: 'about', component: r('AboutIndex') },
+      { path: 'faq', name: 'faq', component: r('AboutFaq') },
       { path: 'whitepaper', name: 'whitepaper', component: r('Whitepaper') },
       { path: 'whitepaper/:locale', name: 'whitepaper-localized', component: r('Whitepaper') }
     ]
   },
 
-  // INTRODUCTION
+  // TEAM
   { path: '/team',
-    component: r('About'),
+    component: r('Team'),
     children: [
-      { path: '/', name: 'about', component: r('AboutIndex') },
-      { path: 'assets', name: 'assets', component: r('AboutAssets') },
-      { path: 'roadmap', name: 'roadmap', component: r('IntroRoadmap') }
+      { path: '/', name: 'team', component: r('TeamIndex') },
+      { path: 'assets', name: 'assets', component: r('Assets') },
+      { path: 'roadmap', name: 'roadmap', component: r('Roadmap') }
     ]
   },
 
   // DEVELOPERS
-  { path: '/dev',
+  { path: '/developers',
     component: r('Dev'),
     children: [
-      { path: '/', name: 'dev', component: r('DevIndex') },
-      { path: 'hackatom', name: 'hackatom-en-us', component: r('HackAtom') },
-      { path: 'hackatom/zh-cn', name: 'hackatom-zh-cn', component: r('HackAtomZhCn') }
+      { path: '/', name: 'developers', component: r('DevIndex') }
+      // { path: 'hackatom', name: 'hackatom-en-us', component: r('HackAtom') },
+      // { path: 'hackatom/zh-cn', name: 'hackatom-zh-cn', component: r('HackAtomZhCn') }
     ]
   },
 
@@ -51,13 +51,13 @@ const routes = [
   { path: '/privacy', name: 'privacy', component: r('Privacy') },
 
   // redirects
-  { path: '/assets', redirect: '/about/assets' },
-  { path: '/faq', redirect: '/intro/faq' },
-  { path: '/roadmap', redirect: '/intro/roadmap' },
+  { path: '/faq', redirect: '/about/faq' },
+  { path: '/roadmap', redirect: '/about/roadmap' },
 
-  { path: '/hackatom', redirect: '/dev/hackatom' },
-  { path: '/whitepaper', redirect: '/dev/whitepaper' },
-  { path: '/whitepaper/en-US', redirect: '/dev/whitepaper' },
+  { path: '/dev', redirect: '/developers' },
+  { path: '/hackatom', redirect: '/developers/hackatom' },
+  { path: '/whitepaper', redirect: '/developers/whitepaper' },
+  { path: '/whitepaper/en-US', redirect: '/developers/whitepaper' },
 
   { path: '/validator', redirect: '/validators' },
   { path: '/blog/:entry', redirect: '/blog' },
