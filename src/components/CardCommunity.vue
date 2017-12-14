@@ -14,7 +14,7 @@ export default {
 </script>
 
 <style lang="stylus">
-@require '../styles/variables.styl'
+@require '~variables'
 
 .card-community
   flex 1

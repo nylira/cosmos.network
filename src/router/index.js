@@ -51,6 +51,7 @@ const routes = [
   { path: '/privacy', name: 'privacy', component: r('Privacy') },
 
   // redirects
+  { path: '/assets', redirect: '/about/assets' },
   { path: '/faq', redirect: '/intro/faq' },
   { path: '/roadmap', redirect: '/intro/roadmap' },
 
@@ -81,8 +82,10 @@ const router = new VueRouter({
   routes,
   scrollBehavior (to, from, savedPosition) {
     if (to.hash) {
+      console.log('theres a hash')
       return {
-        selector: to.hash
+        selector: to.hash,
+        offset: { x: 0, y: 48 + 3 }
       }
     }
     if (savedPosition) {

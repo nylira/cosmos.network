@@ -3,7 +3,7 @@
   .section-home__header Join the Cosmos network!
   .app-footer__row.app-footer__row-actions
     part(title="Get Started")
-      btn#whitepaper-btn(
+      btn(
         type="link"
         to="/intro"
         size="lg"
@@ -13,21 +13,21 @@
   .app-footer__row
     part(title='Discuss & Chat'): .community-cards
       card-community(
-        dt='Forum'
-        dd='Read and discuss the latest developer updates.'
-        icon='university'
-        :anchor='links.cosmos.community.discourse')
-      card-community(
-        dt='Community Chat (Telegram)'
-        dd='Join the `cosmosproject` group on Telegram.'
+        dt='Community Chat'
+        dd='Join `cosmosproject` on Telegram'
         icon='telegram'
         :anchor='links.cosmos.community.telegram')
       card-community(
-        dt='Developer Chat (Matrix)'
-        dd='Join the #cosmos:matrix.org room with Riot.'
+        dt='Developer Chat'
+        dd='Join #cosmos:matrix.org with Riot'
         icon='comments-o'
         :anchor='links.cosmos.community.matrix')
       card-community(
+        dt='Forum'
+        dd='Discuss the latest developer updates'
+        icon='university'
+        :anchor='links.cosmos.community.discourse')
+      // card-community(
         dt='IRC'
         dd='Join #cosmos_network on irc.freenode.net.'
         icon='hashtag'
@@ -35,24 +35,24 @@
     part(title='Social Media'): .community-cards
       card-community(
         dt='Twitter'
-        dd='Follow @cosmos, our official Twitter account.'
+        dd='Follow @cosmos, our official account'
         icon='twatter'
         :anchor='links.cosmos.community.twitter')
-      card-community(
-        dt='BitcoinTalk'
-        dd='Keep up with our thread on BitcoinTalk.'
-        icon='bitcoin'
-        :anchor='links.cosmos.community.bitcointalk')
-      card-community(
+      // card-community(
         dt='Facebook'
         dd='Like the `cosmosproject` page.'
         icon='footbook'
         :anchor='links.cosmos.community.facebook')
       card-community(
         dt='Reddit'
-        dd='Subscribe to /r/cosmosnetwork.'
+        dd='Subscribe to /r/cosmosnetwork'
         icon='raddit'
         :anchor='links.cosmos.community.reddit')
+      card-community(
+        dt='BitcoinTalk'
+        dd='Keep up with our thread on BitcoinTalk'
+        icon='bitcoin'
+        :anchor='links.cosmos.community.bitcointalk')
 </template>
 
 <script>

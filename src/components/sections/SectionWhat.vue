@@ -1,25 +1,25 @@
 <template lang='pug'>
-.section-home.section-home-what: .section-home__container
+#section-what.section-home.section-what: .section-home__container
   .section-home__header What is Cosmos?
   .section-home__main
     .section-home__text
-      .section-home__p Cosmos is a decentralized network of independent parallel blockchains, each powered by classical BFT consensus algorithms like #[a(href="https://tendermint.com") Tendermint]. 
+      .section-home__p Cosmos is a decentralized network of independent parallel blockchains, each powered by classical BFT consensus algorithms like #[a(href="https://tendermint.com" target="_blank") Tendermint]. 
       .section-home__p The first blockchain in the Cosmos network is the Cosmos Hub, whose native token is the Atom. Cosmos is a permissionless network, meaning that anybody can build a blockchain on it.
     .section-home__diagrams
       .cosmos-diagram
         .cosmos-diagram__image: img.cosmos-diagram__img(src="~assets/images/diagrams/diagram-hub.png")
-        .cosmos-diagram__label  A Hub is a blockchain that enables Zones to work together.
+        .cosmos-diagram__label A Hub is a blockchain that enables Zones to work together.
       .cosmos-diagram
         .cosmos-diagram__image: img.cosmos-diagram__img(src="~assets/images/diagrams/diagram-zones.png")
         .cosmos-diagram__label Zones are sovereign blockchains that exchange value through Hubs. They can be private or public.
       .cosmos-diagram
         .cosmos-diagram__image: img.cosmos-diagram__img(src="~assets/images/diagrams/diagram-validators.png")
-        .cosmos-diagram__label  Validators are responsible for committing new blocks and ensuring that consensus is reached.
+        .cosmos-diagram__label Validators are responsible for committing new blocks and ensuring that consensus is reached.
       .cosmos-diagram
         .cosmos-diagram__image: img.cosmos-diagram__img(src="~assets/images/diagrams/diagram-atoms.png")
         .cosmos-diagram__label Atoms are a license for holders to stake and vote on the Cosmos Hub.
     .section-home__text
-      .sectino-home__p: router-link(to="/introduction") Learn  everything you need to know about the Cosmos network here.
+      .section-home__p: router-link(to="/intro") Learn everything you need to know about the Cosmos network here.
 </template>
 
 <script>
@@ -31,7 +31,7 @@ export default {
 <style lang="stylus">
 @require '~variables'
 
-.section-home-what
+.section-what
   background app-fg
 
 .section-home__container
@@ -77,7 +77,7 @@ export default {
 
 .cosmos-diagram__img
   max-width 8rem
-  
+
 .cosmos-diagram__label
   flex 2
   padding 1rem 1rem 1rem 0
@@ -122,5 +122,4 @@ export default {
   .section-home__diagrams
     margin-left 1rem
     margin-right 1rem
-
 </style>

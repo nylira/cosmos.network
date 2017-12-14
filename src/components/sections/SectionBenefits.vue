@@ -9,14 +9,14 @@
         .cosmos-panel__text
           .cosmos-panel__title Interoperability
           .cosmos-panel__body The Cosmos network is built to allow many independent blockchains — public and private — to communicate and exchange value with one another.
-          router-link.cosmos-panel__action(to="/ibc") Learn more about interblockchain communication.
+          router-link.cosmos-panel__action(to="/intro#interoperability") Learn more about interblockchain communication.
       .cosmos-panel
         .cosmos-panel__image
           img.cosmos-panel__img(src="~assets/images/diagrams/panel-interoperability.png")
         .cosmos-panel__text
           .cosmos-panel__title Scalability
           .cosmos-panel__body By leveraging interoperability and Tendermint’s Proof-Of-Stake algorithm, Cosmos provides unprecedented levels of scalability for blockchain networks.
-          router-link.cosmos-panel__action(to="/scaling") Learn more about how Tendermint handles scaling.
+          router-link.cosmos-panel__action(to="/intro#scalability") Learn more about how Tendermint handles scaling.
       .cosmos-panel
         .cosmos-panel__image
           img.cosmos-panel__img(src="~assets/images/diagrams/panel-interoperability.png")

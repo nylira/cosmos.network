@@ -1,20 +1,14 @@
-<template>
-  <div id="app">
-    <app-header></app-header>
-    <div id="app-content">
-      <router-view></router-view>
-    </div>
-    <app-footer></app-footer>
-    <notifications
-      color="hsl(208,100%,25%)"
-      :notifications="notifications">
-    </notifications>
-  </div>
+<template lang="pug">
+#app
+  app-header
+  #app-content: router-view
+  app-footer
+  notifications(color='hsl(208,100%,25%)' :notifications='notifications')
 </template>
 
 <script>
-import AppHeader from './components/AppHeader.vue'
-import AppFooter from './components/AppFooter.vue'
+import AppHeader from 'common/AppHeader.vue'
+import AppFooter from 'common/AppFooter.vue'
 import Notifications from '@nylira/vue-notifications'
 import store from './store/index.js'
 import { mapGetters } from 'vuex'

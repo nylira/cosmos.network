@@ -5,7 +5,7 @@ header.app-header
       i.material-icons(v-if='!activeMenuApp') menu
       i.material-icons(v-else='') close
     router-link.header-item.header-item-link(to='/')
-      img(src='~assets/images/logos/cosmos-wordmark.png', alt='Cosmos Logo')
+      img(src='~assets/images/logos/cosmos-logo.png', alt='Cosmos Logo')
     menu.menu-popup.menu-app(v-if='activeMenuApp || desktop')
       nav.nav-app
         router-link(to='/intro' @click.native='close') Introduction
@@ -77,7 +77,6 @@ export default {
   left 0
   z-index 100
   width 100vw
-
   background app-bg
 
   .container
@@ -96,16 +95,16 @@ export default {
     color txt
     cursor pointer
 
-    .label
+    i + .label
+      margin-left 0.5rem
       user-select none
 
-    i
-      margin-right 0.5rem
+    i.material-icons
+      font-size lg
 
     img
       display block
-      height 1.125rem
-      width auto
+      height 2rem
 
     &:hover
       i, .label
@@ -142,7 +141,7 @@ export default {
         padding 0.75rem 0
       > a
         color txt
-        border-bottom 1px solid bc
+        border-top 1px solid bc
         display flex
         align-items center
         justify-content space-between
@@ -159,14 +158,16 @@ export default {
 
 @media screen and (min-width: 1024px)
   .app-header
-    border-bottom none
-    border-top bw solid darken(app-bg, 50%)
+    border-top bw solid app-fg
+    height 3rem + bw
 
     .container
       .header-item
         border-top bw solid transparent
         margin-top -1 * bw
         height 3rem + bw
+        position relative
+        z-index 10
         &:last-of-type
           justify-content flex-end
 
@@ -176,7 +177,7 @@ export default {
 
         &.header-item-link.router-link-exact-active
           background app-fg
-          border-top bw solid mc
+          border-color mc
 
   .menu-popup.menu-app
     display flex
@@ -194,7 +195,7 @@ export default {
         padding 0 1rem
         color txt
         line-height 3rem
-        height 3rem + 3*px
+        height 3rem + bw
         border-top bw solid transparent
         margin-top -1 * bw
 
@@ -206,7 +207,7 @@ export default {
           cursor default
           user-select none
           color bright
-          border-color mc
+          border-color accent
           background app-fg
           &:hover
             color bright
