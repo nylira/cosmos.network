@@ -86,10 +86,6 @@ export default {
   font-size sm
 
 @media screen and (min-width: 375px)
-  .section-home__diagrams
-    margin-left 1rem
-    margin-right 1rem
-
   .cosmos-diagram__label
     padding 1rem
 
@@ -121,4 +117,10 @@ export default {
     text-align center
     align-items flex-start
     padding-bottom 0
+
+@media screen and (min-width: 1024px)
+  .section-home__diagrams
+    margin-left 1rem
+    margin-right 1rem
+
 </style>
