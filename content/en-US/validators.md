@@ -32,7 +32,7 @@ Actively participate in the testnet. By the end of 2017 you should be able to ma
 
 Tutorial and faucet maintained by community member [Michael Yuan](http://cosmosvalidators.com)
 
-Be sure to frequently check the [changelog](https://github.com/cosmos/gaia/blob/master/CHANGELOG.md) and the [validator chat](https://riot.im/app/#/room/#cosmos_validators:matrix.org) to keep track of any update. 
+Be sure to frequently check the [changelog](https://github.com/cosmos/gaia/blob/master/CHANGELOG.md) and the [validator chat](https://riot.im/app/#/room/#cosmos_validators:matrix.org) to keep track of any update.
 
 #### 3. Set up a validator website
 
@@ -56,7 +56,7 @@ The Tendermint team is also working on extending our Ledger Nano S application t
 
 We will update this page when more key storage solutions become available.
 
-#### 6. DDOS protection (sentry node) 
+#### 6. DDOS protection (sentry node)
 
 Validators are responsible for ensuring that the network can sustain denial of service attacks.
 
@@ -71,7 +71,7 @@ Validators should track the progress of these two github issues:
 
 Validators should begin testing sentry nodes on the testnet when progress has been made on these issues.
 
-#### 7. Organize with your local jurisdiction 
+#### 7. Organize with your local jurisdiction
 
 We strongly recommend that validators setup a separate company and not be run directly by an individual. Seek legal advice if you believe you may need additional licenses. Validators may want to establish terms of service and limits on liability for delegators or have delegators to operate at their own risk.
 
@@ -84,7 +84,7 @@ Discuss the finer details of being a validator on our community chat and forum:
 
 If you want to promote your validator's website, you can do so [here](https://forum.cosmos.network/t/validator-candidates-websites/127)
 
-<!--
-Finally, if you intend to run a validator and want to get updates on the state of the testnet, please join our validator's mailing list
-[input box for people to register their contact mail]
--->
+## Mailing List
+
+Subscribe to our Validator's mailing list to get the latest news about testnets, documentation, timelines and more!
+* [Validator Mailing List](https://tendermint.us8.list-manage.com/subscribe?u=89d5a312be95ee3f0c9cf7ecd&id=a8e72383ff)
