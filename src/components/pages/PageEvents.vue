@@ -1,21 +1,21 @@
 <template lang="pug">
 page(:title="metadata.title" :subtitle="metadata.desc")
   part(title='Upcoming Events' v-if="eventsUpcoming.length > 0")
-    events(:events='eventsUpcoming')
+    card-event(:events='eventsUpcoming')
   part(title='Past Events')
-    events(:events='eventsPast' v-if="eventsPast.length > 0")
+    card-event(:events='eventsPast' v-if="eventsPast.length > 0")
 </template>
 
 <script>
 import moment from 'moment'
 import { mapGetters } from 'vuex'
-import Events from 'comp/Events'
+import CardEvent from 'cards/CardEvent'
 import Page from 'common/NiPage'
 import Part from 'common/NiPart'
 export default {
   name: 'page-events',
   components: {
-    Events,
+    CardEvent,
     Page,
     Part
   },

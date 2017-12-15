@@ -11,8 +11,8 @@
 </template>
 
 <script>
-import { portrait } from '../scripts/cdn.js'
-import ModalPerson from './ModalPerson'
+import { portrait } from 'scripts/cdn'
+import ModalPerson from 'modals/ModalPerson'
 export default {
   name: 'person-container',
   components: {

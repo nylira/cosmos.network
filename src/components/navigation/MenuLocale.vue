@@ -1,4 +1,4 @@
-<template>
+<template lang="pug">
 .hackatom-locale-menu-container
   overlay-btns
     overlay-btn(@click.native='toggle(true)', icon='times', v-if='maximized')

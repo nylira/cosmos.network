@@ -13,7 +13,7 @@ page(title="About" subtitle="Cosmos is run by the Interchain Foundation (ICF). T
 <script>
 import { mapGetters } from 'vuex'
 import Btn from '@nylira/vue-button'
-import CardPerson from 'comp/CardPerson'
+import CardPerson from 'cards/CardPerson'
 import Cards from 'common/NiCards'
 import Page from 'common/NiPage'
 import Part from 'common/NiPart'

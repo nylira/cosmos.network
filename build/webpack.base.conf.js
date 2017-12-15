@@ -40,10 +40,12 @@ module.exports = {
     alias: {
       '@': resolve('src'),
       assets: resolve('src/assets'),
+      images: resolve('src/assets/images'),
       content: resolve('content'),
       scripts: resolve('src/scripts'),
       variables: resolve('src/styles/variables.styl'),
       buttons: resolve('src/components/buttons'),
+      cards: resolve('src/components/cards'),
       common: resolve('src/components/common'),
       forms: resolve('src/components/forms'),
       modals: resolve('src/components/modals'),
