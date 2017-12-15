@@ -3,7 +3,7 @@
   .section-cover__container
     .section-cover__wordmark
       img.section-cover__img(src="~assets/images/logos/cosmos-text.png")
-    .section-cover__tagline The interoperable, scalable, proof-of-stake blockchain network, built for developers.
+    .section-cover__tagline The interoperable, scalable, blockchain network. Built for developers.
     .section-cover__action
       btn(
         type="anchor"
@@ -42,7 +42,6 @@ export default {
 
 .section-cover__container
   flex 1
-  margin-top 3rem
   padding 0 2rem
   background url('~assets/images/backgrounds/home.jpg') center center
   background-size cover
@@ -71,9 +70,8 @@ export default {
 
 .section-cover__tagline
   text-align center
-  font-weight 300
+  font-weight 400
   letter-spacing 0.025em
-  line-height 2
   text-shadow hsla(0,0,0,1) 0 0 0.5em
 
   padding-top 5vh

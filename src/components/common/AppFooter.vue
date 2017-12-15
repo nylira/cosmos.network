@@ -80,11 +80,11 @@ export default {
 
 @media screen and (min-width: 768px)
   .footbot__container
-    padding 1.5rem 0
+    padding 3.5rem 0
 
   .footbot__brandmark
     flex 0 0 50%
-    
+
   .footbot__img
     max-width 14rem
 
