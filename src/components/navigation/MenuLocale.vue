@@ -1,19 +1,16 @@
 <template>
-  <div class="hackatom-locale-menu-container">
-    <overlay-btns>
-      <overlay-btn @click.native="toggle(true)" icon="times" v-if="maximized"></overlay-btn>
-      <overlay-btn @click.native="toggle(true)" icon="globe" v-else></overlay-btn>
-    </overlay-btns>
-    <menu class="hackatom-locale-menu" v-show="maximized">
-      <router-link to="/hackatom" exact>English</router-link>
-      <router-link to="/hackatom/zh-cn">简体中文</router-link>
-    </menu>
-  </div>
+.hackatom-locale-menu-container
+  overlay-btns
+    overlay-btn(@click.native='toggle(true)', icon='times', v-if='maximized')
+    overlay-btn(@click.native='toggle(true)', icon='globe', v-else='')
+  menu.hackatom-locale-menu(v-show='maximized')
+    router-link(to='/hackatom', exact='') English
+    router-link(to='/hackatom/zh-cn') 简体中文
 </template>
 
 <script>
-import OverlayBtn from './OverlayBtn'
-import OverlayBtns from './OverlayBtns'
+import OverlayBtn from 'buttons/OverlayBtn'
+import OverlayBtns from 'buttons/OverlayBtns'
 export default {
   name: 'hackatom-locale-menu',
   components: {
@@ -36,7 +33,7 @@ export default {
 </script>
 
 <style lang="stylus">
-@import '../styles/variables.styl'
+@import '~variables'
 
 .hackatom-locale-menu-container
   position absolute
@@ -66,6 +63,7 @@ export default {
       color dim
     &:last-of-type
       border-bottom none
+
 @media screen and (min-width:1024px)
   .hackatom-locale-menu-container
     bottom 0.5rem
