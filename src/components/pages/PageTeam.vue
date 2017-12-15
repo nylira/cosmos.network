@@ -1,8 +1,7 @@
 <template lang="pug">
 .page
   page-menu
-    router-link(to="/about") People
-    router-link(to="/about/assets") Media Assets
+    router-link(to="/team") Team
     a(href="https://tendermint.com/careers") Careers #[i.fa.fa-external-link]
   router-view
 </template>

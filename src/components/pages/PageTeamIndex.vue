@@ -1,5 +1,5 @@
 <template lang="pug">
-page(title="About" subtitle="Cosmos is run by the Interchain Foundation (ICF). The Tendermint team has been contracted by the ICF for development.")
+page(title="Team" subtitle="Cosmos is run by the Interchain Foundation (ICF). The Tendermint team has been contracted by the ICF for development.")
 
   part(title='Interchain Foundation')
     cards.people
