@@ -12,14 +12,14 @@
           router-link.cosmos-panel__action(to="/intro#interoperability") Learn more about interblockchain communication.
       .cosmos-panel
         .cosmos-panel__image
-          img.cosmos-panel__img(src="~assets/images/diagrams/panel-interoperability.png")
+          img.cosmos-panel__img(src="~assets/images/diagrams/panel-scalability.png")
         .cosmos-panel__text
           .cosmos-panel__title Scalability
           .cosmos-panel__body By leveraging interoperability and Tendermint’s Proof-Of-Stake algorithm, Cosmos provides unprecedented levels of scalability for blockchain networks.
           router-link.cosmos-panel__action(to="/intro#scalability") Learn more about how Tendermint handles scaling.
       .cosmos-panel
         .cosmos-panel__image
-          img.cosmos-panel__img(src="~assets/images/diagrams/panel-interoperability.png")
+          img.cosmos-panel__img(src="~assets/images/diagrams/panel-developer-friendly.png")
         .cosmos-panel__text
           .cosmos-panel__title Developer Friendly
           .cosmos-panel__body Cosmos was designed with developers in mind. Thanks to Tendermint’s Application Blockchain Interface, it’s easy to build blockchains in any programming language. 
