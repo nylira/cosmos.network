@@ -29,8 +29,6 @@ const routes = [
     component: r('Dev'),
     children: [
       { path: '/', name: 'developers', component: r('DevIndex') }
-      // { path: 'hackatom', name: 'hackatom-en-us', component: r('HackAtom') },
-      // { path: 'hackatom/zh-cn', name: 'hackatom-zh-cn', component: r('HackAtomZhCn') }
     ]
   },
 
@@ -56,9 +54,15 @@ const routes = [
   { path: '/roadmap', redirect: '/about/roadmap' },
 
   { path: '/dev', redirect: '/developers' },
+
   { path: '/hackatom', redirect: '/developers/hackatom' },
+  { path: '/dev/hackatom', redirect: '/developers/hackatom' },
+
   { path: '/whitepaper', redirect: '/developers/whitepaper' },
+  { path: '/dev/whitepaper', redirect: '/developers/whitepaper' },
+
   { path: '/whitepaper/en-US', redirect: '/developers/whitepaper' },
+  { path: '/dev/whitepaper/en-US', redirect: '/developers/whitepaper' },
 
   { path: '/validator', redirect: '/validators' },
   { path: '/blog/:entry', redirect: '/blog' },

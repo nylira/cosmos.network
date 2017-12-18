@@ -160,8 +160,8 @@ export default {
 
 @media screen and (min-width: 1024px)
   .app-header
-    border-top bw solid app-fg
-    height 3rem + bw
+    border-bottom 1px solid app-fg
+    border-top bw solid app-bg
 
     .container
       nav

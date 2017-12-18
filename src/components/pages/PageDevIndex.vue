@@ -18,7 +18,7 @@ page(title="Developers" subtitle="Learn how to bootstrap your blockchain with Co
 
   p NOTE: The Cosmos SDK is under heavy development and it's not yet ready for release. Keep up to date with Cosmos SDK news #[a(href="https://blog.cosmos.network") on our blog].
 
-  ul
+  //- ul
     li: a(href="https://github.com/cosmos/cosmos-sdk") Cosmos SDK on GitHub
     li: a(href="http://cosmos-sdk.readthedocs.io/en/latest/") Cosmos SDK Documentation
 
