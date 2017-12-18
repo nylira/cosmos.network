@@ -49,9 +49,9 @@ const routes = [
   { path: '/plan', name: 'plan', component: r('Plan') },
   { path: '/plan/:locale', name: 'plan-localized', component: r('Plan') },
   { path: '/privacy', name: 'privacy', component: r('Privacy') },
-  { path: '/validators', name: 'validators', component: r('Validators') },
 
   // redirects
+  { path: '/assets', redirect: '/about/assets' },
   { path: '/faq', redirect: '/intro/faq' },
   { path: '/roadmap', redirect: '/intro/roadmap' },
 
@@ -82,8 +82,10 @@ const router = new VueRouter({
   routes,
   scrollBehavior (to, from, savedPosition) {
     if (to.hash) {
+      console.log('theres a hash')
       return {
-        selector: to.hash
+        selector: to.hash,
+        offset: { x: 0, y: 48 + 3 }
       }
     }
     if (savedPosition) {

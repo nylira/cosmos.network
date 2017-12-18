@@ -1,32 +1,33 @@
 <template lang="pug">
-.app-footer: .app-footer-container
-  .app-footer-row.actions
+.section-home: .section-home__container
+  .section-home__header Join the Cosmos network!
+  .app-footer__row.app-footer__row-actions
     part(title="Get Started")
-      btn#whitepaper-btn(
+      btn(
         type="link"
         to="/intro"
         size="lg"
         icon="description"
         value="Read Introduction")
     part(title="Get Newsletter"): form-email-signup
-  .app-footer-row
+  .app-footer__row
     part(title='Discuss & Chat'): .community-cards
       card-community(
-        dt='Forum'
-        dd='Read and discuss the latest developer updates.'
-        icon='university'
-        :anchor='links.cosmos.community.discourse')
-      card-community(
-        dt='Community Chat (Telegram)'
-        dd='Join the `cosmosproject` group on Telegram.'
+        dt='Community Chat'
+        dd='Join `cosmosproject` on Telegram'
         icon='telegram'
         :anchor='links.cosmos.community.telegram')
       card-community(
-        dt='Developer Chat (Matrix)'
-        dd='Join the #cosmos:matrix.org room with Riot.'
+        dt='Developer Chat'
+        dd='Join #cosmos:matrix.org with Riot'
         icon='comments-o'
         :anchor='links.cosmos.community.matrix')
       card-community(
+        dt='Forum'
+        dd='Discuss the latest developer updates'
+        icon='university'
+        :anchor='links.cosmos.community.discourse')
+      // card-community(
         dt='IRC'
         dd='Join #cosmos_network on irc.freenode.net.'
         icon='hashtag'
@@ -34,34 +35,33 @@
     part(title='Social Media'): .community-cards
       card-community(
         dt='Twitter'
-        dd='Follow @cosmos, our official Twitter account.'
+        dd='Follow @cosmos, our official account'
         icon='twatter'
         :anchor='links.cosmos.community.twitter')
-      card-community(
-        dt='BitcoinTalk'
-        dd='Keep up with our thread on BitcoinTalk.'
-        icon='bitcoin'
-        :anchor='links.cosmos.community.bitcointalk')
-      card-community(
+      // card-community(
         dt='Facebook'
         dd='Like the `cosmosproject` page.'
         icon='footbook'
         :anchor='links.cosmos.community.facebook')
       card-community(
         dt='Reddit'
-        dd='Subscribe to /r/cosmosnetwork.'
+        dd='Subscribe to /r/cosmosnetwork'
         icon='raddit'
         :anchor='links.cosmos.community.reddit')
-  .app-footer-copyright &copy; {{ new Date().getFullYear() }} Interchain Foundation
+      card-community(
+        dt='BitcoinTalk'
+        dd='Keep up with our thread on BitcoinTalk'
+        icon='bitcoin'
+        :anchor='links.cosmos.community.bitcointalk')
 </template>
 
 <script>
 import {mapGetters} from 'vuex'
-import Cards from './common/NiCards'
+import Cards from 'common/NiCards'
 import Btn from '@nylira/vue-button'
-import CardCommunity from './CardCommunity'
-import FormEmailSignup from './FormEmailSignup'
-import Part from './common/NiPart'
+import CardCommunity from 'comp/CardCommunity'
+import FormEmailSignup from 'comp/FormEmailSignup'
+import Part from 'common/NiPart'
 export default {
   name: 'app-footer',
   components: {
@@ -78,22 +78,12 @@ export default {
 </script>
 
 <style lang="stylus">
-@require '../styles/variables.styl'
+@require '~variables'
 
-.app-footer
-  border-top bw solid app-fg
-  margin-top 3rem
-  padding-top 1.5rem
+.app-footer__row
+  margin 0 1rem 0.25rem
 
-.app-footer-container
-  max-width 1024px
-  margin 0 auto
-
-.app-footer-row
-  width 100%
-  margin-bottom 1rem
-
-.actions
+.app-footer__row-actions
   .ni-part-main
     padding 1rem
     background app-fg
@@ -107,15 +97,8 @@ export default {
       max-width 20rem
       margin 0
 
-.app-footer-copyright
-  padding 1rem
-  color dim
-
 @media screen and (min-width: 768px)
-  .app-footer
-    padding 3rem 0 1.5rem
-
-  .app-footer-row
+  .app-footer__row
     display flex
     flex-flow row nowrap
 

@@ -10,6 +10,9 @@ const state = {
       careers: ''
     },
     cosmos: {
+      assets: {
+        visualIdentity: ''
+      },
       intro: {
         video: ''
       },
