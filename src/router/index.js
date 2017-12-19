@@ -11,6 +11,7 @@ const routes = [
     children: [
       { path: '/', name: 'about', component: r('AboutIndex') },
       { path: 'faq', name: 'faq', component: r('AboutFaq') },
+      { path: 'roadmap', name: 'roadmap', component: r('Roadmap') },
       { path: 'team', name: 'team', component: r('AboutTeam') },
       { path: 'whitepaper', name: 'whitepaper', component: r('Whitepaper') },
       { path: 'whitepaper/:locale', name: 'whitepaper-localized', component: r('Whitepaper') }
@@ -38,9 +39,7 @@ const routes = [
   { path: '/plan', name: 'plan', component: r('Plan') },
   { path: '/plan/:locale', name: 'plan-localized', component: r('Plan') },
   { path: '/privacy', name: 'privacy', component: r('Privacy') },
-  { path: '/validators', name: 'validators', component: r('Validators') },
   { path: '/assets', name: 'assets', component: r('Assets') },
-  { path: 'roadmap', name: 'roadmap', component: r('Roadmap') },
 
   // redirects
   { path: '/blog/:entry', redirect: '/blog' },
