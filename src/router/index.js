@@ -5,25 +5,30 @@ const routes = [
   { path: '/', component: r('Index') },
   { path: '/events', name: 'events', component: r('Events') },
 
-  // INTRODUCTION
-  { path: '/intro',
-    component: r('Intro'),
+  // ABOUT
+  { path: '/about',
+    component: r('About'),
     children: [
-      { path: '/', name: 'intro', component: r('IntroIndex') },
-      { path: 'faq', name: 'faq', component: r('IntroFaq') },
-      { path: 'roadmap', name: 'roadmap', component: r('IntroRoadmap') }
+      { path: '/', name: 'about', component: r('AboutIndex') },
+      { path: 'faq', name: 'faq', component: r('AboutFaq') },
+      { path: 'whitepaper', name: 'whitepaper', component: r('Whitepaper') },
+      { path: 'whitepaper/:locale', name: 'whitepaper-localized', component: r('Whitepaper') }
+    ]
+  },
+
+  // TEAM
+  { path: '/team',
+    component: r('Team'),
+    children: [
+      { path: '/', name: 'team', component: r('TeamIndex') }
     ]
   },
 
   // DEVELOPERS
-  { path: '/dev',
+  { path: '/developers',
     component: r('Dev'),
     children: [
-      { path: '/', name: 'dev', component: r('DevIndex') },
-      { path: 'hackatom', name: 'hackatom-en-us', component: r('HackAtom') },
-      { path: 'hackatom/zh-cn', name: 'hackatom-zh-cn', component: r('HackAtomZhCn') },
-      { path: 'whitepaper', name: 'whitepaper', component: r('Whitepaper') },
-      { path: 'whitepaper/:locale', name: 'whitepaper-localized', component: r('Whitepaper') }
+      { path: '/', name: 'developers', component: r('DevIndex') }
     ]
   },
 
@@ -36,28 +41,28 @@ const routes = [
     ]
   },
 
-  // ABOUT
-  { path: '/about',
-    component: r('About'),
-    children: [
-      { path: '/', name: 'about', component: r('AboutIndex') },
-      { path: 'assets', name: 'assets', component: r('AboutAssets') }
-    ]
-  },
-
   // OTHERS
   { path: '/plan', name: 'plan', component: r('Plan') },
   { path: '/plan/:locale', name: 'plan-localized', component: r('Plan') },
   { path: '/privacy', name: 'privacy', component: r('Privacy') },
+  { path: '/validators', name: 'validators', component: r('Validators') },
+  { path: '/assets', name: 'assets', component: r('Assets') },
+  { path: 'roadmap', name: 'roadmap', component: r('Roadmap') },
 
   // redirects
-  { path: '/assets', redirect: '/about/assets' },
-  { path: '/faq', redirect: '/intro/faq' },
-  { path: '/roadmap', redirect: '/intro/roadmap' },
+  { path: '/faq', redirect: '/about/faq' },
+  { path: '/roadmap', redirect: '/about/roadmap' },
 
-  { path: '/hackatom', redirect: '/dev/hackatom' },
-  { path: '/whitepaper', redirect: '/dev/whitepaper' },
-  { path: '/whitepaper/en-US', redirect: '/dev/whitepaper' },
+  { path: '/dev', redirect: '/developers' },
+
+  { path: '/hackatom', redirect: '/developers/hackatom' },
+  { path: '/dev/hackatom', redirect: '/developers/hackatom' },
+
+  { path: '/whitepaper', redirect: '/developers/whitepaper' },
+  { path: '/dev/whitepaper', redirect: '/developers/whitepaper' },
+
+  { path: '/whitepaper/en-US', redirect: '/developers/whitepaper' },
+  { path: '/dev/whitepaper/en-US', redirect: '/developers/whitepaper' },
 
   { path: '/validator', redirect: '/validators' },
   { path: '/blog/:entry', redirect: '/blog' },

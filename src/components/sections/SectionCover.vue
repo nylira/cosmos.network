@@ -89,7 +89,7 @@ export default {
 
 @media screen and (orientation: landscape)
   .section-cover__img
-    width 20vw
+    width 18vw
 
 @media screen and (min-width: 375px) and (min-height: 812px) and (orientation: portrait)
   .section-cover__action
@@ -117,6 +117,9 @@ export default {
 @media screen and (min-width: 1280px)
   .section-cover__wordmark
     padding-top 12vh
+
+  .section-cover__action
+    padding-top 20vh
 
 @media screen and (min-width: 1440px)
   .section-cover__wordmark

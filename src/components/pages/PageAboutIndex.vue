@@ -1,56 +1,50 @@
 <template lang="pug">
-page(title="About" subtitle="Cosmos is run by the Interchain Foundation (ICF). The Tendermint team has been contracted by the ICF for development.")
+page(title="What is Cosmos?" subtitle="Get started with an overview of Cosmos."): text-container
+  h2 Building an Internet of Blockchains
+  h3 Purpose
+  p Cosmos is a network of blockchains whose purpose it to solve long-standing problems in cryptocurrency and blockchain communities. The end goal is to allow many sovereign and easy-to-develop blockchains to scale and interoperate with each other, creating an Internet of Blockchains.
 
-  part(title='Interchain Foundation')
-    cards.people
-      card-person(group='icf', v-for="person in ppl('icf')", :key='person.slug', :person='person')
+  iframe(:src="links.cosmos.intro.video" width="1024" height="576" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)
 
-  part(title='Tendermint Team')
-    cards.people
-      card-person(group='aib', v-for="person in ppl('aib')", :key='person.slug', :person='person')
+  h3 Architecture
+  p The Cosmos network consists of many independent, parallel blockchains, called zones, each powered by classical Byzantine fault-tolerant (BFT) consensus protocols like #[a(:href='links.tm.website') Tendermint] (already used by platforms like #[a(href='https://github.com/hyperledger/burrow') Hyperledger's Burrow]). Some zones act as hubs with respect to other zones, allowing many zones to interoperate through a shared hub. The architecture is a more general application of the Bitcoin sidechains concept, using classic BFT and Proof-of-Stake algorithms, instead of Proof-of-Work.
+  h3 Cosmos Hub
+  p The first blockchain in the Cosmos network is the Cosmos hub. The Cosmos hub connects to zones via the novel IBC (inter-blockchain communication) protocol and keeps a record of the total number of tokens in each zone. Because all inter-zone transfers go through the Cosmos Hub, you can send tokens from one zone to another, quickly and securely, without the need for a liquid exchange or trusted third party between zones.
+  p The Cosmos Hub can connect to many different kinds of zones - public or private - as long as each zone speaks IBC. Tendermint-based Zones are natively compatible with IBC, but any fast-finality consensus algorithm can be used as a replacement. Cosmos can thus support a wide variety of currencies and scripting languages like those found in Bitcoin, Ethereum, ZeroCash, CryptoNote, and more. Atom is the native token of the Cosmos Hub. It is a license for holders to stake and participate in governance. Learn more about that here (link to staking section).
+
+  h2 Interoperable
+  .image: img(src="~assets/images/diagrams/ex_dist_exchange.png")
+  p Cosmos can interoperate with multiple other applications and cryptocurrencies, something other blockchains can’t do well. By creating a new zone, you can plug any blockchain system into the Cosmos hub and pass tokens back and forth between those zones, without the need for an intermediary.
+  p For example, if you wanted to trade bitcoins for ether today, you would have to do so on a centralized exchange. The problem is, many of our exchanges today are plagued by hacks, theft, and cons. Two prime examples are what happened at #[a(href='http://www.thedailybeast.com/articles/2016/05/19/behind-the-biggest-bitcoin-heist-in-history-inside-the-implosion-of-mt-gox.html') Mt. Gox] and more recently #[a(href='http://www.reuters.com/article/us-bitfinex-hacked-hongkong-idUSKCN10E0KP') Bitfinex].
+
+  h2 Scalable
+  .image: img(src="~assets/images/diagrams/ex_evm_sharding.png")
+  p Scaling is another open issue for blockchains. Both Ethereum and Bitcoin support only a fraction of the transactions seen daily on payment networks like Visa or Mastercard. In contrast, Tendermint and IBC allow blockchains in Cosmos to scale out indefinitely. Zones built on top of Tendermint can handle up to thousands of transactions per second by themselves. And even if transaction speed slows down on a Zone because too many people are using it, another identical Zone can be added to the Hub and half of the users directed to it, thereby doubling transaction capacity. Meanwhile, the Cosmos Hub ensure that Zones connected to it remain in sync.
+
+  h2 Developer Friendly
+  .image: img(src="~assets/images/diagrams/ex_evm_upgrading.png")
+  p Cosmos was designed with developers in mind. It comes with a powerful toolkit based on Tendermint that enables you to easily build decentralized applications. If your application requires sovereignty and flexibility, you can deploy your own blockchain without having to deal with the complicated networking and consensus parts of the software — thanks to Tendermint and its Application-Blockchain Interface (ABCI). If your application doesn’t need its own chain and validator set, you can deploy it on Ethermint, which allows you to do everything Ethereum does — but with far greater performance. Finally, if you want to retain full privacy and control over your application, Tendermint enables you to deploy private blockchains. You can learn more in our #[a(href='/developers') developer] page.
+
+  h2 Decentralized
+  .image: img(src="~assets/images/diagrams/ex_network.png")
+  p One of the great tragedies of cryptocurrencies today has been their failure to interoperate with existing systems — and each other. Cosmos offers a way to link them together, but without creating a new centralized clearinghouse or exchange.
+  p Cosmos is built on principles of cryptography, sound economics, consensus theory, transparency, and accountability to serve as a new foundation for our future financial systems.
+  p You can use Cosmos as a testing ground for a new cryptocurrency design, an upgrade to an existing cryptocurrency, as a means for decentralized exchange, or as a platform for scalable smart contracts.
+  p Cosmos is not just a single distributed ledger, and the Cosmos hub isn't a walled garden or the center of its universe — anyone can use this protocol to create their own hub to compete with Cosmos in a free market of blockchains
+  p The only question is, what will you build on Cosmos?
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-import Btn from '@nylira/vue-button'
-import CardPerson from 'cards/CardPerson'
-import Cards from 'common/NiCards'
+
+import {mapGetters} from 'vuex'
 import Page from 'common/NiPage'
-import Part from 'common/NiPart'
+import TextContainer from 'common/NiTextContainer'
 export default {
-  name: 'page-about-index',
+  name: 'page-intro-index',
   components: {
-    Btn,
-    Cards,
-    CardPerson,
     Page,
-    Part
+    TextContainer
   },
-  computed: {
-    ...mapGetters(['allPeople'])
-  },
-  methods: {
-    ppl (tag) { return this.allPeople.filter(p => p.groups[tag]) }
-  },
-  mounted () {
-    document.title = 'About - Cosmos - Internet of Blockchains'
-  }
+  computed: { ...mapGetters(['links']) }
 }
 </script>
-
-<style lang="stylus">
-@import '~variables'
-
-.people
-  margin-bottom 1rem
-
-@media screen and (min-width: 768px)
-  .people
-    .ni-card-person
-      flex 0 0 50%
-
-@media screen and (min-width: 1024px)
-  .people
-    .ni-card-person
-      flex 0 0 33.333%
-</style>

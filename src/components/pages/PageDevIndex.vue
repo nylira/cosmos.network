@@ -14,13 +14,20 @@ page(title="Developers" subtitle="Learn how to bootstrap your blockchain with Co
   h2 Blockchain Frameworks
 
   h3 Cosmos SDK
-  p The Cosmos SDK affords you all the tools you need to rapidly develop robust blockchains and blockchain applications which are interoperable with the Cosmos Hub. It is a blockchain development 'starter-pack' of common blockchain modules while not enforcing their use thus giving maximum flexibility for application customization. For example, does your app require fees, how do you want to log messages, do you enable IBC, do you even have a cryptocurrency? In this way, the Cosmos SDK is the #[strong "Rails" of cryptocurrencies].
+  p The Cosmos SDK is an ABCI framework written in Golang that affords you all the tools you need to rapidly develop robust blockchains and blockchain applications which are interoperable with the Cosmos Hub. It is a blockchain development 'starter-pack' of common blockchain modules while not enforcing their use thus giving maximum flexibility for application customization. It is perfect to build highly-customizable public proof-of-stake blockchains.
 
   p NOTE: The Cosmos SDK is under heavy development and it's not yet ready for release. Keep up to date with Cosmos SDK news #[a(href="https://blog.cosmos.network") on our blog].
 
-  // ul
+  //- ul
     li: a(href="https://github.com/cosmos/cosmos-sdk") Cosmos SDK on GitHub
     li: a(href="http://cosmos-sdk.readthedocs.io/en/latest/") Cosmos SDK Documentation
+
+  h3 Application-Blockchain Interface (ABCI)
+  p The Application-Blockchain Interface (ABCI) allows you to deploy the business logic of your blockchain application in any language. It handles the connection with the underlying Tendermint engine, which is responsible for the networking and consensus parts of the software. With the ABCI, you can deploy any type of blockchain application - public or private - in no time.
+  ul
+    li: a(href="http://tendermint.readthedocs.io/projects/tools/en/master/introduction.html#abci-overview") ABCI in Docs
+    li: a(href="https://github.com/tendermint/abci") ABCI on Github
+
 
   h3 Ethermint
   p Ethermint is a blazing fast Proof-of-Stake implementation of Ethereum that is built on top of Tendermint using the ABCI protocol. Ethermint lets you use the full power of the Ethereum Virtual Machine in connection to other blockchains (with IBC) on the Cosmos Network.
