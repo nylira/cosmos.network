@@ -17,7 +17,7 @@
         router-link(to="/dev/whitepaper").footbot-menu__item Whitepaper
         router-link(to="/about/assets").footbot-menu__item Visual Assets
     .footbot-menu
-      .footbot-menu__title Cosmos
+      .footbot-menu__title Developers
       .footbot-menu__items
         a(href="https://github.com/cosmos" target="_blank").footbot-menu__item Cosmos GitHub
         a(href="https://github.com/cosmos/cosmos-sdk" target="_blank").footbot-menu__item Cosmos SDK
@@ -80,11 +80,11 @@ export default {
 
 @media screen and (min-width: 768px)
   .footbot__container
-    padding 1.5rem 0
+    padding 3.5rem 0
 
   .footbot__brandmark
     flex 0 0 50%
-    
+
   .footbot__img
     max-width 14rem
 

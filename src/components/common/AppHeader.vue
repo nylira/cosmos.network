@@ -162,22 +162,23 @@ export default {
     height 3rem + bw
 
     .container
-      .header-item
-        border-top bw solid transparent
-        margin-top -1 * bw
-        height 3rem + bw
-        position relative
-        z-index 10
-        &:last-of-type
-          justify-content flex-end
+      nav
+        .header-item
+          border-top bw solid transparent
+          margin-top -1 * bw
+          height 3rem + bw
+          position relative
+          z-index 10
+          &:last-of-type
+            justify-content flex-end
 
-        &:hover
-          color bright
-          border-color hover
+          &:hover
+            color bright
+            border-color hover
 
-        &.header-item-link.router-link-exact-active
-          background app-fg
-          border-color mc
+          &.header-item-link.router-link-exact-active
+            background app-fg
+            border-color mc
 
   .menu-popup.menu-app
     display flex

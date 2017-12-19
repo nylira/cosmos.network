@@ -3,7 +3,7 @@
   .section-home__header What is Cosmos?
   .section-home__main
     .section-home__text
-      .section-home__p Cosmos is a decentralized network of independent parallel blockchains, each powered by classical BFT consensus algorithms like #[a(href="https://tendermint.com" target="_blank") Tendermint]. 
+      .section-home__p Cosmos is a decentralized network of independent parallel blockchains, each powered by classical BFT consensus algorithms like #[a(href="https://tendermint.com" target="_blank") Tendermint].
       .section-home__p The first blockchain in the Cosmos network is the Cosmos Hub, whose native token is the Atom. Cosmos is a permissionless network, meaning that anybody can build a blockchain on it.
     .section-home__diagrams
       .cosmos-diagram
@@ -18,8 +18,7 @@
       .cosmos-diagram
         .cosmos-diagram__image: img.cosmos-diagram__img(src="~assets/images/diagrams/diagram-atoms.png")
         .cosmos-diagram__label Atoms are a license for holders to stake and vote on the Cosmos Hub.
-    .section-home__text
-      .section-home__p: router-link(to="/intro") Learn everything you need to know about the Cosmos network here.
+    .section-home__p: router-link(to="/intro") Learn everything you need to know about the Cosmos network here.
 </template>
 
 <script>
@@ -32,18 +31,18 @@ export default {
 @require '~variables'
 
 .section-what
-  background app-fg
+  background-image: linear-gradient(to bottom, app-bg, app-fg);
 
 .section-home__container
-  padding 2rem 1rem
+  padding 3rem 1rem
   max-width 1024px
   margin 0 auto
   overflow hidden
 
 .section-home__header
-.section-home__text
 .section-home__diagrams
   margin-bottom 1.5rem
+
   &:last-child
     margin-bottom 0
 
@@ -55,12 +54,15 @@ export default {
   text-align center
 
 .section-home__text
-  max-width 32rem
+  max-width 34rem
   margin-left auto
   margin-right auto
 
 .section-home__p
   margin-bottom 1.5rem
+  max-width: 34rem;
+  margin-left: auto;
+  margin-right: auto;
   &:last-child
     margin-bottom 0
 
@@ -91,12 +93,14 @@ export default {
 
 @media screen and (min-width: 768px)
   .section-home__container
-    padding 3rem 1rem
+    padding 5rem 1rem
+
+  .section-home__text
+    margin-bottom 4rem
 
   .section-home__header
-  .section-home__text
   .section-home__diagrams
-    margin-bottom 3rem
+    margin-bottom 2rem
 
   .section-home__diagrams
     display flex
@@ -106,6 +110,7 @@ export default {
   .cosmos-diagram
     flex 1
     flex-flow column nowrap
+    display block
 
   .cosmos-diagram__image
     display flex
