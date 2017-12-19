@@ -8,13 +8,14 @@
       .footbot-menu__title Cosmos
       .footbot-menu__items
         router-link(to="/about").footbot-menu__item About
+        router-link(to="/about/team").footbot-menu__item Team
         a(href="https://tendermint.com/careers" target="_blank").footbot-menu__item Careers
-        router-link(to="/intro/faq").footbot-menu__item FAQ
+        router-link(to="/about/faq").footbot-menu__item FAQ
         a(href="https://fundraiser.cosmos.network" target="_blank").footbot-menu__item Fundraiser
     .footbot-menu
       .footbot-menu__title Downloads
       .footbot-menu__items
-        router-link(to="/dev/whitepaper").footbot-menu__item Whitepaper
+        router-link(to="/developers/whitepaper").footbot-menu__item Whitepaper
         router-link(to="/about/assets").footbot-menu__item Visual Assets
     .footbot-menu
       .footbot-menu__title Developers

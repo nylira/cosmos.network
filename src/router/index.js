@@ -11,16 +11,9 @@ const routes = [
     children: [
       { path: '/', name: 'about', component: r('AboutIndex') },
       { path: 'faq', name: 'faq', component: r('AboutFaq') },
+      { path: 'team', name: 'team', component: r('AboutTeam') },
       { path: 'whitepaper', name: 'whitepaper', component: r('Whitepaper') },
       { path: 'whitepaper/:locale', name: 'whitepaper-localized', component: r('Whitepaper') }
-    ]
-  },
-
-  // TEAM
-  { path: '/team',
-    component: r('Team'),
-    children: [
-      { path: '/', name: 'team', component: r('TeamIndex') }
     ]
   },
 
@@ -50,32 +43,24 @@ const routes = [
   { path: 'roadmap', name: 'roadmap', component: r('Roadmap') },
 
   // redirects
-  { path: '/faq', redirect: '/about/faq' },
-  { path: '/roadmap', redirect: '/about/roadmap' },
-
-  { path: '/dev', redirect: '/developers' },
-
-  { path: '/hackatom', redirect: '/developers/hackatom' },
-  { path: '/dev/hackatom', redirect: '/developers/hackatom' },
-
-  { path: '/whitepaper', redirect: '/developers/whitepaper' },
-  { path: '/dev/whitepaper', redirect: '/developers/whitepaper' },
-
-  { path: '/whitepaper/en-US', redirect: '/developers/whitepaper' },
-  { path: '/dev/whitepaper/en-US', redirect: '/developers/whitepaper' },
-
-  { path: '/validator', redirect: '/validators' },
   { path: '/blog/:entry', redirect: '/blog' },
   { path: '/blog',
-    beforeEnter: () => {
-      window.location.assign('https://blog.cosmos.network')
-    }
+    beforeEnter: () => { window.location.assign('https://blog.cosmos.network') }
   },
+  { path: '/faq', redirect: '/about/faq' },
+  { path: '/dev', redirect: '/developers' },
+  { path: '/dev/hackatom', redirect: '/developers/hackatom' },
+  { path: '/dev/whitepaper', redirect: '/about/whitepaper' },
+  { path: '/hackatom', redirect: '/developers/hackatom' },
+  { path: '/intro/faq', redirect: '/about/faq' },
   { path: '/riot',
-    beforeEnter: () => {
-      window.location.assign('https://riot.im/app/#/room/#cosmos:matrix.org')
-    }
+    beforeEnter: () => { window.location.assign('https://riot.im/app/#/room/#cosmos:matrix.org') }
   },
+  { path: '/roadmap', redirect: '/about/roadmap' },
+  { path: '/team', redirect: '/about/team' },
+  { path: '/validator', redirect: '/validators' },
+  { path: '/whitepaper', redirect: '/about/whitepaper' },
+  { path: '/whitepaper/en-US', redirect: '/about/whitepaper' },
 
   // wildcards
   { path: '/404', component: r('404') },
