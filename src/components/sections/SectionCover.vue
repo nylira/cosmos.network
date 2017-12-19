@@ -7,11 +7,11 @@
     .section-cover__action
       btn(
         type="anchor"
-        href="https://github.com/cosmos/cosmos-ui/releases/latest"
+        href="https://riot.im/app/#/room/#cosmos:matrix.org"
         size="lg"
-        icon="file_download"
+        icon="chat"
         target="_blank"
-        value="Download Wallet")
+        value="Join Developer Chat")
     .section-cover__scroll
       btn(icon="arrow_downward" v-scroll-to="'#section-what'")
 </template>
