@@ -1,19 +1,17 @@
-<template>
-  <div class="events-container">
-    <div class="event" v-for="item in events">
-      <div class="thumbnail"><img :src="image('events', item.location, 'jpg')"></div>
-      <div class="title h3">{{item.title}}</div>
-      <div class="date h4">{{item.dates.start}} to {{ item.dates.end }}</div>
-      <div class="details">
-        {{item.details}}
-        <a :href="item.href" target="_blank">Event website&nbsp;&rsaquo;</a>
-      </div>
-    </div>
-  </div>
+<template lang="pug">
+.events-container
+  .event(v-for='item in events')
+    .thumbnail
+      img(:src="image('events', item.location, 'jpg')")
+    .title.h3 {{item.title}}
+    .date.h4 {{item.dates.start}} to {{ item.dates.end }}
+    .details
+      | {{item.details}}
+      a(:href='item.href', target='_blank') Event website ›
 </template>
 
 <script>
-import { image } from '../scripts/cdn.js'
+import { image } from 'scripts/cdn'
 export default {
   name: 'events-container',
   data: () => ({
@@ -24,7 +22,7 @@ export default {
 </script>
 
 <style lang="stylus">
-@require '../styles/variables.styl'
+@require '~variables'
 
 .events-container
   padding 0.5rem

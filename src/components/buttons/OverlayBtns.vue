@@ -1,7 +1,5 @@
-<template>
-  <div class="overlay-btns">
-    <slot></slot>
-  </div>
+<template lang="pug">
+.overlay-btns: slot
 </template>
 
 <script>
@@ -11,7 +9,7 @@ export default {
 </script>
 
 <style lang="stylus">
-@import '../styles/variables.styl'
+@import '~variables'
 
 .overlay-btns
   height auto

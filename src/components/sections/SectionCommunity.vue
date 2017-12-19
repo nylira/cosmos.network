@@ -59,8 +59,8 @@
 import {mapGetters} from 'vuex'
 import Cards from 'common/NiCards'
 import Btn from '@nylira/vue-button'
-import CardCommunity from 'comp/CardCommunity'
-import FormEmailSignup from 'comp/FormEmailSignup'
+import CardCommunity from 'cards/CardCommunity'
+import FormEmailSignup from 'forms/FormEmailSignup'
 import Part from 'common/NiPart'
 export default {
   name: 'app-footer',

@@ -2,7 +2,7 @@
 page(title="HackAtom" subtitle="The regularly scheduled Cosmos Hackathon.")
   div(slot="menu"): btn(href='https://blog.cosmos.network/announcement-hackatom-2-winners-d31fe584b70b', target='_blank' icon="stars" value="HackAtom 2 Winners")
 
-  locale-menu
+  menu-locale
 
   text-container
     h2 What is HackAtom?
@@ -52,7 +52,7 @@ page(title="HackAtom" subtitle="The regularly scheduled Cosmos Hackathon.")
     h2 Meetup with Cosmonauts
     p
       | We're having HackAtom meetups around the world. If you're located nearby—please do come join us! Meet us to get free tips and support while building your app.
-    meetup-locations
+    card-location
 
     h2 Judging
     p We’re looking for a high level of professionalism and quality, and have invited experienced hackers and entrepreneurs to influence the competition right from the start. You’ll be rewarded by the judges and the community. Your project will be judged by members of the Interchain Foundation.
@@ -68,9 +68,9 @@ page(title="HackAtom" subtitle="The regularly scheduled Cosmos Hackathon.")
 <script>
 import { mapGetters } from 'vuex'
 import Btn from '@nylira/vue-button'
-import LocaleMenu from 'comp/LocaleMenu'
-import MeetupLocations from 'comp/MeetupLocations'
-import ModalAgreement from 'comp/ModalAgreement'
+import MenuLocale from 'navigation/MenuLocale'
+import CardLocation from 'cards/CardLocation'
+import ModalAgreement from 'modals/ModalAgreement'
 import Page from 'common/NiPage'
 import Part from 'common/NiPart'
 import TextContainer from 'common/NiTextContainer'
@@ -78,8 +78,8 @@ export default {
   name: 'page-hackatom',
   components: {
     Btn,
-    LocaleMenu,
-    MeetupLocations,
+    MenuLocale,
+    CardLocation,
     ModalAgreement,
     Page,
     Part,

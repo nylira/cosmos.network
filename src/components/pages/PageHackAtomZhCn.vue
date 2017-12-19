@@ -65,7 +65,7 @@
       header 与Cosmonauts聚会
       main
         p 2017年6月9日当地时间下午7:00，我们将在世界各地举办HackAtom聚会。如果你在附近，请来加入我们！在构建应用时，请与我们联系，以获取免费提示和支持。
-        meetup-locations
+        card-location
 
   section.ha-section.judging
     .ha-container
@@ -88,16 +88,16 @@
 <script>
 import { mapGetters } from 'vuex'
 import Btn from '@nylira/vue-button'
-import LocaleMenu from 'comp/LocaleMenu'
-import MeetupLocations from 'comp/MeetupLocations'
-import ModalAgreement from 'comp/ModalAgreement'
+import MenuLocale from 'navigation/MenuLocale'
+import CardLocation from 'cards/CardLocation'
+import ModalAgreement from 'modals/ModalAgreement'
 import PageHeader from '@nylira/vue-page-header'
 export default {
   name: 'page-hackatom',
   components: {
     Btn,
-    LocaleMenu,
-    MeetupLocations,
+    MenuLocale,
+    CardLocation,
     ModalAgreement,
     PageHeader
   },

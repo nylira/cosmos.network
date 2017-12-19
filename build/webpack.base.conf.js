@@ -40,12 +40,18 @@ module.exports = {
     alias: {
       '@': resolve('src'),
       assets: resolve('src/assets'),
-      comp: resolve('src/components'),
-      common: resolve('src/components/common'),
-      pages: resolve('src/components/pages'),
-      sections: resolve('src/components/sections'),
+      images: resolve('src/assets/images'),
       content: resolve('content'),
-      variables: resolve('src/styles/variables.styl')
+      scripts: resolve('src/scripts'),
+      variables: resolve('src/styles/variables.styl'),
+      buttons: resolve('src/components/buttons'),
+      cards: resolve('src/components/cards'),
+      common: resolve('src/components/common'),
+      forms: resolve('src/components/forms'),
+      modals: resolve('src/components/modals'),
+      navigation: resolve('src/components/navigation'),
+      pages: resolve('src/components/pages'),
+      sections: resolve('src/components/sections')
     }
   },
   module: {

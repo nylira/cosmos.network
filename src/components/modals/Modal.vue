@@ -1,18 +1,14 @@
-<template>
-  <div :class="cssClass">
-    <div class="ni-modal-container">
-      <header class="ni-modal-header">
-        <div class="ni-modal-icon" v-if="icon"><i :class="iconCssClass"></i></div>
-        <div class="ni-modal-title"><slot name="title"></slot></div>
-      </header>
-      <main class="ni-modal-main">
-        <slot></slot>
-      </main>
-      <footer class="ni-modal-footer">
-        <slot name="footer"></slot>
-      </footer>
-    </div>
-  </div>
+<template lang="pug">
+div(:class='cssClass'): .ni-modal-container
+  header.ni-modal-header
+    .ni-modal-icon(v-if='icon')
+      i(:class='iconCssClass')
+    .ni-modal-title
+      slot(name='title')
+  main.ni-modal-main
+    slot
+  footer.ni-modal-footer
+    slot(name='footer')
 </template>
 
 <script>
@@ -50,7 +46,7 @@ export default {
 </script>
 
 <style lang="stylus">
-@import '../styles/variables.styl'
+@import '~variables'
 
 .ni-modal
   position fixed
