@@ -1,18 +1,8 @@
-<template>
-  <div class="page-faq-nav mobile-only">
-    <overlay-btns>
-      <overlay-btn
-        v-show="!faqTocVisible"
-        @click.native="tocVisible(true)"
-        icon="list-ol">
-      </overlay-btn>
-      <overlay-btn
-        v-show="faqTocVisible"
-        @click.native="tocVisible(false)"
-        icon="times">
-      </overlay-btn>
-    </overlay-btns>
-  </div>
+<template lang="pug">
+.page-faq-nav.mobile-only
+  overlay-btns
+    overlay-btn(v-show='!faqTocVisible', @click.native='tocVisible(true)', icon='list-ol')
+    overlay-btn(v-show='faqTocVisible', @click.native='tocVisible(false)', icon='times')
 </template>
 
 <script>

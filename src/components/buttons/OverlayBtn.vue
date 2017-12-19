@@ -15,7 +15,7 @@ export default {
 </script>
 
 <style lang="stylus">
-@import '../styles/variables.styl'
+@import '~variables'
 
 .overlay-btn
   width 2.5em

@@ -1,38 +1,38 @@
 <template lang="pug">
-.locations
-  .loc
+.card-locations
+  .card-location
     a(:href='links.cosmos.meetups.berlin' target='_blank')
-      img(src='../assets/images/hackatom/loc-berlin.jpg')
+      img(src='images/hackatom/loc-berlin.jpg')
       .kv
         .key Cosmos
         .value Berlin
-  .loc
+  .card-location
     a(:href='links.cosmos.meetups.nyc' target='_blank')
-      img(src='../assets/images/hackatom/loc-nyc.jpg')
+      img(src='images/hackatom/loc-nyc.jpg')
       .kv
         .key Cosmos
         .value New York City
-  .loc
+  .card-location
     a(:href='links.cosmos.meetups.toronto' target='_blank')
-      img(src='../assets/images/hackatom/loc-toronto.jpg')
+      img(src='images/hackatom/loc-toronto.jpg')
       .kv
         .key Cosmos
         .value Toronto
-  .loc
+  .card-location
     a(:href='links.cosmos.meetups.sf' target='_blank')
-      img(src='../assets/images/hackatom/loc-san-francisco.jpg')
+      img(src='images/hackatom/loc-san-francisco.jpg')
       .kv
         .key Cosmos
         .value San Francisco
-  .loc
+  .card-location
     a(:href='links.cosmos.meetups.seoul' target='_blank')
-      img(src='../assets/images/hackatom/loc-seoul.jpg')
+      img(src='images/hackatom/loc-seoul.jpg')
       .kv
         .key Cosmos
         .value Seoul
-  .loc
+  .card-location
     a(:href='links.cosmos.meetups.shanghai' target='_blank')
-      img(src='../assets/images/hackatom/loc-shanghai.jpg')
+      img(src='images/hackatom/loc-shanghai.jpg')
       .kv
         .key Cosmos
         .value Shanghai
@@ -48,14 +48,14 @@ export default {
 }
 </script>
 <style lang="stylus">
-@require '~@/styles/variables.styl'
+@require '~variables'
 
-.locations
+.card-locations
   display flex
   flex-flow column nowrap
   margin 0 0 0.5rem
 
-.locations .loc
+.card-location
   margin-bottom 1rem
   display flex
   background app-fg
@@ -105,13 +105,14 @@ export default {
       border-color hsla(0,0,0,0.75)
 
 @media screen and (min-width: 768px)
-  .locations
+  .card-locations
     flex-flow row wrap
     align-items center
     justify-content center
     margin 0 0 1.5rem
-    .loc
-      flex 0 0 50%
-      text-align left
-      margin 0
+
+  .card-location
+    flex 0 0 50%
+    text-align left
+    margin 0
 </style>

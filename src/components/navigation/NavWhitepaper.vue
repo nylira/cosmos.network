@@ -1,38 +1,23 @@
-<template>
-  <div class="page-whitepaper-nav ">
-    <overlay-btns>
-      <locale-menu
-        path="whitepaper"
-        :langs="['en-US', 'ko', 'pt', 'zh-CN']">
-      </locale-menu>
-      <overlay-btn
-        v-show="!whitepaperTocVisible"
-        @click.native="tocVisible(true)"
-        icon="list-ol">
-      </overlay-btn>
-      <overlay-btn class="mobile-only"
-        v-show="whitepaperTocVisible"
-        @click.native="tocVisible(false)"
-        icon="times">
-      </overlay-btn>
-      <overlay-btn
-        class="print-btn"
-        @click.native="download()"
-        icon="file-pdf-o">
-      </overlay-btn>
-    </overlay-btns>
-  </div>
+<template lang="pug">
+.page-whitepaper-nav: overlay-btns
+  locale-menu(path='whitepaper', :langs="['en-US', 'ko', 'pt', 'zh-CN']")
+  overlay-btn(
+    v-show='!whitepaperTocVisible', @click.native='tocVisible(true)', icon='list-ol')
+  overlay-btn.mobile-only(
+    v-show='whitepaperTocVisible', @click.native='tocVisible(false)', icon='times')
+  overlay-btn.print-btn(
+    @click.native='download()', icon='file-pdf-o')
 </template>
 
 <script>
 import Ps from 'perfect-scrollbar'
-import watchTocClicks from '../scripts/watchTocClicks.js'
-import inViewport from '../scripts/inViewport.js'
-import visibleTocActivate from '../scripts/visibleTocActivate.js'
-import percentageScrolling from '../scripts/percentageScrolling.js'
-import LocaleMenu from './LocaleMenu'
-import OverlayBtns from './OverlayBtns'
-import OverlayBtn from './OverlayBtn'
+import watchTocClicks from 'scripts/watchTocClicks.js'
+import inViewport from 'scripts/inViewport.js'
+import visibleTocActivate from 'scripts/visibleTocActivate.js'
+import percentageScrolling from 'scripts/percentageScrolling.js'
+import LocaleMenu from 'navigation/MenuLocale'
+import OverlayBtns from 'buttons/OverlayBtns'
+import OverlayBtn from 'buttons/OverlayBtn'
 import { mapGetters } from 'vuex'
 export default {
   name: 'page-whitepaper-nav',

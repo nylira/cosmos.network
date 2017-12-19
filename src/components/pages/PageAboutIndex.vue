@@ -35,6 +35,7 @@ page(title="What is Cosmos?" subtitle="Get started with an overview of Cosmos.")
 </template>
 
 <script>
+
 import {mapGetters} from 'vuex'
 import Page from 'common/NiPage'
 import TextContainer from 'common/NiTextContainer'

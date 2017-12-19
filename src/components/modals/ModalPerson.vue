@@ -28,14 +28,10 @@
 </template>
 
 <script>
-import { portrait } from '../scripts/cdn.js'
+import { portrait } from 'scripts/cdn'
 import disableScroll from 'disable-scroll'
-import CardPerson from './CardPerson'
 export default {
   name: 'section-people',
-  components: {
-    CardPerson
-  },
   data: () => ({
     portrait: portrait
   }),
