@@ -6,19 +6,19 @@ header.app-header
       i.material-icons(v-else='') close
     router-link.header-item.header-item-link(to='/')
       img(src='~assets/images/logos/cosmos-logo.png', alt='Cosmos Logo')
+    .header-item(v-if='!desktop')
     menu.menu-popup.menu-app(v-if='activeMenuApp || desktop')
-      nav.nav-app
+      nav
         router-link(to='/about' @click.native='close') About
         router-link(to='/developers' @click.native='close') Developers
         router-link(to='/validators' @click.native='close') Validators
-        a.header-item(:href='links.cosmos.blog' @click.native='close' target='_blank')
+      nav
+        a(:href='links.cosmos.blog' @click.native='close' target='_blank')
+          span.label Blog
           i.fa.fa-medium
-          span.label(v-if='desktop') Blog
-        a.header-item(:href='links.cosmos.github' @click.native='close' target='_blank')
+        a(:href='links.cosmos.github' @click.native='close' target='_blank')
+          span.label Github
           i.fa.fa-github
-          span.label(v-if='desktop') Github
-      nav(v-if='!desktop')
-        a(:href='links.cosmos.blog' @click.native='close' target='_blank') Blog
 </template>
 
 <script>
@@ -71,7 +71,7 @@ export default {
 </script>
 
 <style lang="stylus">
-@require '~@/styles/variables.styl'
+@require '~variables'
 
 .app-header
   position fixed
@@ -90,6 +90,7 @@ export default {
 
   .header-item
     height 3rem
+    min-width 3rem
     display flex
     align-items center
     padding 0 1rem
@@ -139,9 +140,8 @@ export default {
       display flex
       flex-flow column
       padding 1.5rem 3rem
-      > a, > p
-        padding 0.75rem 0
       > a
+        padding 0.75rem 0
         color txt
         border-top 1px solid bc
         display flex
@@ -153,10 +153,6 @@ export default {
           cursor not-allowed
         &:hover
           color hover
-      > p
-        .ni-time-left
-          display inline
-          font-weight bold
 
 @media screen and (min-width: 1024px)
   .app-header
@@ -201,6 +197,9 @@ export default {
         height 3rem + bw
         border-top bw solid transparent
         margin-top -1 * bw
+
+        i
+          margin-left 0.5rem
 
         &:hover
           color bright
