@@ -16,6 +16,7 @@ export default {
   display flex
   justify-content center
   align-items center
+  height 2rem
 
   a
     padding 0 1rem
@@ -30,11 +31,15 @@ export default {
       color bright
 
 @media screen and (min-width: 414px)
+  .ni-page-menu
+    height 2.5rem
   .ni-page-menu a
     font-size x
     line-height 2.5rem
 
 @media screen and (min-width: 768px)
+  .ni-page-menu
+    height 3rem
   .ni-page-menu a
     line-height 3rem
 </style>

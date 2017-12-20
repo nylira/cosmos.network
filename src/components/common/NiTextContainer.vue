@@ -14,7 +14,13 @@ export default {
 </script>
 
 <style lang="stylus">
-@require '~@/styles/variables.styl'
+@require '~variables'
+
+.ni-text-container
+  padding 1rem
+  margin-left auto
+  margin-right auto
+  df()
 
 .ni-text
   hr
@@ -53,6 +59,7 @@ export default {
     -ms-word-break break-all
     word-break break-all
     word-break break-word
+
   pre
     margin-left -1rem
     margin-right -1rem
@@ -120,10 +127,11 @@ export default {
   h4:not(:first-child)
     border-top 1px dotted bc
     padding-top 1.5rem
+  ul li, ol li
+    margin-bottom 0.5rem
   ul
     li
       list-style square
-      margin-bottom 0.25em
   ol
     li
       list-style decimal
@@ -143,16 +151,6 @@ export default {
     color txt
     & + h2
       margin-top 1.5rem
-
-.ni-text-container
-  padding 1rem
-  margin-left auto
-  margin-right auto
-  font-family sans
-  font-size 1rem
-  line-height 1.5
-  font-weight 400
-  color txt
 
 .ni-text
   p, hr, ul, ol, table, pre,  figcaption,  blockquote,  img,  iframe,  .ni-btn
