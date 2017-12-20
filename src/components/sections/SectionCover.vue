@@ -61,7 +61,7 @@ export default {
   shadow()
 
 .section-cover__wordmark
-  padding-top 17.5vh
+  padding-top 20vh
   display flex
   align-items center
 
@@ -70,15 +70,14 @@ export default {
 
 .section-cover__tagline
   text-align center
-  font-weight 400
-  letter-spacing 0.025em
+  letter-spacing 0.0375em
   text-shadow hsla(0,0,0,1) 0 0 0.5em
 
-  padding-top 5vh
+  padding-top 7.5vh
   max-width 20em
 
 .section-cover__action
-  padding-top 15vh
+  padding-top 22.5vh
 
 .section-cover__action .ni-btn
   shadow()
@@ -124,55 +123,26 @@ export default {
 /* END queries for bg image */
 
 @media screen and (min-width: 768px) and (orientation: portrait)
+  .section-cover__tagline
+    font-size xl
   .section-cover__img
-    width 36vw
+    width 45vw
 
-@media screen and (orientation: landscape)
-  .section-cover__img
-    width 18vw
-
-@media screen and (min-width: 375px) and (min-height: 812px) and (orientation: portrait)
-  .section-cover__action
-    padding-top 20vh
-
-@media screen and (min-width: 414px)
+@media screen and (min-width: 1024px) and (orientation: landscape)
   .section-cover__tagline
     font-size lg
 
-@media screen and (min-width: 768px)
-  .section-cover__wordmark
-    padding-top 12.5vh
+  .section-cover__img
+    width 25vw
 
-  .section-cover__container
-    padding 0 3rem
-
-@media screen and (min-width: 1024px)
+@media screen and (min-width: 1024px) and (orientation: portrait)
   .section-cover__tagline
-    padding-top 6.25vh
+    font-size 3.25vw
 
-@media screen and (min-height: 1024px)
+@media screen and (min-width: 1280px) and (orientation: landscape)
   .section-cover__tagline
-    font-size xl
-
-@media screen and (min-width: 1280px)
-  .section-cover__wordmark
-    padding-top 12vh
-
-  .section-cover__action
-    padding-top 20vh
-
-@media screen and (min-width: 1440px)
-  .section-cover__wordmark
-    padding-top 10vh
-
-@media screen and (min-width: 1680px)
-  .section-cover__wordmark
-    padding-top 8vh
-
-@media screen and (min-width: 1920px)
-  .section-cover__wordmark
-    padding-top 6vh
+    font-size 1.375vw + 0.25vh
 
   .section-cover__img
-    width 24rem
+    width 20vw
 </style>
