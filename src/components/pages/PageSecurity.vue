@@ -1,7 +1,7 @@
 <template lang="pug">
 .page
   page-menu
-  page(title="Security" subtitle="Security is a core value at Cosmos & Tendermint. Learn how earn bounties by reporting vulnerabilities.")
+  page(title="Security" subtitle="Security is a core value at Cosmos & Tendermint. Learn how to earn bounties by reporting vulnerabilities.")
     text-container: text-content
 </template>
 
