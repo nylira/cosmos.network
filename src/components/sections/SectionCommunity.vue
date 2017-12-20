@@ -14,7 +14,7 @@
     part(title='Discuss & Chat'): .community-cards
       card-community(
         dt='Community Chat'
-        dd='Join `cosmosproject` on Telegram'
+        dd='Join cosmosproject on Telegram'
         icon='telegram'
         :anchor='links.cosmos.community.telegram')
       card-community(
@@ -34,21 +34,21 @@
         :anchor='links.cosmos.community.irc')
     part(title='Social Media'): .community-cards
       card-community(
+        dt='Medium'
+        dd='Read the latest on the Cosmos Blog'
+        icon='medium'
+        :anchor='links.cosmos.blog')
+      card-community(
         dt='Twitter'
         dd='Follow @cosmos, our official account'
         icon='twatter'
         :anchor='links.cosmos.community.twitter')
-      // card-community(
-        dt='Facebook'
-        dd='Like the `cosmosproject` page.'
-        icon='footbook'
-        :anchor='links.cosmos.community.facebook')
       card-community(
         dt='Reddit'
         dd='Subscribe to /r/cosmosnetwork'
         icon='raddit'
         :anchor='links.cosmos.community.reddit')
-      card-community(
+      // card-community(
         dt='BitcoinTalk'
         dd='Keep up with our thread on BitcoinTalk'
         icon='bitcoin'

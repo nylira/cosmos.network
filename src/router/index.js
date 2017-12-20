@@ -36,10 +36,11 @@ const routes = [
   },
 
   // OTHERS
+  { path: '/assets', name: 'assets', component: r('Assets') },
   { path: '/plan', name: 'plan', component: r('Plan') },
   { path: '/plan/:locale', name: 'plan-localized', component: r('Plan') },
   { path: '/privacy', name: 'privacy', component: r('Privacy') },
-  { path: '/assets', name: 'assets', component: r('Assets') },
+  { path: '/security', name: 'security', component: r('Security') },
 
   // redirects
   { path: '/blog/:entry', redirect: '/blog' },

@@ -12,12 +12,13 @@ header.app-header
         router-link(to='/about' @click.native='close') About
         router-link(to='/developers' @click.native='close') Developers
         router-link(to='/validators' @click.native='close') Validators
+        router-link(to='/security' @click.native='close') Security
       nav
         a(:href='links.cosmos.blog' @click.native='close' target='_blank')
           span.label Blog
           i.fa.fa-medium
         a(:href='links.cosmos.github.organization' @click.native='close' target='_blank')
-          span.label Github
+          span.label GitHub
           i.fa.fa-github
 </template>
 

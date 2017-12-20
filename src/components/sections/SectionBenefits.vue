@@ -16,7 +16,7 @@
             img.cosmos-panel__img(src="~assets/images/diagrams/panel-scalability.png")
           .cosmos-panel__text
             .cosmos-panel__title Scalability
-            .cosmos-panel__body By leveraging interoperability and Tendermint’s Proof-Of-Stake algorithm, Cosmos provides unprecedented levels of scalability for blockchain networks.
+            .cosmos-panel__body By leveraging interoperability and Tendermint’s Proof-of-Stake algorithm, Cosmos provides unprecedented levels of scalability for blockchain networks.
             router-link.cosmos-panel__action(to="/about#scalability") Learn more about how Tendermint handles scaling.
         .cosmos-panel
           .cosmos-panel__image

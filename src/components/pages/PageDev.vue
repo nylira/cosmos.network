@@ -1,8 +1,8 @@
 <template lang="pug">
 .page
-  //- page-menu
-    router-link(to="/developers") Overview
-    router-link(to="/developers/hackatom") HackAtom
+  page-menu
+    // router-link(to="/developers") Overview
+    // router-link(to="/developers/hackatom") HackAtom
   router-view
 </template>
 
