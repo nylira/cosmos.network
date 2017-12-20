@@ -109,7 +109,7 @@ export default {
   .section-cover__container
     background-image url('~assets/images/backgrounds/bg-1440p.jpg')
 
-@media screen and (max-device-height: 1600px) and (max-device-height: 1600px)
+@media screen and (max-device-width: 2560px) and (max-device-height: 1600px)
   .section-cover__container
     background-image url('~assets/images/backgrounds/bg-1600p.jpg')
 
