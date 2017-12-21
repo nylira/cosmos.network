@@ -192,7 +192,7 @@ export default {
       align-items center
 
       > a
-        padding 0 1rem
+        padding 0 1.5rem
         color txt
         line-height 3rem
         height 3rem + bw
