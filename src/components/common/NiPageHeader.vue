@@ -65,13 +65,13 @@ export default {
   display flex
   align-items center
   color bright
-  font-weight 500
 
 .ni-page-header-subtitle > div
   color dim
+  font-weight 400
 
 .ni-page-header-title + .ni-page-header-subtitle
-  margin-top 0.25rem
+  margin-top 0.5rem
 
 @media screen and (min-width: 768px)
   .ni-page-header

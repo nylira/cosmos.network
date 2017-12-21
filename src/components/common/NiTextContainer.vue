@@ -94,12 +94,6 @@ export default {
     height 56.25vw
     margin 0 -1rem 1.5rem
 
-  .left
-    float left !important
-    padding-right 2.5em !important
-  .right
-    float right !important
-    padding-left 2.5em !important
   img
     max-width 100%
 
@@ -116,53 +110,6 @@ export default {
       max-width 87.5vw
       margin 0
 
-  h1
-    margin-top 1.5rem
-  h2:not(:first-child)
-    border-top 0.25rem solid bc
-    padding-top 1.5rem
-  h3:not(:first-child)
-    border-top 1px solid bc
-    padding-top 1.5rem
-  h4:not(:first-child)
-    border-top 1px dotted bc
-    padding-top 1.5rem
-  ul li, ol li
-    margin-bottom 0.5rem
-  ul
-    li
-      list-style square
-  ol
-    li
-      list-style decimal
-  table
-    border 1px solid #ddd
-    border-collapse collapse
-    width 100%
-    th
-      font-weight 600
-      background app-fg
-      color dim
-
-  blockquote
-    padding 0.75rem 1rem
-    background app-fg
-    position relative
-    color txt
-    & + h2
-      margin-top 1.5rem
-
-.ni-text
-  p, hr, ul, ol, table, pre,  figcaption,  blockquote,  img,  iframe,  .ni-btn
-    margin-bottom 1.5em
-
-  p code:before, p code:after
-    letter-spacing -0.375em
-    content "\00a0"
-
-  .left, .right
-    margin-bottom 2.5em !important
-
   h1, h2, h3, h4, h5,  h6
     position relative
     line-height 1.25
@@ -171,6 +118,56 @@ export default {
     &:first-child
       margin-top 0
 
+  h1
+    margin-top 1.5rem
+
+  h2:not(:first-child)
+    border-top 0.25rem solid bc
+    padding-top 1.5rem
+    margin-top 1.5rem
+
+  h3:not(:first-child)
+    padding-top 1.5rem
+
+  h4:not(:first-child)
+    padding-top 1.5rem
+     
+  table
+    border 1px solid bc
+    border-collapse collapse
+    width 100%
+    th
+      font-weight 600
+      background app-fg
+      color dim
+      border 1px solid #e0e0e0
+      padding 0.25em 0.5em
+
+  blockquote
+    padding 0.75rem 1rem
+    background app-fg
+    position relative
+    color txt
+
+    & + h2
+      margin-top 1.5rem
+
+    p, ul, ol
+      margin-bottom 0.75rem
+
+      &:last-child
+        margin-bottom 0
+
+
+  p, hr, ul, ol, table, pre,  figcaption,  blockquote,  img,  iframe,  .ni-btn
+    margin-bottom 1.5em
+    + h2
+      margin-bottom 3rem
+
+  p code:before, p code:after
+    letter-spacing -0.375em
+    content "\00a0"
+
   ul, ol
     padding-left 1.5em
 
@@ -178,24 +175,22 @@ export default {
       margin-bottom 0
       padding-top 0.25em
 
+  ul li, ol li
+    margin-bottom 0.5rem
+
+  ul
+    li
+      list-style square
+  ol
+    li
+      list-style decimal
+ 
   li
     p + ol,
     p + ol
       margin-top -1.5em
       &:last-child
         margin-bottom 1.5em
-
-  table 
-    td, th
-      border 1px solid #e0e0e0
-      padding 0.25em 0.5em
-
-  blockquote
-    p, ul, ol
-      margin-bottom 0.75rem
-
-      &:last-child
-        margin-bottom 0
 
 @media screen and (min-width: 768px)
   .ni-text
@@ -235,7 +230,6 @@ sbw = 20rem
       position relative
 
       font-size 1.5rem
-      font-weight 500
 
       &:before
         position absolute
@@ -257,16 +251,19 @@ sbw = 20rem
       padding-top 1.5rem
 
   .ni-text-container
+    h2 + h3
+      border-top 1px solid bc
+
     h3, h4, h5, h6, p, ul, ol, pre, blockquote, .ni-btn, iframe, > div
       margin-left sbw
       padding-left 0
 
       ul, ol
         margin-left 2rem
+
       p
         margin-left 0
 
     h3, h4, h5, h6, p, ul, ol
       padding-right 0.5rem
-
 </style>

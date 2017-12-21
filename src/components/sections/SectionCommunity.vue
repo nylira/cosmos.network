@@ -1,6 +1,6 @@
 <template lang="pug">
 .section-home: .section-home__container
-  .section-home__header Join the Cosmos network!
+  .section-home__header Join the Cosmos Network
   .app-footer__row.app-footer__row-actions
     part(title="Get Started")
       btn(
