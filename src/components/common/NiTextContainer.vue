@@ -251,6 +251,9 @@ sbw = 20rem
       padding-top 1.5rem
 
   .ni-text-container
+    h2 + h3
+      border-top 1px solid bc
+
     h3, h4, h5, h6, p, ul, ol, pre, blockquote, .ni-btn, iframe, > div
       margin-left sbw
       padding-left 0
