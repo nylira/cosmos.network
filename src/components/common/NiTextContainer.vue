@@ -1,15 +1,17 @@
-<template>
-  <div class="ni-text">
-    <div class="ni-text-container">
-      <slot></slot>
-    </div>
-  </div>
+<template lang="pug">
+.ni-text
+  md-text.ni-text-container(v-if="url" :url="url")
+  .ni-text-container(v-else): slot
 </template>
 
 <script>
+import MdText from 'common/NiMdText'
 export default {
-  name: 'ni-text',
-  props: ['content']
+  name: 'ni-text-container',
+  components: {
+    MdText
+  },
+  props: ['url']
 }
 </script>
 
