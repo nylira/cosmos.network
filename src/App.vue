@@ -32,7 +32,7 @@ export default {
         { n: 'twitter:description', c: 'The interoperable, scalable blockchain network. Built for developers.' },
         { n: 'twitter:creator', c: '@cosmos' },
         { n: 'twitter:image', c: require('./assets/images/bg-720p.jpg') },
-        { n: 'twitter:card', c: 'summary_large_image') },
+        { n: 'twitter:card', c: 'summary_large_image' },
 
         { p: 'og:title', c: 'Cosmos Network - Internet of Blockchains' },
         { p: 'og:type', c: 'website' },
