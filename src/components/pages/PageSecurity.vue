@@ -2,21 +2,19 @@
 .page
   page-menu
   page(title="Security" subtitle="Security is a core value at Cosmos & Tendermint. Learn how to earn bounties by reporting vulnerabilities.")
-    text-container: text-content
+    text-container(url='https://raw.githubusercontent.com/tendermint/aib-data/master/md/security.md')
 </template>
 
 <script>
 import Page from 'common/NiPage'
 import PageMenu from 'common/NiPageMenu'
-import TextContent from 'content/en-US/security.md'
 import TextContainer from 'common/NiTextContainer.vue'
 export default {
-  name: 'page-intro-faq',
+  name: 'page-security',
   components: {
     Page,
     PageMenu,
-    TextContainer,
-    TextContent
+    TextContainer
   }
 }
 </script>
