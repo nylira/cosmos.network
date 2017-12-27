@@ -26,21 +26,20 @@ export default {
   head: {
     meta () {
       return [
-        { n: 'description', c: 'Cosmos is a project with an ambitious mission: To create a network of distributed ledgers that will solve long-standing problems in the cryptocurrency community.' },
-
         { n: 'twitter:card', c: 'summary' },
         { n: 'twitter:site', c: '@cosmos' },
-        { n: 'twitter:title', c: 'Cosmos - Internet of Blockchains' },
-        { n: 'twitter:description', c: 'Cosmos is a project with an ambitious mission: To create a network of distributed ledgers that will solve long-standing problems in the cryptocurrency community.' },
+        { n: 'twitter:title', c: 'Cosmos Network - Internet of Blockchains' },
+        { n: 'twitter:description', c: 'The interoperable, scalable blockchain network. Built for developers.' },
         { n: 'twitter:creator', c: '@cosmos' },
-        { p: 'twitter:image', c: require('./assets/favicon/apple-icon-180x180.png') },
+        { n: 'twitter:image', c: require('./assets/images/bg-720p.jpg') },
+        { n: 'twitter:card', c: 'summary_large_image') },
 
-        { p: 'og:title', c: 'Cosmos - Internet of Blockchains' },
+        { p: 'og:title', c: 'Cosmos Network - Internet of Blockchains' },
         { p: 'og:type', c: 'website' },
         { p: 'og:url', c: window.location.href },
-        { p: 'og:image', c: require('./assets/favicon/apple-icon-180x180.png') },
-        { p: 'og:description', c: 'Cosmos is a project with an ambitious mission: To create a network of distributed ledgers that will solve long-standing problems in the cryptocurrency community.' },
-        { p: 'og:site_name', c: 'Cosmos - Internet of Blockchains' },
+        { p: 'og:image', c: require('./assets/images/bg-720p.jpg') },
+        { p: 'og:description', c: 'The interoperable, scalable blockchain network. Built for developers.' },
+        { p: 'og:site_name', c: 'Cosmos Network' },
         { p: 'fb:admins', c: '' },
 
         { n: 'msapplication-TileColor', c: '#ffffff' },
