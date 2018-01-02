@@ -44,6 +44,11 @@ export default {
 <style lang="stylus">
 @require '~variables'
 
+.app-footer
+  background app-bg
+  position relative
+  z-index z(appHeader)
+
 .footbot__container
   max-width 1024px
   margin 0 auto

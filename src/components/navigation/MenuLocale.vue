@@ -4,7 +4,7 @@
     overlay-btn(@click.native='toggle(true)', icon='times', v-if='maximized')
     overlay-btn(@click.native='toggle(true)', icon='globe', v-else='')
   menu.menu-locale(v-show='maximized')
-    router-link(to='/about/whitepaper') English
+    router-link(to='/about/whitepaper' exact) English
     router-link(to='/about/whitepaper/zh-CN') 简体中文
     router-link(to='/about/whitepaper/pt') Portuguese
     router-link(to='/about/whitepaper/ko') Korean

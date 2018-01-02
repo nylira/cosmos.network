@@ -3,16 +3,16 @@
   slot(name='locale')
   slot(name='nav')
   toc-padding(v-bind:class="{ 'toc-visible': tocVisible }")
-    article-body: slot
+    text-container: slot
 </template>
 
 <script>
-import TocPadding from './TocPadding'
-import ArticleBody from '@nylira/vue-article-body'
+import TocPadding from 'navigation/TocPadding'
+import TextContainer from 'common/NiTextContainer'
 export default {
   name: 'toc-page',
   components: {
-    ArticleBody,
+    TextContainer,
     TocPadding
   },
   props: ['tocVisible']
@@ -23,77 +23,56 @@ export default {
 @import '~variables'
 
 .minimal-toc
-  z-index 98
+  z-index z(toolBar)
   font-family sans
 
   // scrollbar
   width 100vw
   height 100vh
   position fixed
-  overflow-y hidden
 
-  a
-    text-decoration none !important
-    color txt
+  // for titlebar
+  padding-top 3rem
+
+  &:before
+    content 'Table of Contents'
+    line-height 2.5rem
+    color dim
+    text-transform uppercase
+    display block
+    padding 0 1rem
+    font-size sm
+    font-weight bold
+
+  > ul
+    padding 0.625rem 0
+    padding-bottom 1.5rem
+    margin 0
+    > li > a
+      font-weight 500
+      color txt
 
   ul
-    padding 0 !important
-
-    li 
-      margin-bottom 0 !important
-      list-style none !important
+    li
+      list-style none
+      margin-bottom 0
       a
-        position relative
-
-        line-height 1.25
-        padding 0.375rem 1.5em
-
-        &:hover
-          color link
-          text-decoration none
-
-      a.active
-        position relative
-        color dim
-        &:before
-          width 1.5rem
-          height 2rem
-          color link
-          position absolute
-          top 0
-          left 0
-
-          display flex
-          align-items center
-          justify-content center
-
-          content '\f0da'
-          font-family FontAwesome
-          color dim
-  > ul
-    > li
-      &:last-of-type
-        border-bottom none
-
-      > a
         display block
+        padding 0.375rem 1rem
+        line-height 1.25rem
+        &:hover
+          color bright
+          text-decoration none
+          background hover
+    ul
+      padding 0
+      a
+        padding-left 2.5rem
         color txt
-        font-weight bold
-        padding 0.5em 1.5em
-
       ul
-        margin-bottom 0
-        li
-          a
-            display block
-            padding-left 3em
-            font-weight 500
-
-        ul
-          padding 0
-          li
-            a
-              padding-left 4.5em
+        a
+          padding-left 4rem
+          color dim
 
 @media screen and (min-width: 768px)
   .minimal-toc
@@ -102,20 +81,10 @@ export default {
 @media screen and (max-width: 1023px)
   .minimal-toc
     background app-bg
-    top 3rem
+    top 0
     left 0
-    right 0
-    bottom 0
-
     &:before
-      display block
-      padding 0 1.25rem
-
-      content 'Table of Contents'
-      color txt
-      line-height 2rem
-      border-bottom 1px solid bc
-      text-transform uppercase
+      background app-fg
 
 @media screen and (min-width: 1024px)
   .minimal-toc
@@ -124,12 +93,11 @@ export default {
     left 0
     bottom 0
     max-height 100vh
-    width 20rem
+    width width-side
     padding 0.5rem 0 0
     border-right 1px solid bc
 
 @media screen and (min-width: 1280px)
-  .minimal-toc
-    padding 3rem
-    width 26rem
+  .minimal-toc ul
+    margin-left 0 !important
 </style>
