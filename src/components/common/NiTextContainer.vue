@@ -20,6 +20,7 @@ export default {
 
 .ni-text-container
   padding 1rem
+  max-width 40rem
   margin-left auto
   margin-right auto
   df()
@@ -123,6 +124,11 @@ export default {
   h1
     margin-top 1.5rem
 
+  h1 + p
+    color dim
+    font-size 1.25rem
+    margin-top -0.5rem
+
   h2:not(:first-child)
     border-top 0.25rem solid bc
     padding-top 1.5rem
@@ -211,22 +217,23 @@ export default {
       max-width 44rem
       max-height 24.75rem
 
-sbw = 20rem
-
-@media screen and (min-width: 1024px)
+@media screen and (min-width: 1280px)
   .ni-text-container
-    margin 0
-    max-width 100%
+    margin 0 auto
+    max-width 1024px
     padding-left 0
     padding-right 0
 
   .ni-text
+    h1
+      padding-left width-side
+
     h2, h2:not(:first-child)
-      border-top 1px solid bc
+      border-top px solid bc
       padding-top 1.5rem
       padding-left 1rem
 
-      width sbw - 1rem
+      width width-side - 1rem
       float left
       margin-top 0
       position relative
@@ -257,7 +264,7 @@ sbw = 20rem
       border-top 1px solid bc
 
     h3, h4, h5, h6, p, ul, ol, pre, blockquote, .ni-btn, iframe, > div
-      margin-left sbw
+      margin-left width-side
       padding-left 0
 
       ul, ol

@@ -11,11 +11,9 @@ export default {
 </script>
 
 <style lang="stylus">
+@import '~variables'
+
 @media screen and (min-width: 1024px)
   .toc-padding.toc-visible
-    margin-left 20rem
-
-@media screen and (min-width: 1280px)
-  .toc-padding.toc-visible
-    margin-left 26rem
+    margin-left width-side
 </style>
