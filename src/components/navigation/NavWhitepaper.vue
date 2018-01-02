@@ -1,34 +1,37 @@
 <template lang="pug">
 .page-whitepaper-nav: overlay-btns
-  locale-menu(path='whitepaper', :langs="['en-US', 'ko', 'pt', 'zh-CN']")
+  menu-locale(path='whitepaper' :langs="['en-US', 'ko', 'pt', 'zh-CN']")
   overlay-btn(
-    v-show='!whitepaperTocVisible', @click.native='tocVisible(true)', icon='list-ol')
+    v-show='!whitepaperTocVisible' @click.native='tocVisible(true)' icon='list-ol')
   overlay-btn.mobile-only(
-    v-show='whitepaperTocVisible', @click.native='tocVisible(false)', icon='times')
+    v-show='whitepaperTocVisible' @click.native='tocVisible(false)' icon='times')
   overlay-btn.print-btn(
     @click.native='download()', icon='file-pdf-o')
 </template>
 
 <script>
-import Ps from 'perfect-scrollbar'
+import PerfectScrollbar from 'perfect-scrollbar'
 import watchTocClicks from 'scripts/watchTocClicks.js'
 import inViewport from 'scripts/inViewport.js'
 import visibleTocActivate from 'scripts/visibleTocActivate.js'
 import percentageScrolling from 'scripts/percentageScrolling.js'
-import LocaleMenu from 'navigation/MenuLocale'
+import MenuLocale from 'navigation/MenuLocale'
 import OverlayBtns from 'buttons/OverlayBtns'
 import OverlayBtn from 'buttons/OverlayBtn'
 import { mapGetters } from 'vuex'
 export default {
   name: 'page-whitepaper-nav',
   components: {
-    LocaleMenu,
+    MenuLocale,
     OverlayBtns,
     OverlayBtn
   },
   computed: {
     ...mapGetters(['whitepaperTocVisible', 'whitepaperElementsVisible'])
   },
+  data: () => ({
+    ps: ''
+  }),
   methods: {
     download () {
       window.location.href = 'https://github.com/tendermint/aib-data/raw/master/pdf/cosmos-whitepaper.pdf'
@@ -51,7 +54,8 @@ export default {
       }
     },
     initToc () {
-      Ps.initialize(document.querySelector('.minimal-toc'))
+      let container = document.querySelector('.minimal-toc')
+      this.ps = new PerfectScrollbar(container)
       this.$store.commit('setWhitepaperTocVisible', true)
       watchTocClicks(this.tocVisible)
       this.$store.commit('setWhitepaperElementsVisible',
@@ -59,8 +63,10 @@ export default {
       percentageScrolling()
     },
     destroyToc () {
-      Ps.destroy(document.querySelector('.minimal-toc'))
-      this.$store.commit('setWhitepaperTocVisible', false)
+      if (this.ps) {
+        this.ps.destroy()
+        this.$store.commit('setWhitepaperTocVisible', false)
+      }
     }
   },
   mounted () {
@@ -76,8 +82,3 @@ export default {
   }
 }
 </script>
-<style lang="stylus">
-.page-whitepaper-nav
-  i
-    line-height : 3rem
-</style>

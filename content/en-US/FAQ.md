@@ -1,3 +1,47 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**
+
+- [Overview](#overview)
+  - [Who is the team developing Cosmos?](#who-is-the-team-developing-cosmos)
+  - [What's the difference between Tendermint, the Cosmos Network, the Cosmos Hub, and Atoms?](#whats-the-difference-between-tendermint-the-cosmos-network-the-cosmos-hub-and-atoms)
+  - [When will the Cosmos Network launch?](#when-will-the-cosmos-network-launch)
+- [Atoms](#atoms)
+  - [Why are Atoms necessary?](#why-are-atoms-necessary)
+  - [What is the initial distribution of Atoms?](#what-is-the-initial-distribution-of-atoms)
+  - [When is the Fundraiser?](#when-is-the-fundraiser)
+  - [How do I get Atoms?](#how-do-i-get-atoms)
+  - [Which exchanges will Atoms trade on?](#which-exchanges-will-atoms-trade-on)
+- [Comparisons](#comparisons)
+  - [How is Cosmos different than Blockstream's Sidechains?](#how-is-cosmos-different-than-blockstreams-sidechains)
+  - [How is this different than Atomic Cross-Chain Transactions (Atomic Swaps)?](#how-is-this-different-than-atomic-cross-chain-transactions-atomic-swaps)
+  - [How is this different than Ethereum?](#how-is-this-different-than-ethereum)
+  - [How is this different than Interledger?](#how-is-this-different-than-interledger)
+- [Scalability](#scalability)
+  - [What is sharding?](#what-is-sharding)
+  - [How does Cosmos do sharding?](#how-does-cosmos-do-sharding)
+  - [Why are shards called zones?](#why-are-shards-called-zones)
+  - [What's an IBC packet?](#whats-an-ibc-packet)
+- [Interoperability](#interoperability)
+  - [How does one exchange currencies in this system?](#how-does-one-exchange-currencies-in-this-system)
+  - [So can I trade BTC for ETH using Cosmos?](#so-can-i-trade-btc-for-eth-using-cosmos)
+  - [Does Cosmos involve escrow?](#does-cosmos-involve-escrow)
+  - [How does one switch blockchains in this system?](#how-does-one-switch-blockchains-in-this-system)
+  - [Will there be multiple hubs?](#will-there-be-multiple-hubs)
+- [Consensus](#consensus)
+  - [Is consensus configurable?](#is-consensus-configurable)
+  - [Can you give some details about what you took (derived) from the DLS consensus algorithm?](#can-you-give-some-details-about-what-you-took-derived-from-the-dls-consensus-algorithm)
+  - [Why is Cosmos's governance better than any other options out there?](#why-is-cosmoss-governance-better-than-any-other-options-out-there)
+- [Validators](#validators)
+  - [What is the maximum number of validators in Cosmos?  What about nodes?](#what-is-the-maximum-number-of-validators-in-cosmos--what-about-nodes)
+  - [What will be the process for abandoning validators that misbehave?](#what-will-be-the-process-for-abandoning-validators-that-misbehave)
+  - [What's the difference between a Delegator and a Validator?](#whats-the-difference-between-a-delegator-and-a-validator)
+  - [Can delegators also be validators?](#can-delegators-also-be-validators)
+  - [How are validator voting powers determined and changed?](#how-are-validator-voting-powers-determined-and-changed)
+- [Use Cases](#use-cases)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## Overview
 
 ### Who is the team developing Cosmos?

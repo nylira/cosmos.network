@@ -1,18 +1,20 @@
 <template lang="pug">
-.hackatom-locale-menu-container
+.menu-locale-container
   overlay-btns
     overlay-btn(@click.native='toggle(true)', icon='times', v-if='maximized')
     overlay-btn(@click.native='toggle(true)', icon='globe', v-else='')
-  menu.hackatom-locale-menu(v-show='maximized')
-    router-link(to='/hackatom', exact='') English
-    router-link(to='/hackatom/zh-cn') 简体中文
+  menu.menu-locale(v-show='maximized')
+    router-link(to='/about/whitepaper') English
+    router-link(to='/about/whitepaper/zh-CN') 简体中文
+    router-link(to='/about/whitepaper/pt') Portuguese
+    router-link(to='/about/whitepaper/ko') Korean
 </template>
 
 <script>
 import OverlayBtn from 'buttons/OverlayBtn'
 import OverlayBtns from 'buttons/OverlayBtns'
 export default {
-  name: 'hackatom-locale-menu',
+  name: 'menu-locale',
   components: {
     OverlayBtn,
     OverlayBtns
@@ -35,12 +37,11 @@ export default {
 <style lang="stylus">
 @import '~variables'
 
-.hackatom-locale-menu-container
+.menu-locale-container
   position absolute
 
-.hackatom-locale-menu
-  background alpha(#fff, 95%)
-  backdrop-filter blur(0.125rem)
+.menu-locale
+  background app-fg
   shadow()
 
   position fixed
@@ -56,15 +57,16 @@ export default {
     padding 0 1.25rem
     cursor pointer
     color txt
+    user-select none
 
     &:hover
       color link
     &.router-link-active
-      color dim
+      color accent
     &:last-of-type
       border-bottom none
 
 @media screen and (min-width:1024px)
-  .hackatom-locale-menu-container
+  .menu-locale-container
     bottom 0.5rem
 </style>

@@ -26,11 +26,12 @@ export default {
   text-align center
   color txt
 
-  background alpha(app-fg, 90%)
-  backdrop-filter blur(0.125rem)
+  background app-fg
   shadow()
 
   cursor pointer
+  i
+    line-height 2.5em
 
 @media screen and (min-width: 360px)
   .overlay-btn
@@ -38,4 +39,6 @@ export default {
     height 3em
     line-height 3em
     border-radius 1.5em
+    i
+      line-height 3em
 </style>

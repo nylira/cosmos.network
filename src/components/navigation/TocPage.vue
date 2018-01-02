@@ -1,13 +1,9 @@
-<template>
-  <div class="toc-page">
-    <slot name="locale"></slot>
-    <slot name="nav"></slot>
-    <toc-padding v-bind:class="{ 'toc-visible': tocVisible }">
-      <article-body>
-        <slot></slot>
-      </article-body>
-    </toc-padding>
-  </div>
+<template lang="pug">
+.toc-page
+  slot(name='locale')
+  slot(name='nav')
+  toc-padding(v-bind:class="{ 'toc-visible': tocVisible }")
+    article-body: slot
 </template>
 
 <script>
@@ -24,14 +20,17 @@ export default {
 </script>
 
 <style lang="stylus">
-@import '../styles/variables.styl'
+@import '~variables'
 
 .minimal-toc
   z-index 98
   font-family sans
-  overflow hidden
+
+  // scrollbar
+  width 100vw
+  height 100vh
   position fixed
-  display none
+  overflow-y hidden
 
   a
     text-decoration none !important

@@ -1,8 +1,11 @@
 <template lang="pug">
-// toc-page(:toc-visible='whitepaperTocVisible'): page-nav(slot='nav')
+toc-page(:toc-visible='whitepaperTocVisible')
+  page-nav(slot='nav')
+  text-en-us
 
-page(title="Whitepaper" subtitle="Read the original Cosmos whitepaper.")
+// page(title="Whitepaper" subtitle="Read the original Cosmos whitepaper.")
   div(slot="menu"): btn(@click.native="download()" icon="print" value="Download PDF")
+  page-nav
   text-container
     text-ko(v-if="$route.params.locale === 'ko'")
     text-pt(v-else-if="$route.params.locale === 'pt'")
@@ -21,7 +24,7 @@ import TextEnUs from 'content/en-US/WHITEPAPER.md'
 import TextKo from 'content/ko/WHITEPAPER.md'
 import TextPt from 'content/pt/WHITEPAPER.md'
 import TextZhCn from 'content/zh-CN/WHITEPAPER.md'
-// import TocPage from './TocPage'
+import TocPage from 'navigation/TocPage'
 export default {
   components: {
     Btn,
@@ -32,8 +35,8 @@ export default {
     TextEnUs,
     TextKo,
     TextPt,
-    TextZhCn
-    // TocPage
+    TextZhCn,
+    TocPage
   },
   computed: {
     ...mapGetters(['whitepaperTocVisible'])
@@ -42,19 +45,17 @@ export default {
     download () {
       window.location.href = 'https://github.com/tendermint/aib-data/raw/master/pdf/cosmos-whitepaper.pdf'
     }
-  }
-  /* ,
+  },
   mounted () {
     if (document.documentElement.clientWidth >= 1024) {
       this.$store.commit('setWhitepaperTocVisible', true)
     }
   }
-  */
 }
 </script>
 
 <style lang="stylus">
-@require '~@/styles/variables.styl'
+@require '~variables'
 
 .minimal-toc
   display none
