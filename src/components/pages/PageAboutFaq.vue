@@ -1,19 +1,19 @@
 <template lang="pug">
-toc-page(:toc-visible='faqTocVisible')
-  nav-about-faq(slot='nav')
+toc-page(:toc-visible="faqTocVisible")
+  nav-contents(slot="nav" text-id="whitepaper")
   text-en-us
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
-import NavAboutFaq from 'navigation/NavAboutFaq'
+import NavContents from 'navigation/NavContents'
 import TextEnUs from 'content/en-US/FAQ.md'
 import TocPage from 'navigation/TocPage'
 export default {
-  name: 'page-intro-faq',
+  name: 'page-about-faq',
   metaInfo: { title: 'FAQ - About' },
   components: {
-    NavAboutFaq,
+    NavContents,
     TextEnUs,
     TocPage
   },

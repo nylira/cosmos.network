@@ -13,7 +13,7 @@ const routes = [
       { path: 'roadmap', name: 'roadmap', component: r('Roadmap') },
       { path: 'team', name: 'team', component: r('AboutTeam') },
       { path: 'whitepaper', name: 'whitepaper', component: r('AboutWhitepaper') },
-      { path: 'whitepaper/:locale', name: 'whitepaper-localized', component: r('Whitepaper') }
+      { path: 'whitepaper/:locale', name: 'whitepaper-localized', component: r('AboutWhitepaper') }
     ]
   },
 

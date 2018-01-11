@@ -1,12 +1,21 @@
 <template lang="pug">
-.page-whitepaper-nav: overlay-btns
-  menu-locale(path='whitepaper' :langs="['en-US', 'ko', 'pt', 'zh-CN']")
+.nav-contents: overlay-btns
+  menu-locale(
+    v-if="textId === 'whitepaper'"
+    path='whitepaper'
+    :langs="['en-US', 'ko', 'pt', 'zh-CN']")
   overlay-btn(
-    v-show='!whitepaperTocVisible' @click.native='tocVisible(true)' icon='list-ol')
+    v-show='!tocVisible'
+    @click.native='setTocVisible(true)'
+    icon='list-ol')
   overlay-btn.mobile-only(
-    v-show='whitepaperTocVisible' @click.native='tocVisible(false)' icon='times')
+    v-show='tocVisible'
+    @click.native='setTocVisible(false)'
+    icon='times')
   overlay-btn.print-btn(
-    @click.native='download()', icon='file-pdf-o')
+    v-if="textId === 'whitepaper'"
+    @click.native='downloadWhitepaper()'
+    icon='file-pdf-o')
 </template>
 
 <script>
@@ -20,29 +29,50 @@ import OverlayBtns from 'buttons/OverlayBtns'
 import OverlayBtn from 'buttons/OverlayBtn'
 import { mapGetters } from 'vuex'
 export default {
-  name: 'page-whitepaper-nav',
+  name: 'nav-contents',
   components: {
     MenuLocale,
     OverlayBtns,
     OverlayBtn
   },
   computed: {
-    ...mapGetters(['whitepaperTocVisible', 'whitepaperElementsVisible'])
+    ...mapGetters([
+      'faqTocVisible',
+      'faqElementsVisible',
+      'whitepaperTocVisible',
+      'whitepaperElementsVisible'
+    ]),
+    elementsVisible () {
+      let value
+      switch (this.textId) {
+        case 'whitepaper': value = this.whitepaperElementsVisible; break
+        case 'faq': value = this.faqElementsVisible; break
+      }
+      return value
+    },
+    tocVisible () {
+      let value
+      switch (this.textId) {
+        case 'whitepaper': value = this.whitepaperTocVisible; break
+        case 'faq': value = this.faqTocVisible; break
+      }
+      return value
+    }
   },
   data: () => ({ ps: '' }),
   methods: {
-    download () {
+    downloadWhitepaper () {
       window.location.href = 'https://github.com/tendermint/aib-data/raw/master/pdf/cosmos-whitepaper.pdf'
     },
     setTocVisOnWidth () {
       let width = document.documentElement.clientWidth
       if (width >= 1024) {
-        this.tocVisible(true)
+        this.setTocVisible(true)
       } else {
-        this.tocVisible(false)
+        this.setTocVisible(false)
       }
     },
-    tocVisible (value) {
+    setTocVisible (value) {
       if (value) {
         document.querySelector('.minimal-toc').style.display = 'block'
         this.initToc()
@@ -54,25 +84,26 @@ export default {
     initToc () {
       let container = document.querySelector('.minimal-toc')
       this.ps = new PerfectScrollbar(container)
-      this.$store.commit('setTocVisible', { id: 'whitepaper', visible: true })
-      watchTocClicks(this.tocVisible)
-      this.$store.commit('setElementsVisible', { id: 'whitepaper',
+      this.$store.commit('setTocVisible', { id: this.textId, visible: true })
+      watchTocClicks(this.setTocVisible)
+      this.$store.commit('setElementsVisible', { id: this.textId,
         els: inViewport(document.querySelectorAll('h2, h3, h4, h5')) })
       percentageScrolling()
     },
     destroyToc () {
       if (this.ps) {
         this.ps.destroy()
-        this.$store.commit('setTocVisible', { id: 'whitepaper', visible: false })
+        this.$store.commit('setTocVisible', { id: this.textId, visible: false })
       }
     }
   },
   mounted () {
     this.setTocVisOnWidth()
   },
+  props: ['text-id'],
   watch: {
-    whitepaperElementsVisible () {
-      visibleTocActivate(this.whitepaperElementsVisible)
+    elementsVisible () {
+      visibleTocActivate(this.elementsVisible)
     },
     '$route.params.locale' () {
       setTimeout(() => this.setTocVisOnWidth(), 100)

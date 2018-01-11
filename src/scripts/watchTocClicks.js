@@ -2,7 +2,7 @@ import scrollTo from 'scroll-to'
 
 export default function (tocVisibility) {
   function scrollToIt (e) {
-    console.log('scrolling to it!')
+    // console.log('scrolling to it!')
     e.preventDefault()
 
     let scrollSpeed = 666
