@@ -8,9 +8,8 @@ page(title="Media Assets" subtitle="Cosmos branding, logo, and media assets.")
     h3 Visual Identity
     p Please read and follow the Cosmos Visual Identity Guide. (741 KB)
     btn(type="anchor" :href="links.cosmos.assets.visualIdentity" value="Download Guide" size="lg" icon="description")
-    p 
 
-    h3 Logo Assets 
+    h3 Logo Assets
     p Download the Cosmos Logo Assets to get access to our logo in vector, alpha, and high resolution formats. (3.5 MB)
     btn(type="anchor" :href="links.cosmos.assets.logoAssets" value="Download Assets" size="lg" icon="image")
 </template>
@@ -21,15 +20,13 @@ import Btn from '@nylira/vue-button'
 import Page from 'common/NiPage'
 import TextContainer from 'common/NiTextContainer'
 export default {
-  name: 'page-about-assets',
+  name: 'page-media-assets',
+  metaInfo: { title: 'Media Assets' },
   components: {
     Btn,
     Page,
     TextContainer
   },
-  computed: { ...mapGetters(['links']) },
-  mounted () {
-    document.title = 'Brand - Cosmos - Internet of Blockchains'
-  }
+  computed: { ...mapGetters(['links']) }
 }
 </script>

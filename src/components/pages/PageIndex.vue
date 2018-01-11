@@ -11,19 +11,11 @@ import SectionWhat from 'sections/SectionWhat'
 import SectionBenefits from 'sections/SectionBenefits'
 export default {
   name: 'page-index',
+  metaInfo: { title: 'Internet of Blockchains' },
   components: {
     SectionCover,
     SectionWhat,
     SectionBenefits
-  },
-  head: {
-    title () {
-      return {
-        inner: 'Cosmos',
-        separator: '-',
-        complement: 'Internet of Blockchains'
-      }
-    }
   }
 }
 </script>

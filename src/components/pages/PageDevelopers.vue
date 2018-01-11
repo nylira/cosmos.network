@@ -9,12 +9,10 @@
 <script>
 import PageMenu from 'common/NiPageMenu'
 export default {
-  name: 'page-intro',
+  name: 'page-developers',
+  metaInfo: { title: 'Developers' },
   components: {
     PageMenu
-  },
-  mounted () {
-    document.title = 'Developers - Cosmos - Internet of Blockchains'
   }
 }
 </script>

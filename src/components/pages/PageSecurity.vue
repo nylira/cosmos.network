@@ -11,6 +11,7 @@ import PageMenu from 'common/NiPageMenu'
 import TextContainer from 'common/NiTextContainer.vue'
 export default {
   name: 'page-security',
+  metaInfo: { title: 'Security' },
   components: {
     Page,
     PageMenu,

@@ -50,14 +50,13 @@ page(title="HackAtom" subtitle="The regularly scheduled Cosmos Hackathon.")
         .value Submit by September 14 at 10:00 AM PDT
 
     h2 Meetup with Cosmonauts
-    p
-      | We're having HackAtom meetups around the world. If you're located nearby—please do come join us! Meet us to get free tips and support while building your app.
+    p We're having HackAtom meetups around the world. If you're located nearby—please do come join us! Meet us to get free tips and support while building your app.
     card-location
 
     h2 Judging
     p We’re looking for a high level of professionalism and quality, and have invited experienced hackers and entrepreneurs to influence the competition right from the start. You’ll be rewarded by the judges and the community. Your project will be judged by members of the Interchain Foundation.
 
-    h2 Sign Up 
+    h2 Sign Up
     p Enter your details in the form to participate in Cosmos HackAtom. You’ll receive further instructions on how to compete.
     btn(@click.native='setModal(true)', size='lg', icon='done', value='Sign Up for HackAtom')
     p For inquiries about hackathon, please talk to us on #[a(:href="'mailto:' + links.cosmos.community.matrix") Developer Chat].
@@ -75,6 +74,7 @@ import Part from 'common/NiPart'
 import TextContainer from 'common/NiTextContainer'
 export default {
   name: 'page-hackatom',
+  metaInfo: { title: 'HackAtom - Developers' },
   components: {
     Btn,
     MenuLocale,
@@ -86,15 +86,6 @@ export default {
   },
   computed: {
     ...mapGetters(['allPeople', 'hackatom', 'links'])
-  },
-  head: {
-    title () {
-      return {
-        inner: 'HackAtom 2017',
-        separator: '-',
-        complement: 'Cosmos - Internet of Blockchains'
-      }
-    }
   },
   methods: {
     ppl (tag) { return this.allPeople.filter(p => p.groups[tag]) },

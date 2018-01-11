@@ -8,7 +8,8 @@ import Page from 'common/NiPage'
 import TextContent from 'content/en-US/ROADMAP.md'
 import TextContainer from 'common/NiTextContainer.vue'
 export default {
-  name: 'page-intro-roadmap',
+  name: 'page-roadmap',
+  metaInfo: { title: 'Roadmap' },
   components: {
     Page,
     TextContainer,

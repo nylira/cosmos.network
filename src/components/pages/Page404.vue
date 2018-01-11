@@ -17,8 +17,6 @@ export default {
     TextContainer
   },
   computed: { ...mapGetters(['links']) },
-  metaInfo: {
-    title: 'Error 404'
-  }
+  metaInfo: { title: 'Error 404' }
 }
 </script>
