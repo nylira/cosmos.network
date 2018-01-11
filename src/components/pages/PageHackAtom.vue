@@ -60,8 +60,7 @@ page(title="HackAtom" subtitle="The regularly scheduled Cosmos Hackathon.")
     h2 Sign Up 
     p Enter your details in the form to participate in Cosmos HackAtom. You’ll receive further instructions on how to compete.
     btn(@click.native='setModal(true)', size='lg', icon='done', value='Sign Up for HackAtom')
-    p For inquiries about hackathon, please contact us at #[a(:href="'mailto:' + links.cosmos.email") {{links.cosmos.email}}].
-
+    p For inquiries about hackathon, please talk to us on #[a(:href="'mailto:' + links.cosmos.community.matrix") Developer Chat].
   modal-agreement(v-if='hackatom.modal')
 </template>
 

@@ -80,7 +80,7 @@
         btn(@click.native='setModal(true)', size='lg', icon='clock-o', value='Sign Up for HackAtom')
         p
           | 想要咨询黑客马拉松活动，请通过邮件与我们联系：
-          a(:href="'mailto:' + links.cosmos.email") {{links.cosmos.email}}
+          a(:href="'mailto:' + links.cosmos.community.matrix") Developer Chat
           | 。
   modal-agreement(v-if='hackatom.modal')
 </template>
