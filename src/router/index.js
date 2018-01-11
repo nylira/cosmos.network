@@ -12,8 +12,8 @@ const routes = [
       { path: 'faq', name: 'faq', component: r('AboutFaq') },
       { path: 'roadmap', name: 'roadmap', component: r('Roadmap') },
       { path: 'team', name: 'team', component: r('AboutTeam') },
-      { path: 'whitepaper', name: 'whitepaper', component: r('Whitepaper') },
-      { path: 'whitepaper/:locale', name: 'whitepaper-localized', component: r('Whitepaper') }
+      { path: 'whitepaper', name: 'whitepaper', component: r('AboutWhitepaper') },
+      { path: 'whitepaper/:locale', name: 'whitepaper-localized', component: r('AboutWhitepaper') }
     ]
   },
 
