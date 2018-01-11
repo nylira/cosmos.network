@@ -18,7 +18,8 @@ import Cards from 'common/NiCards'
 import Page from 'common/NiPage'
 import Part from 'common/NiPart'
 export default {
-  name: 'page-about-index',
+  name: 'page-about-team',
+  metaInfo: { title: 'Team - About' },
   components: {
     Btn,
     Cards,
@@ -31,9 +32,6 @@ export default {
   },
   methods: {
     ppl (tag) { return this.allPeople.filter(p => p.groups[tag]) }
-  },
-  mounted () {
-    document.title = 'About - Cosmos - Internet of Blockchains'
   }
 }
 </script>

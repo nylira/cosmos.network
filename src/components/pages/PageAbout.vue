@@ -13,11 +13,9 @@
 import PageMenu from 'common/NiPageMenu'
 export default {
   name: 'page-intro',
+  metaInfo: { title: 'About' },
   components: {
     PageMenu
-  },
-  mounted () {
-    document.title = 'Introduction - Cosmos - Internet of Blockchains'
   }
 }
 </script>

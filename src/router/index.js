@@ -3,7 +3,6 @@ function r (page) { return require('../components/pages/Page' + page) }
 
 const routes = [
   { path: '/', component: r('Index') },
-  { path: '/events', name: 'events', component: r('Events') },
 
   // ABOUT
   { path: '/about',
@@ -20,9 +19,9 @@ const routes = [
 
   // DEVELOPERS
   { path: '/developers',
-    component: r('Dev'),
+    component: r('Developers'),
     children: [
-      { path: '/', name: 'developers', component: r('DevIndex') }
+      { path: '/', name: 'developers', component: r('DevelopersIndex') }
     ]
   },
 

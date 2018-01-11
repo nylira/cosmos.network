@@ -40,7 +40,8 @@ import {mapGetters} from 'vuex'
 import Page from 'common/NiPage'
 import TextContainer from 'common/NiTextContainer'
 export default {
-  name: 'page-intro-index',
+  name: 'page-about-introduction',
+  metaInfo: { title: 'Introduction - About' },
   components: {
     Page,
     TextContainer

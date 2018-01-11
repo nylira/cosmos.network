@@ -9,6 +9,7 @@ import TextContent from 'content/en-US/FAQ.md'
 import TextContainer from 'common/NiTextContainer.vue'
 export default {
   name: 'page-intro-faq',
+  metaInfo: { title: 'FAQ - About' },
   components: {
     Page,
     TextContainer,

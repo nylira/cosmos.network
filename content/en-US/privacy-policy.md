@@ -130,6 +130,5 @@ If there are any questions regarding this privacy policy, you may contact us usi
 * c/o Gubelstrasse 11
 * Zug, Zug 6300
 * Switzerland
-* hello@tendermint.com
 
 Last Edited on 2017-07-17

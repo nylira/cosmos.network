@@ -80,7 +80,7 @@
         btn(@click.native='setModal(true)', size='lg', icon='clock-o', value='Sign Up for HackAtom')
         p
           | 想要咨询黑客马拉松活动，请通过邮件与我们联系：
-          a(:href="'mailto:' + links.cosmos.email") {{links.cosmos.email}}
+          a(:href="'mailto:' + links.cosmos.community.matrix") Developer Chat
           | 。
   modal-agreement(v-if='hackatom.modal')
 </template>
@@ -93,7 +93,8 @@ import CardLocation from 'cards/CardLocation'
 import ModalAgreement from 'modals/ModalAgreement'
 import PageHeader from '@nylira/vue-page-header'
 export default {
-  name: 'page-hackatom',
+  name: 'page-hackatom-zh-cn',
+  metaInfo: { title: 'HackAtom (Chinese) - Developers' },
   components: {
     Btn,
     MenuLocale,
@@ -103,15 +104,6 @@ export default {
   },
   computed: {
     ...mapGetters(['allPeople', 'hackatom', 'links'])
-  },
-  head: {
-    title () {
-      return {
-        inner: 'HackAtom 2017',
-        separator: '-',
-        complement: 'Cosmos - Internet of Blockchains'
-      }
-    }
   },
   methods: {
     ppl (tag) { return this.allPeople.filter(p => p.tags.includes(tag)) },

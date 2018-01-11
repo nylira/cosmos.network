@@ -5,15 +5,7 @@ toc-page(:toc-visible='whitepaperTocVisible')
   text-pt(v-else-if="$route.params.locale === 'pt'")
   text-zh-cn(v-else-if="$route.params.locale === 'zh-CN'")
   text-en-us(v-else='')
-
-// page(title="Whitepaper" subtitle="Read the original Cosmos whitepaper.")
-  div(slot="menu"): btn(@click.native="download()" icon="print" value="Download PDF")
-  page-nav
-  text-container
-    text-ko(v-if="$route.params.locale === 'ko'")
-    text-pt(v-else-if="$route.params.locale === 'pt'")
-    text-zh-cn(v-else-if="$route.params.locale === 'zh-CN'")
-    text-en-us(v-else='')
+// btn(@click.native="download()" icon="print" value="Download PDF")
 </template>
 
 <script>
@@ -26,6 +18,8 @@ import TextPt from 'content/pt/WHITEPAPER.md'
 import TextZhCn from 'content/zh-CN/WHITEPAPER.md'
 import TocPage from 'navigation/TocPage'
 export default {
+  name: 'page-about-whitepaper',
+  metaInfo: { title: 'Whitepaper - About' },
   components: {
     PageNav,
     Page,
@@ -50,10 +44,3 @@ export default {
   }
 }
 </script>
-
-<style lang="stylus">
-@require '~variables'
-
-.minimal-toc
-  display none
-</style>

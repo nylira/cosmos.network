@@ -12,13 +12,11 @@ import Page from 'common/NiPage'
 import TextContainer from 'common/NiTextContainer'
 export default {
   name: 'page-validators-faq',
+  metaInfo: { title: 'FAQ - Validators' },
   components: {
     BodyText,
     Page,
     TextContainer
-  },
-  mounted () {
-    document.title = 'Validators FAQ - Cosmos - Internet of Blockchains'
   }
 }
 </script>

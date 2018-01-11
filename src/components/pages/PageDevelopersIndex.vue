@@ -57,7 +57,8 @@ import Page from 'common/NiPage'
 import Part from 'common/NiPart'
 import TextContainer from 'common/NiTextContainer'
 export default {
-  name: 'page-dev-index',
+  name: 'page-developers-index',
+  metaInfo: { title: 'Overview - Developers' },
   components: {
     Btn,
     Page,

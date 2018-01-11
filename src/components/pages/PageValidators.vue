@@ -10,6 +10,7 @@
 import PageMenu from 'common/NiPageMenu'
 export default {
   name: 'page-validators',
+  metaInfo: { title: 'Validators' },
   components: {
     PageMenu
   }
