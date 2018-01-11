@@ -1,3 +1,8 @@
+# FAQ
+Frequently asked questions and answers about Cosmos.
+
+[[toc]]
+
 ## Overview
 
 ### Who is the team developing Cosmos?

@@ -10,19 +10,11 @@ const state = {
 }
 
 const mutations = {
-  setFaqElementsVisible (state, value) {
-    state.faq.elementsVisible = value
+  setElementsVisible (state, { id, els }) {
+    state[id].elementsVisible = els
   },
-  setFaqTocVisible (state, value) {
-    // console.log('MUTATION: faqTocVisible', value)
-    state.faq.tocVisible = value
-  },
-  setWhitepaperElementsVisible (state, value) {
-    state.whitepaper.elementsVisible = value
-  },
-  setWhitepaperTocVisible (state, value) {
-    // console.log('MUTATION: whitepaperTocVisible', value)
-    state.whitepaper.tocVisible = value
+  setTocVisible (state, { id, visible }) {
+    state[id].tocVisible = visible
   }
 }
 
