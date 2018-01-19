@@ -35,6 +35,7 @@ const routes = [
   },
 
   // OTHERS
+  { path: '/academy', name: 'academy', component: r('Academy') },
   { path: '/assets', name: 'assets', component: r('Assets') },
   { path: '/plan', name: 'plan', component: r('Plan') },
   { path: '/plan/:locale', name: 'plan-localized', component: r('Plan') },

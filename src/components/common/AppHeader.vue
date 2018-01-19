@@ -10,6 +10,7 @@ header.app-header
     menu.menu-popup.menu-app(v-if='activeMenuApp || desktop')
       nav
         router-link(to='/about' @click.native='close') About
+        router-link(to='/academy' @click.native='close') Academy
         router-link(to='/developers' @click.native='close') Developers
         router-link(to='/validators' @click.native='close') Validators
         router-link(to='/security' @click.native='close') Security
