@@ -1,5 +1,5 @@
 <template lang="pug">
-page(title="Developers" subtitle="Learn how to bootstrap your blockchain with Cosmos."): text-container
+page(title="Developers" subtitle="Learn about and contribute to the code that powers the Cosmos Network."): text-container
   h2 Cosmos Hub
 
   h3 Gaia
