@@ -3,7 +3,7 @@
   .section-cover__container
     .section-cover__wordmark
       img.section-cover__img(src="~assets/images/logos/cosmos-text.png")
-    .section-cover__tagline The interoperable, scalable blockchain network. Built for developers.
+    .section-cover__tagline The interoperable and scalable blockchain network.
     .section-cover__action
       btn(
         type="anchor"
