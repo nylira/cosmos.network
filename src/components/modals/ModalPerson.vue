@@ -105,9 +105,10 @@ export default {
   .name
     color bright
     font-size h3
+    font-weight 500
 
   .title
-    font-size h5
+    font-size x
     color dim
     margin-bottom 0.75rem
 

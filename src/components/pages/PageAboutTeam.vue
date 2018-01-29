@@ -31,7 +31,13 @@ export default {
     ...mapGetters(['allPeople'])
   },
   methods: {
-    ppl (tag) { return this.allPeople.filter(p => p.groups[tag]) }
+    ppl (tag) {
+      if (this.allPeople) {
+        return this.allPeople.filter(p => p.groups[tag])
+      } else {
+        return []
+      }
+    }
   }
 }
 </script>
