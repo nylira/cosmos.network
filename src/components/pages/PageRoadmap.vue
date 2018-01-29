@@ -1,19 +1,39 @@
 <template lang="pug">
-page(title="Roadmap" subtitle="Cosmos's roadmap for 2017-2018.")
+.eras
+  .era
+    .tech
+    .tech
+    .tech
+  .era
+    .tech
+    .tech
+    .tech
+    .tech
+  .era
+    .tech
+    .tech
+    .tech
+    .tech
+    .tech
+  .era
+    .tech
+    .tech
+    .tech
+    .tech
+    .tech
+    .tech
+    .tech
   text-container: text-content
 </template>
 
 <script>
 import Page from 'common/NiPage'
-import TextContent from 'content/en-US/ROADMAP.md'
-import TextContainer from 'common/NiTextContainer.vue'
 export default {
   name: 'page-roadmap',
   metaInfo: { title: 'Roadmap' },
   components: {
-    Page,
-    TextContainer,
-    TextContent
   }
 }
 </script>
+
+
