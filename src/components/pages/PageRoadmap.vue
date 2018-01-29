@@ -13,57 +13,76 @@
       .meta-container: .meta
         .project-title tendermint
         .project-subtitle The PoS consensus engine for Cosmos.
-      .node-container: .node#tm-synt.node--done 0.16.0
-      .node-container: .node#tm-atom 0.17.0
-      .node-container: .node#tm-gala 0.18.0
-      .node-container: .node#tm-plan 0.19.0
-      .node-container: .node#tm-luna 0.20.0
+      card-node(v-for="n in tendermintNodes" :id="n.id" :key="n.id" :node="n")
     .project
       .meta-container: .meta
         .project-title go-wire
         .project-subtitle Go lib for encoding structures into binary &amp; JSON.
-      .node-container: .node#gw-synt.node--done 0.7.0
-      .node-container: .node#gw-atom 0.8.0
-      .node-container: .node#gw-gala 0.9.0
-      .node-container: .node#gw-plan 0.10.0
-      .node-container: .node#gw-luna 0.11.0
+      card-node(v-for="n in gowireNodes" :id="n.id" :key="n.id" :node="n")
     .project
       .meta-container: .meta
         .project-title cosmos-sdk
         .project-subtitle Used to create the first and future Cosmos hubs.
-      .node-container: .node#sdk-synt.node--done 0.8.0
-      .node-container: .node#sdk-atom 0.9.0
-      .node-container: .node#sdk-gala 0.10.0
-      .node-container: .node#sdk-plan 0.11.0
-      .node-container: .node#sdk-luna 0.12.0
+      card-node(v-for="n in sdkNodes" :id="n.id" :key="n.id" :node="n")
     .project
       .meta-container: .meta
         .project-title cosmos-hub
         .project-subtitle The first Hub facilitates trade between zones.
-      .node-container: .node#hub-synt.node--done 0.5.0
-      .node-container: .node#hub-atom 0.6.0
-      .node-container: .node#hub-gala 0.7.0
-      .node-container: .node#hub-plan 0.8.0
-      .node-container: .node#hub-luna 0.9.0
+      card-node(v-for="n in hubNodes" :id="n.id" :key="n.id" :node="n")
     .project
       .meta-container: .meta
         .project-title cosmos-ui
         .project-subtitle Allows creating and viewing transactions on the Hub.
-      .node-container: .node#ui-synt.node--done 0.3.0
-      .node-container: .node#ui-atom 0.4.0
-      .node-container: .node#ui-gala 0.5.0
-      .node-container: .node#ui-plan 0.6.0
-      .node-container: .node#ui-luna 0.7.0
+      card-node(v-for="n in uiNodes" :id="n.id" :key="n.id" :node="n")
 </template>
 
 <script>
 import PageMenu from 'common/NiPageMenu'
+import CardNode from 'cards/CardNode'
 export default {
   name: 'page-roadmap',
   metaInfo: { title: 'Roadmap' },
   components: {
-    PageMenu
+    PageMenu,
+    CardNode
   },
+  data: () => ({
+    tendermintNodes: [
+      { id: 'tm-synt', title: '0.16.0', era: 'synthesis', done: true },
+      { id: 'tm-atom', title: '0.17.0', era: 'atomic', done: false },
+      { id: 'tm-gala', title: '0.18.0', era: 'galactic', done: false },
+      { id: 'tm-plan', title: '0.19.0', era: 'plantetary', done: false },
+      { id: 'tm-luna', title: '0.20.0', era: 'lunar', done: false }
+    ],
+    gowireNodes: [
+      { id: 'gw-synt', title: '0.7.0', era: 'synthesis', done: true },
+      { id: 'gw-atom', title: '0.8.0', era: 'atomic', done: false },
+      { id: 'gw-gala', title: '0.9.0', era: 'galactic', done: false },
+      { id: 'gw-plan', title: '0.10.0', era: 'plantetary', done: false },
+      { id: 'gw-luna', title: '0.11.0', era: 'lunar', done: false }
+    ],
+    sdkNodes: [
+      { id: 'sdk-synt', title: '0.8.0', era: 'synthesis', done: true },
+      { id: 'sdk-atom', title: '0.9.0', era: 'atomic', done: false },
+      { id: 'sdk-gala', title: '0.10.0', era: 'galactic', done: false },
+      { id: 'sdk-plan', title: '0.11.0', era: 'plantetary', done: false },
+      { id: 'sdk-luna', title: '0.12.0', era: 'lunar', done: false }
+    ],
+    hubNodes: [
+      { id: 'hub-synt', title: '0.5.0', era: 'synthesis', done: true },
+      { id: 'hub-atom', title: '0.6.0', era: 'atomic', done: false },
+      { id: 'hub-gala', title: '0.7.0', era: 'galactic', done: false },
+      { id: 'hub-plan', title: '0.8.0', era: 'plantetary', done: false },
+      { id: 'hub-luna', title: '0.9.0', era: 'lunar', done: false }
+    ],
+    uiNodes: [
+      { id: 'ui-synt', title: '0.3.0', era: 'synthesis', done: true },
+      { id: 'ui-atom', title: '0.4.0', era: 'atomic', done: false },
+      { id: 'ui-gala', title: '0.5.0', era: 'galactic', done: false },
+      { id: 'ui-plan', title: '0.6.0', era: 'plantetary', done: false },
+      { id: 'ui-luna', title: '0.7.0', era: 'lunar', done: false }
+    ]
+  }),
   mounted () {
   }
 }
@@ -74,7 +93,6 @@ export default {
 
 .projects
   max-width 100vw
-  border-right 1px solid bc
   overflow-x scroll
 
 .projects-container
@@ -106,7 +124,7 @@ export default {
     color dim
     font-size xs
 
-  .node-container, .era
+  .era
     font-size sm
     text-align center
     justify-content center
@@ -115,50 +133,5 @@ export default {
   .era
     text-transform uppercase
     font-weight 500
-
-.node
-  border 2*px solid bc
-  padding 1rem
-  border-radius 0.25rem
-  min-width 4.5rem
-  position relative
-
-  color txt
-
-  &:after
-    position absolute
-    bottom -2*px
-    right -2*px
-    width 1rem
-    height 1rem
-    background bc
-    border-radius 0.25rem 0 0.25rem 0
-
-    content 'search'
-    font-family 'Material Icons'
-    color dim
-    font-size xs
-
-    display flex
-    align-items center
-    justify-content center
-
-  &:hover
-    cursor pointer
-    border-color hover
-    &:after
-      background hover
-
-  &.node--done
-    color bright
-    background alpha(link, 10%)
-    border-color link
-    &:after
-      color bright
-      background link
-    &:hover
-      border-color hover
-      &:after
-        background hover
 </style>
 

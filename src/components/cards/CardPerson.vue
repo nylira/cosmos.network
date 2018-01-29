@@ -14,7 +14,7 @@
 import { portrait } from 'scripts/cdn'
 import ModalPerson from 'modals/ModalPerson'
 export default {
-  name: 'person-container',
+  name: 'ni-card-person',
   components: {
     ModalPerson
   },
