@@ -80,9 +80,6 @@ export default {
 <style lang="stylus">
 @require '~variables'
 
-.app-footer__row
-  margin 0 1rem 0.25rem
-
 .app-footer__row-actions
   .ni-part-main
     padding 1rem
@@ -101,6 +98,7 @@ export default {
   .app-footer__row
     display flex
     flex-flow row nowrap
+    margin 0 1rem 0.25rem
 
     .ni-part:first-child
       margin-right 2px
