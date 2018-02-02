@@ -2,7 +2,8 @@
 .page
   page-menu
   page(title="Security" subtitle="Security is a core value at Cosmos & Tendermint. Learn how to earn bounties by reporting vulnerabilities.")
-    text-container(url='https://raw.githubusercontent.com/tendermint/aib-data/master/md/security.md')
+    text-container(
+      url='https://api.github.com/repos/tendermint/aib-data/contents/md/security.md')
 </template>
 
 <script>
