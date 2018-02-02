@@ -2,8 +2,8 @@
 .page
   page-menu
   page(title="Cosmos Academy" subtitle="Participate in the Academy to learn how to build your project on the Cosmos Network.")
-    text-container(url='https://raw.githubusercontent.com/tendermint/aib-data/master/md/academy.md')
-
+    text-container(
+      url='https://api.github.com/repos/tendermint/aib-data/contents/md/academy.md')
 </template>
 
 <script>

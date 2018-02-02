@@ -4,6 +4,7 @@
 
 <script>
 import MarkdownIt from 'markdown-it'
+import axios from 'axios'
 export default {
   name: 'ni-md-text',
   data: () => ({
@@ -15,10 +16,9 @@ export default {
       return md.render(text)
     }
   },
-  mounted () {
-    window.fetch(this.url)
-      .then(response => response.text())
-      .then(text => (this.text = text))
+  async mounted () {
+    let data = (await axios.get(this.url)).data
+    this.text = window.atob(data.content)
   },
   props: ['url']
 }
