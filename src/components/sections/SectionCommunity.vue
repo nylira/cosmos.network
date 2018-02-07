@@ -1,6 +1,6 @@
 <template lang="pug">
-.section-home: .section-home__container
-  .section-home__header Join the Cosmos Network
+.section-community: .section-community__container
+  .section-community__header Join the Cosmos Network
   .app-footer__row.app-footer__row-actions
     part(title="Get Started")
       btn(
@@ -80,10 +80,20 @@ export default {
 <style lang="stylus">
 @require '~variables'
 
+.section-community__container
+  max-width 1024px
+  margin 0 auto
+
+.section-community__header
+  font-size xl
+  font-weight 500
+  text-align center
+  line-height 5rem
+
 .app-footer__row-actions
+  margin-bottom 1rem
   .ni-part-main
     padding 1rem
-    background app-fg
     margin-top 0.25rem
 
     .ni-btn:only-child
@@ -98,12 +108,12 @@ export default {
   .app-footer__row
     display flex
     flex-flow row nowrap
-    margin 0 1rem 0.25rem
+    margin 0 0 1rem
 
     .ni-part:first-child
-      margin-right 2px
+      margin-right 0.5rem
     .ni-part:last-child
-      margin-left 2px
+      margin-left 0.5rem
 
     .ni-part
       flex 1
