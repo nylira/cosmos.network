@@ -61,7 +61,7 @@ export default {
 
   .project-header
     margin 0 0 0.5rem
-    background bc
+    background bc-
     line-height 1.5rem
 
   .project-title

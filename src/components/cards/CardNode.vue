@@ -58,7 +58,6 @@ export default {
 
 .ni-card-node
   flex 1
-
   &:last-of-type
     .ni-card-node__arrow:not(.ni-card-node__arrow--continues)
       visibility hidden
@@ -80,6 +79,16 @@ export default {
         background alpha(link, 50%)
       .ni-card-node__arrow-head
         border-top-color alpha(link, 50%)
+
+  &.ni-card-node--active
+    .ni-card-node__node
+      position relative
+      z-index z(modalHelp)
+
+    &.ni-card-node--done .ni-card-node__node
+      border-color link
+      &:after
+        background link
 
 .ni-card-node__container
   display flex

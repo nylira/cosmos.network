@@ -4,10 +4,12 @@
     .modal-node-header
       .title {{ node.title }}
       .version {{ node.version }}
-    .modal-node-body
-      template(v-if="node.notes") {{ node.notes }}
-      template(v-else) No description.
-    .modal-node-footer(v-if="node.date") Released {{ node.date }}
+    .modal-node-body(v-if="node.notes") {{ node.notes }}
+    .modal-node-footer
+      .completion-success(v-if="node.date")
+        | #[i.material-icons check_circle] Released {{ node.date }}
+      .completion-warning(v-else)
+        | #[i.material-icons hourglass_empty] In Progress
 </template>
 
 <script>
@@ -33,13 +35,13 @@ export default {
   left 0
   width 100vw
   height 100vh
-  z-index 100
+  z-index z(modal)
 
   display flex
   align-items flex-end
   justify-content flex-end
 
-  background hsla(0,0,0,0.5)
+  background hsla(0,0,0,0.75)
 
 .modal-node
   margin 1rem
@@ -89,8 +91,18 @@ export default {
     margin-left 0.333rem
 
 .modal-node-body
-  margin-bottom 1rem
+  margin-bottom 1.25rem
 
-.modal-node-footer
+.modal-node-footer div
   color dim
+  display flex
+  align-items center
+  i
+    margin-right 0.333rem
+
+  &.completion-success i
+    color success
+
+  &.completion-warning i
+    color warning
 </style>
