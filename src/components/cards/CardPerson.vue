@@ -71,6 +71,7 @@ export default {
     font-weight 500
   .title
     color dim
+    font-size 0.875*x
 
   &:hover
     background hover-bg

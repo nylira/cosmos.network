@@ -1,8 +1,6 @@
-let url = 'https://raw.githubusercontent.com/tendermint/aib-data/master/json/links.json'
+import getJson from 'scripts/getJson'
 
-window.fetch(url)
-  .then(response => response.json())
-  .then(json => (state.data = json))
+let url = 'https://api.github.com/repos/tendermint/aib-data/contents/json/links.json'
 
 const state = {
   data: {
@@ -29,4 +27,10 @@ const state = {
   }
 }
 
-export default { state }
+const mutations = {
+  async initializeLinks (state) {
+    state.data = await getJson(url)
+  }
+}
+
+export default { state, mutations }

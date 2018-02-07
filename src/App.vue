@@ -59,6 +59,10 @@ export default {
     // all titles will be injected into this template
     titleTemplate: '%s - Cosmos Network'
   },
+  mounted () {
+    this.$store.commit('initializeLinks')
+    this.$store.commit('initializePeople')
+  },
   store
 }
 </script>
