@@ -1,8 +1,12 @@
 <template lang="pug">
-.ni-card-node-container
-  .ni-card-node(@click='setPopup(true)' :class="{'node--done': node.done }")
-    .text
-      .title {{ node.title }}
+.ni-card-node(:class="{'ni-card-node--done': node.date !== '' }")
+  .ni-card-node__container
+    .ni-card-node__node(@click="setPopup(true)")
+      .ni-card-node__key {{ node.title }}
+      .ni-card-node__value {{ node.version }}
+  .ni-card-node__arrow(:style="arrowStyle" :class="arrowClass")
+    .ni-card-node__arrow-body
+    .ni-card-node__arrow-head
   modal-node(:node='node' v-if='activePopup' @click.native='setPopup(false)')
 </template>
 
@@ -12,6 +16,20 @@ export default {
   name: 'ni-card-node',
   components: {
     ModalNode
+  },
+  computed: {
+    arrowClass () {
+      if (this.node.continues) {
+        return 'ni-card-node__arrow--continues'
+      }
+    },
+    arrowStyle () {
+      let span = this.node.span
+      let height = span * 4 + (span - 1) * 3
+      return {
+        height: height + 'rem'
+      }
+    }
   },
   data: () => ({
     activePopup: false
@@ -28,37 +46,63 @@ export default {
 <style scoped lang="stylus">
 @import '~variables'
 
-.ni-card-node-container
+.ni-card-node
+  flex 1
+
+  &:last-of-type
+    .ni-card-node__arrow:not(.ni-card-node__arrow--continues)
+      visibility hidden
+
+  &.ni-card-node--done
+    .ni-card-node__node
+      color bright
+      background app-fg
+      border-color link
+      &:after
+        color bright
+        background link
+      &:hover
+        border-color hover
+        &:after
+          background hover
+    .ni-card-node__arrow
+      .ni-card-node__arrow-body
+        background alpha(link, 50%)
+      .ni-card-node__arrow-head
+        border-top-color alpha(link, 50%)
+
+.ni-card-node__container
   display flex
   align-items center
   justify-content center
 
-.ni-card-node
-  border 2*px solid bc
-  padding 1rem
+.ni-card-node__node
   border-radius 0.25rem
-  min-width 4.5rem
-  position relative
-  color txt
+  height 3rem
+  width 100%
+  border 2*px solid bc
   background app-bg
 
-  font-size sm
-  text-align center
+  display flex
+  flex-flow column nowrap
+  align-items center
   justify-content center
+
+  position relative
 
   &:after
     position absolute
     bottom -2*px
     right -2*px
-    width 1rem
-    height 1rem
+    width 1.25rem
+    height 0.5rem
     background bc
     border-radius 0.25rem 0 0.25rem 0
 
-    content 'search'
+    content 'more_horiz'
     font-family 'Material Icons'
     color dim
-    font-size xs
+    font-size sm
 
     display flex
     align-items center
@@ -70,41 +114,36 @@ export default {
     &:after
       background hover
 
-  &.node--done
-    color bright
-    background app-fg
-    border-color link
-    &:after
-      color bright
-      background link
-    &:hover
-      border-color hover
-      &:after
-        background hover
+.ni-card-node__key
+  color dim
+  font-size xs
 
-// simple connecting arrows
-.ni-card-node-container:not(:last-child)
-  .ni-card-node:before
-    box-sizing border-box
-    content 'play_arrow'
-    font-family 'Material Icons'
-    font-size x
-    line-height 0.125rem
-    color bc
-    text-indent 1.5rem
-    text-align right
+.ni-card-node__value
+  font-size sm
+  text-align center
+  justify-content center
+  color txt
+  font-weight 500
 
-    height 0.125rem
-    background bc
-    width 10vw
-    margin-top 0.125rem / 2
+arrow-size = 0.5rem
+arrow-color = bc
 
-    z-index -1
-    position absolute
-    top 50%
-    left 3.375rem + 1.5rem
+.ni-card-node__arrow
+  height 4rem
+  display flex
+  flex-flow column nowrap
+  align-items center
+  padding 0.5rem 0
 
-  .ni-card-node.node--done:before
-    background alpha(link, 50%)
-    color alpha(link, 50%)
+.ni-card-node__arrow-body
+  width 2*px
+  background arrow-color
+  flex 1
+
+.ni-card-node__arrow-head
+  width 0
+  height 0
+  border-left arrow-size solid transparent
+  border-right arrow-size solid transparent
+  border-top arrow-size solid arrow-color
 </style>
