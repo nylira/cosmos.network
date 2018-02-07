@@ -1,5 +1,5 @@
 <template lang="pug">
-.ni-card-node(:class="{'ni-card-node--done': node.date !== '' }")
+.ni-card-node(:class="cardClass")
   .ni-card-node__container
     .ni-card-node__node(@click="setPopup(true)")
       .ni-card-node__key {{ node.title }}
@@ -18,6 +18,16 @@ export default {
     ModalNode
   },
   computed: {
+    cardClass () {
+      let value = ''
+      if (this.node.date) {
+        value += 'ni-card-node--done '
+      }
+      if (this.activePopup) {
+        value += 'ni-card-node--active '
+      }
+      return value
+    },
     arrowClass () {
       if (this.node.continues) {
         return 'ni-card-node__arrow--continues'
