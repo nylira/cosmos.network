@@ -1,11 +1,11 @@
 <template lang="pug">
-.modal-node-wrapper
-  .modal-node
-    .modal-node-header
+.ni-modal-node-wrapper
+  .ni-modal-node(:class="modalClass")
+    .ni-modal-node-header
       .title {{ node.title }}
       .version {{ node.version }}
-    .modal-node-body(v-if="node.notes") {{ node.notes }}
-    .modal-node-footer
+    .ni-modal-node-body(v-if="node.notes") {{ node.notes }}
+    .ni-modal-node-footer
       .completion-success(v-if="node.date")
         | #[i.material-icons check_circle] Released {{ node.date }}
       .completion-warning(v-else)
@@ -15,7 +15,16 @@
 <script>
 import disableScroll from 'disable-scroll'
 export default {
-  name: 'ni-modal-node',
+  name: 'ni-ni-modal-node',
+  computed: {
+    modalClass () {
+      let value = ''
+      if (this.node.date) {
+        value += ' ni-modal-node--done'
+      }
+      return value
+    }
+  },
   mounted () {
     disableScroll.on()
   },
@@ -29,7 +38,7 @@ export default {
 <style scoped lang="stylus">
 @import '~variables'
 
-.modal-node-wrapper
+.ni-modal-node-wrapper
   position fixed
   top 0
   left 0
@@ -41,9 +50,10 @@ export default {
   align-items flex-end
   justify-content flex-end
 
-  background hsla(0,0,0,0.75)
+  background hsla(0,0,0,0.5)
+  backdrop-filter blur(0.5rem)
 
-.modal-node
+.ni-modal-node
   margin 1rem
   border 2px solid bc
   border-radius 0.25rem
@@ -55,6 +65,10 @@ export default {
   padding 1rem
 
   position relative
+  z-index 100000
+
+  &.ni-modal-node--done
+    border-color link
 
   &:before
     display block
@@ -74,7 +88,7 @@ export default {
     cursor pointer
     color link
 
-.modal-node-header
+.ni-modal-node-header
   display flex
   align-items center
   font-size lg
@@ -90,10 +104,10 @@ export default {
     font-weight 300
     margin-left 0.333rem
 
-.modal-node-body
+.ni-modal-node-body
   margin-bottom 1.25rem
 
-.modal-node-footer div
+.ni-modal-node-footer div
   color dim
   display flex
   align-items center
@@ -105,4 +119,14 @@ export default {
 
   &.completion-warning i
     color warning
+
+@media screen and (min-width: 768px)
+  .ni-modal-node
+    margin 3rem
+    padding 1.5rem
+
+@media screen and (min-width: 1024px)
+  .ni-modal-node-wrapper
+    align-items center
+    justify-content center
 </style>

@@ -1,12 +1,12 @@
 <template lang="pug">
-.ni-card-node(:class="cardClass")
+.ni-card-node(:class="cardClass" :style="cardStyle")
+  .ni-card-node__arrow(:class="arrowClass" :style="arrowStyle" )
+    .ni-card-node__arrow-head
+    .ni-card-node__arrow-body
   .ni-card-node__container
     .ni-card-node__node(@click="setPopup(true)")
       .ni-card-node__key {{ node.title }}
       .ni-card-node__value {{ node.version }}
-  .ni-card-node__arrow(:style="arrowStyle" :class="arrowClass")
-    .ni-card-node__arrow-body
-    .ni-card-node__arrow-head
   modal-node(:node='node' v-if='activePopup' @click.native='setPopup(false)')
 </template>
 
@@ -28,6 +28,13 @@ export default {
       }
       return value
     },
+    cardStyle () {
+      let offset = this.node.offset
+      let height = (offset * 6) + 0.5
+      return {
+        marginBottom: height + 'rem'
+      }
+    },
     arrowClass () {
       if (this.node.continues) {
         return 'ni-card-node__arrow--continues'
@@ -35,7 +42,7 @@ export default {
     },
     arrowStyle () {
       let span = this.node.span
-      let height = span * 4 + (span - 1) * 3
+      let height = span * 3 + (span - 1) * 3
       return {
         height: height + 'rem'
       }
@@ -60,6 +67,7 @@ export default {
   flex 1
   &:last-of-type
     .ni-card-node__arrow:not(.ni-card-node__arrow--continues)
+      display none
       visibility hidden
 
   &.ni-card-node--done
@@ -78,17 +86,32 @@ export default {
       .ni-card-node__arrow-body
         background alpha(link, 50%)
       .ni-card-node__arrow-head
-        border-top-color alpha(link, 50%)
+        border-bottom-color alpha(link, 50%)
+
+  &.ni-card-node--active
+  &.ni-card-node--done.ni-card-node--active
+    .ni-card-node__node
+      position relative
+      &:after
+        color bright
+
+    .ni-card-node__key
+    .ni-card-node__value
+      color bright
 
   &.ni-card-node--active
     .ni-card-node__node
-      position relative
-      z-index z(modalHelp)
-
-    &.ni-card-node--done .ni-card-node__node
-      border-color link
+      border-color bc
+      background bc
       &:after
-        background link
+        background bc
+
+  &.ni-card-node--done.ni-card-node--active
+    .ni-card-node__node
+      background hover
+      border-color hover
+      &:after
+        background hover
 
 .ni-card-node__container
   display flex
@@ -98,6 +121,7 @@ export default {
 .ni-card-node__node
   border-radius 0.25rem
   height 3rem
+  max-width 12rem
   width 100%
   border 2*px solid bc
   background app-bg
@@ -139,8 +163,6 @@ export default {
 
 .ni-card-node__value
   font-size sm
-  text-align center
-  justify-content center
   color txt
   font-weight 500
 
@@ -164,5 +186,14 @@ arrow-color = bc
   height 0
   border-left arrow-size solid transparent
   border-right arrow-size solid transparent
-  border-top arrow-size solid arrow-color
+  border-bottom arrow-size solid arrow-color
+
+@media screen and (min-width: 768px)
+  .ni-card-node__node
+
+    &:after
+      position absolute
+      width 1.5rem
+      height 0.75rem
+
 </style>

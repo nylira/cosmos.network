@@ -4,20 +4,24 @@
   .projects-container: .projects
     .project
       .project-header
-        .project-title Gaia Testnet
-      card-node(v-for="n in nodes.hub" :id="n.id" :key="n.id" :node="n")
+        .project-title Cosmos Hub
+      .project-nodes
+        card-node(v-for="n in nodes.hub" :id="n.id" :key="n.id" :node="n")
     .project
       .project-header
         .project-title Cosmos SDK
-      card-node(v-for="n in nodes.sdk" :id="n.id" :key="n.id" :node="n")
+      .project-nodes
+        card-node(v-for="n in nodes.sdk" :id="n.id" :key="n.id" :node="n")
     .project
       .project-header
         .project-title Tendermint
-      card-node(v-for="n in nodes.tmc" :id="n.id" :key="n.id" :node="n")
+      .project-nodes
+        card-node(v-for="n in nodes.tmc" :id="n.id" :key="n.id" :node="n")
     .project
       .project-header
         .project-title Cosmos UI
-      card-node(v-for="n in nodes.gui" :id="n.id" :key="n.id" :node="n")
+      .project-nodes
+        card-node(v-for="n in nodes.gui" :id="n.id" :key="n.id" :node="n")
 </template>
 
 <script>
@@ -53,7 +57,8 @@ export default {
   flex-flow row nowrap
   width 100%
   max-width 1024px
-  padding 0.25rem
+  padding 0.25rem 0.25rem 2rem
+  border-bottom 0.25rem solid app-fg
 
 .project
   flex 1
@@ -69,4 +74,15 @@ export default {
     font-size sm
     color bright
     font-weight 500
+
+  .project-nodes
+    display flex
+    flex-flow column-reverse nowrap
+
+@media screen and (min-width: 768px)
+  .projects
+    padding 0.5rem 0.5rem 3rem
+
+  .project
+    padding 0.5rem
 </style>
