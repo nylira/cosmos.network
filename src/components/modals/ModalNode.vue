@@ -6,16 +6,26 @@
       .version {{ node.version }}
     .ni-modal-node-body(v-if="node.notes") {{ node.notes }}
     .ni-modal-node-footer
-      .completion-success(v-if="node.date")
+      .completion.completion-success(v-if="node.date")
         | #[i.material-icons check_circle] Released {{ node.date }}
-      .completion-warning(v-else)
+      .completion.completion-warning(v-else)
         | #[i.material-icons hourglass_empty] In Progress
+      btn.url(type="anchor"
+      :href="node.url"
+      target="_blank"
+      v-if="node.url"
+      icon="search"
+      value="Details")
 </template>
 
 <script>
+import Btn from '@nylira/vue-button'
 import disableScroll from 'disable-scroll'
 export default {
-  name: 'ni-ni-modal-node',
+  name: 'ni-modal-node',
+  components: {
+    Btn
+  },
   computed: {
     modalClass () {
       let value = ''
@@ -117,23 +127,33 @@ export default {
 .ni-modal-node-body
   margin-bottom 1.25rem
 
-.ni-modal-node-footer div
-  color dim
+.ni-modal-node-footer
   display flex
-  align-items center
-  i
-    margin-right 0.333rem
+  flex-flow row nowrap
+  justify-content space-between
 
-  &.completion-success i
-    color success
+  .completion
+    color dim
+    display flex
+    align-items center
+    i
+      margin-right 0.333rem
 
-  &.completion-warning i
-    color warning
+    &.completion-success i
+      color success
+
+    &.completion-warning i
+      color warning
 
 @media screen and (min-width: 768px)
   .ni-modal-node
     margin 3rem
     padding 1.5rem
+
+    &:before
+      width 4rem
+      height 4rem
+      font-size lg
 
 @media screen and (min-width: 1024px)
   .ni-modal-node-wrapper

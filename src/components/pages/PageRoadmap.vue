@@ -5,9 +5,13 @@
       .overall-progress__inner(:style="overallProgressStyle")
     .overall-progress__label
       .label__key Roadmap to Launch
-      .label__value {{ overallProgressPercent }}% #[span.desktop-inline Complete]
+      .label__value {{ overallProgressPct }}% #[span.desktop-inline Complete]
 
   .projects-container: .projects
+    .dependency-arrow(
+      v-for="a in arrows"
+      :class="a.css"
+      :style="`left:${a.cx}px; top:${a.cy}px; width:${a.length}px; transform:rotate(${a.angle}deg)`")
 
     .project.project-hub
       .project-header
@@ -17,7 +21,8 @@
         .project-progress
           .project-progress__outer
             .project-progress__inner(:style="hubProgressStyle")
-          .project-progress__label {{ hubProgressPercent }}% #[span.desktop-inline Complete]
+          .project-progress__label
+            | {{ hubProgressPct }}% #[span.desktop-inline Complete]
       .project-nodes
         card-node(v-for="n in nodes.hub" :key="n.id" :node="n" type="hub")
 
@@ -29,7 +34,8 @@
         .project-progress
           .project-progress__outer
             .project-progress__inner(:style="sdkProgressStyle")
-          .project-progress__label {{ sdkProgressPercent }}% #[span.desktop-inline Complete]
+          .project-progress__label
+            | {{ sdkProgressPct }}% #[span.desktop-inline Complete]
       .project-nodes
         card-node(v-for="n in nodes.sdk" :key="n.id" :node="n" type="sdk")
 
@@ -41,7 +47,8 @@
         .project-progress
           .project-progress__outer
             .project-progress__inner(:style="tmcProgressStyle")
-          .project-progress__label {{ tmcProgressPercent }}% #[span.desktop-inline Complete]
+          .project-progress__label
+            | {{ tmcProgressPct }}% #[span.desktop-inline Complete]
       .project-nodes
         card-node(v-for="n in nodes.tmc" :key="n.id" :node="n" type="tmc")
 
@@ -53,7 +60,8 @@
         .project-progress
           .project-progress__outer
             .project-progress__inner(:style="guiProgressStyle")
-          .project-progress__label {{ guiProgressPercent }}% #[span.desktop-inline Complete]
+          .project-progress__label
+            | {{ guiProgressPct }}% #[span.desktop-inline Complete]
       .project-nodes
         card-node(v-for="n in nodes.gui" :key="n.id" :node="n" type="gui")
 </template>
@@ -75,31 +83,29 @@ export default {
       if (this.roadmap) {
         return this.roadmap.nodes
       } else {
-        return {
-          hub: [],
-          sdk: [],
-          tmc: [],
-          gui: []
-        }
+        return { hub: [], sdk: [], tmc: [], gui: [] }
       }
     },
-    hubProgressPercent () { return this.projectProgress(this.nodes.hub) },
-    hubProgressStyle () { return { width: this.hubProgressPercent + '%' } },
-    sdkProgressPercent () { return this.projectProgress(this.nodes.sdk) },
-    sdkProgressStyle () { return { width: this.sdkProgressPercent + '%' } },
-    tmcProgressPercent () { return this.projectProgress(this.nodes.tmc) },
-    tmcProgressStyle () { return { width: this.tmcProgressPercent + '%' } },
-    guiProgressPercent () { return this.projectProgress(this.nodes.gui) },
-    guiProgressStyle () { return { width: this.guiProgressPercent + '%' } },
-    overallProgressPercent () {
-      let value = this.hubProgressPercent + this.sdkProgressPercent
-      value = value + this.tmcProgressPercent + this.guiProgressPercent
+    hubProgressPct () { return this.calcProgress(this.nodes.hub) },
+    hubProgressStyle () { return { width: this.hubProgressPct + '%' } },
+    sdkProgressPct () { return this.calcProgress(this.nodes.sdk) },
+    sdkProgressStyle () { return { width: this.sdkProgressPct + '%' } },
+    tmcProgressPct () { return this.calcProgress(this.nodes.tmc) },
+    tmcProgressStyle () { return { width: this.tmcProgressPct + '%' } },
+    guiProgressPct () { return this.calcProgress(this.nodes.gui) },
+    guiProgressStyle () { return { width: this.guiProgressPct + '%' } },
+    overallProgressPct () {
+      let value = this.hubProgressPct + this.sdkProgressPct
+      value = value + this.tmcProgressPct + this.guiProgressPct
       return Math.round(value / 4)
     },
-    overallProgressStyle () { return { width: this.overallProgressPercent + '%' } }
+    overallProgressStyle () { return { width: this.overallProgressPct + '%' } }
   },
+  data: () => ({
+    arrows: []
+  }),
   methods: {
-    projectProgress (nodes) {
+    calcProgress (nodes) {
       if (nodes) {
         let totalNodes = nodes.length
         let doneNodes = nodes.filter(n => n.date !== '').length
@@ -107,6 +113,73 @@ export default {
       } else {
         return 0
       }
+    },
+    getOffset (el) {
+      let rect = el.getBoundingClientRect()
+      return {
+        left: rect.left + window.pageXOffset,
+        top: rect.top + window.pageYOffset,
+        width: rect.width || el.offsetWidth,
+        height: rect.height || el.offsetHeight
+      }
+    },
+    connect (div1, div2) {
+      let thickness = 2
+      let off1 = this.getOffset(div1)
+      let off2 = this.getOffset(div2)
+
+      // line start
+      let x1 = off1.left + off1.width / 2
+      let y1 = off1.top + off1.height / 2
+
+      // line end
+      let x2 = off2.left + off2.width / 2
+      let y2 = off2.top + off2.height / 2
+
+      // distance
+      let length = Math.sqrt(((x2 - x1) * (x2 - x1)) + ((y2 - y1) * (y2 - y1)))
+
+      // center
+      let cx = ((x1 + x2) / 2) - (length / 2)
+      let cy = ((y1 + y2) / 2) - (thickness / 2)
+
+      // angle
+      let angle = Math.atan2((y1 - y2), (x1 - x2)) * (180 / Math.PI)
+
+      // class
+      let from = div1.id.split('-').shift()
+      let to = div2.id.split('-').shift()
+      let css = `da-${from}-${to}`
+
+      // setup line
+      let arrow = {
+        length: length,
+        cx: cx,
+        cy: cy,
+        angle: angle,
+        css: css
+      }
+      this.arrows.push(arrow)
+    },
+    setDependencies () {
+      let $ = (el) => this.$el.querySelector('#' + el)
+      let connect = this.connect
+      let nodes = this.nodes
+
+      setTimeout(function () {
+        nodes.hub.map(n => n.children.map(to => connect($(n.id), $(to))))
+        nodes.sdk.map(n => n.children.map(to => connect($(n.id), $(to))))
+        nodes.tmc.map(n => n.children.map(to => connect($(n.id), $(to))))
+        nodes.gui.map(n => n.children.map(to => connect($(n.id), $(to))))
+      }, 1000)
+    }
+  },
+  mounted () {
+    this.setDependencies()
+  },
+  watch: {
+    nodes: function (newNodes, oldNodes) {
+      this.setDependencies()
     }
   }
 }
@@ -114,6 +187,32 @@ export default {
 
 <style scoped lang="stylus">
 @import '~variables'
+
+hub = link
+sdk = accent
+tmc = tmc
+gui = mc
+
+.dependency-arrow
+  position absolute
+  z-index z(default)
+
+  line-height 2*px
+  height 2*px
+  background bc
+  opacity 0.5
+  &.da-hub-sdk
+    background linear-gradient(to left, hub 33%, sdk 67%)
+  &.da-hub-gui
+    background linear-gradient(to left, hub 33%, gui 67%)
+  &.da-sdk-hub
+    background linear-gradient(to left, sdk 33%, hub 67%)
+  &.da-sdk-gui
+    background linear-gradient(to left, sdk 33%, gui 67%)
+  &.da-tmc-hub
+    background linear-gradient(to left, tmc 33%, hub 67%)
+  &.da-tmc-gui
+    background linear-gradient(to left, tmc 33%, gui 67%)
 
 op-height = 2rem
 .overall-progress

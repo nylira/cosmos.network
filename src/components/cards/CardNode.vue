@@ -1,10 +1,10 @@
 <template lang="pug">
-.ni-card-node(:class="cardClass" :style="cardStyle" :id="node.id")
+.ni-card-node(:class="cardClass" :style="cardStyle")
   .ni-card-node__arrow(:class="arrowClass" :style="arrowStyle" )
     .ni-card-node__arrow-head
     .ni-card-node__arrow-body
   .ni-card-node__container
-    .ni-card-node__node(@click="setPopup(true)")
+    .ni-card-node__node(@click="setPopup(true)" :id="node.id")
       .ni-card-node__key {{ node.title }}
       .ni-card-node__value {{ node.version }}
   modal-node(:node="node" :type="type" v-if="activePopup"
@@ -181,7 +181,9 @@ export default {
   align-items center
   justify-content center
 
+  box-shadow app-bg 0 0 0 0.125rem
   position relative
+  z-index z(listItem)
 
   &:after
     position absolute
@@ -225,6 +227,9 @@ arrow-color = bc
   flex-flow column nowrap
   align-items center
   padding 0.5rem 0
+
+  position relative
+  z-index z(listItem)
 
 .ni-card-node__arrow-body
   width 2*px
@@ -348,6 +353,7 @@ arrow-color = bc
 
 @media screen and (min-width: 768px)
   .ni-card-node__node
+    box-shadow app-bg 0 0 0 0.25rem
     &:after
       position absolute
       width 1.5rem
