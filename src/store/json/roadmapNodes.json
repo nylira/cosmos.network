@@ -20,7 +20,7 @@
       "id": "gaia-venus",
       "title": "Testnet",
       "version": "venus",
-      "span": 1,
+      "span": 2,
       "date": "2017-06-30",
       "notes": "Venus is a 7-node public testnet based on Ethermint 0.3.0. It allows you to do everything you can do with the standard Ethereum network, but at 10-times the speed and a much lower cost per transaction. [Offline]"
     },
@@ -193,7 +193,7 @@
       "id": "tmc-0-7",
       "title": "Tendermint",
       "version": "0.7.0",
-      "span": 2,
+      "span": 1,
       "date": "2016-08-07",
       "notes": "Starting from this release (0.7.0 \"Tommy\") we commit to following a strict semantic versioning discipline and release protocol. In recognition of this monumental occasion, we bumped the version number a few extra times."
     },
@@ -300,7 +300,7 @@
       "title": "Netmon UI",
       "version": "0.0.3",
       "span": 1,
-      "date": "2016-11-01",
+      "date": "2016-08-01",
       "notes": "Before the Cosmos UI, there was the web-based Tendermint Blockchain Platform UI. TMUI was designed as a multi-blockchain management interface. Components of the platform are used today in Cosmos UI, primarily the network monitor portion."
     },
     {

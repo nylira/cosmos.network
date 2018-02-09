@@ -190,10 +190,8 @@ arrow-color = bc
 
 @media screen and (min-width: 768px)
   .ni-card-node__node
-
     &:after
       position absolute
       width 1.5rem
       height 0.75rem
-
 </style>
