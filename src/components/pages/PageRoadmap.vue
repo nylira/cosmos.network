@@ -166,12 +166,13 @@ export default {
       let connect = this.connect
       let nodes = this.nodes
 
+      // todo: fix this hack for nodes to load before drawing dependencies
       setTimeout(function () {
         nodes.hub.map(n => n.children.map(to => connect($(n.id), $(to))))
         nodes.sdk.map(n => n.children.map(to => connect($(n.id), $(to))))
         nodes.tmc.map(n => n.children.map(to => connect($(n.id), $(to))))
         nodes.gui.map(n => n.children.map(to => connect($(n.id), $(to))))
-      }, 300)
+      }, 1000)
     }
   },
   watch: {
