@@ -61,7 +61,7 @@ export default {
   },
   mounted () {
     this.$store.commit('initializeLinks')
-    // this.$store.commit('initializeRoadmap')
+    this.$store.commit('initializeRoadmap')
     this.$store.commit('initializePeople')
   },
   store

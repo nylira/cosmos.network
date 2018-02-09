@@ -171,11 +171,8 @@ export default {
         nodes.sdk.map(n => n.children.map(to => connect($(n.id), $(to))))
         nodes.tmc.map(n => n.children.map(to => connect($(n.id), $(to))))
         nodes.gui.map(n => n.children.map(to => connect($(n.id), $(to))))
-      }, 1000)
+      }, 300)
     }
-  },
-  mounted () {
-    this.setDependencies()
   },
   watch: {
     nodes: function (newNodes, oldNodes) {
