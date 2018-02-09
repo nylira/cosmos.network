@@ -1,5 +1,5 @@
 <template lang="pug">
-.ni-card-node(:class="cardClass" :style="cardStyle")
+.ni-card-node(:class="cardClass" :style="cardStyle" :id="node.id")
   .ni-card-node__arrow(:class="arrowClass" :style="arrowStyle" )
     .ni-card-node__arrow-head
     .ni-card-node__arrow-body
