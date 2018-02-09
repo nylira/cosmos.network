@@ -12,7 +12,7 @@ reset-html5()
 
 body
   background app-bg
-  padding-top 3rem
+  padding-top 3rem + 4*px
   -webkit-text-size-adjust 100%
 
 a
@@ -97,8 +97,19 @@ h6, .h6
 
 .desktop
   visibility collapse
+
+.desktop-inline
+.desktop-block
+.desktop-flex
+  display none
 @media screen and (min-width: 768px)
   .mobile
     visibility collapse
   .desktop
     visibility visible
+  .desktop-inline
+    display inline
+  .desktop-block
+    display block
+  .desktop-flex
+    display flex

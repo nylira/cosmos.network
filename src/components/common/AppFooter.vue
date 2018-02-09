@@ -47,7 +47,7 @@ export default {
 .app-footer
   background app-bg
   position relative
-  z-index z(appHeader)
+  z-index z(appMenu)
 
 .footbot__container
   max-width 1024px

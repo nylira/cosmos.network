@@ -10,6 +10,7 @@ header.app-header
     menu.menu-popup.menu-app(v-if='activeMenuApp || desktop')
       nav
         router-link(to='/about' @click.native='close') About
+        router-link(to='/roadmap' @click.native='close') Roadmap
         router-link(to='/academy' @click.native='close') Academy
         router-link(to='/developers' @click.native='close') Developers
         router-link(to='/validators' @click.native='close') Validators
@@ -193,7 +194,7 @@ export default {
       align-items center
 
       > a
-        padding 0 1.5rem
+        padding 0 1rem
         color txt
         line-height 3rem
         height 3rem + bw

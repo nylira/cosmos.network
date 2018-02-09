@@ -10,7 +10,6 @@ const routes = [
     children: [
       { path: '/', name: 'about', component: r('AboutIndex') },
       { path: 'faq', name: 'faq', component: r('AboutFaq') },
-      { path: 'roadmap', name: 'roadmap', component: r('Roadmap') },
       { path: 'team', name: 'team', component: r('AboutTeam') },
       { path: 'whitepaper', name: 'whitepaper', component: r('AboutWhitepaper') },
       { path: 'whitepaper/:locale', name: 'whitepaper-localized', component: r('AboutWhitepaper') }
@@ -40,6 +39,7 @@ const routes = [
   { path: '/plan', name: 'plan', component: r('Plan') },
   { path: '/plan/:locale', name: 'plan-localized', component: r('Plan') },
   { path: '/privacy', name: 'privacy', component: r('Privacy') },
+  { path: '/roadmap', name: 'roadmap', component: r('Roadmap') },
   { path: '/security', name: 'security', component: r('Security') },
 
   // redirects
@@ -56,7 +56,6 @@ const routes = [
   { path: '/riot',
     beforeEnter: () => { window.location.assign('https://riot.im/app/#/room/#cosmos:matrix.org') }
   },
-  { path: '/roadmap', redirect: '/about/roadmap' },
   { path: '/team', redirect: '/about/team' },
   { path: '/validator', redirect: '/validators' },
   { path: '/whitepaper', redirect: '/about/whitepaper' },

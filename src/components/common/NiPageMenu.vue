@@ -19,27 +19,33 @@ export default {
   height 2rem
 
   a
-    padding 0 1rem
-    line-height 2rem
+    padding 0 0.5rem
+    height 1.5rem
     font-size sm
     color dim
+    margin 0 0.5rem
+    border-radius 0.25rem
+    display flex
+    align-items center
+    justify-content center
 
     &:hover
       color bright
+      background alpha(hover, 25%)
 
     &.router-link-exact-active
       color bright
+      background alpha(accent, 25%)
+      cursor default
 
 @media screen and (min-width: 414px)
   .ni-page-menu
     height 2.5rem
   .ni-page-menu a
     font-size x
-    line-height 2.5rem
+    height 2rem
 
 @media screen and (min-width: 768px)
   .ni-page-menu
     height 3rem
-  .ni-page-menu a
-    line-height 3rem
 </style>
