@@ -9,49 +9,53 @@
 
   .projects-container: .projects
 
-    .project.project-gui
+    .project.project-hub
       .project-header
         .project-title Cosmos Hub
-        img.project-logo(src="~assets/images/roadmap/cosmos-hub.png")
+        a.project-link(href="https://github.com/cosmos/gaia" target="_blank")
+          img.project-logo(src="~assets/images/roadmap/cosmos-hub.png" alt="Cosmos Hub")
         .project-progress
           .project-progress__outer
             .project-progress__inner(:style="hubProgressStyle")
           .project-progress__label {{ hubProgressPercent }}% #[span.desktop-inline Complete]
       .project-nodes
-        card-node(v-for="n in nodes.hub" :key="n.id" :node="n")
+        card-node(v-for="n in nodes.hub" :key="n.id" :node="n" type="hub")
 
     .project.project-sdk
       .project-header
         .project-title Cosmos SDK
-        img.project-logo(src="~assets/images/roadmap/cosmos-sdk.png")
+        a.project-link(href="https://github.com/cosmos/cosmos-sdk" target="_blank")
+          img.project-logo(src="~assets/images/roadmap/cosmos-sdk.png" alt="Cosmos SDK")
         .project-progress
           .project-progress__outer
             .project-progress__inner(:style="sdkProgressStyle")
           .project-progress__label {{ sdkProgressPercent }}% #[span.desktop-inline Complete]
       .project-nodes
-        card-node(v-for="n in nodes.sdk" :key="n.id" :node="n")
+        card-node(v-for="n in nodes.sdk" :key="n.id" :node="n" type="sdk")
 
     .project.project-tmc
       .project-header
         .project-title Tendermint
-        img.project-logo(src="~assets/images/roadmap/tendermint-core.png")
+        a.project-link(href="https://github.com/tendermint/tendermint" target="_blank")
+          img.project-logo(src="~assets/images/roadmap/tendermint-core.png" alt="Tendermint Core")
         .project-progress
           .project-progress__outer
             .project-progress__inner(:style="tmcProgressStyle")
           .project-progress__label {{ tmcProgressPercent }}% #[span.desktop-inline Complete]
       .project-nodes
-        card-node(v-for="n in nodes.tmc" :key="n.id" :node="n")
+        card-node(v-for="n in nodes.tmc" :key="n.id" :node="n" type="tmc")
 
     .project.project-gui
       .project-header
         .project-title Cosmos UI
-        img.project-logo(src="~assets/images/roadmap/cosmos-ui.png")
+        a.project-link(href="https://github.com/cosmos/cosmos-ui" target="_blank")
+          img.project-logo(src="~assets/images/roadmap/cosmos-ui.png" alt="Cosmos UI")
         .project-progress
           .project-progress__outer
             .project-progress__inner(:style="guiProgressStyle")
           .project-progress__label {{ guiProgressPercent }}% #[span.desktop-inline Complete]
       .project-nodes
-        card-node(v-for="n in nodes.gui" :key="n.id" :node="n")
+        card-node(v-for="n in nodes.gui" :key="n.id" :node="n" type="gui")
 </template>
 
 <script>
@@ -135,9 +139,6 @@ op-height = 2rem
   color bright
   font-weight 500
 
-  .label__value
-    color accent
-
 .overall-progress__outer
 .overall-progress__inner
   width 100%
@@ -149,7 +150,6 @@ op-height = 2rem
   background app-fg
 .overall-progress__inner
   background bc
-  border-right 0.25rem solid accent
 
 pp-height = 1rem
 .project-progress
@@ -183,8 +183,14 @@ pp-height = 1rem
   left 0
 .project-progress__outer
   background bc
-.project-progress__inner
+.project-hub .project-progress__inner
+  background link
+.project-sdk .project-progress__inner
   background accent
+.project-tmc .project-progress__inner
+  background tmc
+.project-gui .project-progress__inner
+  background mc
 
 .projects-container
   display flex
@@ -215,6 +221,9 @@ pp-height = 1rem
   line-height 1.5rem
   background app-fg
   display none
+
+.project-link
+  display block
 
 .project-logo
   width 100%

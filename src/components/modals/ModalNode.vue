@@ -22,6 +22,9 @@ export default {
       if (this.node.date) {
         value += ' ni-modal-node--done'
       }
+      if (this.type) {
+        value += ` ni-modal-node--${this.type}`
+      }
       return value
     }
   },
@@ -31,7 +34,7 @@ export default {
   beforeDestroy () {
     disableScroll.off()
   },
-  props: ['node']
+  props: ['node', 'type']
 }
 </script>
 
@@ -68,7 +71,14 @@ export default {
   z-index 100000
 
   &.ni-modal-node--done
+  &.ni-modal-node--hub
     border-color link
+  &.ni-modal-node--sdk
+    border-color accent
+  &.ni-modal-node--tmc
+    border-color tmc
+  &.ni-modal-node--gui
+    border-color mc
 
   &:before
     display block
