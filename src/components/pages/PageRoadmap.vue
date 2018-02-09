@@ -57,22 +57,35 @@ export default {
   computed: {
     ...mapGetters(['roadmap']),
     nodes () {
-      return this.roadmap.nodes
+      if (this.roadmap) {
+        return this.roadmap.nodes
+      } else {
+        return {
+          hub: [],
+          sdk: [],
+          tmc: [],
+          gui: []
+        }
+      }
     },
-    hubProgressPercent () { return this.projectProgress(this.roadmap.nodes.hub) },
+    hubProgressPercent () { return this.projectProgress(this.nodes.hub) },
     hubProgressStyle () { return { width: this.hubProgressPercent + '%' } },
-    sdkProgressPercent () { return this.projectProgress(this.roadmap.nodes.sdk) },
+    sdkProgressPercent () { return this.projectProgress(this.nodes.sdk) },
     sdkProgressStyle () { return { width: this.sdkProgressPercent + '%' } },
-    tmcProgressPercent () { return this.projectProgress(this.roadmap.nodes.tmc) },
+    tmcProgressPercent () { return this.projectProgress(this.nodes.tmc) },
     tmcProgressStyle () { return { width: this.tmcProgressPercent + '%' } },
-    guiProgressPercent () { return this.projectProgress(this.roadmap.nodes.gui) },
+    guiProgressPercent () { return this.projectProgress(this.nodes.gui) },
     guiProgressStyle () { return { width: this.guiProgressPercent + '%' } }
   },
   methods: {
     projectProgress (nodes) {
-      let totalNodes = nodes.length
-      let doneNodes = nodes.filter(n => n.date !== '').length
-      return Math.round(doneNodes / totalNodes * 100)
+      if (nodes) {
+        let totalNodes = nodes.length
+        let doneNodes = nodes.filter(n => n.date !== '').length
+        return Math.round(doneNodes / totalNodes * 100)
+      } else {
+        return 0
+      }
     }
   }
 }
