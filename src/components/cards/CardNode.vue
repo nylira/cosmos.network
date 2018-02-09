@@ -10,7 +10,6 @@
   modal-node(:node="node" :type="type" v-if="activePopup"
     @click.native="setPopup(false)")
 </template>
-dal
 
 <script>
 import ModalNode from 'modals/ModalNode'
