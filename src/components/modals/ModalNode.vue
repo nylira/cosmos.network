@@ -60,8 +60,8 @@ export default {
   z-index z(modal)
 
   display flex
-  align-items flex-end
-  justify-content flex-end
+  align-items center
+  justify-content center
 
   background hsla(0,0,0,0.5)
   backdrop-filter blur(0.5rem)
@@ -154,9 +154,4 @@ export default {
       width 4rem
       height 4rem
       font-size lg
-
-@media screen and (min-width: 1024px)
-  .ni-modal-node-wrapper
-    align-items center
-    justify-content center
 </style>
