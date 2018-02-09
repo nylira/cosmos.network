@@ -2,7 +2,7 @@
 page(title="What is Cosmos?" subtitle="Get started with an overview of Cosmos."): text-container
   h2 Building an Internet of Blockchains
   h3 Purpose
-  p Cosmos is a network of blockchains whose purpose it to solve long-standing problems in cryptocurrency and blockchain communities. The end goal is to allow many sovereign and easy-to-develop blockchains to scale and interoperate with each other, creating an Internet of Blockchains.
+  p Cosmos is a network of blockchains whose purpose is to solve long-standing problems in cryptocurrency and blockchain communities. The end goal is to allow many sovereign and easy-to-develop blockchains to scale and interoperate with each other, creating an Internet of Blockchains.
 
   iframe(:src="links.cosmos.intro.video" width="1024" height="576" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)
 
