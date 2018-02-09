@@ -71,14 +71,14 @@ export default {
   z-index 100000
 
   &.ni-modal-node--done
-  &.ni-modal-node--hub
-    border-color link
-  &.ni-modal-node--sdk
-    border-color accent
-  &.ni-modal-node--tmc
-    border-color tmc
-  &.ni-modal-node--gui
-    border-color mc
+    &.ni-modal-node--hub
+      border-color link
+    &.ni-modal-node--sdk
+      border-color accent
+    &.ni-modal-node--tmc
+      border-color tmc
+    &.ni-modal-node--gui
+      border-color mc
 
   &:before
     display block
