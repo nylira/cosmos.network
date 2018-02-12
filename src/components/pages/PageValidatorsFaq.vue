@@ -3,7 +3,8 @@ page(
   title="Validator FAQ"
   subtitle="Frequently asked questions about Cosmos Validators."
   splash="validator")
-  text-container(url='https://raw.githubusercontent.com/cosmos/cosmos/master/VALIDATORS_FAQ.md')
+  text-container(
+    url='https://api.github.com/repos/cosmos/cosmos/contents/VALIDATORS_FAQ.md')
 </template>
 
 <script>
