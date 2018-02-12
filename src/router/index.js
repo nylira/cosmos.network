@@ -35,6 +35,16 @@ const routes = [
     ]
   },
 
+  // WALLET
+  { path: '/wallet',
+    component: r('Wallet'),
+    children: [
+      { path: '/', name: 'wallet', component: r('WalletIndex') },
+      { path: 'faq', name: 'wallet-faq', component: r('WalletFaq') },
+      { path: 'support', name: 'wallet-support', component: r('WalletSupport') }
+    ]
+  },
+
   // OTHERS
   { path: '/assets', name: 'assets', component: r('Assets') },
   { path: '/plan', name: 'plan', component: r('Plan') },
@@ -42,7 +52,6 @@ const routes = [
   { path: '/privacy', name: 'privacy', component: r('Privacy') },
   { path: '/roadmap', name: 'roadmap', component: r('Roadmap') },
   { path: '/security', name: 'security', component: r('Security') },
-  { path: '/wallet', name: 'wallet', component: r('Wallet') },
 
   // redirects
   { path: '/academy', redirect: '/developers/academy' },

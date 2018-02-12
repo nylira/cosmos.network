@@ -1,21 +1,20 @@
 <template lang="pug">
-.page-index
-  section-cover
-  section-what
-  section-benefits
+.page
+  page-menu
+    router-link(to="/wallet") Overview
+    router-link(to="/wallet/faq") FAQ
+    router-link(to="/wallet/support") Support
+    a(href="https://github.com/cosmos/cosmos-ui/releases" target="_Blank") Download
+  router-view
 </template>
 
 <script>
-import SectionCover from 'sections/SectionCover'
-import SectionWhat from 'sections/SectionWhat'
-import SectionBenefits from 'sections/SectionBenefits'
+import PageMenu from 'common/NiPageMenu'
 export default {
-  name: 'page-index',
-  metaInfo: { title: 'Internet of Blockchains' },
+  name: 'page-wallet',
+  metaInfo: { title: 'Wallet' },
   components: {
-    SectionCover,
-    SectionWhat,
-    SectionBenefits
+    PageMenu
   }
 }
 </script>
