@@ -30,13 +30,13 @@ export default {
   max-width 24rem
   margin 0 auto
 
-.ni-btn#mc-embedded-subscribe
-  .ni-btn-container
-    border-left-width 1px
-    border-radius 0 0.25rem 0.25rem 0
+  .ni-btn
+    .ni-btn-container
+      border-left-width 1px
+      border-radius 0 0.25rem 0.25rem 0
 
-    .ni-btn-value
-      display none
+      .ni-btn-value
+        display none
 
 @media screen and (min-width: 640px)
   .ni-btn#mc-embedded-subscribe

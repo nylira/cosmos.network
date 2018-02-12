@@ -161,19 +161,21 @@ export default {
       }
       this.arrows.push(arrow)
     },
-    setDependencies () {
+    async setDependencies () {
       let $ = (el) => this.$el.querySelector('#' + el)
       let connect = this.connect
       let nodes = this.nodes
 
-      // todo: fix this hack for nodes to load before drawing dependencies
-      setTimeout(function () {
-        nodes.hub.map(n => n.children.map(to => connect($(n.id), $(to))))
-        nodes.sdk.map(n => n.children.map(to => connect($(n.id), $(to))))
-        nodes.tmc.map(n => n.children.map(to => connect($(n.id), $(to))))
-        nodes.gui.map(n => n.children.map(to => connect($(n.id), $(to))))
-      }, 1000)
+      await this.$nextTick()
+
+      nodes.hub.map(n => n.children.map(to => connect($(n.id), $(to))))
+      nodes.sdk.map(n => n.children.map(to => connect($(n.id), $(to))))
+      nodes.tmc.map(n => n.children.map(to => connect($(n.id), $(to))))
+      nodes.gui.map(n => n.children.map(to => connect($(n.id), $(to))))
     }
+  },
+  mounted () {
+    this.$store.commit('initializeRoadmap')
   },
   watch: {
     nodes: function (newNodes, oldNodes) {
