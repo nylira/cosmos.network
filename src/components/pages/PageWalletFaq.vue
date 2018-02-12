@@ -18,8 +18,9 @@ page(title="Wallet FAQ" subtitle="Frequently asked questions and answers about t
     h3 I forgot my wallet seed. What can I do?
     p Unfortunately there's nothing you can do, if you did not back up your wallet seed somewhere. Luckily this is just a testnet wallet. You'll have to create a new account.
 
-    h2 Didn't answer your question?
-    p View the #[router-link(to="/wallet/support") support page] to learn how to create an issue on the project repository.
+    h2 Still stumped?
+    h3 Didn't answer your question?
+    p View the #[router-link(to="/wallet/support") support page] to learn how to create an issue on the Cosmos Wallet repository. Thanks in advance for your patience, and your help in improving the Cosmos Wallet!
 </template>
 
 <script>
