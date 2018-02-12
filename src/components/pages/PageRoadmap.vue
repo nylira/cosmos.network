@@ -174,6 +174,9 @@ export default {
       nodes.gui.map(n => n.children.map(to => connect($(n.id), $(to))))
     }
   },
+  mounted () {
+    this.$store.commit('initializeRoadmap')
+  },
   watch: {
     nodes: function (newNodes, oldNodes) {
       this.setDependencies()
