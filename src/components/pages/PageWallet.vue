@@ -4,7 +4,8 @@
     router-link(to="/wallet") Overview
     router-link(to="/wallet/faq") FAQ
     router-link(to="/wallet/support") Support
-    a(href="https://github.com/cosmos/cosmos-ui/releases" target="_Blank") Download
+    a(href="https://github.com/cosmos/cosmos-ui/releases" target="_Blank")
+      | Download #[i.fa.fa-github]
   router-view
 </template>
 

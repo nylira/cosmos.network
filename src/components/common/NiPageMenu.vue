@@ -28,6 +28,8 @@ export default {
     display flex
     align-items center
     justify-content center
+    i
+      margin-left 0.5rem
 
     &:hover
       color bright
