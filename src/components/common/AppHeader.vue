@@ -11,10 +11,10 @@ header.app-header
       nav
         router-link(to='/about' @click.native='close') About
         router-link(to='/roadmap' @click.native='close') Roadmap
-        router-link(to='/academy' @click.native='close') Academy
+        router-link(to='/security' @click.native='close') Security
         router-link(to='/developers' @click.native='close') Developers
         router-link(to='/validators' @click.native='close') Validators
-        router-link(to='/security' @click.native='close') Security
+        router-link(to='/wallet' @click.native='close') Download Wallet
       nav
         a(:href='links.cosmos.blog' @click.native='close' target='_blank')
           span.label Blog

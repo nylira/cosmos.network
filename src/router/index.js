@@ -20,7 +20,9 @@ const routes = [
   { path: '/developers',
     component: r('Developers'),
     children: [
-      { path: '/', name: 'developers', component: r('DevelopersIndex') }
+      { path: '/', name: 'developers', component: r('DevelopersIndex') },
+      { path: 'academy', name: 'academy', component: r('DevelopersAcademy') },
+      { path: 'hackatom', name: 'hackatom', component: r('DevelopersHackAtom') }
     ]
   },
 
@@ -34,15 +36,16 @@ const routes = [
   },
 
   // OTHERS
-  { path: '/academy', name: 'academy', component: r('Academy') },
   { path: '/assets', name: 'assets', component: r('Assets') },
   { path: '/plan', name: 'plan', component: r('Plan') },
   { path: '/plan/:locale', name: 'plan-localized', component: r('Plan') },
   { path: '/privacy', name: 'privacy', component: r('Privacy') },
   { path: '/roadmap', name: 'roadmap', component: r('Roadmap') },
   { path: '/security', name: 'security', component: r('Security') },
+  { path: '/wallet', name: 'wallet', component: r('Wallet') },
 
   // redirects
+  { path: '/academy', redirect: '/developers/academy' },
   { path: '/blog/:entry', redirect: '/blog' },
   { path: '/blog',
     beforeEnter: () => { window.location.assign('https://blog.cosmos.network') }
