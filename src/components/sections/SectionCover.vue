@@ -1,32 +1,67 @@
 <template lang='pug'>
 .section-cover
   .section-cover__container
-    .section-cover__wordmark
-      img.section-cover__img(src="~assets/images/logos/cosmos-text.png")
-    .section-cover__tagline The interoperable and scalable blockchain network.
-    .section-cover__action
-      btn(
-        type="anchor"
-        href="https://riot.im/app/#/room/#cosmos:matrix.org"
-        size="lg"
-        icon="chat"
-        target="_blank"
-        value="Join Developer Chat")
-    .section-cover__scroll
-      btn(icon="arrow_downward" v-scroll-to="'#section-what'")
+    .section-cover__actions.desktop
+      form.action(action="//network.us14.list-manage.com/subscribe/post?u=1b8aeaa81ca615914eb2eb7fc&id=64c73f9f5f" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate="")
+        field#mce-EMAIL(name="EMAIL" type="email" placeholder="name@email.com" size="lg")
+        btn#mc-embedded-subscribe(
+          type="submit"
+          icon="email"
+          value="Get Launch Alert"
+          size="lg"
+          color="primary")
+        div(style="position: absolute; left: -5000px;" aria-hidden="true")
+          input(type="text" name="b_1b8aeaa81ca615914eb2eb7fc_64c73f9f5f" tabindex="-1" value="")
+      .action
+        btn(
+          type="anchor"
+          href="https://riot.im/app/#/room/#cosmos:matrix.org"
+          icon="developer_board"
+          target="_blank"
+          size="lg"
+          value="Join Developer Chat")
+        btn(
+          type="anchor"
+          href="https://t.me/cosmosproject"
+          icon="chat"
+          target="_blank"
+          size="lg"
+          value="Join Community Chat")
+    .section-cover__actions.mobile
+      form.action(action="//network.us14.list-manage.com/subscribe/post?u=1b8aeaa81ca615914eb2eb7fc&id=64c73f9f5f" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate="")
+        field#mce-EMAIL(name="EMAIL" type="email" placeholder="name@email.com")
+        btn#mc-embedded-subscribe(
+          type="submit"
+          icon="email"
+          value="Get Launch Alert"
+          color="primary")
+        div(style="position: absolute; left: -5000px;" aria-hidden="true")
+          input(type="text" name="b_1b8aeaa81ca615914eb2eb7fc_64c73f9f5f" tabindex="-1" value="")
+      .action
+        btn(
+          type="anchor"
+          href="https://riot.im/app/#/room/#cosmos:matrix.org"
+          icon="developer_board"
+          target="_blank"
+          value="Join Developer Chat")
+        btn(
+          type="anchor"
+          href="https://t.me/cosmosproject"
+          icon="chat"
+          target="_blank"
+          value="Join Community Chat")
+    .section-cover__scroll(v-scroll-to="'#section-what'")
+      i.material-icons arrow_downward
 </template>
 
 <script>
 import Btn from '@nylira/vue-button'
+import Field from '@nylira/vue-field'
 export default {
   name: 'section-cover',
   components: {
-    Btn
-  },
-  methods: {
-    scrollDown () {
-      console.log('scrolling down')
-    }
+    Btn,
+    Field
   }
 }
 </script>
@@ -42,51 +77,66 @@ export default {
 
 .section-cover__container
   flex 1
-  padding 0 2rem
   background url('~assets/images/backgrounds/bg-568@2x.jpg') center center
   background-size cover
+  position relative
 
+.section-cover__actions
+  position absolute
+  bottom 0
+  margin-bottom 3rem
   display flex
   flex-flow column nowrap
   align-items center
-  justify-content center
-  position relative
+  width 100%
+
+  .action
+    margin 0 auto 1rem
+    width 14rem
+
+    .ni-field
+    .ni-btn
+      width 100%
+      margin-bottom 0.25rem
+      shadow()
+
+    .ni-field
+      background alpha(app-bg, 50%)
 
 .section-cover__scroll
   position absolute
-  bottom 0.5rem
-  right 0.5rem
+  bottom 0
+  right 0
+  i.material-icons
+    font-size 1.5rem
+    display flex
+    align-items center
+    justify-content center
+    width 3rem
+    height 3rem
+    background alpha(app-bg, 50%)
 
-.section-cover__scroll .ni-btn
-  shadow()
+@media screen and (min-width: 768px)
+  .section-cover__actions
+    flex-flow row-reverse nowrap
+    .action
+      width 16rem
+      .ni-field
+      .ni-btn
+        margin-bottom 1.5rem
+  .section-cover__scroll
+    right 50%
+    margin-right -3rem
+    i.material-icons
+      width 6rem
 
-.section-cover__wordmark
-  padding-top 20vh
-  display flex
-  align-items center
+@media screen and (min-width: 1024px)
+  .section-cover__actions
+    margin-bottom 1.5rem
 
-.section-cover__img
-  width 60vw
-
-.section-cover__tagline
-  text-align center
-  letter-spacing 0.0375em
-  text-shadow hsla(0,0,0,1) 0 0 0.5em
-
-  padding-top 7.5vh
-  max-width 20em
-
-.section-cover__action
-  padding-top 22.5vh
-
-.section-cover__action .ni-btn
-  shadow()
-
-/* START queries for bg image */
-
-@media screen and (max-device-width: 667px)
+@media screen and (max-device-width: 675px)
   .section-cover__container
-    background-image url('~assets/images/backgrounds/bg-667@2x.jpg')
+    background-image url('~assets/images/backgrounds/bg-675@2x.jpg')
 
 @media screen and (max-device-width: 812px)
   .section-cover__container
@@ -103,7 +153,7 @@ export default {
 @media screen and (max-device-width: 1920px) and (max-device-height: 1080px)
   .section-cover__container
     background-image url('~assets/images/backgrounds/bg-1080p.jpg')
- 
+
 @media screen and (max-device-width: 2560px) and (max-device-height: 1440px)
   .section-cover__container
     background-image url('~assets/images/backgrounds/bg-1440p.jpg')
@@ -119,30 +169,4 @@ export default {
 @media screen and (min-device-width: 2881px) and (min-device-height: 1801px)
   .section-cover__container
     background-image url('~assets/images/backgrounds/bg-2160p.jpg')
-
-/* END queries for bg image */
-
-@media screen and (min-width: 768px) and (orientation: portrait)
-  .section-cover__tagline
-    font-size xl
-  .section-cover__img
-    width 45vw
-
-@media screen and (min-width: 1024px) and (orientation: landscape)
-  .section-cover__tagline
-    font-size lg
-
-  .section-cover__img
-    width 25vw
-
-@media screen and (min-width: 1024px) and (orientation: portrait)
-  .section-cover__tagline
-    font-size 3.25vw
-
-@media screen and (min-width: 1280px) and (orientation: landscape)
-  .section-cover__tagline
-    font-size 1.375vw + 0.25vh
-
-  .section-cover__img
-    width 20vw
 </style>
