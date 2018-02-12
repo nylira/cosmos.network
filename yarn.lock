@@ -58,9 +58,9 @@
   version "3.5.0"
   resolved "https://registry.yarnpkg.com/@nylira/vue-article-body/-/vue-article-body-3.5.0.tgz#343de6fb36bb4a4e9fe2f0e83df4eb9239a6d770"
 
-"@nylira/vue-button@4.1.5":
-  version "4.1.5"
-  resolved "https://registry.yarnpkg.com/@nylira/vue-button/-/vue-button-4.1.5.tgz#3cb0cc38535910e34bae11f206b6874d292cec89"
+"@nylira/vue-button@^4.3.2":
+  version "4.3.2"
+  resolved "https://registry.yarnpkg.com/@nylira/vue-button/-/vue-button-4.3.2.tgz#f27b90a931a1a3b5e27736dba11dfcaa305d6ddb"
 
 "@nylira/vue-field@^1.1.8":
   version "1.1.12"
