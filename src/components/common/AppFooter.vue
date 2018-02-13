@@ -16,7 +16,7 @@
       .footbot-menu__title Downloads
       .footbot-menu__items
         router-link(to="/about/whitepaper").footbot-menu__item Whitepaper
-        a(href="https://github.com/cosmos/cosmos-ui" target="_blank").footbot-menu__item Cosmos UI
+        router-link(to="/voyager").footbot-menu__item Voyager
         router-link(to="/assets").footbot-menu__item Media Assets
     .footbot-menu
       .footbot-menu__title Developers

@@ -36,12 +36,12 @@ const routes = [
   },
 
   // WALLET
-  { path: '/wallet',
-    component: r('Wallet'),
+  { path: '/voyager',
+    component: r('Voyager'),
     children: [
-      { path: '/', name: 'wallet', component: r('WalletIndex') },
-      { path: 'faq', name: 'wallet-faq', component: r('WalletFaq') },
-      { path: 'support', name: 'wallet-support', component: r('WalletSupport') }
+      { path: '/', name: 'voyager', component: r('VoyagerIndex') },
+      { path: 'faq', name: 'voyager-faq', component: r('VoyagerFaq') },
+      { path: 'support', name: 'voyager-support', component: r('VoyagerSupport') }
     ]
   },
 
@@ -72,6 +72,11 @@ const routes = [
   { path: '/validator', redirect: '/validators' },
   { path: '/whitepaper', redirect: '/about/whitepaper' },
   { path: '/whitepaper/en-US', redirect: '/about/whitepaper' },
+  // wallet redirects
+  { path: '/wallet', redirect: '/voyager' },
+  { path: '/download', redirect: '/voyager' },
+  { path: '/downloads', redirect: '/voyager' },
+  { path: '/ui', redirect: '/voyager' },
 
   // wildcards
   { path: '/404', component: r('404') },

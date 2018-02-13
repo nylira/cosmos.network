@@ -1,5 +1,5 @@
 <template lang="pug">
-page(title="HackAtom" subtitle="February 2018 Notice: HackAtom is currently on hiatus as we focus all of our efforts on the launch of Cosmos Hub.")
+page(title="HackAtom" subtitle="Alert: HackAtom is currently on hiatus as we focus all of our efforts on the launch of Cosmos Hub.")
   div(slot="menu"): btn(href='https://blog.cosmos.network/announcement-hackatom-2-winners-d31fe584b70b', target='_blank' icon="stars" value="HackAtom #2 Winners")
 
   // menu-locale
