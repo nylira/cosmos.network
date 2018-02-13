@@ -1,18 +1,18 @@
 <template lang="pug">
-page(title="HackAtom" subtitle="The regularly scheduled Cosmos Hackathon.")
-  div(slot="menu"): btn(href='https://blog.cosmos.network/announcement-hackatom-2-winners-d31fe584b70b', target='_blank' icon="stars" value="HackAtom 2 Winners")
+page(title="HackAtom" subtitle="Alert: HackAtom is currently on hiatus as we focus all of our efforts on the launch of Cosmos Hub.")
+  div(slot="menu"): btn(href='https://blog.cosmos.network/announcement-hackatom-2-winners-d31fe584b70b', target='_blank' icon="stars" value="HackAtom #2 Winners")
 
-  menu-locale
+  // menu-locale
 
   text-container
-    h2 What is HackAtom?
+    h2 What's HackAtom?
     ul
       li $50k to be won
       li Particpate for anywhere
       li Aug 5 - Sept 14, 2017
 
     p HackAtom is seeking individuals and teams worldwide for a $50k open-source hackathon from August 5 – September 14, 2017. Participants will turn innovative ideas into working applications, with rewards from the Cosmos community.
-    p HackAtom is four weeks long. You'll build a real product while the crypto and blockchain communities watch and cast their vote on the project that captures their imagination. Tell the story behind your innovative idea, turn it into a working product, get other members to join, and build something cool. 
+    p HackAtom is four weeks long. You'll build a real product while the crypto and blockchain communities watch and cast their vote on the project that captures their imagination. Tell the story behind your innovative idea, turn it into a working product, get other members to join, and build something cool.
 
     h2 Prizes
     p There is $50,000 USD worth of ETH to be won. The prizes for the best open source apps are as follows:

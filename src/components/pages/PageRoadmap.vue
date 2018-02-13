@@ -54,9 +54,10 @@
 
     .project.project-gui
       .project-header
-        .project-title Cosmos UI
-        a.project-link(href="https://github.com/cosmos/cosmos-ui" target="_blank")
-          img.project-logo(src="~assets/images/roadmap/cosmos-ui.png" alt="Cosmos UI")
+        .project-title Cosmos Voyager
+        a.project-link(href="https://github.com/cosmos/voyager" target="_blank")
+          img.project-logo(
+            src="~assets/images/roadmap/cosmos-voyager.png" alt="Cosmos Voyager")
         .project-progress
           .project-progress__outer
             .project-progress__inner(:style="guiProgressStyle")

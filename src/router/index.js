@@ -20,7 +20,9 @@ const routes = [
   { path: '/developers',
     component: r('Developers'),
     children: [
-      { path: '/', name: 'developers', component: r('DevelopersIndex') }
+      { path: '/', name: 'developers', component: r('DevelopersIndex') },
+      { path: 'academy', name: 'academy', component: r('DevelopersAcademy') },
+      { path: 'hackatom', name: 'hackatom', component: r('DevelopersHackAtom') }
     ]
   },
 
@@ -33,8 +35,17 @@ const routes = [
     ]
   },
 
+  // WALLET
+  { path: '/voyager',
+    component: r('Voyager'),
+    children: [
+      { path: '/', name: 'voyager', component: r('VoyagerIndex') },
+      { path: 'faq', name: 'voyager-faq', component: r('VoyagerFaq') },
+      { path: 'support', name: 'voyager-support', component: r('VoyagerSupport') }
+    ]
+  },
+
   // OTHERS
-  { path: '/academy', name: 'academy', component: r('Academy') },
   { path: '/assets', name: 'assets', component: r('Assets') },
   { path: '/plan', name: 'plan', component: r('Plan') },
   { path: '/plan/:locale', name: 'plan-localized', component: r('Plan') },
@@ -43,6 +54,7 @@ const routes = [
   { path: '/security', name: 'security', component: r('Security') },
 
   // redirects
+  { path: '/academy', redirect: '/developers/academy' },
   { path: '/blog/:entry', redirect: '/blog' },
   { path: '/blog',
     beforeEnter: () => { window.location.assign('https://blog.cosmos.network') }
@@ -60,6 +72,11 @@ const routes = [
   { path: '/validator', redirect: '/validators' },
   { path: '/whitepaper', redirect: '/about/whitepaper' },
   { path: '/whitepaper/en-US', redirect: '/about/whitepaper' },
+  // wallet redirects
+  { path: '/wallet', redirect: '/voyager' },
+  { path: '/download', redirect: '/voyager' },
+  { path: '/downloads', redirect: '/voyager' },
+  { path: '/ui', redirect: '/voyager' },
 
   // wildcards
   { path: '/404', component: r('404') },
