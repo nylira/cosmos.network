@@ -13,7 +13,7 @@ page(title="Voyager FAQ" subtitle="Frequently asked questions and answers about 
     p We will work on the network monitor after the launch of Cosmos Hub. There is already a blockchain explorer in the current release of Voyager.
 
     h3 Is there a Windows installer or a Mac DMG?
-    p No, we do currently have installers for Windows or macOS X. The reason is because we aim to only release deterministic builds. Deterministic builds are builds that can be recreated on any machine. Replicable builds increase the security of our network. Right now we're attempting to solve the issue of differing timestamps from building a Windows or macOS DMG installer.
+    p No, we don't currently have installers for Windows or macOS X. The reason is because we aim to only release deterministic builds. Deterministic builds are builds that can be recreated on any machine. Replicable builds increase the security of our network. Right now we're attempting to solve the issue of differing timestamps from building a Windows or macOS DMG installer.
 
     h3 I forgot my Cosmos seed. What can I do?
     p Did you back up your Cosmos seed somewhere? Recover it from that. If you didn't backup your Cosmos seed, unfortunately you're out of luck. There's no way of recovering it from our end. You'll have to create a new account.
