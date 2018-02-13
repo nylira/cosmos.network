@@ -8,7 +8,7 @@ import axios from 'axios'
 export default {
   name: 'ni-md-text',
   data: () => ({
-    text: '## Loading...'
+    text: '## Loading...\nLoading...'
   }),
   methods: {
     markdown (text) {

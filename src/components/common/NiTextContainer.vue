@@ -273,6 +273,9 @@ export default {
       p
         margin-left 0
 
+    .ni-btn
+      display block
+
     h3, h4, h5, h6, p, ul, ol
       padding-right 0.5rem
 </style>
