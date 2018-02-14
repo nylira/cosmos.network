@@ -4,7 +4,7 @@
     router-link(to="/voyager") Overview
     router-link(to="/voyager/faq") FAQ
     router-link(to="/voyager/support") Support
-    a(href="https://github.com/cosmos/voyager/releases" target="_Blank")
+    a(href="https://github.com/cosmos/voyager/releases")
       | Download #[i.fa.fa-github]
   router-view
 </template>

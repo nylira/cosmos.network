@@ -2,20 +2,20 @@
 .page-voyager-index
   .voyager-cover
     .voyager-cover__container
-      .voyager-cover__title Welcome to Voyager.
-      .voyager-cover__subtitle The free and open source UI for Cosmos. Built to scale for the entire network.
-      btn.voyager-cover__action(size="lg" icon="get_app" value="Download Now" type="anchor" href="https://github.com/cosmos/voyager/releases" target="_blank" color="primary")
+      .voyager-cover__title Explore the Cosmos with Voyager.
+      .voyager-cover__subtitle The user interface for the Cosmos Network. Built to scale to infinity and beyond.
+      btn.voyager-cover__action(size="lg" icon="get_app" value="Download Alpha" type="anchor" href="https://github.com/cosmos/voyager/releases" color="primary")
 
   .voyager-section.voyager-section-benefits: .voyager-section__container
     .voyager-section__header
-      .voyager-section__title Why Use Voyager?
-      .voyager-section__subtitle Voyager is a secure desktop app for the Cosmos Network. Download and install it to store, bond, and exchange your Atoms and other IBC tokens. Voyager will add support for more tokens and zones in the future.
+      .voyager-section__title What is Voyager?
+      .voyager-section__subtitle Voyager is a secure desktop app for the Cosmos Network. #[router-link(to="/roadmap") At launch], you will be able to use it to store, bond, and exchange your Atoms and other #[a(href="https://blog.cosmos.network/developer-deep-dive-cosmos-ibc-5855aaf183fe") IBC tokens]. Voyager will add support for more tokens and zones in the future.
     .voyager-section-main: .card-features
       .card-feature: .card-feature__container
         .card-feature__icon: i.material-icons lock
         .card-feature__text
           .card-feature__title Store IBC Tokens
-          .card-feature__subtitle Store IBC-supported tokens&mdash;like Atoms and Photons&mdash;from the Cosmos Hub, Ethermint Zone, Peggy Zone, and any future Cosmos Zones.
+          .card-feature__subtitle [Coming Soon] Store IBC-supported tokens&mdash;like Atoms and Photons&mdash;from the Cosmos Hub, #[a(href="https://ethermint.zone") Ethermint Zone], #[a(href="https://eth.peg.zone") Peggy Zone], and any future Cosmos Zones.
       .card-feature: .card-feature__container
         .card-feature__icon: i.material-icons swap_horiz
         .card-feature__text
@@ -25,12 +25,12 @@
         .card-feature__icon: i.material-icons search
         .card-feature__text
           .card-feature__title Examine Validators
-          .card-feature__subtitle View detailed information on the current set of Cosmos Validators, aka the top 100 stakeholders of the Cosmos Network.
+          .card-feature__subtitle View detailed information on the current set of #[router-link(to="/validators") Cosmos Validators], aka the top 100 stakeholders of the Cosmos Network.
       .card-feature: .card-feature__container
         .card-feature__icon: i.material-icons attach_money
         .card-feature__text
           .card-feature__title Earn Staking Income
-          .card-feature__subtitle Bond your Atoms to Cosmos Validators through the bonding interface and earn staking income in Photons every block.
+          .card-feature__subtitle [Coming Soon] Bond your Atoms to Cosmos Validators through the bonding interface and earn staking income in #[a(href="https://blog.cosmos.network/cosmos-fee-token-introducing-the-photon-8a62b2f51aa") Photons] every block.
       .card-feature: .card-feature__container
         .card-feature__icon: i.material-icons widgets
         .card-feature__text
@@ -51,7 +51,7 @@
         .card-feature__icon: i.material-icons language
         .card-feature__text
           .card-feature__title Built with Web Tech
-          .card-feature__subtitle Voyager is built on top of Electron, a battle-tested cross-platform development framework. It lets us build Voyager for Windows, macOS, and Linux with standard web tech like Javascript, HTML and CSS.
+          .card-feature__subtitle Voyager is built on top of #[a(href="https://electronjs.org/") Electron], a battle-tested cross-platform development framework. It lets us build Voyager for Windows, macOS, and Linux with standard web tech like Javascript, HTML and CSS.
       .card-feature: .card-feature__container
         .card-feature__icon: i.material-icons settings_input_component
 
@@ -67,7 +67,7 @@
         .card-feature__icon: i.material-icons color_lens
         .card-feature__text
           .card-feature__title Vue UI Library
-          .card-feature__subtitle To keep the experience consistent for Voyager users and simplify your development workflow, we have developed a flexible UI library based on Vue that you can use to quickly build Voyager plugins.
+          .card-feature__subtitle To keep the experience consistent for Voyager users and simplify your development workflow, we have developed a flexible UI library based on #[a(href="https://vuejs.org/") Vue] that you can use to quickly build Voyager plugins.
 
   .voyager-section.voyager-section-interface: .voyager-section__container
     .voyager-section__header
@@ -103,15 +103,15 @@
       .card-download
         .card-download__title Windows
         .card-download__subtitle 32-bit
-        btn(icon="cloud_download" value="Download" color="primary" type="anchor" href="https://github.com/cosmos/voyager/releases" target="_blank")
+        btn(icon="cloud_download" value="Download" color="primary" type="anchor" href="https://github.com/cosmos/voyager/releases")
       .card-download
         .card-download__title macOS
         .card-download__subtitle 64-bit
-        btn(icon="cloud_download" value="Download" color="primary" type="anchor" href="https://github.com/cosmos/voyager/releases" target="_blank")
+        btn(icon="cloud_download" value="Download" color="primary" type="anchor" href="https://github.com/cosmos/voyager/releases")
       .card-download
         .card-download__title Linux
         .card-download__subtitle 64-bit
-        btn(icon="cloud_download" value="Download" color="primary" type="anchor" href="https://github.com/cosmos/voyager/releases" target="_blank")
+        btn(icon="cloud_download" value="Download" color="primary" type="anchor" href="https://github.com/cosmos/voyager/releases")
 </template>
 
 <script>
@@ -147,7 +147,11 @@ export default {
 .voyager-cover__title
 .voyager-cover__subtitle
   text-align center
-  max-width 28rem
+
+.voyager-cover__title
+  max-width 24rem
+.voyager-cover__subtitle
+  max-width 30rem
 
 .voyager-cover__title
   font-size h1
