@@ -3,8 +3,12 @@ page(title="Voyager FAQ" subtitle="Frequently asked questions and answers about 
   text-container
     h2 Q&A
 
+    h3 How can I access my Atoms and Photons in Voyager?
+
+    p Voyager is currently in Alpha. That means support for Atoms and Photons are not in place yet. Please do not enter in your fundraiser seed in this version of Voyager. You can view our current launch progress on the Roadmap. You can also get an alert for the launch by adding your email and clicking "Get Launch Alert" #[router-link(to="/") on the homepage].
+
     h3 Where can I get some tokens to test Voyager?
-    p You can get Fermions from the unofficial #[a(href="https://cosmosvalidators.com")] Cosmos Validators faucet. Scroll halfway down the page, enter your Cosmos address, solve the captcha, and there you go! Note: you may have to click the Refresh button on the Balances page of Voyager in order to see your updateupdated funds.
+    p You can get Fermions from the unofficial #[a(href="https://cosmosvalidators.com") Cosmos Validators faucet]. Scroll halfway down the page, enter your Cosmos address, solve the captcha, and there you go! Note: you may have to click the Refresh button on the Balances page of Voyager in order to see your updateupdated funds.
 
     h3 Will we support iOS and Android?
     p We will work on Voyager for iOS and Android after the release of the Cosmos Hub.
