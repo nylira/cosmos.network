@@ -8,7 +8,7 @@
 
   .voyager-section.voyager-section-benefits: .voyager-section__container
     .voyager-section__header
-      .voyager-section__title Why Use Voyager?
+      .voyager-section__title What is Voyager?
       .voyager-section__subtitle Voyager is a secure desktop app for the Cosmos Network. #[router-link(to="/roadmap") At launch], you will be able to use it to store, bond, and exchange your Atoms and other #[a(href="https://blog.cosmos.network/developer-deep-dive-cosmos-ibc-5855aaf183fe") IBC tokens]. Voyager will add support for more tokens and zones in the future.
     .voyager-section-main: .card-features
       .card-feature: .card-feature__container
