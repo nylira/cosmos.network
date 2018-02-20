@@ -32,7 +32,7 @@ Actively participate in the testnet. By the end of 2017 you should be able to ma
 
 Tutorial and faucet maintained by community member [Michael Yuan](http://cosmosvalidators.com)
 
-Be sure to frequently check the [changelog](https://github.com/cosmos/gaia/blob/master/CHANGELOG.md) and the [validator chat](https://riot.im/app/#/room/#cosmos_validators:matrix.org) to keep track of any update.
+Be sure to frequently check the [changelog](https://github.com/cosmos/gaia/blob/master/CHANGELOG.md) and the [validator chat](https://riot.im/app/#/room/#cosmos_validators:matrix.org) to keep track of any updates.
 
 #### 3. Set up a validator website
 
