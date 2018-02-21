@@ -254,7 +254,6 @@ They will all have different features and characteristics.
 For instance changes in speed by altering the number of validators - 
 there could be a much slower, but more distributed "slow hub", and a much faster but less decentralized "high-frequency hubs".
 There may also be hubs with different native virtual machine capacities and transaction types.
-If Bitcoin manages to activate Segwit, maybe Bitcoin itself will one day become a hub!
 There could also be hubs validated by members of the banking system.
 And so on.
 
