@@ -22,7 +22,9 @@ const routes = [
     children: [
       { path: '/', name: 'developers', component: r('DevelopersIndex') },
       { path: 'academy', name: 'academy', component: r('DevelopersAcademy') },
-      { path: 'hackatom', name: 'hackatom', component: r('DevelopersHackAtom') }
+      { path: 'hackatom', name: 'hackatom', component: r('DevelopersHackAtom') },
+      { path: 'wallet', name: 'wallet', component: r('DevelopersWallet') },
+      { path: 'scaling-eth', name: 'scaling-eth', component: r('DevelopersScalingEth') }
     ]
   },
 
@@ -35,7 +37,7 @@ const routes = [
     ]
   },
 
-  // WALLET
+  // VOYAGER
   { path: '/voyager',
     component: r('Voyager'),
     children: [
@@ -63,17 +65,21 @@ const routes = [
   { path: '/dev', redirect: '/developers' },
   { path: '/dev/hackatom', redirect: '/developers/hackatom' },
   { path: '/dev/whitepaper', redirect: '/about/whitepaper' },
+  { path: '/developers/scaling', redirect: '/developers/scaling-eth' },
   { path: '/hackatom', redirect: '/developers/hackatom' },
   { path: '/intro/faq', redirect: '/about/faq' },
   { path: '/riot',
     beforeEnter: () => { window.location.assign('https://riot.im/app/#/room/#cosmos:matrix.org') }
   },
+  { path: '/scaling-eth', redirect: '/developers/scaling-eth' },
+  { path: '/scalingeth', redirect: '/developers/scaling-eth' },
+  { path: '/scaling', redirect: '/developers/scaling-eth' },
   { path: '/team', redirect: '/about/team' },
   { path: '/validator', redirect: '/validators' },
+  { path: '/wallet', redirect: '/developers/wallet' },
   { path: '/whitepaper', redirect: '/about/whitepaper' },
   { path: '/whitepaper/en-US', redirect: '/about/whitepaper' },
-  // wallet redirects
-  { path: '/wallet', redirect: '/voyager' },
+  // voyager redirects
   { path: '/download', redirect: '/voyager' },
   { path: '/downloads', redirect: '/voyager' },
   { path: '/ui', redirect: '/voyager' },
