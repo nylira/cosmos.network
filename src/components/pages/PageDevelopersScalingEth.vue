@@ -1,5 +1,5 @@
 <template lang="pug">
-page(title="Scaling Ethereum" subtitle="Use Ethermint to scale your Dapp performance by orders of magnitude.")
+page(title="Scaling Ethereum" subtitle="Learn about the different paths to scaling Ethereum Dapps using the Cosmos stack.")
   text-container(
     url='https://api.github.com/repos/tendermint/aib-data/contents/md/scaling-eth.md')
 </template>
