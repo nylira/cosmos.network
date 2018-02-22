@@ -1,10 +1,10 @@
 <template lang="pug">
 page(
-  title="Validator FAQ"
-  subtitle="Frequently asked questions about Cosmos Validators."
+  title="Validators FAQ"
+  subtitle="Frequently asked questions and answers about Cosmos Validators."
   splash="validator")
   text-container(
-    url='https://api.github.com/repos/cosmos/cosmos/contents/VALIDATORS_FAQ.md')
+    url='https://api.github.com/repos/tendermint/aib-data/contents/md/staking-validators-faq.md')
 </template>
 
 <script>
