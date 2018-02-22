@@ -1,6 +1,5 @@
 <template lang="pug">
 .section-community: .section-community__container
-  .section-community__header Join the Cosmos Network
   .app-footer__row.app-footer__row-actions
     part(title="Get Started")
       btn(
@@ -82,13 +81,7 @@ export default {
 
 .section-community__container
   max-width 1024px
-  margin 0 auto
-
-.section-community__header
-  font-size xl
-  font-weight 500
-  text-align center
-  line-height 5rem
+  margin 1.5rem auto 0
 
 .app-footer__row-actions
   margin-bottom 1rem
