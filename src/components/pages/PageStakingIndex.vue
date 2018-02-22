@@ -1,7 +1,7 @@
 <template lang="pug">
 page(
   title="Staking"
-  subtitle="What is staking? What are validators and delegators?"
+  subtitle="An overview of the staking, delegating, and governance processes of the Cosmos Hub."
   splash="validator")
   text-container(
     url='https://api.github.com/repos/tendermint/aib-data/contents/md/staking-index.md')
