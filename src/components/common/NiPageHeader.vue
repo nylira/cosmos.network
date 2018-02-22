@@ -69,6 +69,7 @@ export default {
 .ni-page-header-subtitle > div
   color dim
   font-weight 400
+  max-width 40rem
 
 .ni-page-header-title + .ni-page-header-subtitle
   margin-top 0.5rem

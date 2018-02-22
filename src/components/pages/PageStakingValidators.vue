@@ -3,18 +3,17 @@ page(
   title="Validators"
   subtitle="What is a Cosmos Validator? How can you run one?"
   splash="validator")
-  text-container: body-text
+  text-container(
+    url='https://api.github.com/repos/tendermint/aib-data/contents/md/staking-validators.md')
 </template>
 
 <script>
-import BodyText from 'content/en-US/validators.md'
 import Page from 'common/NiPage'
 import TextContainer from 'common/NiTextContainer'
 export default {
-  name: 'page-validators-index',
-  metaInfo: { title: 'Overview - Validators' },
+  name: 'page-staking-validators',
+  metaInfo: { title: 'Validators - Staking' },
   components: {
-    BodyText,
     Page,
     TextContainer
   }

@@ -2,37 +2,37 @@
 .card-locations
   .card-location
     a(:href='links.cosmos.meetups.berlin' target='_blank')
-      img(src='images/hackatom/loc-berlin.jpg')
+      img(src='~images/hackatom/loc-berlin.jpg')
       .kv
         .key Cosmos
         .value Berlin
   .card-location
     a(:href='links.cosmos.meetups.nyc' target='_blank')
-      img(src='images/hackatom/loc-nyc.jpg')
+      img(src='~images/hackatom/loc-nyc.jpg')
       .kv
         .key Cosmos
         .value New York City
   .card-location
     a(:href='links.cosmos.meetups.toronto' target='_blank')
-      img(src='images/hackatom/loc-toronto.jpg')
+      img(src='~images/hackatom/loc-toronto.jpg')
       .kv
         .key Cosmos
         .value Toronto
   .card-location
     a(:href='links.cosmos.meetups.sf' target='_blank')
-      img(src='images/hackatom/loc-san-francisco.jpg')
+      img(src='~images/hackatom/loc-san-francisco.jpg')
       .kv
         .key Cosmos
         .value San Francisco
   .card-location
     a(:href='links.cosmos.meetups.seoul' target='_blank')
-      img(src='images/hackatom/loc-seoul.jpg')
+      img(src='~images/hackatom/loc-seoul.jpg')
       .kv
         .key Cosmos
         .value Seoul
   .card-location
     a(:href='links.cosmos.meetups.shanghai' target='_blank')
-      img(src='images/hackatom/loc-shanghai.jpg')
+      img(src='~images/hackatom/loc-shanghai.jpg')
       .kv
         .key Cosmos
         .value Shanghai

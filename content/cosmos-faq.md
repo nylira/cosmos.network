@@ -19,7 +19,7 @@ Its development is being led primarily by the [Tendermint](https://tendermint.co
 
 ### When will the Cosmos Network launch?
 
-Please check <router-link to="/roadmap">our roadmap</router-link>. Atoms will not be tradeable until then.
+Please check [our roadmap](/roadmap). Atoms will not be tradeable until then.
 
 ## Atoms
 
@@ -27,7 +27,7 @@ Please check <router-link to="/roadmap">our roadmap</router-link>. Atoms will no
 
 Public, decentralized networks require high levels of security and spam-prevention that are best achieved by economic means:
 participants in the consensus must incur some economic cost, and all transactions processed by the network must pay a fee.
-Since we want to use Proof-of-Stake validators insteaed of Proof-of-Work miners,
+Since we want to use Proof-of-Stake validators instead of Proof-of-Work miners,
 we require validators of the Cosmos Hub to make a large security deposit in Atoms - 
 if they misbehave, their Atoms are revoked by the protocol! 
 The more Atoms in security deposits, the more stake on the line; the more skin-in-the-game; the greater the economic security.
@@ -58,7 +58,7 @@ The security of the fundraising process has been vetted extremely carefully.
 ### How do I get Atoms?
 
 If you participated in the fundraiser, you can check your suggested atom balance at [fundraiser.cosmos.network](https://fundraiser.cosmos.network).
-If not, you must wait until the <router-link to="/roadmap">Cosmos Network launches</router-link> and Atoms are traded on exchanges.
+If not, you must wait until the [Cosmos Network launches](/roadmap) and Atoms are traded on exchanges.
 
 ### Which exchanges will Atoms trade on?
 

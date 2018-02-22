@@ -1,7 +1,7 @@
 <template lang="pug">
 page(title="Cosmos Academy" subtitle="Participate in the Academy to learn how to build your project on the Cosmos Network.")
   text-container(
-    url='https://api.github.com/repos/tendermint/aib-data/contents/md/academy.md')
+    url='https://api.github.com/repos/tendermint/aib-data/contents/md/cosmos-academy.md')
 </template>
 
 <script>

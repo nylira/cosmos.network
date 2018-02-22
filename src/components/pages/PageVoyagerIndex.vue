@@ -25,7 +25,7 @@
         .card-feature__icon: i.material-icons search
         .card-feature__text
           .card-feature__title Examine Validators
-          .card-feature__subtitle View detailed information on the current set of #[router-link(to="/validators") Cosmos Validators], aka the top 100 stakeholders of the Cosmos Network.
+          .card-feature__subtitle View detailed information on the current set of #[router-link(to="/staking/validators") Cosmos Validators], aka the top 100 stakeholders of the Cosmos Network.
       .card-feature: .card-feature__container
         .card-feature__icon: i.material-icons attach_money
         .card-feature__text
