@@ -1,26 +1,20 @@
 <template lang="pug">
-page-split.page-privacy
-  page-header(
-    title='Privacy Policy'
-    subtitle='Learn about our privacy policy.'
-    type='split'
-    slot='header')
-  article-body: markdown-content
+page(
+  title="Privacy Policy"
+  subtitle="Learn about our strict privacy policy.")
+  text-container(
+    url='https://api.github.com/repos/tendermint/aib-data/contents/md/cosmos-privacy.md')
 </template>
 
 <script>
-import MarkdownContent from 'content/en-US/privacy-policy.md'
-import PageHeader from '@nylira/vue-page-header'
-import PageSplit from '@nylira/vue-page-split'
-import ArticleBody from '@nylira/vue-article-body'
+import TextContainer from 'common/NiTextContainer'
+import Page from 'common/NiPage'
 export default {
   name: 'page-privacy',
   metaInfo: { title: 'Privacy Policy' },
   components: {
-    ArticleBody,
-    PageHeader,
-    PageSplit,
-    MarkdownContent
+    Page,
+    TextContainer
   }
 }
 </script>

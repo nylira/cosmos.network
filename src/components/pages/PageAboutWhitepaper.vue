@@ -10,10 +10,10 @@ toc-page(:toc-visible="whitepaperTocVisible")
 <script>
 import { mapGetters } from 'vuex'
 import NavContents from 'navigation/NavContents'
-import TextEnUs from 'content/en-US/WHITEPAPER.md'
-import TextKo from 'content/ko/WHITEPAPER.md'
-import TextPt from 'content/pt/WHITEPAPER.md'
-import TextZhCn from 'content/zh-CN/WHITEPAPER.md'
+import TextEnUs from 'content/whitepaper.md'
+import TextKo from 'content/whitepaper-ko.md'
+import TextPt from 'content/whitepaper-pt.md'
+import TextZhCn from 'content/whitepaper-zh-CN.md'
 import TocPage from 'navigation/TocPage'
 export default {
   name: 'page-about-whitepaper',
@@ -34,3 +34,4 @@ export default {
   }
 }
 </script>
+

@@ -9,7 +9,7 @@ page(title="Developers" subtitle="Learn about and contribute to the code that po
 
   ul
     li: a(href="https://github.com/cosmos/gaia" target="_blank") Gaia on GitHub
-    li: router-link(to="/validators") Learn about Cosmos Validators
+    li: router-link(to="/staking") Learn about staking
 
   h2 Blockchain Frameworks
 

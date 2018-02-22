@@ -1,22 +1,20 @@
 <template lang="pug">
-.page-plan
-  article-body: text-en-us
+page(
+  title="Fundraiser Plan"
+  subtitle="Our original plan and roadmap for the April 2017 fundraiser.")
+  text-container(
+    url='https://api.github.com/repos/tendermint/aib-data/contents/md/fundraiser-plan.md')
 </template>
 
 <script>
-import ArticleBody from '@nylira/vue-article-body'
-import TextEnUs from 'content/en-US/PLAN.md'
+import TextContainer from 'common/NiTextContainer'
+import Page from 'common/NiPage'
 export default {
   name: 'page-plan',
-  metaInfo: {
-    meta: [
-      { name: 'description', content: 'Information about the Cosmos fundraising plan. The details in this plan override what is currently in the whitepaper, and all other plans published prior.' }
-    ],
-    title: 'Fundraising Plan'
-  },
+  metaInfo: { title: 'Fundraiser Plan' },
   components: {
-    ArticleBody,
-    TextEnUs
+    Page,
+    TextContainer
   }
 }
 </script>

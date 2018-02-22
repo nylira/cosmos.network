@@ -28,12 +28,14 @@ const routes = [
     ]
   },
 
-  // VALIDATORS
-  { path: '/validators',
-    component: r('Validators'),
+  // STAKING
+  { path: '/staking',
+    component: r('Staking'),
     children: [
-      { path: '/', name: 'validators', component: r('ValidatorsIndex') },
-      { path: 'faq', name: 'validators-faq', component: r('ValidatorsFaq') }
+      { path: '/', name: 'staking', component: r('StakingIndex') },
+      { path: 'delegators', name: 'delegators', component: r('StakingDelegators') },
+      { path: 'validators', name: 'validators', component: r('StakingValidators') },
+      { path: 'validators-faq', name: 'validators-faq', component: r('StakingValidatorsFaq') }
     ]
   },
 
@@ -50,7 +52,6 @@ const routes = [
   // OTHERS
   { path: '/assets', name: 'assets', component: r('Assets') },
   { path: '/plan', name: 'plan', component: r('Plan') },
-  { path: '/plan/:locale', name: 'plan-localized', component: r('Plan') },
   { path: '/privacy', name: 'privacy', component: r('Privacy') },
   { path: '/roadmap', name: 'roadmap', component: r('Roadmap') },
   { path: '/security', name: 'security', component: r('Security') },
@@ -61,6 +62,8 @@ const routes = [
   { path: '/blog',
     beforeEnter: () => { window.location.assign('https://blog.cosmos.network') }
   },
+  { path: '/download', redirect: '/voyager' },
+  { path: '/downloads', redirect: '/voyager' },
   { path: '/faq', redirect: '/about/faq' },
   { path: '/dev', redirect: '/developers' },
   { path: '/dev/hackatom', redirect: '/developers/hackatom' },
@@ -68,6 +71,7 @@ const routes = [
   { path: '/developers/scaling', redirect: '/developers/scaling-eth' },
   { path: '/hackatom', redirect: '/developers/hackatom' },
   { path: '/intro/faq', redirect: '/about/faq' },
+  { path: '/plan/:locale', redirect: '/plan' },
   { path: '/riot',
     beforeEnter: () => { window.location.assign('https://riot.im/app/#/room/#cosmos:matrix.org') }
   },
@@ -75,15 +79,14 @@ const routes = [
   { path: '/scalingeth', redirect: '/developers/scaling-eth' },
   { path: '/scaling', redirect: '/developers/scaling-eth' },
   { path: '/team', redirect: '/about/team' },
-  { path: '/validator', redirect: '/validators' },
-  { path: '/wallet', redirect: '/developers/wallet' },
+  { path: '/ui', redirect: '/voyager' },
+  { path: '/validator', redirect: '/staking/validators' },
+  { path: '/validators', redirect: '/staking/validators' },
+  { path: '/validators/faq', redirect: '/staking/validators-faq' },
   { path: '/whitepaper', redirect: '/about/whitepaper' },
   { path: '/whitepaper/en-US', redirect: '/about/whitepaper' },
-  // voyager redirects
-  { path: '/download', redirect: '/voyager' },
-  { path: '/downloads', redirect: '/voyager' },
-  { path: '/ui', redirect: '/voyager' },
-
+  { path: '/wallet', redirect: '/voyager' },
+  
   // wildcards
   { path: '/404', component: r('404') },
   { path: '*', component: r('404') }

@@ -5,26 +5,26 @@
     .footbot__brandmark
       img.footbot__img(src="~assets/images/logos/cosmos-brandmark.png")
     .footbot-menu
-      .footbot-menu__title Cosmos
+      .footbot-menu__title About
       .footbot-menu__items
         router-link(to="/about").footbot-menu__item Introduction
         router-link(to="/about/faq").footbot-menu__item FAQ
         router-link(to="/about/team").footbot-menu__item Team
-        a(href="https://tendermint.com/careers" target="_blank").footbot-menu__item Careers
         a(href="https://fundraiser.cosmos.network" target="_blank").footbot-menu__item Fundraiser
     .footbot-menu
-      .footbot-menu__title Downloads
+      .footbot-menu__title Learn
       .footbot-menu__items
         router-link(to="/about/whitepaper").footbot-menu__item Whitepaper
-        router-link(to="/voyager").footbot-menu__item Voyager
+        router-link(to="/staking").footbot-menu__item Staking
         router-link(to="/assets").footbot-menu__item Media Assets
+        router-link(to="/voyager").footbot-menu__item Voyager
     .footbot-menu
-      .footbot-menu__title Developers
+      .footbot-menu__title Develop
       .footbot-menu__items
         a(href="https://github.com/cosmos" target="_blank").footbot-menu__item Cosmos GitHub
         a(href="https://github.com/cosmos/cosmos-sdk" target="_blank").footbot-menu__item Cosmos SDK
+        a(href="https://github.com/cosmos/gaia" target="_blank").footbot-menu__item Cosmos Hub
         a(href="https://tendermint.com" target="_blank").footbot-menu__item Tendermint
-        router-link(to="/validators").footbot-menu__item Validators
 </template>
 
 <script>

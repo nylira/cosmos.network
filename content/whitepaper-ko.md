@@ -778,4 +778,3 @@ wording, especially under the TMSP section
 #### 기타 링크 (Unsorted links)
 
 * [https://www.docdroid.net/ec7xGzs/314477721-ethereum-platform-review-opportunities-and-challenges-for-private-and-consortium-blockchains.pdf.html]
-

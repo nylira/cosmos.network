@@ -20,7 +20,7 @@ export default {
 
 .ni-text-container
   padding 1rem
-  max-width 40rem
+  max-width 50rem
   margin-left auto
   margin-right auto
   df()
@@ -129,17 +129,18 @@ export default {
     font-size 1.25rem
     margin-top -0.5rem
 
-  h2:not(:first-child)
-    border-top 0.25rem solid bc
-    padding-top 1.5rem
-    margin-top 1.5rem
+  h2
+    border-top 0.25rem solid bc-dim
+    padding-top 1rem
+    + p, + ul, + ol, + blockquote
+      margin-bottm 3rem
 
   h3:not(:first-child)
     padding-top 1.5rem
 
   h4:not(:first-child)
     padding-top 1.5rem
-     
+
   table
     border 1px solid bc
     border-collapse collapse
@@ -169,8 +170,6 @@ export default {
 
   p, hr, ul, ol, table, pre,  figcaption,  blockquote,  img,  iframe,  .ni-btn
     margin-bottom 1.5em
-    + h2
-      margin-bottom 3rem
 
   p code:before, p code:after
     letter-spacing -0.375em
@@ -192,7 +191,7 @@ export default {
   ol
     li
       list-style decimal
- 
+
   li
     p + ol,
     p + ol
@@ -216,66 +215,4 @@ export default {
       margin-right 0
       max-width 44rem
       max-height 24.75rem
-
-@media screen and (min-width: 1280px)
-  .ni-text-container
-    margin 0 auto
-    max-width 1024px
-    padding-left 0
-    padding-right 0
-
-  .ni-text
-    h1
-      padding-left width-side
-
-    h2, h2:not(:first-child)
-      border-top px solid bc
-      padding-top 1.5rem
-      padding-left 1rem
-
-      width width-side - 1rem
-      float left
-      margin-top 0
-      position relative
-
-      font-size 1.5rem
-
-      &:before
-        position absolute
-        top 0
-        left 0
-
-        content ''
-        display block
-
-        height 0.1875rem
-        width 4rem
-        background accent
-
-    h2 + h3
-      margin-top 0
-
-    h2 + p, h2 + ul, h2 + ol, h2 + blockquote, h2 + pre
-      border-top 1px solid bc
-      padding-top 1.5rem
-
-  .ni-text-container
-    h2 + h3
-      border-top 1px solid bc
-
-    h3, h4, h5, h6, p, ul, ol, pre, blockquote, .ni-btn, iframe, > div
-      margin-left width-side
-      padding-left 0
-
-      ul, ol
-        margin-left 2rem
-
-      p
-        margin-left 0
-
-    .ni-btn
-      display block
-
-    h3, h4, h5, h6, p, ul, ol
-      padding-right 0.5rem
 </style>

@@ -1,8 +1,8 @@
 <template lang="pug">
 modal.modal-agreement(size='fullscreen')
   div(slot='title') HackAtom Participation Agreement
-  article-body
-    markdown-content
+  text-container(
+    url='https://api.github.com/repos/tendermint/aib-data/contents/md/hackathon-agreement.md')
   div(slot='footer')
     btn(value='Cancel', @click.native='no')
     btn(value='Agree', @click.native='yes')
@@ -10,17 +10,15 @@ modal.modal-agreement(size='fullscreen')
 
 <script>
 import { mapGetters } from 'vuex'
-import MarkdownContent from 'content/en-US/participation-agreement.md'
 import Btn from '@nylira/vue-button'
 import Modal from 'modals/Modal'
-import ArticleBody from '@nylira/vue-article-body'
+import TextContainer from 'common/NiTextContainer'
 export default {
   name: 'modal-agreement',
   components: {
-    ArticleBody,
     Btn,
-    MarkdownContent,
-    Modal
+    Modal,
+    TextContainer
   },
   computed: {
     ...mapGetters(['links'])

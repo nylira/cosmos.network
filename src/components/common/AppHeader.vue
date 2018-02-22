@@ -13,7 +13,7 @@ header.app-header
         router-link(to='/roadmap' @click.native='close') Roadmap
         router-link(to='/security' @click.native='close') Security
         router-link(to='/developers' @click.native='close') Developers
-        router-link(to='/validators' @click.native='close') Validators
+        router-link(to='/staking' @click.native='close') Staking
         router-link(to='/voyager' @click.native='close') Voyager
       nav
         a(:href='links.cosmos.blog' @click.native='close' target='_blank')
