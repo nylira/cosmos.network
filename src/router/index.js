@@ -2,7 +2,7 @@ import VueRouter from 'vue-router'
 function r (page) { return require('../components/pages/Page' + page) }
 
 const routes = [
-  { path: '/', component: r('Index') },
+  { path: '/', name: 'home', component: r('Index') },
 
   // ABOUT
   { path: '/about',
@@ -12,7 +12,7 @@ const routes = [
       { path: 'faq', name: 'faq', component: r('AboutFaq') },
       { path: 'team', name: 'team', component: r('AboutTeam') },
       { path: 'whitepaper', name: 'whitepaper', component: r('AboutWhitepaper') },
-      { path: 'whitepaper/:locale', name: 'whitepaper-localized', component: r('AboutWhitepaper') }
+      { path: 'whitepaper/:locale', name: 'whitepaper-i18n', component: r('AboutWhitepaper') }
     ]
   },
 
@@ -48,9 +48,9 @@ const routes = [
   },
 
   // OTHERS
-  { path: '/assets', name: 'assets', component: r('Assets') },
-  { path: '/plan', name: 'plan', component: r('Plan') },
-  { path: '/privacy', name: 'privacy', component: r('Privacy') },
+  { path: '/assets', name: 'media-assets', component: r('Assets') },
+  { path: '/plan', name: 'fundraiser-plan', component: r('Plan') },
+  { path: '/privacy', name: 'privacy-policy', component: r('Privacy') },
   { path: '/roadmap', name: 'roadmap', component: r('Roadmap') },
   { path: '/security', name: 'security', component: r('Security') },
 

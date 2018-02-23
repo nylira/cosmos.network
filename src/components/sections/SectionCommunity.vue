@@ -4,7 +4,7 @@
     part(title="Get Started")
       btn(
         type="link"
-        to="/about/whitepaper"
+        :to="{ name: 'whitepaper'}"
         size="lg"
         icon="description"
         value="Read Whitepaper")

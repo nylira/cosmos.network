@@ -3,20 +3,20 @@ page(title="Developers" subtitle="Learn about and contribute to the code that po
   h2 Cosmos Hub
 
   h3 Gaia
-  p Gaia is the testing version of the Cosmos Hub. When the Hub is complete, it will contain the Tendermint consensus engine, staking, and governing, and token exchange components. We're currently working hard on getting the components #[router-link(to="/roadmap") ready for public release].
+  p Gaia is the testing version of the Cosmos Hub. When the Hub is complete, it will contain the Tendermint consensus engine, staking, and governing, and token exchange components. We're currently working hard on getting the components #[router-link(:to="{name: 'roadmap'}") ready for public release].
 
   p Gaia is a testnet designed to get validators acquainted with staking concepts and procedures. For testing purposes, the Gaia validator set is determined as validators with the top 100 bonded atoms. The validator set is undated every block. All bonding and unbonding is instantaneous (no queue). Absent features: delegation, validator rewards, and the unbonding wait period.
 
   ul
     li: a(href="https://github.com/cosmos/gaia" target="_blank") Gaia on GitHub
-    li: router-link(to="/staking") Learn about staking
+    li: router-link(:to="{name: 'staking'}") Learn about staking
 
   h2 Blockchain Frameworks
 
   h3 Cosmos SDK
   p The Cosmos SDK is an ABCI framework written in Golang that affords you all the tools you need to rapidly develop robust blockchains and blockchain applications which are interoperable with the Cosmos Hub. It is a blockchain development 'starter-pack' of common blockchain modules while not enforcing their use thus giving maximum flexibility for application customization. It is perfect to build highly-customizable public proof-of-stake blockchains.
 
-  p WARNING: The Cosmos SDK is under heavy development and it's #[router-link(to="/roadmap") not yet ready] for release. Keep up to date with Cosmos SDK news #[a(href="https://blog.cosmos.network" target="_blank") on our blog].
+  p WARNING: The Cosmos SDK is under heavy development and it's #[router-link(:to="{name: 'roadmap'}") not yet ready] for release. Keep up to date with Cosmos SDK news #[a(href="https://blog.cosmos.network" target="_blank") on our blog].
 
   ul
     li: a(href="https://github.com/cosmos/cosmos-sdk" target="_blank") Cosmos SDK on GitHub

@@ -9,7 +9,7 @@
   .voyager-section.voyager-section-benefits: .voyager-section__container
     .voyager-section__header
       .voyager-section__title What is Voyager?
-      .voyager-section__subtitle Voyager is a secure desktop app for the Cosmos Network. #[router-link(to="/roadmap") At launch], you will be able to use it to store, bond, and exchange your Atoms and other #[a(href="https://blog.cosmos.network/developer-deep-dive-cosmos-ibc-5855aaf183fe") IBC tokens]. Voyager will add support for more tokens and zones in the future.
+      .voyager-section__subtitle Voyager is a secure desktop app for the Cosmos Network. #[router-link(:to="{name: 'roadmap'}") At launch], you will be able to use it to store, bond, and exchange your Atoms and other #[a(href="https://blog.cosmos.network/developer-deep-dive-cosmos-ibc-5855aaf183fe") IBC tokens]. Voyager will add support for more tokens and zones in the future.
     .voyager-section-main: .card-features
       .card-feature: .card-feature__container
         .card-feature__icon: i.material-icons lock
@@ -25,7 +25,7 @@
         .card-feature__icon: i.material-icons search
         .card-feature__text
           .card-feature__title Examine Validators
-          .card-feature__subtitle View detailed information on the current set of #[router-link(to="/staking/validators") Cosmos Validators], aka the top 100 stakeholders of the Cosmos Network.
+          .card-feature__subtitle View detailed information on the current set of #[router-link(:to="{name: 'validators'}") Cosmos Validators], aka the top 100 stakeholders of the Cosmos Network.
       .card-feature: .card-feature__container
         .card-feature__icon: i.material-icons attach_money
         .card-feature__text
@@ -40,7 +40,7 @@
         .card-feature__icon: i.material-icons update
         .card-feature__text
           .card-feature__title Change the Future
-          .card-feature__subtitle [Coming Soon] With the #[router-link(to="/roadmap") launch of the Cosmos Hub] you will be able to create and vote on proposals affecting the future of the Cosmos Network.
+          .card-feature__subtitle [Coming Soon] With the #[router-link(:to="{name: 'roadmap'}") launch of the Cosmos Hub] you will be able to create and vote on proposals affecting the future of the Cosmos Network.
 
   .voyager-section.voyager-section-development: .voyager-section__container
     .voyager-section__header
@@ -62,7 +62,7 @@
         .card-feature__icon: i.material-icons settings_ethernet
         .card-feature__text
           .card-feature__title IBC Compatible
-          .card-feature__subtitle Any proposed Cosmos Zone that's accepted into the Cosmos Hub is instantly integrated into Voyager. Learn how to build your own IBC-powered zone on the #[router-link(to="/developers") Developers page].
+          .card-feature__subtitle Any proposed Cosmos Zone that's accepted into the Cosmos Hub is instantly integrated into Voyager. Learn how to build your own IBC-powered zone on the #[router-link(:to="{name: 'developers'}") Developers page].
       .card-feature: .card-feature__container
         .card-feature__icon: i.material-icons color_lens
         .card-feature__text

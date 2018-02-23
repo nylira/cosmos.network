@@ -1,9 +1,9 @@
 <template lang="pug">
 .page
   page-menu
-    router-link(to="/developers") Overview
-    router-link(to="/developers/academy") Academy
-    router-link.disabled(to="/developers/hackatom") HackAtom
+    router-link(:to="{ name: 'developers'}") Overview
+    router-link(:to="{ name: 'academy'}") Academy
+    // router-link(:to="{ name: 'hackatom'}") HackAtom
   router-view
 </template>
 
