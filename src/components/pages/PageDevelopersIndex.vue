@@ -1,4 +1,4 @@
-<template lang="pug">
+<template lang="pug"> 
 page(title="Developers" subtitle="Learn about and contribute to the code that powers the Cosmos Network."): text-container
   h2 Cosmos Hub
 
