@@ -3,6 +3,7 @@
 </template>
 
 <script>
+import { Base64 } from 'js-base64'
 import MarkdownIt from 'markdown-it'
 import axios from 'axios'
 export default {
@@ -18,7 +19,7 @@ export default {
   },
   async mounted () {
     let data = (await axios.get(this.url)).data
-    this.text = window.atob(data.content)
+    this.text = Base64.decode(data.content)
   },
   props: ['url']
 }
