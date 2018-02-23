@@ -1,5 +1,5 @@
 <template lang="pug">
-page(title="Wallet Design" subtitle="Learn how to develop a custom wallet for the Cosmos Network.")
+page(title="Wallet Design" subtitle="[Coming Soon] Learn how to develop a custom wallet for the Cosmos Network.")
   text-container(
     url='https://api.github.com/repos/tendermint/aib-data/contents/md/wallet.md')
 </template>

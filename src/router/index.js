@@ -86,7 +86,7 @@ const routes = [
   { path: '/whitepaper', redirect: '/about/whitepaper' },
   { path: '/whitepaper/en-US', redirect: '/about/whitepaper' },
   { path: '/wallet', redirect: '/voyager' },
-  
+
   // wildcards
   { path: '/404', component: r('404') },
   { path: '*', component: r('404') }
