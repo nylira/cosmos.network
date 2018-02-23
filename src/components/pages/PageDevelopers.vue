@@ -2,8 +2,8 @@
 .page
   page-menu
     router-link(to="/developers") Overview
-    router-link(to="/developers/scaling-eth") Scaling Ethereum
-    router-link(to="/developers/wallet") Wallet Design
+    router-link(to="/developers/scaling-eth") Scaling ETH
+    router-link(to="/developers/wallet") Wallet Dev
     router-link(to="/developers/academy") Academy
     // router-link(to="/developers/hackatom") HackAtom
   router-view
