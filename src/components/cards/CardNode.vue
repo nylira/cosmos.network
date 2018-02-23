@@ -249,113 +249,12 @@ arrow-color = bc
       position absolute
       width 1.5rem
       height 0.75rem
-</style>
 
-  &.ni-card-node--active
-  &.ni-card-node--done.ni-card-node--active
-    .ni-card-node__node
-      position relative
-      &:after
-        color bright
-
-    .ni-card-node__key
-    .ni-card-node__value
-      color bright
-
-  &.ni-card-node--active
-    .ni-card-node__node
-      border-color bc
-      background bc
-      &:after
-        background bc
-
-  &.ni-card-node--done.ni-card-node--active
-    .ni-card-node__node
-      background hover
-      border-color hover
-      &:after
-        background hover
-
-.ni-card-node__container
-  display flex
-  align-items center
-  justify-content center
-
-.ni-card-node__node
-  border-radius 0.25rem
-  height 3rem
-  max-width 12rem
-  width 100%
-  border 2*px solid bc
-  background app-bg
-
-  display flex
-  flex-flow column nowrap
-  align-items center
-  justify-content center
-
-  position relative
-
-  &:after
-    position absolute
-    bottom -2*px
-    right -2*px
-    width 1.25rem
-    height 0.5rem
-    background bc
-    border-radius 0.25rem 0 0.25rem 0
-
-    content 'more_horiz'
-    font-family 'Material Icons'
-    color dim
-    font-size sm
-
-    display flex
-    align-items center
-    justify-content center
-
-  &:hover
-    cursor pointer
-    border-color hover
-    &:after
-      background hover
-
-.ni-card-node__key
-  color dim
-  font-size xs
-
-.ni-card-node__value
-  font-size sm
-  color txt
-  font-weight 500
-
-arrow-size = 0.5rem
-arrow-color = bc
-
-.ni-card-node__arrow
-  height 4rem
-  display flex
-  flex-flow column nowrap
-  align-items center
-  padding 0.5rem 0
-
-.ni-card-node__arrow-body
-  width 2*px
-  background arrow-color
-  flex 1
-
-.ni-card-node__arrow-head
-  width 0
-  height 0
-  border-left arrow-size solid transparent
-  border-right arrow-size solid transparent
-  border-bottom arrow-size solid arrow-color
-
-@media screen and (min-width: 768px)
-  .ni-card-node__node
-    box-shadow app-bg 0 0 0 0.25rem
-    &:after
-      position absolute
-      width 1.5rem
-      height 0.75rem
+@media all and (-ms-high-contrast:none)
+  // ie11 support
+  *::-ms-backdrop, .ni-card-node
+    margin-bottom 1.5rem
+  *::-ms-backdrop, .ni-card-node__arrow
+    display none !important
+    background #f00
 </style>
