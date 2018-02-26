@@ -5,7 +5,6 @@ page(title="Wallet Development" subtitle="[Coming Soon] Learn how to develop a c
 </template>
 
 <script>
-import {mapGetters} from 'vuex'
 import Page from 'common/NiPage'
 import TextContainer from 'common/NiTextContainer.vue'
 export default {
@@ -14,7 +13,6 @@ export default {
   components: {
     Page,
     TextContainer
-  },
-  computed: { ...mapGetters(['links']) }
+  }
 }
 </script>
