@@ -371,4 +371,9 @@ pp-height = 1rem
   .project-title
     font-size x
     line-height 3rem
+
+@media all and (-ms-high-contrast:none)
+  // ie11 support
+  *::-ms-backdrop, .project-nodes
+    display block
 </style>

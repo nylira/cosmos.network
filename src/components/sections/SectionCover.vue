@@ -72,6 +72,7 @@ export default {
 .section-cover
   height 100vh
   width 100vw
+  max-width 100% // fixes issue where 100vw causes horizontal scrollbar
   display flex
   margin-top -3rem
 
