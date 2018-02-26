@@ -7,17 +7,17 @@
     .footbot-menu
       .footbot-menu__title About
       .footbot-menu__items
-        router-link(to="/about").footbot-menu__item Introduction
-        router-link(to="/about/faq").footbot-menu__item FAQ
-        router-link(to="/about/team").footbot-menu__item Team
-        a(href="https://fundraiser.cosmos.network" target="_blank").footbot-menu__item Fundraiser
+        router-link(:to="{ name: 'about'}").footbot-menu__item Introduction
+        router-link(:to="{ name: 'faq'}").footbot-menu__item FAQ
+        router-link(:to="{ name: 'team'}").footbot-menu__item Team
+        a(:href="config.FUNDRAISER_URL" target="_blank").footbot-menu__item Fundraiser
     .footbot-menu
       .footbot-menu__title Learn
       .footbot-menu__items
-        router-link(to="/about/whitepaper").footbot-menu__item Whitepaper
-        router-link(to="/staking").footbot-menu__item Staking
-        router-link(to="/assets").footbot-menu__item Media Assets
-        router-link(to="/voyager").footbot-menu__item Voyager
+        router-link(:to="{ name: 'whitepaper'}").footbot-menu__item Whitepaper
+        router-link(:to="{ name: 'staking'}").footbot-menu__item Staking
+        router-link(:to="{ name: 'media-assets'}").footbot-menu__item Media Assets
+        router-link(:to="{ name: 'voyager'}").footbot-menu__item Voyager
     .footbot-menu
       .footbot-menu__title Develop
       .footbot-menu__items
@@ -36,7 +36,7 @@ export default {
     SectionCommunity
   },
   computed: {
-    ...mapGetters(['links'])
+    ...mapGetters(['links', 'config'])
   }
 }
 </script>

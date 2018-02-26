@@ -1,27 +1,17 @@
 <template lang="pug">
-toc-page(:toc-visible="faqTocVisible")
-  nav-contents(slot="nav" text-id="whitepaper")
-  text-en-us
+page(title="Cosmos FAQ" subtitle="Answers to frequently asked questions about the Cosmos Network.")
+  text-container(url="https://api.github.com/repos/tendermint/aib-data/contents/md/cosmos-faq.md")
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-import NavContents from 'navigation/NavContents'
-import TextEnUs from 'content/cosmos-faq.md'
-import TocPage from 'navigation/TocPage'
+import Page from 'common/NiPage'
+import TextContainer from 'common/NiTextContainer'
 export default {
   name: 'page-about-faq',
   metaInfo: { title: 'FAQ - About' },
   components: {
-    NavContents,
-    TextEnUs,
-    TocPage
-  },
-  computed: { ...mapGetters(['faqTocVisible']) },
-  mounted () {
-    if (document.documentElement.clientWidth >= 1024) {
-      this.$store.commit('setTocVisible', { id: 'faq', visible: true })
-    }
+    Page,
+    TextContainer
   }
 }
 </script>
