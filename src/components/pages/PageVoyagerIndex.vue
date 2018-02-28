@@ -15,7 +15,7 @@
         .card-feature__icon: i.material-icons lock
         .card-feature__text
           .card-feature__title Store IBC Tokens
-          .card-feature__subtitle [Coming Soon] Store IBC-supported tokens&mdash;like Atoms and Photons&mdash;from the Cosmos Hub, #[a(href="https://ethermint.zone") Ethermint Zone], #[a(href="https://eth.peg.zone") Peggy Zone], and any future Cosmos Zones.
+          .card-feature__subtitle [Coming Soon] Store IBC-supported tokens&mdash;like Atoms and Photons&mdash;from the Cosmos Hub, #[a(href="https://ethermint.zone") Ethermint Zone], #[a(href="https://ether.peg.zone") Peggy Zone], and any future Cosmos Zones.
       .card-feature: .card-feature__container
         .card-feature__icon: i.material-icons swap_horiz
         .card-feature__text
