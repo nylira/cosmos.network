@@ -19,12 +19,12 @@
       card-community(
         dt='Developer Chat'
         dd='Join #cosmos:matrix.org with Riot'
-        icon='comments-o'
+        icon='rocketchat'
         :anchor='links.cosmos.community.matrix')
       card-community(
         dt='Forum'
-        dd='Discuss the latest developer updates'
-        icon='university'
+        dd='Discuss the Cosmos Network.'
+        icon='discourse'
         :anchor='links.cosmos.community.discourse')
       // card-community(
         dt='IRC'
@@ -40,12 +40,12 @@
       card-community(
         dt='Twitter'
         dd='Follow @cosmos, our official account'
-        icon='twatter'
+        icon='twitter'
         :anchor='links.cosmos.community.twitter')
       card-community(
         dt='Reddit'
         dd='Subscribe to /r/cosmosnetwork'
-        icon='raddit'
+        icon='reddit'
         :anchor='links.cosmos.community.reddit')
       // card-community(
         dt='BitcoinTalk'

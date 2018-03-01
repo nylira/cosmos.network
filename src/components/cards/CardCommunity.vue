@@ -1,6 +1,6 @@
 <template lang="pug">
 a.card-community(:href='anchor' target='_blank')
-  .icon: i.fa(:class="'fa-' + icon")
+  .icon: i.fab(:class="'fa-' + icon")
   .text
     .dt {{ dt }}
     .dd {{ dd }}
@@ -28,7 +28,7 @@ export default {
     align-items center
     justify-content center
 
-    i.fa
+    i.fab
       color link
       font-size xl
 
