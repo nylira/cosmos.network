@@ -5,7 +5,7 @@
     router-link(:to="{ name: 'voyager-faq'}") FAQ
     router-link(:to="{ name: 'voyager-support'}") Support
     a(href="https://github.com/cosmos/voyager/releases")
-      | Download #[i.fa.fa-github]
+      | Download #[i.fab.fa-github]
   router-view
 </template>
 
