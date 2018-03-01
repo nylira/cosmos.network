@@ -1,57 +1,38 @@
 <template lang='pug'>
-.section-cover
-  .section-cover__container
-    .section-cover__actions.desktop
-      form.action(action="//network.us14.list-manage.com/subscribe/post?u=1b8aeaa81ca615914eb2eb7fc&id=64c73f9f5f" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate="")
-        field#mce-EMAIL(name="EMAIL" type="email" placeholder="name@email.com" size="lg")
-        btn#mc-embedded-subscribe(
-          type="submit"
-          icon="email"
-          value="Get Launch Alert"
-          size="lg"
-          color="primary")
-        div(style="position: absolute; left: -5000px;" aria-hidden="true")
-          input(type="text" name="b_1b8aeaa81ca615914eb2eb7fc_64c73f9f5f" tabindex="-1" value="")
-      .action
-        btn(
-          type="anchor"
-          href="https://riot.im/app/#/room/#cosmos:matrix.org"
-          icon="developer_board"
-          target="_blank"
-          size="lg"
-          value="Join Developer Chat")
-        btn(
-          type="anchor"
-          href="https://t.me/cosmosproject"
-          icon="chat"
-          target="_blank"
-          size="lg"
-          value="Join Community Chat")
-    .section-cover__actions.mobile
-      form.action(action="//network.us14.list-manage.com/subscribe/post?u=1b8aeaa81ca615914eb2eb7fc&id=64c73f9f5f" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate="")
-        field#mce-EMAIL(name="EMAIL" type="email" placeholder="name@email.com")
-        btn#mc-embedded-subscribe(
-          type="submit"
-          icon="email"
-          value="Get Launch Alert"
-          color="primary")
-        div(style="position: absolute; left: -5000px;" aria-hidden="true")
-          input(type="text" name="b_1b8aeaa81ca615914eb2eb7fc_64c73f9f5f" tabindex="-1" value="")
-      .action
-        btn(
-          type="anchor"
-          href="https://riot.im/app/#/room/#cosmos:matrix.org"
-          icon="developer_board"
-          target="_blank"
-          value="Join Developer Chat")
-        btn(
-          type="anchor"
-          href="https://t.me/cosmosproject"
-          icon="chat"
-          target="_blank"
-          value="Join Community Chat")
-    .section-cover__scroll(v-scroll-to="'#section-what'")
-      i.material-icons arrow_downward
+mixin actions(size)
+  form.action(action="//network.us14.list-manage.com/subscribe/post?u=1b8aeaa81ca615914eb2eb7fc&id=64c73f9f5f" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate="")
+    field#mce-EMAIL(name="EMAIL" type="email" placeholder="name@email.com" size=size)
+    btn#mc-embedded-subscribe(
+      type="submit"
+      icon="email"
+      value="Get Launch Alert"
+      size=size
+      color="primary")
+    div(style="position: absolute; left: -5000px;" aria-hidden="true")
+      input(type="text" name="b_1b8aeaa81ca615914eb2eb7fc_64c73f9f5f" tabindex="-1" value="")
+
+  .action
+    btn(
+      type="anchor"
+      href="https://riot.im/app/#/room/#cosmos:matrix.org"
+      icon="developer_board"
+      target="_blank"
+      size=size
+      value="Join Developer Chat")
+
+    btn(
+      type="anchor"
+      href="https://t.me/cosmosproject"
+      icon="chat"
+      target="_blank"
+      size=size
+      value="Join Community Chat")
+
+.section-cover: .section-cover__container
+  .section-cover__actions.desktop: +actions("lg")
+  .section-cover__actions.mobile: +actions
+  .section-cover__scroll(v-scroll-to="'#section-what'")
+    i.material-icons arrow_downward
 </template>
 
 <script>
@@ -116,6 +97,9 @@ export default {
     width 3rem
     height 3rem
     background alpha(app-bg, 50%)
+    cursor pointer
+    &:hover
+      background alpha(app-bg, 75%)
 
 @media screen and (min-width: 768px)
   .section-cover__actions
