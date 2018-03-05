@@ -18,7 +18,8 @@
       .cosmos-diagram
         .cosmos-diagram__image: img.cosmos-diagram__img(src="~assets/images/diagrams/diagram-atoms.png")
         .cosmos-diagram__label Atoms are a license for holders to stake and vote on the Cosmos Hub.
-    .section-home__p: router-link(:to="{ name: 'about'}") Learn everything about the Cosmos Network.
+    .section-home__action
+      router-link(:to="{ name: 'about'}") Introduction to Cosmos &rsaquo;
 </template>
 
 <script>
@@ -65,6 +66,10 @@ export default {
   margin-right: auto;
   &:last-child
     margin-bottom 0
+
+.section-home__action
+  display block
+  text-align center
 
 .section-home__diagrams
   background app-bg
