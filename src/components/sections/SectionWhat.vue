@@ -1,10 +1,10 @@
 <template lang='pug'>
 #section-what.section-home.section-what: .section-home__container
-  .section-home__header What is Cosmos?
+  .section-home__header Welcome to Cosmos.
   .section-home__main
     .section-home__text
       .section-home__p Cosmos is a decentralized network of independent parallel blockchains, each powered by classical BFT consensus algorithms like #[a(href="https://tendermint.com" target="_blank") Tendermint].
-      .section-home__p The first blockchain in the Cosmos network is the Cosmos Hub, whose native token is the Atom. Cosmos is a permissionless network, meaning that anybody can build a blockchain on it.
+      .section-home__p The first blockchain in the Cosmos Network is the Cosmos Hub, whose native token is the Atom. Cosmos is a permissionless network, meaning that anybody can build a blockchain on it.
     .section-home__diagrams
       .cosmos-diagram
         .cosmos-diagram__image: img.cosmos-diagram__img(src="~assets/images/diagrams/diagram-hub.png")
@@ -18,7 +18,7 @@
       .cosmos-diagram
         .cosmos-diagram__image: img.cosmos-diagram__img(src="~assets/images/diagrams/diagram-atoms.png")
         .cosmos-diagram__label Atoms are a license for holders to stake and vote on the Cosmos Hub.
-    .section-home__p: router-link(:to="{ name: 'about'}") Learn everything you need to know about the Cosmos network here.
+    .section-home__p: router-link(:to="{ name: 'about'}") Learn everything about the Cosmos Network.
 </template>
 
 <script>
@@ -30,8 +30,8 @@ export default {
 <style lang="stylus">
 @require '~variables'
 
-.section-what
-  background-image: linear-gradient(to bottom, app-bg, app-fg);
+.section-home
+  background linear-gradient(top, app-bg, app-fg)
 
 .section-home__container
   padding 3rem 1rem
@@ -47,7 +47,7 @@ export default {
     margin-bottom 0
 
 .section-home__header
-  font-size h1
+  font-size h2
   color bright
   font-weight 500
   margin-bottom 1.5rem
