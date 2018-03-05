@@ -2,7 +2,6 @@
 .page
   page-menu
     router-link(:to="{ name: 'about'}") Introduction
-    router-link(:to="{ name: 'faq'}") FAQ
     router-link(:to="{ name: 'whitepaper'}") Whitepaper
     router-link(:to="{ name: 'team'}") Team
   router-view

@@ -9,7 +9,6 @@ const routes = [
     component: r('About'),
     children: [
       { path: '/', name: 'about', component: r('AboutIndex') },
-      { path: 'faq', name: 'faq', component: r('AboutFaq') },
       { path: 'team', name: 'team', component: r('AboutTeam') },
       { path: 'whitepaper', name: 'whitepaper', component: r('AboutWhitepaper') },
       { path: 'whitepaper/:locale', name: 'whitepaper-i18n', component: r('AboutWhitepaper') }
@@ -23,8 +22,9 @@ const routes = [
       { path: '/', name: 'developers', component: r('DevelopersIndex') },
       { path: 'academy', name: 'academy', component: r('DevelopersAcademy') },
       { path: 'hackatom', name: 'hackatom', component: r('DevelopersHackAtom') },
-      { path: 'wallet', name: 'wallet', component: r('DevelopersWallet') },
-      { path: 'scaling-eth', name: 'scaling-eth', component: r('DevelopersScalingEth') }
+      { path: 'scaling-eth', name: 'scaling-eth', component: r('DevelopersScalingEth') },
+      { path: 'security', name: 'security', component: r('DevelopersSecurity') },
+      { path: 'wallet', name: 'wallet', component: r('DevelopersWallet') }
     ]
   },
 
@@ -51,12 +51,13 @@ const routes = [
 
   // OTHERS
   { path: '/assets', name: 'media-assets', component: r('Assets') },
+  { path: '/faq', name: 'faq', component: r('Faq') },
   { path: '/plan', name: 'fundraiser-plan', component: r('Plan') },
   { path: '/privacy', name: 'privacy-policy', component: r('Privacy') },
   { path: '/roadmap', name: 'roadmap', component: r('Roadmap') },
-  { path: '/security', name: 'security', component: r('Security') },
 
   // redirects
+  { path: '/about/faq', redirect: '/faq' },
   { path: '/academy', redirect: '/developers/academy' },
   { path: '/blog/:entry', redirect: '/blog' },
   { path: '/blog',
@@ -64,7 +65,6 @@ const routes = [
   },
   { path: '/download', redirect: '/voyager' },
   { path: '/downloads', redirect: '/voyager' },
-  { path: '/faq', redirect: '/about/faq' },
   { path: '/dev', redirect: '/developers' },
   { path: '/dev/hackatom', redirect: '/developers/hackatom' },
   { path: '/dev/whitepaper', redirect: '/about/whitepaper' },
@@ -78,6 +78,7 @@ const routes = [
   { path: '/scaling-eth', redirect: '/developers/scaling-eth' },
   { path: '/scalingeth', redirect: '/developers/scaling-eth' },
   { path: '/scaling', redirect: '/developers/scaling-eth' },
+  { path: '/security', redirect: '/developers/security' },
   { path: '/team', redirect: '/about/team' },
   { path: '/ui', redirect: '/voyager' },
   { path: '/validator', redirect: '/staking/validators' },

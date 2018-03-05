@@ -10,8 +10,8 @@ header.app-header
     menu.menu-popup.menu-app(v-if='activeMenuApp || desktop')
       nav
         router-link(to='/about' @click.native='close') About
+        router-link(to='/faq' @click.native='close') FAQ
         router-link(to='/roadmap' @click.native='close') Roadmap
-        router-link(to='/security' @click.native='close') Security
         router-link(to='/developers' @click.native='close') Developers
         router-link(to='/staking' @click.native='close') Staking
         router-link(to='/voyager' @click.native='close') Voyager
