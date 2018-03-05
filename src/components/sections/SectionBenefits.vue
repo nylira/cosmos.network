@@ -1,7 +1,7 @@
 <template lang='pug'>
 .section-why
   .section-home.section-home-benefits: .section-home__container
-    .section-home__header What are the benefits of Cosmos?
+    .section-home__header Why Use Cosmos?
     .section-home__main
       .cosmos-panels
         .cosmos-panel
@@ -26,7 +26,7 @@
           .cosmos-panel__image
             img.cosmos-panel__img(src="~assets/images/diagrams/panel-developer-friendly.png")
           .cosmos-panel__text
-            .cosmos-panel__title Developer friendly
+            .cosmos-panel__title Developer Friendly
             .cosmos-panel__body Cosmos was designed with developers in mind. Thanks to Tendermint’s Application Blockchain Interface, it’s easy to build blockchains in any programming language.
             .cosmos-panel__action
               router-link(:to="{ name: 'developers'}") Cosmos for Developers &rsaquo;
@@ -71,7 +71,7 @@ export default {
 
 .cosmos-panel__title
   color bright
-  font-size h3
+  font-size h2
   font-weight 500
 
 .cosmos-panel__img

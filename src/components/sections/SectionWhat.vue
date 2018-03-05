@@ -1,6 +1,6 @@
 <template lang='pug'>
 #section-what.section-home.section-what: .section-home__container
-  .section-home__header Welcome to Cosmos.
+  .section-home__header What is Cosmos?
   .section-home__main
     .section-home__text
       .section-home__p Cosmos is a decentralized network of independent parallel blockchains, each powered by classical BFT consensus algorithms like #[a(href="https://tendermint.com" target="_blank") Tendermint].
@@ -17,7 +17,7 @@
         .cosmos-diagram__label #[router-link(to="{ name: 'validators' }") Validators] are responsible for committing new blocks and ensuring that consensus is reached.
       .cosmos-diagram: .cosmos-diagram__container
         .cosmos-diagram__image: img.cosmos-diagram__img(src="~assets/images/diagrams/diagram-atoms.png")
-        .cosmos-diagram__label Atoms are a license for holders to stake and vote on the Cosmos Hub.
+        .cosmos-diagram__label #[router-link(to="{ name: 'faq' }") Atoms] are a license for holders to stake and vote on the Cosmos Hub.
     .section-home__action
       router-link(:to="{ name: 'about'}") Introduction to Cosmos &rsaquo;
 </template>
@@ -48,7 +48,7 @@ export default {
     margin-bottom 0
 
 .section-home__header
-  font-size h2
+  font-size h1
   color bright
   font-weight 500
   margin-bottom 1.5rem
