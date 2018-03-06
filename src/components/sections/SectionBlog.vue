@@ -1,6 +1,6 @@
 <template lang='pug'>
 .section-home: .section-home__container
-  .section-home__header Latest from #[a(href="https://blog.cosmos.network" target="_blank") the blog]
+  .section-home__header Latest from #[a(href="https://blog.cosmos.network" target="_blank") the Blog]
   .section-home__main
     .blog-posts
       a.blog-post(v-for="p in posts" :href="p.link" target="_blank"): .blog-post-container
