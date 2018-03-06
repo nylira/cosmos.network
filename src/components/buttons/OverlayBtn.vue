@@ -1,15 +1,11 @@
-<template>
-  <div class="overlay-btn">
-    <i :class="cssClass"></i>
-  </div>
+<template lang="pug">
+.overlay-btn
+  i.material-icons {{ icon }}
 </template>
 
 <script>
 export default {
   name: 'overlay-btn',
-  computed: {
-    cssClass () { return 'fa fa-' + this.icon }
-  },
   props: ['icon']
 }
 </script>

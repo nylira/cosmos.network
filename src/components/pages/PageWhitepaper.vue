@@ -1,15 +1,19 @@
 <template lang="pug">
-toc-page(:toc-visible="whitepaperTocVisible")
-  nav-contents(slot="nav" text-id="whitepaper")
-  text-ko(v-if="$route.params.locale === 'ko'")
-  text-pt(v-else-if="$route.params.locale === 'pt'")
-  text-zh-cn(v-else-if="$route.params.locale === 'zh-CN'")
-  text-en-us(v-else)
+.page
+  page-menu
+    a(href="assets/cosmos-whitepaper.pdf" target="_blank") Download PDF #[i.material-icons file_download]
+  toc-page(:toc-visible="whitepaperTocVisible")
+    nav-contents(slot="nav" text-id="whitepaper")
+    text-ko(v-if="$route.params.locale === 'ko'")
+    text-pt(v-else-if="$route.params.locale === 'pt'")
+    text-zh-cn(v-else-if="$route.params.locale === 'zh-CN'")
+    text-en-us(v-else)
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
 import NavContents from 'navigation/NavContents'
+import PageMenu from 'common/NiPageMenu'
 import TextEnUs from 'content/whitepaper.md'
 import TextKo from 'content/whitepaper-ko.md'
 import TextPt from 'content/whitepaper-pt.md'
@@ -20,6 +24,7 @@ export default {
   metaInfo: { title: 'Whitepaper - About' },
   components: {
     NavContents,
+    PageMenu,
     TextEnUs,
     TextKo,
     TextPt,
