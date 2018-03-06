@@ -66,6 +66,11 @@ const routes = [
   { path: '/hackatom', redirect: '/developers/hackatom' },
   { path: '/intro/faq', redirect: '/faq' },
   { path: '/introduction', redirect: '/intro' },
+  { path: '/matrix',
+    beforeEnter: () => {
+      window.location.assign('https://riot.im/app/#/room/#cosmos:matrix.org')
+    }
+  },
   { path: '/plan/:locale', redirect: '/plan' },
   { path: '/riot',
     beforeEnter: () => {
