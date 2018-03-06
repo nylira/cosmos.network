@@ -153,11 +153,14 @@ The Tendermint consensus algorithm is implemented in a program called Tendermint
 Core.  Tendermint Core is an application-agnostic "consensus engine" that can
 turn any deterministic blackbox application into a distributedly replicated
 blockchain. Tendermint Core connects to blockchain
-applications via the Application Blockchain Interface (ABCI) [\[17\]][17]. Thus, ABCI
-allows for blockchain applications to be programmed in any language, not just
-the programming language that the consensus engine is written in.  Additionally,
-ABCI makes it possible to easily swap out the consensus layer of any existing
-blockchain stack.
+applications via the Application Blockchain Interface (ABCI) [\[17\]][17]. ABCI 
+is an interface that defines the boundary between the replication engine (the
+blockchain), and the state machine (the application). By using a socket protocol,
+we enable a consensus engine running in one process to manage an application
+state running in another. Thus, the ABCI allows for blockchain applications to be
+programmed in any language, not just the programming language that the consensus
+engine is written in. Additionally, the ABCI makes it possible to easily swap out
+the consensus layer of any existing blockchain stack.
 
 We draw an analogy with the well-known cryptocurrency Bitcoin. Bitcoin is a
 cryptocurrency blockchain where each node maintains a fully audited Unspent
