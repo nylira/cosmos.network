@@ -62,6 +62,7 @@ export default {
   mounted () {
     this.$store.commit('initializeLinks')
     this.$store.commit('initializePeople')
+    this.$store.commit('initializeBlog')
   },
   store
 }

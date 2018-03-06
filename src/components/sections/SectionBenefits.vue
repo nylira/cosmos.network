@@ -9,25 +9,27 @@
             img.cosmos-panel__img(src="~assets/images/diagrams/panel-interoperability.png")
           .cosmos-panel__text
             .cosmos-panel__title Interoperable
-            .cosmos-panel__body The Cosmos network is built to allow many independent blockchains — public and private — to communicate and exchange value with one another.
-            router-link.cosmos-panel__action(:to="{ name: 'about'}")
-              | Learn more about interblockchain communication.
+            .cosmos-panel__body The Cosmos Network is built to allow many independent blockchains — public and private — to communicate and exchange value with one another.
+            .cosmos-panel__action
+              router-link(:to="{ name: 'about'}") Interblockchain Comms &rsaquo;
+
         .cosmos-panel
           .cosmos-panel__image
             img.cosmos-panel__img(src="~assets/images/diagrams/panel-scalability.png")
           .cosmos-panel__text
             .cosmos-panel__title Scalable
             .cosmos-panel__body By leveraging interoperability and Tendermint’s Proof-of-Stake algorithm, Cosmos provides unprecedented levels of scalability for blockchain networks.
-            router-link.cosmos-panel__action(:to="{ name: 'scaling-eth'}")
-              | Learn more about how Tendermint handles scaling.
+            .cosmos-panel__action
+              router-link(:to="{ name: 'scaling-eth'}") Scaling Ethereum &rsaquo;
+
         .cosmos-panel
           .cosmos-panel__image
             img.cosmos-panel__img(src="~assets/images/diagrams/panel-developer-friendly.png")
           .cosmos-panel__text
             .cosmos-panel__title Developer Friendly
             .cosmos-panel__body Cosmos was designed with developers in mind. Thanks to Tendermint’s Application Blockchain Interface, it’s easy to build blockchains in any programming language.
-            router-link.cosmos-panel__action(:to="{ name: 'developers'}")
-              | Visit the developer’s page to get started.
+            .cosmos-panel__action
+              router-link(:to="{ name: 'developers'}") Cosmos for Developers &rsaquo;
 </template>
 
 <script>
@@ -112,5 +114,5 @@ export default {
 
   .cosmos-panel__body
     flex 1
-
+    height 11rem
 </style>

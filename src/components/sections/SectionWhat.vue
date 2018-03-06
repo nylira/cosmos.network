@@ -4,21 +4,22 @@
   .section-home__main
     .section-home__text
       .section-home__p Cosmos is a decentralized network of independent parallel blockchains, each powered by classical BFT consensus algorithms like #[a(href="https://tendermint.com" target="_blank") Tendermint].
-      .section-home__p The first blockchain in the Cosmos network is the Cosmos Hub, whose native token is the Atom. Cosmos is a permissionless network, meaning that anybody can build a blockchain on it.
+      .section-home__p The first blockchain in the Cosmos Network is the Cosmos Hub, whose native token is the Atom. Cosmos is a permissionless network, meaning that anybody can build a blockchain on it.
     .section-home__diagrams
-      .cosmos-diagram
+      .cosmos-diagram: .cosmos-diagram__container
         .cosmos-diagram__image: img.cosmos-diagram__img(src="~assets/images/diagrams/diagram-hub.png")
         .cosmos-diagram__label A Hub is a blockchain that enables Zones to work together.
-      .cosmos-diagram
+      .cosmos-diagram: .cosmos-diagram__container
         .cosmos-diagram__image: img.cosmos-diagram__img(src="~assets/images/diagrams/diagram-zones.png")
         .cosmos-diagram__label Zones are sovereign blockchains that exchange value through Hubs. They can be private or public.
-      .cosmos-diagram
+      .cosmos-diagram: .cosmos-diagram__container
         .cosmos-diagram__image: img.cosmos-diagram__img(src="~assets/images/diagrams/diagram-validators.png")
-        .cosmos-diagram__label Validators are responsible for committing new blocks and ensuring that consensus is reached.
-      .cosmos-diagram
+        .cosmos-diagram__label #[router-link(to="{ name: 'validators' }") Validators] are responsible for committing new blocks and ensuring that consensus is reached.
+      .cosmos-diagram: .cosmos-diagram__container
         .cosmos-diagram__image: img.cosmos-diagram__img(src="~assets/images/diagrams/diagram-atoms.png")
-        .cosmos-diagram__label Atoms are a license for holders to stake and vote on the Cosmos Hub.
-    .section-home__p: router-link(:to="{ name: 'about'}") Learn everything you need to know about the Cosmos network here.
+        .cosmos-diagram__label #[router-link(to="{ name: 'faq' }") Atoms] are a license for holders to stake and vote on the Cosmos Hub.
+    .section-home__action
+      router-link(:to="{ name: 'about'}") Introduction to Cosmos &rsaquo;
 </template>
 
 <script>
@@ -30,8 +31,8 @@ export default {
 <style lang="stylus">
 @require '~variables'
 
-.section-what
-  background-image: linear-gradient(to bottom, app-bg, app-fg);
+.section-home
+  background linear-gradient(top, app-bg, app-fg)
 
 .section-home__container
   padding 3rem 1rem
@@ -54,77 +55,82 @@ export default {
   text-align center
 
 .section-home__text
+.section-home__p
   max-width 34rem
   margin-left auto
   margin-right auto
 
 .section-home__p
   margin-bottom 1.5rem
-  max-width: 34rem;
-  margin-left: auto;
-  margin-right: auto;
   &:last-child
     margin-bottom 0
 
+.section-home__action
+  display block
+  text-align center
+
 .section-home__diagrams
-  background app-bg
+  margin -0.5rem
+  display flex
+  align-items center
+  flex-flow column nowrap
 
 .cosmos-diagram
   display flex
+  max-width 34rem + 1rem
+
+.cosmos-diagram__container
+  flex 1
+  background app-bg
+  display flex
   flex-flow row nowrap
+  align-items center
+  margin 0.5rem
 
 .cosmos-diagram__image
   flex 1
   padding 1rem
 
 .cosmos-diagram__img
-  max-width 8rem
+  width 7rem
 
 .cosmos-diagram__label
-  flex 2
-  padding 1rem 1rem 1rem 0
-  display flex
-  align-items center
-  font-size sm
-
-@media screen and (min-width: 375px)
-  .cosmos-diagram__label
-    padding 1rem
+  padding 1rem
+  padding-left 0
 
 @media screen and (min-width: 768px)
   .section-home__container
-    padding 5rem 1rem
+    padding 4rem 1rem
 
   .section-home__text
-    margin-bottom 4rem
+    margin-bottom 3rem
 
   .section-home__header
   .section-home__diagrams
     margin-bottom 2rem
 
-  .section-home__diagrams
-    display flex
-    flex-flow row nowrap
-    padding 2rem
-
-  .cosmos-diagram
-    flex 1
-    flex-flow column nowrap
-    display block
-
-  .cosmos-diagram__image
-    display flex
-    align-items center
-    justify-content center
+  .cosmos-diagram__img
+    width 10rem
 
   .cosmos-diagram__label
-    flex 1
-    text-align center
-    align-items flex-start
-    padding-bottom 0
+    padding-left 1rem
 
 @media screen and (min-width: 1024px)
   .section-home__diagrams
-    margin-left 1rem
-    margin-right 1rem
+    flex-flow row nowrap
+
+  .cosmos-diagram
+    flex 1
+
+  .cosmos-diagram__container
+    display block
+
+  .cosmos-diagram__image
+    text-align center
+
+  .cosmos-diagram__label
+    flex 1
+    display block
+    text-align center
+    height 9rem
 </style>
