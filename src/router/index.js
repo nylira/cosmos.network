@@ -4,16 +4,16 @@ function r (page) { return require('../components/pages/Page' + page) }
 const routes = [
   { path: '/', name: 'home', component: r('Index') },
 
-  // ABOUT
-  { path: '/about',
-    component: r('About'),
-    children: [
-      { path: '/', name: 'about', component: r('AboutIndex') },
-      { path: 'team', name: 'team', component: r('AboutTeam') },
-      { path: 'whitepaper', name: 'whitepaper', component: r('AboutWhitepaper') },
-      { path: 'whitepaper/:locale', name: 'whitepaper-i18n', component: r('AboutWhitepaper') }
-    ]
-  },
+  // PAGES
+  { path: '/about', name: 'about', component: r('About') },
+  { path: '/assets', name: 'media-assets', component: r('Assets') },
+  { path: '/faq', name: 'faq', component: r('Faq') },
+  { path: '/intro', name: 'intro', component: r('Intro') },
+  { path: '/plan', name: 'fundraiser-plan', component: r('Plan') },
+  { path: '/privacy', name: 'privacy-policy', component: r('Privacy') },
+  { path: '/roadmap', name: 'roadmap', component: r('Roadmap') },
+  { path: '/whitepaper', name: 'whitepaper', component: r('Whitepaper') },
+  { path: '/whitepaper/:locale', name: 'whitepaper-i18n', component: r('Whitepaper') },
 
   // DEVELOPERS
   { path: '/developers',
@@ -48,15 +48,10 @@ const routes = [
     ]
   },
 
-  // OTHERS
-  { path: '/assets', name: 'media-assets', component: r('Assets') },
-  { path: '/faq', name: 'faq', component: r('Faq') },
-  { path: '/plan', name: 'fundraiser-plan', component: r('Plan') },
-  { path: '/privacy', name: 'privacy-policy', component: r('Privacy') },
-  { path: '/roadmap', name: 'roadmap', component: r('Roadmap') },
-
   // redirects
   { path: '/about/faq', redirect: '/faq' },
+  { path: '/about/team', redirect: '/about' },
+  { path: '/about/whitepaper', redirect: '/whitepaper' },
   { path: '/academy', redirect: '/developers/academy' },
   { path: '/blog/:entry', redirect: '/blog' },
   { path: '/blog',
@@ -66,10 +61,11 @@ const routes = [
   { path: '/downloads', redirect: '/voyager' },
   { path: '/dev', redirect: '/developers' },
   { path: '/dev/hackatom', redirect: '/developers/hackatom' },
-  { path: '/dev/whitepaper', redirect: '/about/whitepaper' },
+  { path: '/dev/whitepaper', redirect: '/whitepaper' },
   { path: '/developers/scaling', redirect: '/developers/scaling-eth' },
   { path: '/hackatom', redirect: '/developers/hackatom' },
-  { path: '/intro/faq', redirect: '/about/faq' },
+  { path: '/intro/faq', redirect: '/faq' },
+  { path: '/introduction', redirect: '/intro' },
   { path: '/plan/:locale', redirect: '/plan' },
   { path: '/riot',
     beforeEnter: () => {
@@ -82,7 +78,7 @@ const routes = [
   { path: '/security',
     beforeEnter: () => { window.location.assign('https://tendermint.com/security') }
   },
-  { path: '/team', redirect: '/about/team' },
+  { path: '/team', redirect: '/about' },
   { path: '/telegram',
     beforeEnter: () => { window.location.assign('https://t.me/cosmosproject') }
   },
@@ -91,8 +87,7 @@ const routes = [
   { path: '/validator', redirect: '/staking/validators' },
   { path: '/validators', redirect: '/staking/validators' },
   { path: '/validators/faq', redirect: '/staking/validators-faq' },
-  { path: '/whitepaper', redirect: '/about/whitepaper' },
-  { path: '/whitepaper/en-US', redirect: '/about/whitepaper' },
+  { path: '/whitepaper/en-US', redirect: '/whitepaper' },
   { path: '/wallet', redirect: '/developers/wallet' },
 
   // wildcards

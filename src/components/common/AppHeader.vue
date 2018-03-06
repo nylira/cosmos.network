@@ -9,17 +9,19 @@ header.app-header
     .header-item(v-if='!desktop')
     menu.menu-popup.menu-app(v-if='activeMenuApp || desktop')
       nav
-        router-link(to='/about' @click.native='close') About
+        router-link(to='/intro' @click.native='close') Intro
         router-link(to='/faq' @click.native='close') FAQ
+        router-link(to='/whitepaper' @click.native='close') Whitepaper
         router-link(to='/roadmap' @click.native='close') Roadmap
         router-link(to='/developers' @click.native='close') Developers
         router-link(to='/staking' @click.native='close') Staking
         router-link(to='/voyager' @click.native='close') Voyager
+        router-link(to='/about' @click.native='close') About
       nav
         a(:href='links.cosmos.blog' @click.native='close' target='_blank')
           span.label Blog
           i.fab.fa-medium
-        a(:href='links.cosmos.github.organization' @click.native='close' target='_blank')
+        // a(:href='links.cosmos.github.organization' @click.native='close' target='_blank')
           span.label GitHub
           i.fab.fa-github
 </template>
@@ -194,7 +196,7 @@ export default {
       align-items center
 
       > a
-        padding 0 1.5rem
+        padding 0 1.35rem
         color txt
         line-height 3rem
         height 3rem + bw
