@@ -7,15 +7,15 @@
   overlay-btn(
     v-show='!tocVisible'
     @click.native='setTocVisible(true)'
-    icon='list-ol')
+    icon='format_list_numbered')
   overlay-btn.mobile-only(
     v-show='tocVisible'
     @click.native='setTocVisible(false)'
-    icon='times')
+    icon='close')
   overlay-btn.print-btn(
     v-if="textId === 'whitepaper'"
     @click.native='downloadWhitepaper()'
-    icon='file-pdf-o')
+    icon='file_download')
 </template>
 
 <script>

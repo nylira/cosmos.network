@@ -1,5 +1,5 @@
 <template lang="pug">
-page(title="What is Cosmos?" subtitle="Get started with an overview of Cosmos."): text-container
+page(title="Introduction to Cosmos" subtitle="Get started with an overview of the Cosmos Network."): text-container
   h2 Building an Internet of Blockchains
   h3 Purpose
   p Cosmos is a network of blockchains whose purpose is to solve long-standing problems in cryptocurrency and blockchain communities. The end goal is to allow many sovereign and easy-to-develop blockchains to scale and interoperate with each other, creating an Internet of Blockchains.

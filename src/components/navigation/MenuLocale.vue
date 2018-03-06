@@ -1,8 +1,8 @@
 <template lang="pug">
 .menu-locale-container
   overlay-btns
-    overlay-btn(@click.native='toggle(true)', icon='times', v-if='maximized')
-    overlay-btn(@click.native='toggle(true)', icon='globe', v-else='')
+    overlay-btn(@click.native='toggle(true)', icon='close', v-if='maximized')
+    overlay-btn(@click.native='toggle(true)', icon='language', v-else='')
   menu.menu-locale(v-show='maximized')
     router-link(to='/about/whitepaper' exact) English
     router-link(to='/about/whitepaper/zh-CN') 简体中文

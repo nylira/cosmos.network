@@ -7,9 +7,9 @@
     .footbot-menu
       .footbot-menu__title About
       .footbot-menu__items
-        router-link(:to="{ name: 'about'}").footbot-menu__item Introduction
+        router-link(:to="{ name: 'intro'}").footbot-menu__item Intro
         router-link(:to="{ name: 'faq'}").footbot-menu__item FAQ
-        router-link(:to="{ name: 'team'}").footbot-menu__item Team
+        router-link(:to="{ name: 'about'}").footbot-menu__item About
         a(:href="config.FUNDRAISER_URL" target="_blank").footbot-menu__item Fundraiser
     .footbot-menu
       .footbot-menu__title Learn
