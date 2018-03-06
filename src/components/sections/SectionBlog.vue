@@ -23,16 +23,9 @@ export default {
   },
   methods: {
     imageSrc (txt) {
-      // Find where the img tag starts
-      let tagIndex = txt.indexOf('<img')
-      // Find where the src attribute starts
-      let srcIndex = txt.substring(tagIndex).indexOf('src=') + tagIndex
-      // Find where the actual image URL starts; 5 for the length of 'src="'
-      let srcStart = srcIndex + 5
-      // Find where the URL ends
-      let srcEnd = txt.substring(srcStart).indexOf('"') + srcStart
-      // Extract just the URL
-      let src = txt.substring(srcStart, srcEnd)
+      let el = document.createElement('html')
+      el.innerHTML = txt
+      let src = el.querySelectorAll('img')[0].src
       return src
     },
     humanDate (date) {
