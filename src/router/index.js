@@ -23,7 +23,6 @@ const routes = [
       { path: 'academy', name: 'academy', component: r('DevelopersAcademy') },
       { path: 'hackatom', name: 'hackatom', component: r('DevelopersHackAtom') },
       { path: 'scaling-eth', name: 'scaling-eth', component: r('DevelopersScalingEth') },
-      { path: 'security', name: 'security', component: r('DevelopersSecurity') },
       { path: 'wallet', name: 'wallet', component: r('DevelopersWallet') }
     ]
   },
@@ -73,20 +72,28 @@ const routes = [
   { path: '/intro/faq', redirect: '/about/faq' },
   { path: '/plan/:locale', redirect: '/plan' },
   { path: '/riot',
-    beforeEnter: () => { window.location.assign('https://riot.im/app/#/room/#cosmos:matrix.org') }
+    beforeEnter: () => {
+      window.location.assign('https://riot.im/app/#/room/#cosmos:matrix.org')
+    }
   },
   { path: '/scaling-eth', redirect: '/developers/scaling-eth' },
   { path: '/scalingeth', redirect: '/developers/scaling-eth' },
   { path: '/scaling', redirect: '/developers/scaling-eth' },
-  { path: '/security', redirect: '/developers/security' },
+  { path: '/security',
+    beforeEnter: () => { window.location.assign('https://tendermint.com/security') }
+  },
   { path: '/team', redirect: '/about/team' },
+  { path: '/telegram',
+    beforeEnter: () => { window.location.assign('https://t.me/cosmosproject') }
+  },
+  { path: '/scaling-eth', redirect: '/developers/scaling-eth' },
   { path: '/ui', redirect: '/voyager' },
   { path: '/validator', redirect: '/staking/validators' },
   { path: '/validators', redirect: '/staking/validators' },
   { path: '/validators/faq', redirect: '/staking/validators-faq' },
   { path: '/whitepaper', redirect: '/about/whitepaper' },
   { path: '/whitepaper/en-US', redirect: '/about/whitepaper' },
-  { path: '/wallet', redirect: '/voyager' },
+  { path: '/wallet', redirect: '/developers/wallet' },
 
   // wildcards
   { path: '/404', component: r('404') },

@@ -5,7 +5,6 @@
     router-link(:to="{ name: 'scaling-eth'}") Scaling
     router-link(:to="{ name: 'wallet'}") Wallet
     router-link(:to="{ name: 'academy'}") Academy
-    router-link(:to="{ name: 'security'}") Security
     // router-link(:to="{ name: 'hackatom'}") HackAtom
   router-view
 </template>
