@@ -6,7 +6,8 @@ const routes = [
 
   // PAGES
   { path: '/about', name: 'about', component: r('About') },
-  { path: '/assets', name: 'media-assets', component: r('Assets') },
+  { path: '/assets', name: 'assets', component: r('Assets') },
+  { path: '/community', name: 'community', component: r('Community') },
   { path: '/faq', name: 'faq', component: r('Faq') },
   { path: '/intro', name: 'intro', component: r('Intro') },
   { path: '/plan', name: 'fundraiser-plan', component: r('Plan') },

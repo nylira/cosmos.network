@@ -1,6 +1,7 @@
 <template lang="pug">
-a.card-community(:href='anchor' target='_blank')
-  .icon: i.fab(:class="'fa-' + icon")
+a.ni-card-social(:href='anchor' target='_blank')
+  .icon(v-if="iconType === 'mi'"): i.material-icons {{ icon }}
+  .icon(v-else): i.fab(:class="'fa-' + icon")
   .text
     .dt {{ dt }}
     .dd {{ dd }}
@@ -8,15 +9,15 @@ a.card-community(:href='anchor' target='_blank')
 
 <script>
 export default {
-  name: 'card-community',
-  props: ['anchor', 'dt', 'dd', 'icon']
+  name: 'ni-card-social',
+  props: ['anchor', 'dt', 'dd', 'icon', 'icon-type']
 }
 </script>
 
 <style lang="stylus">
 @require '~variables'
 
-.card-community
+.ni-card-social
   flex 1
   display flex
   margin-top 0.25rem
@@ -29,6 +30,7 @@ export default {
     justify-content center
 
     i.fab
+    i.material-icons
       color link
       font-size xl
 
@@ -45,7 +47,7 @@ export default {
     background app-fg
 
 @media screen and (min-width: 768px)
-  .card-community
+  .ni-card-social
     .icon
       flex 0 0 4rem
 
