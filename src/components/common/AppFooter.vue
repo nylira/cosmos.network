@@ -1,39 +1,39 @@
 <template lang="pug">
 .app-footer
-  section-community
+  section-social
   .footbot: .footbot__container
     .footbot__brandmark
       img.footbot__img(src="~assets/images/logos/cosmos-brandmark.png")
     .footbot-menu
       .footbot-menu__title About
       .footbot-menu__items
-        router-link(:to="{ name: 'intro'}").footbot-menu__item Intro
         router-link(:to="{ name: 'faq'}").footbot-menu__item FAQ
-        router-link(:to="{ name: 'about'}").footbot-menu__item About
+        router-link(:to="{ name: 'team'}").footbot-menu__item Team
+        router-link(:to="{ name: 'community'}").footbot-menu__item Community
         a(:href="config.FUNDRAISER_URL" target="_blank").footbot-menu__item Fundraiser
     .footbot-menu
       .footbot-menu__title Learn
       .footbot-menu__items
+        router-link(:to="{ name: 'intro'}").footbot-menu__item Introduction
         router-link(:to="{ name: 'whitepaper'}").footbot-menu__item Whitepaper
-        router-link(:to="{ name: 'staking'}").footbot-menu__item Staking
-        router-link(:to="{ name: 'media-assets'}").footbot-menu__item Media Assets
+        router-link(:to="{ name: 'validators'}").footbot-menu__item Validators
         router-link(:to="{ name: 'voyager'}").footbot-menu__item Voyager
     .footbot-menu
       .footbot-menu__title Develop
       .footbot-menu__items
-        a(href="https://github.com/cosmos" target="_blank").footbot-menu__item Cosmos GitHub
         a(href="https://github.com/cosmos/cosmos-sdk" target="_blank").footbot-menu__item Cosmos SDK
         a(href="https://github.com/cosmos/gaia" target="_blank").footbot-menu__item Cosmos Hub
         a(href="https://tendermint.com" target="_blank").footbot-menu__item Tendermint
+        router-link(:to="{ name: 'media-assets'}").footbot-menu__item Media Assets
 </template>
 
 <script>
 import {mapGetters} from 'vuex'
-import SectionCommunity from 'sections/SectionCommunity'
+import SectionSocial from 'sections/SectionSocial'
 export default {
   name: 'app-footer',
   components: {
-    SectionCommunity
+    SectionSocial
   },
   computed: {
     ...mapGetters(['links', 'config'])

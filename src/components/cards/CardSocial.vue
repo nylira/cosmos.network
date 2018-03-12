@@ -1,5 +1,5 @@
 <template lang="pug">
-a.ni-card-community(:href='anchor' target='_blank')
+a.ni-card-social(:href='anchor' target='_blank')
   .icon: i.fab(:class="'fa-' + icon")
   .text
     .dt {{ dt }}
@@ -8,7 +8,7 @@ a.ni-card-community(:href='anchor' target='_blank')
 
 <script>
 export default {
-  name: 'ni-card-community',
+  name: 'ni-card-social',
   props: ['anchor', 'dt', 'dd', 'icon']
 }
 </script>
@@ -16,7 +16,7 @@ export default {
 <style lang="stylus">
 @require '~variables'
 
-.ni-card-community
+.ni-card-social
   flex 1
   display flex
   margin-top 0.25rem
@@ -45,7 +45,7 @@ export default {
     background app-fg
 
 @media screen and (min-width: 768px)
-  .ni-card-community
+  .ni-card-social
     .icon
       flex 0 0 4rem
 
