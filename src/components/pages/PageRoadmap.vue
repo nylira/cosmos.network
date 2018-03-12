@@ -327,6 +327,7 @@ pp-height = 1rem
 
 .project-logo
   width 100%
+  height 35px // for iphone 4
   border 1px solid bc-dim
   border-bottom none
   display block
@@ -335,7 +336,18 @@ pp-height = 1rem
   display flex
   flex-flow column-reverse nowrap
 
+@media screen and (min-width: 360px)
+  .project-logo
+    height 40px
+
+@media screen and (min-width: 375px)
+  .project-logo
+    height 42px
+
 @media screen and (min-width: 414px)
+  .project-logo
+    height 47px
+
   .overall-progress
   .overall-progress__inner
   .overall-progress__outer
@@ -343,6 +355,9 @@ pp-height = 1rem
     height 2.5rem
 
 @media screen and (min-width: 768px)
+  .project-logo
+    height 86px
+
   .overall-progress
   .overall-progress__inner
   .overall-progress__outer
@@ -371,6 +386,10 @@ pp-height = 1rem
   .project-title
     font-size x
     line-height 3rem
+
+@media screen and (min-width: 1024px)
+  .project-logo
+    height 96px
 
 @media all and (-ms-high-contrast:none)
   // ie11 support
