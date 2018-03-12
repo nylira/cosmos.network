@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import SectionBlog from 'sections/sectionBlog'
+import SectionBlog from 'sections/SectionBlog'
 import SectionCover from 'sections/SectionCover'
 import SectionWhat from 'sections/SectionWhat'
 import SectionBenefits from 'sections/SectionBenefits'
