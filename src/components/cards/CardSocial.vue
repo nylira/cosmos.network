@@ -30,6 +30,7 @@ export default {
     justify-content center
 
     i.fab
+    i.material-icons
       color link
       font-size xl
 

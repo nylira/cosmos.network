@@ -3,49 +3,64 @@ page(
   title="Community"
   subtitle="These are the only official Cosmos communication channels.")
 
-  part(title='Social Media'): .community-cards
+  part(title="Social Media"): .community-cards
     card-social(
-      dt='Twitter'
-      dd='Follow @cosmos, our official account'
-      icon='twitter'
-      :anchor='links.cosmos.community.twitter')
+      dt="Twitter"
+      dd="Follow @cosmos, our official account"
+      icon="twitter"
+      :anchor="links.cosmos.community.twitter")
     card-social(
-      dt='Medium'
-      dd='Read the latest on the Cosmos Blog'
-      icon='medium'
-      :anchor='links.cosmos.blog')
-  part(title='Chat'): .community-cards
+      dt="Medium"
+      dd="Read the latest on the Cosmos Blog"
+      icon="medium"
+      :anchor="links.cosmos.blog")
+  part(title="Forums"): .community-cards
     card-social(
-      dt='Community Chat'
-      dd='Join cosmosproject on Telegram'
-      icon='telegram'
-      :anchor='links.cosmos.community.telegram')
+      dt="Official Forum"
+      dd="Discuss the Cosmos Network"
+      icon="discourse"
+      :anchor="links.cosmos.community.discourse")
     card-social(
-      dt='Developer Chat'
-      dd='Join #cosmos:matrix.org with Riot'
-      icon='rocketchat'
-      :anchor='links.cosmos.community.matrix')
+      dt="Reddit"
+      dd="Subscribe to /r/cosmosnetwork"
+      icon="reddit"
+      :anchor="links.cosmos.community.reddit")
+  part(title="Chat"): .community-cards
     card-social(
-      dt='IRC'
-      dd='Join #cosmos_network on irc.freenode.net.'
-      icon='hashtag'
-      :anchor='links.cosmos.community.irc')
-  part(title='Forums'): .community-cards
+      dt="Community Chat"
+      dd="Join cosmosproject on Telegram"
+      icon="telegram"
+      :anchor="links.cosmos.community.telegram")
     card-social(
-      dt='Reddit'
-      dd='Subscribe to /r/cosmosnetwork'
-      icon='reddit'
-      :anchor='links.cosmos.community.reddit')
+      dt="Developer Chat"
+      dd="Join #cosmos:matrix.org"
+      icon-type="mi"
+      icon="chat"
+      :anchor="links.cosmos.community.matrix")
     card-social(
-      dt='Forum'
-      dd='Discuss the Cosmos Network'
-      icon='discourse'
-      :anchor='links.cosmos.community.discourse')
+      dt="Cosmos-SDK Chat"
+      dd="Join #cosmos-sdk:matrix.org"
+      icon-type="mi"
+      icon="chat"
+      anchor="https://riot.im/app/#/room/#cosmos-sdk:matrix.org")
     card-social(
-      dt='BitcoinTalk'
-      dd='Keep up with our thread on BitcoinTalk'
-      icon='bitcoin'
-      :anchor='links.cosmos.community.bitcointalk')
+      dt="Validator Chat"
+      dd="Join #cosmos_validators:matrix.org"
+      icon-type="mi"
+      icon="chat"
+      anchor="https://riot.im/app/#/room/#cosmos_validators:matrix.org")
+    card-social(
+      dt="Tendermint Chat"
+      dd="Join #tendermint:matrix.org"
+      icon-type="mi"
+      icon="chat"
+      anchor="https://riot.im/app/#/room/#tendermint:matrix.org")
+    card-social(
+      dt="IRC"
+      dd="Join #cosmos_network on freenode"
+      icon-type="mi"
+      icon="chat"
+      :anchor="links.cosmos.community.irc")
 </template>
 
 <script>
@@ -68,3 +83,16 @@ export default {
   }
 }
 </script>
+
+<style lang="stylus">
+@require '~variables'
+
+@media screen and (min-width: 768px)
+  .community-cards
+    display flex
+    flex-flow row wrap
+
+    .ni-card-social
+      flex 0 0 50%
+</style>
+

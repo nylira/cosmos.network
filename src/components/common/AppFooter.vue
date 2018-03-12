@@ -37,8 +37,7 @@ export default {
   },
   computed: {
     isPageCommunity () {
-      console.log(this.$router.route)
-      return this.$router.route !== 'community'
+      return this.$router.currentRoute.name === 'community'
     },
     ...mapGetters(['links', 'config'])
   }
