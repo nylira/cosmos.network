@@ -1,6 +1,7 @@
 <template lang="pug">
 a.ni-card-social(:href='anchor' target='_blank')
-  .icon: i.fab(:class="'fa-' + icon")
+  .icon(v-if="iconType === 'mi'"): i.material-icons {{ icon }}
+  .icon(v-else): i.fab(:class="'fa-' + icon")
   .text
     .dt {{ dt }}
     .dd {{ dd }}
@@ -9,7 +10,7 @@ a.ni-card-social(:href='anchor' target='_blank')
 <script>
 export default {
   name: 'ni-card-social',
-  props: ['anchor', 'dt', 'dd', 'icon']
+  props: ['anchor', 'dt', 'dd', 'icon', 'icon-type']
 }
 </script>
 

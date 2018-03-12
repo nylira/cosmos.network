@@ -1,30 +1,30 @@
 <template lang="pug">
 .app-footer
-  section-social
+  section-social(v-if="!isPageCommunity")
   .footbot: .footbot__container
     .footbot__brandmark
       img.footbot__img(src="~assets/images/logos/cosmos-brandmark.png")
     .footbot-menu
       .footbot-menu__title About
       .footbot-menu__items
-        router-link(:to="{ name: 'faq'}").footbot-menu__item FAQ
-        router-link(:to="{ name: 'team'}").footbot-menu__item Team
+        router-link(:to="{ name: 'about'}").footbot-menu__item Team
         router-link(:to="{ name: 'community'}").footbot-menu__item Community
         a(:href="config.FUNDRAISER_URL" target="_blank").footbot-menu__item Fundraiser
+        router-link(:to="{ name: 'assets'}").footbot-menu__item Media Assets
     .footbot-menu
       .footbot-menu__title Learn
       .footbot-menu__items
         router-link(:to="{ name: 'intro'}").footbot-menu__item Introduction
+        router-link(:to="{ name: 'faq'}").footbot-menu__item FAQ
         router-link(:to="{ name: 'whitepaper'}").footbot-menu__item Whitepaper
         router-link(:to="{ name: 'validators'}").footbot-menu__item Validators
-        router-link(:to="{ name: 'voyager'}").footbot-menu__item Voyager
     .footbot-menu
       .footbot-menu__title Develop
       .footbot-menu__items
+        router-link(:to="{ name: 'developers'}").footbot-menu__item Developers
         a(href="https://github.com/cosmos/cosmos-sdk" target="_blank").footbot-menu__item Cosmos SDK
         a(href="https://github.com/cosmos/gaia" target="_blank").footbot-menu__item Cosmos Hub
         a(href="https://tendermint.com" target="_blank").footbot-menu__item Tendermint
-        router-link(:to="{ name: 'media-assets'}").footbot-menu__item Media Assets
 </template>
 
 <script>
@@ -36,6 +36,10 @@ export default {
     SectionSocial
   },
   computed: {
+    isPageCommunity () {
+      console.log(this.$router.route)
+      return this.$router.route !== 'community'
+    },
     ...mapGetters(['links', 'config'])
   }
 }

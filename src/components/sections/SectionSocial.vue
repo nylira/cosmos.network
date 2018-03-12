@@ -23,14 +23,9 @@
         :anchor='links.cosmos.community.matrix')
       card-social(
         dt='Forum'
-        dd='Discuss the Cosmos Network.'
+        dd='Discuss the Cosmos Network'
         icon='discourse'
         :anchor='links.cosmos.community.discourse')
-      // card-social(
-        dt='IRC'
-        dd='Join #cosmos_network on irc.freenode.net.'
-        icon='hashtag'
-        :anchor='links.cosmos.community.irc')
     part(title='Social Media'): .community-cards
       card-social(
         dt='Medium'
@@ -47,11 +42,6 @@
         dd='Subscribe to /r/cosmosnetwork'
         icon='reddit'
         :anchor='links.cosmos.community.reddit')
-      // card-social(
-        dt='BitcoinTalk'
-        dd='Keep up with our thread on BitcoinTalk'
-        icon='bitcoin'
-        :anchor='links.cosmos.community.bitcointalk')
 </template>
 
 <script>
