@@ -17,7 +17,7 @@
       .project-header
         .project-title Cosmos Hub
         a.project-link(href="https://github.com/cosmos/gaia" target="_blank")
-          img.project-logo(src="~assets/images/roadmap/cosmos-hub.png" alt="Cosmos Hub")
+          img.project-logo(src="~assets/images/roadmap/cosmos-hub.png" alt="Cosmos Hub" @load="imageLoaded")
         .project-progress
           .project-progress__outer
             .project-progress__inner(:style="hubProgressStyle")
@@ -30,7 +30,7 @@
       .project-header
         .project-title Cosmos SDK
         a.project-link(href="https://github.com/cosmos/cosmos-sdk" target="_blank")
-          img.project-logo(src="~assets/images/roadmap/cosmos-sdk.png" alt="Cosmos SDK")
+          img.project-logo(src="~assets/images/roadmap/cosmos-sdk.png" alt="Cosmos SDK" @load="imageLoaded")
         .project-progress
           .project-progress__outer
             .project-progress__inner(:style="sdkProgressStyle")
@@ -43,7 +43,7 @@
       .project-header
         .project-title Tendermint
         a.project-link(href="https://github.com/tendermint/tendermint" target="_blank")
-          img.project-logo(src="~assets/images/roadmap/tendermint-core.png" alt="Tendermint Core")
+          img.project-logo(src="~assets/images/roadmap/tendermint-core.png" alt="Tendermint Core" @load="imageLoaded")
         .project-progress
           .project-progress__outer
             .project-progress__inner(:style="tmcProgressStyle")
@@ -57,7 +57,7 @@
         .project-title Cosmos Voyager
         a.project-link(href="https://github.com/cosmos/voyager" target="_blank")
           img.project-logo(
-            src="~assets/images/roadmap/cosmos-voyager.png" alt="Cosmos Voyager")
+            src="~assets/images/roadmap/cosmos-voyager.png" alt="Cosmos Voyager" @load="imageLoaded")
         .project-progress
           .project-progress__outer
             .project-progress__inner(:style="guiProgressStyle")
@@ -103,9 +103,13 @@ export default {
     overallProgressStyle () { return { width: this.overallProgressPct + '%' } }
   },
   data: () => ({
+    imagesLoaded: 0,
     arrows: []
   }),
   methods: {
+    imageLoaded () {
+      this.imagesLoaded += 1
+    },
     calcProgress (nodes) {
       if (nodes) {
         let totalNodes = nodes.length
@@ -173,14 +177,22 @@ export default {
       nodes.sdk.map(n => n.children.map(to => connect($(n.id), $(to))))
       nodes.tmc.map(n => n.children.map(to => connect($(n.id), $(to))))
       nodes.gui.map(n => n.children.map(to => connect($(n.id), $(to))))
+    },
+    createDepArrows (nodesLoaded) {
+      if (this.imagesLoaded === 4 && Object.keys(nodesLoaded).length === 4) {
+        this.setDependencies()
+      }
     }
   },
   mounted () {
     this.$store.commit('initializeRoadmap')
   },
   watch: {
-    nodes: function (newNodes, oldNodes) {
-      this.setDependencies()
+    imagesLoaded (newImages, oldImages) {
+      this.createDepArrows(this.nodes)
+    },
+    nodes (newNodes, oldNodes) {
+      this.createDepArrows(newNodes)
     }
   }
 }
@@ -327,7 +339,6 @@ pp-height = 1rem
 
 .project-logo
   width 100%
-  height 35px // for iphone 4
   border 1px solid bc-dim
   border-bottom none
   display block
@@ -336,18 +347,7 @@ pp-height = 1rem
   display flex
   flex-flow column-reverse nowrap
 
-@media screen and (min-width: 360px)
-  .project-logo
-    height 40px
-
-@media screen and (min-width: 375px)
-  .project-logo
-    height 42px
-
 @media screen and (min-width: 414px)
-  .project-logo
-    height 47px
-
   .overall-progress
   .overall-progress__inner
   .overall-progress__outer
@@ -355,9 +355,6 @@ pp-height = 1rem
     height 2.5rem
 
 @media screen and (min-width: 768px)
-  .project-logo
-    height 86px
-
   .overall-progress
   .overall-progress__inner
   .overall-progress__outer
@@ -386,10 +383,6 @@ pp-height = 1rem
   .project-title
     font-size x
     line-height 3rem
-
-@media screen and (min-width: 1024px)
-  .project-logo
-    height 96px
 
 @media all and (-ms-high-contrast:none)
   // ie11 support
