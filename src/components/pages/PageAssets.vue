@@ -6,11 +6,11 @@ page(title="Media Assets" subtitle="Cosmos branding, logo, and media assets.")
     p All current Cosmos logos are under Creative Commons attribution 3.0.
 
     h3 Visual Identity
-    p Please read and follow the Cosmos Visual Identity Guide. (741 KB)
+    p Please read and follow the Cosmos Visual Identity Guide. (PDF)
     btn(type="anchor" :href="links.cosmos.assets.visualIdentity" value="Download Guide" size="lg" icon="description")
 
     h3 Logo Assets
-    p Download the Cosmos Logo Assets to get access to our logo in vector, alpha, and high resolution formats. (3.5 MB)
+    p Download the Cosmos Logo Assets to get access to our logo in vector, alpha, and high resolution formats. (ZIP)
     btn(type="anchor" :href="links.cosmos.assets.logoAssets" value="Download Assets" size="lg" icon="image")
 </template>
 
