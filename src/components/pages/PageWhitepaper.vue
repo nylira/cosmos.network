@@ -32,10 +32,24 @@ export default {
     TocPage
   },
   computed: { ...mapGetters(['whitepaperTocVisible']) },
-  mounted () {
-    if (document.documentElement.clientWidth >= 1024) {
-      this.$store.commit('setTocVisible', { id: 'whitepaper', visible: true })
+  methods: {
+    toggleToc () {
+      let width = document.documentElement.clientWidth
+      console.log('resizing!', width)
+      if (document.documentElement.clientWidth >= 1024) {
+        console.log('desktop mode!')
+        this.$store.commit('setTocVisible', { id: 'whitepaper', visible: true })
+      } else {
+        this.$store.commit('setTocVisible', { id: 'whitepaper', visible: false })
+        console.log('mobile mode!')
+      }
     }
+  },
+  mounted () {
+    window.addEventListener('resize', this.toggleToc)
+  },
+  beforeDestroy () {
+    window.removeEventListener('resize', this.toggleToc)
   }
 }
 </script>
