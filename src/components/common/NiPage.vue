@@ -27,6 +27,6 @@ export default {
 @require '~variables'
 
 .ni-page
-  max-width 50rem
+  max-width 64rem
   margin 0 auto
 </style>

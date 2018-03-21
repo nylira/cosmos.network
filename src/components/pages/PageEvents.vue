@@ -1,0 +1,42 @@
+<template lang="pug">
+page(title="Events")
+  .card-event
+    part(title="Upcoming Events" v-if="upcomingEvents.length > 0"): .ni-events
+    card-event(v-for="e in upcomingEvents" :event="e" :key="e.id")
+  part(title="Past Events" v-if="pastEvents.length > 0"): .ni-events
+    card-event(v-for="e in pastEvents" :event="e" :key="e.id" status="ended")
+</template>
+
+<script>
+import moment from 'moment'
+import { orderBy } from 'lodash'
+import { mapGetters } from 'vuex'
+import CardEvent from 'cards/NiCardEvent'
+import Part from 'common/NiPart'
+import Page from 'common/NiPage'
+import TextContainer from 'common/NiTextContainer'
+export default {
+  name: 'page-events',
+  metaInfo: { title: 'Events' },
+  components: {
+    CardEvent,
+    Page,
+    Part,
+    TextContainer
+  },
+  computed: {
+    upcomingEvents () {
+      // fuzz search to current and future events within three days of today
+      let events = this.events.filter(
+        e => moment(e.dates.start).add(3, 'days') >= moment())
+      return orderBy(events, [function (e) { return moment(e.dates.start) }], 'asc')
+    },
+    pastEvents () {
+      let events = this.events.filter(
+        e => moment(e.dates.start) < moment())
+      return orderBy(events, [function (e) { return moment(e.dates.start) }], 'desc')
+    },
+    ...mapGetters(['events'])
+  }
+}
+</script>

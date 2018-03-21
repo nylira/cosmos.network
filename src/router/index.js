@@ -8,6 +8,7 @@ const routes = [
   { path: '/about', name: 'about', component: r('About') },
   { path: '/assets', name: 'assets', component: r('Assets') },
   { path: '/community', name: 'community', component: r('Community') },
+  { path: '/events', name: 'events', component: r('Events') },
   { path: '/faq', name: 'faq', component: r('Faq') },
   { path: '/intro', name: 'intro', component: r('Intro') },
   { path: '/plan', name: 'fundraiser-plan', component: r('Plan') },
