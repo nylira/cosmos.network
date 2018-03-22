@@ -36,6 +36,7 @@
         v-else-if="dateStart !== 'TBD'"
         type="anchor"
         :href="addToCalendarGoogle"
+        target="_blank"
         value="Add to calendar")
 </template>
 
@@ -77,16 +78,16 @@ export default {
     addToCalendarGoogle () {
       let eventTitle = this.event.title
       let eventLoc = this.event.title
-      let eventDesc = `For details, go to: ${this.event.href}`
+      let eventDesc = `For event details, visit: ${this.event.href}. This is an event sponsored by Tendermint (https://tendermint.com) and Cosmos (https://cosmos.network)`
+      let dateFormat = 'YMMDDTHHmmss'
+      let eventStart = moment(this.event.dates.start).format(dateFormat) + 'Z'
+      let eventEnd = moment(this.event.dates.end).format(dateFormat) + 'Z'
       let eventDates = ''
-      let eventStart = moment(this.event.dates.start).format('Ymd\\THi00\\Z')
-      let eventEnd = moment(this.event.dates.end).format('Ymd\\THi00\\Z')
-      if (this.eventEnd) {
+      if (eventEnd) {
         eventDates = eventStart + '/' + eventEnd
       } else {
         eventDates = eventStart
       }
-      console.log('eventDates', eventDates)
       return `https://www.google.com/calendar/render?action=TEMPLATE&text=${eventTitle}&dates=${eventDates}&details=${eventDesc}&location=${eventLoc}&sf=true&output=xml`
     }
   },
