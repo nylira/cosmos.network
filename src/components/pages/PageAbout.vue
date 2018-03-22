@@ -32,12 +32,12 @@ export default {
     Part
   },
   computed: {
-    ...mapGetters(['allPeople'])
+    ...mapGetters(['people'])
   },
   methods: {
     ppl (tag) {
-      if (this.allPeople) {
-        return this.allPeople.filter(p => p.groups[tag])
+      if (this.people) {
+        return this.people.filter(p => p.groups[tag])
       } else {
         return []
       }

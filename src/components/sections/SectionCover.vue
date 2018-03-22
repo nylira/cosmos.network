@@ -31,7 +31,7 @@ mixin actions(size)
 .section-cover: .section-cover__container
   .section-cover__actions.desktop: +actions("lg")
   .section-cover__actions.mobile: +actions
-  .section-cover__scroll(v-scroll-to="'#section-what'")
+  .section-cover__scroll(v-scroll-to="'#section-events'")
     i.material-icons arrow_downward
 </template>
 

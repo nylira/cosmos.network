@@ -20,9 +20,6 @@ export default {
 
 .ni-text-container
   padding 1rem
-  max-width 50rem
-  margin-left auto
-  margin-right auto
   df()
 
 .ni-text
@@ -198,6 +195,9 @@ export default {
       margin-top -1.5em
       &:last-child
         margin-bottom 1.5em
+
+  h3, h4, h5, h6, p, li, code, blockquote
+    max-width 40rem
 
 @media screen and (min-width: 768px)
   .ni-text

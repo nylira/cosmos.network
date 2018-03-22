@@ -1,6 +1,7 @@
 <template lang="pug">
 .page-index
   section-cover
+  section-events
   section-what
   section-benefits
   section-blog
@@ -9,6 +10,7 @@
 <script>
 import SectionBlog from 'sections/SectionBlog'
 import SectionCover from 'sections/SectionCover'
+import SectionEvents from 'sections/SectionEvents'
 import SectionWhat from 'sections/SectionWhat'
 import SectionBenefits from 'sections/SectionBenefits'
 export default {
@@ -17,6 +19,7 @@ export default {
   components: {
     SectionBlog,
     SectionCover,
+    SectionEvents,
     SectionWhat,
     SectionBenefits
   }

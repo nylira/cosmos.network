@@ -1,5 +1,5 @@
 <template lang="pug">
-page(
+page.page-community(
   title="Community"
   subtitle="These are the only official Cosmos communication channels.")
 
@@ -88,7 +88,7 @@ export default {
 @require '~variables'
 
 @media screen and (min-width: 768px)
-  .community-cards
+  .page-community .community-cards
     display flex
     flex-flow row wrap
 
