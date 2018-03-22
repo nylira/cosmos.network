@@ -26,10 +26,14 @@ export default {
   },
   computed: {
     upcomingEvents () {
+      let tbdEvents = this.events.filter(e => e.dates.start === undefined)
+      let datedEvents = this.events.filter(e => e.dates.start !== undefined)
       // fuzz search to current and future events within three days of today
-      let events = this.events.filter(
+      let events = datedEvents.filter(
         e => moment(e.dates.start).add(3, 'days') >= moment())
-      return orderBy(events, [function (e) { return moment(e.dates.start) }], 'asc')
+      events = orderBy(events, [function (e) { return moment(e.dates.start) }], 'asc')
+      tbdEvents.map(e => events.push(e))
+      return events
     },
     pastEvents () {
       let events = this.events.filter(

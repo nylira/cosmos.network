@@ -8,9 +8,9 @@
       .footbot-menu__title About
       .footbot-menu__items
         router-link(:to="{ name: 'about'}").footbot-menu__item Team
-        router-link(:to="{ name: 'community'}").footbot-menu__item Community
-        a(:href="config.FUNDRAISER_URL" target="_blank").footbot-menu__item Fundraiser
+        router-link(:to="{ name: 'events'}").footbot-menu__item Events
         router-link(:to="{ name: 'assets'}").footbot-menu__item Media Assets
+        a(:href="config.FUNDRAISER_URL" target="_blank").footbot-menu__item Fundraiser
     .footbot-menu
       .footbot-menu__title Learn
       .footbot-menu__items
@@ -22,8 +22,8 @@
       .footbot-menu__title Develop
       .footbot-menu__items
         router-link(:to="{ name: 'developers'}").footbot-menu__item Developers
+        router-link(:to="{ name: 'community'}").footbot-menu__item Community
         a(href="https://github.com/cosmos/cosmos-sdk" target="_blank").footbot-menu__item Cosmos SDK
-        a(href="https://github.com/cosmos/gaia" target="_blank").footbot-menu__item Cosmos Hub
         a(href="https://tendermint.com" target="_blank").footbot-menu__item Tendermint
 </template>
 
