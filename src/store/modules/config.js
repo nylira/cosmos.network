@@ -6,6 +6,7 @@ function startDatetime () {
 }
 
 const state = {
+  CONTACT_EVENTS_URL: 'https://goo.gl/forms/DI7K9znY4DVrYSsk2',
   ENDS_AFTER: 14,
   FUNDRAISER_URL: 'https://fundraiser.cosmos.network',
   SELF_URL: 'https://cosmos.network/',

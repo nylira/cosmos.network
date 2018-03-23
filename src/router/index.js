@@ -1,4 +1,5 @@
 import VueRouter from 'vue-router'
+import config from '../store/modules/config.js'
 function r (page) { return require('../components/pages/Page' + page) }
 
 const routes = [
@@ -61,7 +62,7 @@ const routes = [
   },
   { path: '/contact-events',
     beforeEnter: () => {
-      window.location.assign('https://goo.gl/forms/DI7K9znY4DVrYSsk2')
+      window.location.assign(config.state.CONTACT_EVENTS_URL)
     }
   },
   { path: '/download', redirect: '/voyager' },

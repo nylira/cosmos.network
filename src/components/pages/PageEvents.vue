@@ -1,7 +1,7 @@
 <template lang="pug">
 page(title="Events")
   div(slot="menu")
-    btn(icon="event" value="Contact Cosmos Events" type="anchor" href="https://goo.gl/forms/DI7K9znY4DVrYSsk2" target="_blank" color="primary")
+    btn(icon="event" value="Contact Cosmos Events" type="anchor" :href="config.CONTACT_EVENTS_URL" target="_blank" color="primary")
   .card-event
     part(title="Upcoming Events" v-if="upcomingEvents.length > 0"): .ni-events
     card-event(v-for="e in upcomingEvents" :event="e" :key="e.id")
@@ -44,7 +44,7 @@ export default {
         e => moment(e.dates.start).add(3, 'days') < moment())
       return orderBy(events, [function (e) { return moment(e.dates.start) }], 'desc')
     },
-    ...mapGetters(['events'])
+    ...mapGetters(['events', 'config'])
   }
 }
 </script>
