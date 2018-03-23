@@ -37,7 +37,7 @@ export default {
     },
     pastEvents () {
       let events = this.events.filter(
-        e => moment(e.dates.start) < moment())
+        e => moment(e.dates.start).add(3, 'days') < moment())
       return orderBy(events, [function (e) { return moment(e.dates.start) }], 'desc')
     },
     ...mapGetters(['events'])

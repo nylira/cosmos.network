@@ -11,7 +11,7 @@
             .cosmos-panel__title Interoperable
             .cosmos-panel__body The Cosmos Network is built to allow many independent blockchains — public and private — to communicate and exchange value with one another.
             .cosmos-panel__action
-              router-link(:to="{ name: 'about'}") Interblockchain Comms &rsaquo;
+              router-link(:to="{ name: 'intro'}") Interblockchain Comms &rsaquo;
 
         .cosmos-panel
           .cosmos-panel__image
