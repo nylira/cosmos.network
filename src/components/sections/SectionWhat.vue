@@ -14,12 +14,12 @@
         .cosmos-diagram__label Zones are sovereign blockchains that exchange value through Hubs. They can be private or public.
       .cosmos-diagram: .cosmos-diagram__container
         .cosmos-diagram__image: img.cosmos-diagram__img(src="~assets/images/diagrams/diagram-validators.png")
-        .cosmos-diagram__label #[router-link(to="{ name: 'validators' }") Validators] are responsible for committing new blocks and ensuring that consensus is reached.
+        .cosmos-diagram__label #[router-link(:to="{ name: 'validators' }") Validators] are responsible for committing new blocks and ensuring that consensus is reached.
       .cosmos-diagram: .cosmos-diagram__container
         .cosmos-diagram__image: img.cosmos-diagram__img(src="~assets/images/diagrams/diagram-atoms.png")
-        .cosmos-diagram__label #[router-link(to="{ name: 'faq' }") Atoms] are a license for holders to stake and vote on the Cosmos Hub.
+        .cosmos-diagram__label #[router-link(:to="{ name: 'faq' }") Atoms] are a license for holders to stake and vote on the Cosmos Hub.
     .section-home__action
-      router-link(:to="{ name: 'about'}") Introduction to Cosmos &rsaquo;
+      router-link(:to="{ name: 'intro'}") Introduction to Cosmos &rsaquo;
 </template>
 
 <script>
