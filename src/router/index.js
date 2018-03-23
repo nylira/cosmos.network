@@ -59,6 +59,11 @@ const routes = [
   { path: '/blog',
     beforeEnter: () => { window.location.assign('https://blog.cosmos.network') }
   },
+  { path: '/contact-events',
+    beforeEnter: () => {
+      window.location.assign('https://goo.gl/forms/DI7K9znY4DVrYSsk2')
+    }
+  },
   { path: '/download', redirect: '/voyager' },
   { path: '/downloads', redirect: '/voyager' },
   { path: '/dev', redirect: '/developers' },
