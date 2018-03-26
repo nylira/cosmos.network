@@ -46,10 +46,7 @@ export default {
 
 .ni-page-header-container
   display flex
-
-  // move it to the left
-  .ni-votes
-    margin-left -1rem
+  flex-flow column
 
 .ni-page-header-title
   display flex
@@ -91,9 +88,11 @@ export default {
   .ni-page-header
     border-bottom 1px solid bc
 
-  .ni-page-header-menu
   .ni-page-header-backdrop
     display none
+
+  .ni-page-header-menu
+    margin-top 1rem
 
 @media screen and (min-width: 1024px)
   .ni-page-header-container

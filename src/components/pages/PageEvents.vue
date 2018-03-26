@@ -1,5 +1,7 @@
 <template lang="pug">
 page(title="Events")
+  div(slot="menu")
+    btn(icon="event" value="Contact Cosmos Events" type="anchor" :href="config.CONTACT_EVENTS_URL" target="_blank" color="primary")
   .card-event
     part(title="Upcoming Events" v-if="upcomingEvents.length > 0"): .ni-events
     card-event(v-for="e in upcomingEvents" :event="e" :key="e.id")
@@ -11,6 +13,7 @@ page(title="Events")
 import moment from 'moment'
 import { orderBy } from 'lodash'
 import { mapGetters } from 'vuex'
+import Btn from '@nylira/vue-button'
 import CardEvent from 'cards/NiCardEvent'
 import Part from 'common/NiPart'
 import Page from 'common/NiPage'
@@ -19,6 +22,7 @@ export default {
   name: 'page-events',
   metaInfo: { title: 'Events' },
   components: {
+    Btn,
     CardEvent,
     Page,
     Part,
@@ -40,7 +44,7 @@ export default {
         e => moment(e.dates.start).add(3, 'days') < moment())
       return orderBy(events, [function (e) { return moment(e.dates.start) }], 'desc')
     },
-    ...mapGetters(['events'])
+    ...mapGetters(['events', 'config'])
   }
 }
 </script>

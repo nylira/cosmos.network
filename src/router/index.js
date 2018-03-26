@@ -1,4 +1,5 @@
 import VueRouter from 'vue-router'
+import config from '../store/modules/config.js'
 function r (page) { return require('../components/pages/Page' + page) }
 
 const routes = [
@@ -58,6 +59,11 @@ const routes = [
   { path: '/blog/:entry', redirect: '/blog' },
   { path: '/blog',
     beforeEnter: () => { window.location.assign('https://blog.cosmos.network') }
+  },
+  { path: '/contact-events',
+    beforeEnter: () => {
+      window.location.assign(config.state.CONTACT_EVENTS_URL)
+    }
   },
   { path: '/download', redirect: '/voyager' },
   { path: '/downloads', redirect: '/voyager' },

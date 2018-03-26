@@ -2,6 +2,8 @@
 .page
   page-menu
   page(title="About" subtitle="Cosmos is supported by the Interchain Foundation (ICF). The Tendermint team has been contracted by the ICF for development.")
+    div(slot="menu")
+      btn(icon="person_add" value="Join our team!" type="anchor" href="https://tendermint.com/careers" target="_blank" color="primary")
 
     part(title='Interchain Foundation')
       cards.people
