@@ -20,7 +20,7 @@ page(title="Developers" subtitle="Learn about and contribute to the code that po
 
   ul
     li: a(href="https://github.com/cosmos/cosmos-sdk" target="_blank") Cosmos SDK on GitHub
-    li: a(href="http://cosmos-sdk.readthedocs.io/en/latest/" target="_blank") Cosmos SDK Documentation
+    li: a(href="https://cosmos-sdk.readthedocs.io/en/develop/" target="_blank") Cosmos SDK Documentation
 
   h3 Application-Blockchain Interface (ABCI)
   p The Application-Blockchain Interface (ABCI) allows you to deploy the business logic of your blockchain application in any language. It handles the connection with the underlying Tendermint engine, which is responsible for the networking and consensus parts of the software. With the ABCI, you can deploy any type of blockchain application - public or private - in no time.
