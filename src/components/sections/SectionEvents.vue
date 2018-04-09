@@ -5,30 +5,38 @@ part#section-events.ni-section-events(title="Upcoming Events")
 </template>
 
 <script>
-import moment from 'moment'
-import { orderBy } from 'lodash'
-import { mapGetters } from 'vuex'
-import CardEventSmall from 'cards/NiCardEventSmall'
-import Part from 'common/NiPart'
+import moment from 'moment';
+import {orderBy} from 'lodash';
+import {mapGetters} from 'vuex';
+import CardEventSmall from 'cards/NiCardEventSmall';
+import Part from 'common/NiPart';
 export default {
-  name: 'page-events',
-  metaInfo: { title: 'Events' },
+  name: 'section-events',
   components: {
     CardEventSmall,
-    Part
+    Part,
   },
   computed: {
-    upcomingEvents () {
-      let events = this.events.filter(e => e.dates.start !== undefined)
+    upcomingEvents() {
+      let events = this.events.filter(e => e.dates.start !== undefined);
       // fuzz search to current and future events within three days of today
       events = events.filter(
-        e => moment(e.dates.start).add(3, 'days') >= moment())
-      events = orderBy(events, [function (e) { return moment(e.dates.start) }], 'asc')
-      return events.slice(0, 4)
+        e => moment(e.dates.start).add(3, 'days') >= moment(),
+      );
+      events = orderBy(
+        events,
+        [
+          function(e) {
+            return moment(e.dates.start);
+          },
+        ],
+        'asc',
+      );
+      return events.slice(0, 4);
     },
-    ...mapGetters(['events'])
-  }
-}
+    ...mapGetters(['events']),
+  },
+};
 </script>
 
 <style lang="stylus">
@@ -61,4 +69,3 @@ export default {
       .ni-event-sm__container
         flex 0 0 25%
 </style>
-
