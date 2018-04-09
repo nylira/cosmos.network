@@ -17,7 +17,7 @@ export default {
     Part
   },
   computed: {
-    upcomingEvents() {
+    upcomingEvents () {
       let events = this.events.filter(e => e.dates.start !== undefined)
       // fuzz search to current and future events within three days of today
       events = events.filter(
@@ -26,9 +26,9 @@ export default {
       events = orderBy(
         events,
         [
-          function(e) {
-            return moment(e.dates.start);
-          },
+          function (e) {
+            return moment(e.dates.start)
+          }
         ],
         'asc'
       )
