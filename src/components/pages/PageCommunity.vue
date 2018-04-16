@@ -64,14 +64,14 @@ page.page-community(
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-import CardSocial from 'cards/CardSocial'
-import Page from 'common/NiPage'
-import Part from 'common/NiPart'
-import TextContainer from 'common/NiTextContainer'
+import { mapGetters } from "vuex"
+import CardSocial from "@/components/cards/CardSocial"
+import Page from "@/components/common/NiPage"
+import Part from "@/components/common/NiPart"
+import TextContainer from "@/components/common/NiTextContainer"
 export default {
-  name: 'page-community',
-  metaInfo: { title: 'Community' },
+  name: "page-community",
+  metaInfo: { title: "Community" },
   components: {
     CardSocial,
     Part,
@@ -79,7 +79,7 @@ export default {
     TextContainer
   },
   computed: {
-    ...mapGetters(['links'])
+    ...mapGetters(["links"])
   }
 }
 </script>
@@ -95,4 +95,3 @@ export default {
     .ni-card-social
       flex 0 0 50%
 </style>
-

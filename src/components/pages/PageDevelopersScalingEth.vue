@@ -5,16 +5,16 @@ page(title="Scaling Ethereum" subtitle="Held back by Ethereum performance? Here 
 </template>
 
 <script>
-import {mapGetters} from 'vuex'
-import Page from 'common/NiPage'
-import TextContainer from 'common/NiTextContainer.vue'
+import { mapGetters } from "vuex"
+import Page from "@/components/common/NiPage"
+import TextContainer from "@/components/common/NiTextContainer.vue"
 export default {
-  name: 'page-scaling-eth',
-  metaInfo: { title: 'Scaling Ethereum' },
+  name: "page-scaling-eth",
+  metaInfo: { title: "Scaling Ethereum" },
   components: {
     Page,
     TextContainer
   },
-  computed: { ...mapGetters(['links']) }
+  computed: { ...mapGetters(["links"]) }
 }
 </script>

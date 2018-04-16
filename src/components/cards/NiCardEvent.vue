@@ -41,50 +41,52 @@
 </template>
 
 <script>
-import moment from 'moment'
-import { image } from 'scripts/cdn'
-import Btn from '@nylira/vue-button'
+import moment from "moment"
+import { image } from "@/scripts/cdn"
+import Btn from "@nylira/vue-button"
 export default {
-  name: 'ni-event-container',
+  name: "ni-event-container",
   components: {
     Btn
   },
   computed: {
-    location () {
+    location() {
       if (this.event.location) {
         return this.event.location
       } else {
-        return 'TBD'
+        return "TBD"
       }
     },
-    dateStart () {
+    dateStart() {
       let dateStart = this.event.dates.start
       if (dateStart) {
-        if (this.status === 'ended') {
-          return moment(dateStart).format('YYYY MMMM D')
+        if (this.status === "ended") {
+          return moment(dateStart).format("YYYY MMMM D")
         } else {
-          return moment(dateStart).format('MMMM D')
+          return moment(dateStart).format("MMMM D")
         }
       } else {
-        return 'TBD'
+        return "TBD"
       }
     },
-    dateEnd () {
+    dateEnd() {
       let dateEnd = this.event.dates.end
       if (dateEnd) {
-        return moment(dateEnd).format('D')
+        return moment(dateEnd).format("D")
       }
     },
-    addToCalendarGoogle () {
+    addToCalendarGoogle() {
       let eventTitle = this.event.title
       let eventLoc = this.event.title
-      let eventDesc = `For event details, visit: ${this.event.href}. This is an event sponsored by Tendermint (https://tendermint.com) and Cosmos (https://cosmos.network)`
-      let dateFormat = 'YMMDDTHHmmss'
-      let eventStart = moment(this.event.dates.start).format(dateFormat) + 'Z'
-      let eventEnd = moment(this.event.dates.end).format(dateFormat) + 'Z'
-      let eventDates = ''
+      let eventDesc = `For event details, visit: ${
+        this.event.href
+      }. This is an event sponsored by Tendermint (https://tendermint.com) and Cosmos (https://cosmos.network)`
+      let dateFormat = "YMMDDTHHmmss"
+      let eventStart = moment(this.event.dates.start).format(dateFormat) + "Z"
+      let eventEnd = moment(this.event.dates.end).format(dateFormat) + "Z"
+      let eventDates = ""
       if (eventEnd) {
-        eventDates = eventStart + '/' + eventEnd
+        eventDates = eventStart + "/" + eventEnd
       } else {
         eventDates = eventStart
       }
@@ -92,7 +94,7 @@ export default {
     }
   },
   data: () => ({ image: image }),
-  props: ['event', 'status']
+  props: ["event", "status"]
 }
 </script>
 

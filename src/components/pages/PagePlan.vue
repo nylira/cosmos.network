@@ -7,11 +7,11 @@ page(
 </template>
 
 <script>
-import TextContainer from 'common/NiTextContainer'
-import Page from 'common/NiPage'
+import TextContainer from "@/components/common/NiTextContainer"
+import Page from "@/components/common/NiPage"
 export default {
-  name: 'page-plan',
-  metaInfo: { title: 'Fundraiser Plan' },
+  name: "page-plan",
+  metaInfo: { title: "Fundraiser Plan" },
   components: {
     Page,
     TextContainer

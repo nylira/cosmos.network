@@ -7,16 +7,16 @@ page(title="Error 404" subtitle="Page Not Found")
 </template>
 
 <script>
-import {mapGetters} from 'vuex'
-import Page from 'common/NiPage'
-import TextContainer from 'common/NiTextContainer'
+import { mapGetters } from "vuex"
+import Page from "@/components/common/NiPage"
+import TextContainer from "@/components/common/NiTextContainer"
 export default {
-  name: 'page-intro',
+  name: "page-404",
   components: {
     Page,
     TextContainer
   },
-  computed: { ...mapGetters(['links']) },
-  metaInfo: { title: 'Error 404' }
+  computed: { ...mapGetters(["links"]) },
+  metaInfo: { title: "Error 404" }
 }
 </script>

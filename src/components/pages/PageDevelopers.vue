@@ -10,10 +10,10 @@
 </template>
 
 <script>
-import PageMenu from 'common/NiPageMenu'
+import PageMenu from "@/components/common/NiPageMenu"
 export default {
-  name: 'page-developers',
-  metaInfo: { title: 'Developers' },
+  name: "page-developers",
+  metaInfo: { title: "Developers" },
   components: {
     PageMenu
   }

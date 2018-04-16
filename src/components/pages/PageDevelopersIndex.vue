@@ -51,20 +51,20 @@ page(title="Developers" subtitle="Learn about and contribute to the code that po
 </template>
 
 <script>
-import {mapGetters} from 'vuex'
-import Btn from '@nylira/vue-button'
-import Page from 'common/NiPage'
-import Part from 'common/NiPart'
-import TextContainer from 'common/NiTextContainer'
+import { mapGetters } from "vuex"
+import Btn from "@nylira/vue-button"
+import Page from "@/components/common/NiPage"
+import Part from "@/components/common/NiPart"
+import TextContainer from "@/components/common/NiTextContainer"
 export default {
-  name: 'page-developers-index',
-  metaInfo: { title: 'Overview - Developers' },
+  name: "page-developers-index",
+  metaInfo: { title: "Overview - Developers" },
   components: {
     Btn,
     Page,
     Part,
     TextContainer
   },
-  computed: { ...mapGetters(['links']) }
+  computed: { ...mapGetters(["links"]) }
 }
 </script>

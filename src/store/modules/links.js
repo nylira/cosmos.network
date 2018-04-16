@@ -1,34 +1,35 @@
-import getJson from 'scripts/getJson'
+import getJson from "@/scripts/getJson"
 
-let url = 'https://api.github.com/repos/tendermint/aib-data/contents/json/links.json'
+let url =
+  "https://api.github.com/repos/tendermint/aib-data/contents/json/links.json"
 
 const state = {
   data: {
     tm: {
-      careers: ''
+      careers: ""
     },
     cosmos: {
       assets: {
-        visualIdentity: ''
+        visualIdentity: ""
       },
       intro: {
-        video: ''
+        video: ""
       },
       github: {
-        organization: ''
+        organization: ""
       },
       community: {
-        telegram: ''
+        telegram: ""
       },
       tm: {
-        website: ''
+        website: ""
       }
     }
   }
 }
 
 const mutations = {
-  async initializeLinks (state) {
+  async initializeLinks(state) {
     state.data = await getJson(url)
   }
 }

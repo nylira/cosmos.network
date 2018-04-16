@@ -28,11 +28,11 @@ page(title="Voyager FAQ" subtitle="Frequently asked questions and answers about 
 </template>
 
 <script>
-import Page from 'common/NiPage'
-import TextContainer from 'common/NiTextContainer.vue'
+import Page from "@/components/common/NiPage"
+import TextContainer from "@/components/common/NiTextContainer.vue"
 export default {
-  name: 'page-voyager-faq',
-  metaInfo: { title: 'Voyager FAQ' },
+  name: "page-voyager-faq",
+  metaInfo: { title: "Voyager FAQ" },
   components: {
     Page,
     TextContainer

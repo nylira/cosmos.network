@@ -15,18 +15,18 @@ page(title="Media Assets" subtitle="Cosmos branding, logo, and media assets.")
 </template>
 
 <script>
-import {mapGetters} from 'vuex'
-import Btn from '@nylira/vue-button'
-import Page from 'common/NiPage'
-import TextContainer from 'common/NiTextContainer'
+import { mapGetters } from "vuex"
+import Btn from "@nylira/vue-button"
+import Page from "@/components/common/NiPage"
+import TextContainer from "@/components/common/NiTextContainer"
 export default {
-  name: 'page-media-assets',
-  metaInfo: { title: 'Media Assets' },
+  name: "page-media-assets",
+  metaInfo: { title: "Media Assets" },
   components: {
     Btn,
     Page,
     TextContainer
   },
-  computed: { ...mapGetters(['links']) }
+  computed: { ...mapGetters(["links"]) }
 }
 </script>

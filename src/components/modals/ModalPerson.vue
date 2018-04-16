@@ -28,20 +28,20 @@
 </template>
 
 <script>
-import { portrait } from 'scripts/cdn'
-import disableScroll from 'disable-scroll'
+import { portrait } from "@/scripts/cdn"
+import disableScroll from "disable-scroll"
 export default {
-  name: 'section-people',
+  name: "section-people",
   data: () => ({
     portrait: portrait
   }),
-  mounted () {
+  mounted() {
     disableScroll.on()
   },
-  beforeDestroy () {
+  beforeDestroy() {
     disableScroll.off()
   },
-  props: ['person', 'group']
+  props: ["person", "group"]
 }
 </script>
 

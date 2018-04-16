@@ -11,17 +11,17 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-import NavContents from 'navigation/NavContents'
-import PageMenu from 'common/NiPageMenu'
-import TextEnUs from 'content/whitepaper.md'
-import TextKo from 'content/whitepaper-ko.md'
-import TextPt from 'content/whitepaper-pt.md'
-import TextZhCn from 'content/whitepaper-zh-CN.md'
-import TocPage from 'navigation/TocPage'
+import { mapGetters } from "vuex"
+import NavContents from "@/components/navigation/NavContents"
+import PageMenu from "@/components/common/NiPageMenu"
+import TextEnUs from "@/content/whitepaper.md"
+import TextKo from "@/content/whitepaper-ko.md"
+import TextPt from "@/content/whitepaper-pt.md"
+import TextZhCn from "@/content/whitepaper-zh-CN.md"
+import TocPage from "@/components/navigation/TocPage"
 export default {
-  name: 'page-about-whitepaper',
-  metaInfo: { title: 'Whitepaper - About' },
+  name: "page-about-whitepaper",
+  metaInfo: { title: "Whitepaper - About" },
   components: {
     NavContents,
     PageMenu,
@@ -31,12 +31,11 @@ export default {
     TextZhCn,
     TocPage
   },
-  computed: { ...mapGetters(['whitepaperTocVisible']) },
-  mounted () {
+  computed: { ...mapGetters(["whitepaperTocVisible"]) },
+  mounted() {
     if (document.documentElement.clientWidth >= 1024) {
-      this.$store.commit('setTocVisible', { id: 'whitepaper', visible: true })
+      this.$store.commit("setTocVisible", { id: "whitepaper", visible: true })
     }
   }
 }
 </script>
-

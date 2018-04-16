@@ -18,6 +18,7 @@ mixin actions(size)
       icon="developer_board"
       target="_blank"
       size=size
+      color="primary"
       value="Join Developer Chat")
 
     btn(
@@ -26,6 +27,7 @@ mixin actions(size)
       icon="chat"
       target="_blank"
       size=size
+      color="primary"
       value="Join Community Chat")
 
 .section-cover: .section-cover__container
@@ -36,10 +38,10 @@ mixin actions(size)
 </template>
 
 <script>
-import Btn from '@nylira/vue-button'
-import Field from '@nylira/vue-field'
+import Btn from "@nylira/vue-button"
+import Field from "@nylira/vue-field"
 export default {
-  name: 'section-cover',
+  name: "section-cover",
   components: {
     Btn,
     Field

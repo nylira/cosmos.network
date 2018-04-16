@@ -5,13 +5,13 @@
 </template>
 
 <script>
-import MdText from 'common/NiMdText'
+import MdText from "@/components/common/NiMdText"
 export default {
-  name: 'ni-text-container',
+  name: "ni-text-container",
   components: {
     MdText
   },
-  props: ['url']
+  props: ["url"]
 }
 </script>
 

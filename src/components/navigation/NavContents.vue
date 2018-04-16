@@ -19,17 +19,17 @@
 </template>
 
 <script>
-import PerfectScrollbar from 'perfect-scrollbar'
-import watchTocClicks from 'scripts/watchTocClicks.js'
-import inViewport from 'scripts/inViewport.js'
-import visibleTocActivate from 'scripts/visibleTocActivate.js'
-import percentageScrolling from 'scripts/percentageScrolling.js'
-import MenuLocale from 'navigation/MenuLocale'
-import OverlayBtns from 'buttons/OverlayBtns'
-import OverlayBtn from 'buttons/OverlayBtn'
-import { mapGetters } from 'vuex'
+import { mapGetters } from "vuex"
+import PerfectScrollbar from "perfect-scrollbar"
+import watchTocClicks from "@/scripts/watchTocClicks.js"
+import inViewport from "@/scripts/inViewport.js"
+import visibleTocActivate from "@/scripts/visibleTocActivate.js"
+import percentageScrolling from "@/scripts/percentageScrolling.js"
+import MenuLocale from "@/components/navigation/MenuLocale"
+import OverlayBtns from "@/components/buttons/OverlayBtns"
+import OverlayBtn from "@/components/buttons/OverlayBtn"
 export default {
-  name: 'nav-contents',
+  name: "nav-contents",
   components: {
     MenuLocale,
     OverlayBtns,
@@ -37,34 +37,43 @@ export default {
   },
   computed: {
     ...mapGetters([
-      'faqTocVisible',
-      'faqElementsVisible',
-      'whitepaperTocVisible',
-      'whitepaperElementsVisible'
+      "faqTocVisible",
+      "faqElementsVisible",
+      "whitepaperTocVisible",
+      "whitepaperElementsVisible"
     ]),
-    elementsVisible () {
+    elementsVisible() {
       let value
       switch (this.textId) {
-        case 'whitepaper': value = this.whitepaperElementsVisible; break
-        case 'faq': value = this.faqElementsVisible; break
+        case "whitepaper":
+          value = this.whitepaperElementsVisible
+          break
+        case "faq":
+          value = this.faqElementsVisible
+          break
       }
       return value
     },
-    tocVisible () {
+    tocVisible() {
       let value
       switch (this.textId) {
-        case 'whitepaper': value = this.whitepaperTocVisible; break
-        case 'faq': value = this.faqTocVisible; break
+        case "whitepaper":
+          value = this.whitepaperTocVisible
+          break
+        case "faq":
+          value = this.faqTocVisible
+          break
       }
       return value
     }
   },
-  data: () => ({ ps: '' }),
+  data: () => ({ ps: "" }),
   methods: {
-    downloadWhitepaper () {
-      window.location.href = 'https://github.com/tendermint/aib-data/raw/master/pdf/cosmos-whitepaper.pdf'
+    downloadWhitepaper() {
+      window.location.href =
+        "https://github.com/tendermint/aib-data/raw/master/pdf/cosmos-whitepaper.pdf"
     },
-    setTocVisOnWidth () {
+    setTocVisOnWidth() {
       let width = document.documentElement.clientWidth
       if (width >= 1024) {
         this.setTocVisible(true)
@@ -72,40 +81,42 @@ export default {
         this.setTocVisible(false)
       }
     },
-    setTocVisible (value) {
+    setTocVisible(value) {
       if (value) {
-        document.querySelector('.minimal-toc').style.display = 'block'
+        document.querySelector(".minimal-toc").style.display = "block"
         this.initToc()
       } else {
-        document.querySelector('.minimal-toc').style.display = 'none'
+        document.querySelector(".minimal-toc").style.display = "none"
         this.destroyToc()
       }
     },
-    initToc () {
-      let container = document.querySelector('.minimal-toc')
+    initToc() {
+      let container = document.querySelector(".minimal-toc")
       this.ps = new PerfectScrollbar(container)
-      this.$store.commit('setTocVisible', { id: this.textId, visible: true })
+      this.$store.commit("setTocVisible", { id: this.textId, visible: true })
       watchTocClicks(this.setTocVisible)
-      this.$store.commit('setElementsVisible', { id: this.textId,
-        els: inViewport(document.querySelectorAll('h2, h3, h4, h5')) })
+      this.$store.commit("setElementsVisible", {
+        id: this.textId,
+        els: inViewport(document.querySelectorAll("h2, h3, h4, h5"))
+      })
       percentageScrolling()
     },
-    destroyToc () {
+    destroyToc() {
       if (this.ps) {
         this.ps.destroy()
-        this.$store.commit('setTocVisible', { id: this.textId, visible: false })
+        this.$store.commit("setTocVisible", { id: this.textId, visible: false })
       }
     }
   },
-  mounted () {
+  mounted() {
     this.setTocVisOnWidth()
   },
-  props: ['text-id'],
+  props: ["text-id"],
   watch: {
-    elementsVisible () {
+    elementsVisible() {
       visibleTocActivate(this.elementsVisible)
     },
-    '$route.params.locale' () {
+    "$route.params.locale"() {
       setTimeout(() => this.setTocVisOnWidth(), 100)
     }
   }

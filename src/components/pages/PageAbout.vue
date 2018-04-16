@@ -15,16 +15,16 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-import Btn from '@nylira/vue-button'
-import CardPerson from 'cards/CardPerson'
-import Cards from 'common/NiCards'
-import Page from 'common/NiPage'
-import PageMenu from 'common/NiPageMenu'
-import Part from 'common/NiPart'
+import { mapGetters } from "vuex"
+import Btn from "@nylira/vue-button"
+import CardPerson from "@/components/cards/CardPerson"
+import Cards from "@/components/common/NiCards"
+import Page from "@/components/common/NiPage"
+import PageMenu from "@/components/common/NiPageMenu"
+import Part from "@/components/common/NiPart"
 export default {
-  name: 'page-about',
-  metaInfo: { title: 'About' },
+  name: "page-about",
+  metaInfo: { title: "About" },
   components: {
     Btn,
     Cards,
@@ -34,10 +34,10 @@ export default {
     Part
   },
   computed: {
-    ...mapGetters(['people'])
+    ...mapGetters(["people"])
   },
   methods: {
-    ppl (tag) {
+    ppl(tag) {
       if (this.people) {
         return this.people.filter(p => p.groups[tag])
       } else {

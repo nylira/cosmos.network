@@ -7,24 +7,32 @@
       .section-home__p The first blockchain in the Cosmos Network is the Cosmos Hub, whose native token is the Atom. Cosmos is a permissionless network, meaning that anybody can build a blockchain on it.
     .section-home__diagrams
       .cosmos-diagram: .cosmos-diagram__container
-        .cosmos-diagram__image: img.cosmos-diagram__img(src="~assets/images/diagrams/diagram-hub.png")
-        .cosmos-diagram__label A Hub is a blockchain that enables Zones to work together.
+        .cosmos-diagram__image: img.cosmos-diagram__img(
+          src="@/assets/images/diagrams/diagram-hub.png")
+        .cosmos-diagram__label
+          | A Hub is a blockchain that enables Zones to work together.
       .cosmos-diagram: .cosmos-diagram__container
-        .cosmos-diagram__image: img.cosmos-diagram__img(src="~assets/images/diagrams/diagram-zones.png")
-        .cosmos-diagram__label Zones are sovereign blockchains that exchange value through Hubs. They can be private or public.
+        .cosmos-diagram__image: img.cosmos-diagram__img(
+          src="@/assets/images/diagrams/diagram-zones.png")
+        .cosmos-diagram__label
+          | Zones are sovereign blockchains that exchange value through Hubs. They can be private or public.
       .cosmos-diagram: .cosmos-diagram__container
-        .cosmos-diagram__image: img.cosmos-diagram__img(src="~assets/images/diagrams/diagram-validators.png")
-        .cosmos-diagram__label #[router-link(:to="{ name: 'validators' }") Validators] are responsible for committing new blocks and ensuring that consensus is reached.
+        .cosmos-diagram__image: img.cosmos-diagram__img(
+        src="@/assets/images/diagrams/diagram-validators.png")
+        .cosmos-diagram__label
+          | #[router-link(:to="{ name: 'validators' }") Validators] are responsible for committing new blocks and ensuring that consensus is reached.
       .cosmos-diagram: .cosmos-diagram__container
-        .cosmos-diagram__image: img.cosmos-diagram__img(src="~assets/images/diagrams/diagram-atoms.png")
-        .cosmos-diagram__label #[router-link(:to="{ name: 'faq' }") Atoms] are a license for holders to stake and vote on the Cosmos Hub.
+        .cosmos-diagram__image: img.cosmos-diagram__img(
+          src="@/assets/images/diagrams/diagram-atoms.png")
+        .cosmos-diagram__label
+          | #[router-link(:to="{ name: 'faq' }") Atoms] are a license for holders to stake and vote on the Cosmos Hub.
     .section-home__action
       router-link(:to="{ name: 'intro'}") Introduction to Cosmos &rsaquo;
 </template>
 
 <script>
 export default {
-  name: 'section-what'
+  name: "section-what"
 }
 </script>
 

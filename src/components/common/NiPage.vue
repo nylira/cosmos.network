@@ -11,11 +11,11 @@
 </template>
 
 <script>
-import PageHeader from 'common/NiPageHeader'
-import PageFooter from 'common/NiPageFooter'
+import PageHeader from "@/components/common/NiPageHeader"
+import PageFooter from "@/components/common/NiPageFooter"
 export default {
-  name: 'ni-page',
-  props: ['title', 'subtitle', 'icon', 'splash'],
+  name: "ni-page",
+  props: ["title", "subtitle", "icon", "splash"],
   components: {
     PageHeader,
     PageFooter
