@@ -42,7 +42,7 @@
 
 <script>
 import moment from "moment"
-import { image } from "@/scripts/cdn"
+import { image } from "scripts/cdn"
 import Btn from "@nylira/vue-button"
 export default {
   name: "ni-event-container",

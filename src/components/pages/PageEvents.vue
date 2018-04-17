@@ -14,10 +14,10 @@ import moment from "moment"
 import { orderBy } from "lodash"
 import { mapGetters } from "vuex"
 import Btn from "@nylira/vue-button"
-import CardEvent from "@/components/cards/NiCardEvent"
-import Part from "@/components/common/NiPart"
-import Page from "@/components/common/NiPage"
-import TextContainer from "@/components/common/NiTextContainer"
+import CardEvent from "cards/NiCardEvent"
+import Part from "common/NiPart"
+import Page from "common/NiPage"
+import TextContainer from "common/NiTextContainer"
 export default {
   name: "page-events",
   metaInfo: { title: "Events" },

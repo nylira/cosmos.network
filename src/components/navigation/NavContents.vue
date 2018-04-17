@@ -21,13 +21,13 @@
 <script>
 import { mapGetters } from "vuex"
 import PerfectScrollbar from "perfect-scrollbar"
-import watchTocClicks from "@/scripts/watchTocClicks.js"
-import inViewport from "@/scripts/inViewport.js"
-import visibleTocActivate from "@/scripts/visibleTocActivate.js"
-import percentageScrolling from "@/scripts/percentageScrolling.js"
-import MenuLocale from "@/components/navigation/MenuLocale"
-import OverlayBtns from "@/components/buttons/OverlayBtns"
-import OverlayBtn from "@/components/buttons/OverlayBtn"
+import watchTocClicks from "scripts/watchTocClicks.js"
+import inViewport from "scripts/inViewport.js"
+import visibleTocActivate from "scripts/visibleTocActivate.js"
+import percentageScrolling from "scripts/percentageScrolling.js"
+import MenuLocale from "navigation/MenuLocale"
+import OverlayBtns from "buttons/OverlayBtns"
+import OverlayBtn from "buttons/OverlayBtn"
 export default {
   name: "nav-contents",
   components: {

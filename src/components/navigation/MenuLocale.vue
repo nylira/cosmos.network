@@ -11,8 +11,8 @@
 </template>
 
 <script>
-import OverlayBtn from "@/components/buttons/OverlayBtn"
-import OverlayBtns from "@/components/buttons/OverlayBtns"
+import OverlayBtn from "buttons/OverlayBtn"
+import OverlayBtns from "buttons/OverlayBtns"
 export default {
   name: "menu-locale",
   components: {

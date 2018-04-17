@@ -6,19 +6,19 @@ page(title="Media Assets" subtitle="Cosmos branding, logo, and media assets.")
     p All current Cosmos logos are under Creative Commons attribution 3.0.
 
     h3 Visual Identity
-    p Please read and follow the Cosmos Visual Identity Guide. (741 KB)
+    p Please read and follow the Cosmos Visual Identity Guide.
     btn(type="anchor" :href="links.cosmos.assets.visualIdentity" value="Download Guide" size="lg" icon="description")
 
     h3 Logo Assets
-    p Download the Cosmos Logo Assets to get access to our logo in vector, alpha, and high resolution formats. (3.5 MB)
+    p Download the Cosmos Logo Assets to get access to our logo in vector, alpha, and high resolution formats.
     btn(type="anchor" :href="links.cosmos.assets.logoAssets" value="Download Assets" size="lg" icon="image")
 </template>
 
 <script>
 import { mapGetters } from "vuex"
 import Btn from "@nylira/vue-button"
-import Page from "@/components/common/NiPage"
-import TextContainer from "@/components/common/NiTextContainer"
+import Page from "common/NiPage"
+import TextContainer from "common/NiTextContainer"
 export default {
   name: "page-media-assets",
   metaInfo: { title: "Media Assets" },

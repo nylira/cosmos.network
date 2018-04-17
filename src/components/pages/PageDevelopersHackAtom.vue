@@ -66,12 +66,12 @@ page(title="HackAtom" subtitle="Alert: HackAtom is currently on hiatus as we foc
 <script>
 import { mapGetters } from "vuex"
 import Btn from "@nylira/vue-button"
-import MenuLocale from "@/components/navigation/MenuLocale"
-import CardLocation from "@/components/cards/CardLocation"
-import ModalAgreement from "@/components/modals/ModalAgreement"
-import Page from "@/components/common/NiPage"
-import Part from "@/components/common/NiPart"
-import TextContainer from "@/components/common/NiTextContainer"
+import MenuLocale from "navigation/MenuLocale"
+import CardLocation from "cards/CardLocation"
+import ModalAgreement from "modals/ModalAgreement"
+import Page from "common/NiPage"
+import Part from "common/NiPart"
+import TextContainer from "common/NiTextContainer"
 export default {
   name: "page-hackatom",
   metaInfo: { title: "HackAtom - Developers" },

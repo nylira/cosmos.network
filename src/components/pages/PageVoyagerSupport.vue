@@ -37,8 +37,8 @@ page(title="Voyager Support" subtitle="Learn how to make a support ticket, so we
 </template>
 
 <script>
-import Page from "@/components/common/NiPage"
-import TextContainer from "@/components/common/NiTextContainer.vue"
+import Page from "common/NiPage"
+import TextContainer from "common/NiTextContainer.vue"
 export default {
   name: "page-voyager-support",
   metaInfo: { title: "Voyager Support" },

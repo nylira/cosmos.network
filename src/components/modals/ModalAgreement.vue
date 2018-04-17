@@ -11,8 +11,8 @@ modal.modal-agreement(size='fullscreen')
 <script>
 import { mapGetters } from "vuex"
 import Btn from "@nylira/vue-button"
-import Modal from "@/components/modals/Modal"
-import TextContainer from "@/components/common/NiTextContainer"
+import Modal from "modals/Modal"
+import TextContainer from "common/NiTextContainer"
 export default {
   name: "modal-agreement",
   components: {

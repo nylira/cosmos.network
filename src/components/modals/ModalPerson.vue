@@ -28,8 +28,8 @@
 </template>
 
 <script>
-import { portrait } from "@/scripts/cdn"
 import disableScroll from "disable-scroll"
+import { portrait } from "scripts/cdn"
 export default {
   name: "section-people",
   data: () => ({

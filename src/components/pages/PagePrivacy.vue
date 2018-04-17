@@ -7,8 +7,8 @@ page(
 </template>
 
 <script>
-import TextContainer from "@/components/common/NiTextContainer"
-import Page from "@/components/common/NiPage"
+import TextContainer from "common/NiTextContainer"
+import Page from "common/NiPage"
 export default {
   name: "page-privacy",
   metaInfo: { title: "Privacy Policy" },

@@ -3,7 +3,7 @@
   section-social(v-if="!isPageCommunity")
   .footbot: .footbot__container
     .footbot__brandmark
-      img.footbot__img(src="@/assets/images/logos/cosmos-brandmark.png")
+      img.footbot__img(src="images/logos/cosmos-brandmark.png")
     .footbot-menu
       .footbot-menu__title About
       .footbot-menu__items
@@ -29,7 +29,7 @@
 
 <script>
 import { mapGetters } from "vuex"
-import SectionSocial from "@/components/sections/SectionSocial"
+import SectionSocial from "sections/SectionSocial"
 export default {
   name: "app-footer",
   components: {

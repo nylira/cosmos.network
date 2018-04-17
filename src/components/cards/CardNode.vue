@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import ModalNode from "@/components/modals/ModalNode"
+import ModalNode from "modals/ModalNode"
 export default {
   name: "ni-card-node",
   components: {

@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import PageMenu from "@/components/common/NiPageMenu"
+import PageMenu from "common/NiPageMenu"
 export default {
   name: "page-voyager",
   metaInfo: { title: "Voyager" },

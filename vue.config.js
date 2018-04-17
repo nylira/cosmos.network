@@ -24,7 +24,7 @@ module.exports = {
     config.resolve.alias
       .set("assets", resolve("src/assets"))
       .set("images", resolve("src/assets/images"))
-      .set("content", resolve("content"))
+      .set("content", resolve("src/content"))
       .set("scripts", resolve("src/scripts"))
       .set("variables", resolve("src/styles/variables.styl"))
       .set("buttons", resolve("src/components/buttons"))

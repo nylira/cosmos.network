@@ -5,8 +5,8 @@ page(title="Wallet Development" subtitle="[Coming Soon] Learn how to develop a c
 </template>
 
 <script>
-import Page from "@/components/common/NiPage"
-import TextContainer from "@/components/common/NiTextContainer.vue"
+import Page from "common/NiPage"
+import TextContainer from "common/NiTextContainer.vue"
 export default {
   name: "page-wallet",
   metaInfo: { title: "Wallet" },

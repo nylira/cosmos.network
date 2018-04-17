@@ -7,8 +7,8 @@
 </template>
 
 <script>
-import TocPadding from "@/components/navigation/TocPadding"
-import TextContainer from "@/components/common/NiTextContainer"
+import TocPadding from "navigation/TocPadding"
+import TextContainer from "common/NiTextContainer"
 export default {
   name: "toc-page",
   components: {

@@ -8,8 +8,8 @@ page(title="Error 404" subtitle="Page Not Found")
 
 <script>
 import { mapGetters } from "vuex"
-import Page from "@/components/common/NiPage"
-import TextContainer from "@/components/common/NiTextContainer"
+import Page from "common/NiPage"
+import TextContainer from "common/NiTextContainer"
 export default {
   name: "page-404",
   components: {

@@ -1,4 +1,4 @@
-import getJson from "@/scripts/getJson"
+import getJson from "scripts/getJson"
 let url =
   "https://api.github.com/repos/tendermint/aib-data/contents/json/events.json"
 

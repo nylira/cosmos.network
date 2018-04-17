@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import MdText from "@/components/common/NiMdText"
+import MdText from "common/NiMdText"
 export default {
   name: "ni-text-container",
   components: {

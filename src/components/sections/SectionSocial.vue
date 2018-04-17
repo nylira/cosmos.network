@@ -47,10 +47,10 @@
 <script>
 import { mapGetters } from "vuex"
 import Btn from "@nylira/vue-button"
-import Cards from "@/components/common/NiCards"
-import CardSocial from "@/components/cards/CardSocial"
-import FormEmailSignup from "@/components/forms/FormEmailSignup"
-import Part from "@/components/common/NiPart"
+import Cards from "common/NiCards"
+import CardSocial from "cards/CardSocial"
+import FormEmailSignup from "forms/FormEmailSignup"
+import Part from "common/NiPart"
 export default {
   name: "app-footer",
   components: {

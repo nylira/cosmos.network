@@ -12,13 +12,13 @@
 
 <script>
 import { mapGetters } from "vuex"
-import NavContents from "@/components/navigation/NavContents"
-import PageMenu from "@/components/common/NiPageMenu"
-import TextEnUs from "@/content/whitepaper.md"
-import TextKo from "@/content/whitepaper-ko.md"
-import TextPt from "@/content/whitepaper-pt.md"
-import TextZhCn from "@/content/whitepaper-zh-CN.md"
-import TocPage from "@/components/navigation/TocPage"
+import NavContents from "navigation/NavContents"
+import PageMenu from "common/NiPageMenu"
+import TextEnUs from "content/whitepaper.md"
+import TextKo from "content/whitepaper-ko.md"
+import TextPt from "content/whitepaper-pt.md"
+import TextZhCn from "content/whitepaper-zh-CN.md"
+import TocPage from "navigation/TocPage"
 export default {
   name: "page-about-whitepaper",
   metaInfo: { title: "Whitepaper - About" },

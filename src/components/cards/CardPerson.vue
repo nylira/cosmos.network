@@ -11,8 +11,8 @@
 </template>
 
 <script>
-import { portrait } from "@/scripts/cdn"
-import ModalPerson from "@/components/modals/ModalPerson"
+import ModalPerson from "modals/ModalPerson"
+import { portrait } from "scripts/cdn"
 export default {
   name: "ni-card-person",
   components: {

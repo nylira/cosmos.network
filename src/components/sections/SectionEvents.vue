@@ -8,8 +8,8 @@ part#section-events.ni-section-events(title="Upcoming Events")
 import moment from "moment"
 import { orderBy } from "lodash"
 import { mapGetters } from "vuex"
-import CardEventSmall from "@/components/cards/NiCardEventSmall"
-import Part from "@/components/common/NiPart"
+import CardEventSmall from "cards/NiCardEventSmall"
+import Part from "common/NiPart"
 export default {
   name: "section-events",
   components: {

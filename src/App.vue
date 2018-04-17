@@ -7,8 +7,8 @@
 </template>
 
 <script>
-import AppHeader from "@/components/common/AppHeader.vue"
-import AppFooter from "@/components/common/AppFooter.vue"
+import AppHeader from "common/AppHeader.vue"
+import AppFooter from "common/AppFooter.vue"
 import Notifications from "@nylira/vue-notifications"
 import store from "@/store/index.js"
 import { mapGetters } from "vuex"

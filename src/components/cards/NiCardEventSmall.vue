@@ -20,7 +20,7 @@
 
 <script>
 import moment from "moment"
-import { image } from "@/scripts/cdn"
+import { image } from "scripts/cdn"
 export default {
   name: "ni-event-sm-container",
   computed: {

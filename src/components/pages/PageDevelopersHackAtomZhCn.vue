@@ -89,9 +89,9 @@
 import { mapGetters } from "vuex"
 import Btn from "@nylira/vue-button"
 import PageHeader from "@nylira/vue-page-header"
-import MenuLocale from "@/components/navigation/MenuLocale"
-import CardLocation from "@/components/cards/CardLocation"
-import ModalAgreement from "@/components/modals/ModalAgreement"
+import MenuLocale from "navigation/MenuLocale"
+import CardLocation from "cards/CardLocation"
+import ModalAgreement from "modals/ModalAgreement"
 export default {
   name: "page-hackatom-zh-cn",
   metaInfo: { title: "HackAtom (Chinese) - Developers" },

@@ -12,7 +12,6 @@ div(:class='cssClass'): .ni-modal-container
 </template>
 
 <script>
-// import Ps from 'perfect-scrollbar'
 export default {
   computed: {
     iconCssClass() {
@@ -37,9 +36,6 @@ export default {
     close() {
       this.$destroy()
     }
-  },
-  mounted() {
-    // Ps.initialize(document.querySelector('.ni-modal-main'))
   },
   props: ["size", "icon"]
 }

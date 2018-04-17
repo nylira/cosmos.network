@@ -115,9 +115,9 @@
 </template>
 
 <script>
-import Page from "@/components/common/NiPage"
+import Page from "common/NiPage"
 import Btn from "@nylira/vue-button"
-import TextContainer from "@/components/common/NiTextContainer.vue"
+import TextContainer from "common/NiTextContainer.vue"
 export default {
   name: "page-voyager-index",
   metaInfo: { title: "Voyager Overview" },

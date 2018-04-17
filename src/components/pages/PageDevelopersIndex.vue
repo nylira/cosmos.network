@@ -1,4 +1,4 @@
-<template lang="pug"> 
+<template lang="pug">
 page(title="Developers" subtitle="Learn about and contribute to the code that powers the Cosmos Network."): text-container
   h2 Cosmos Hub
 
@@ -53,9 +53,9 @@ page(title="Developers" subtitle="Learn about and contribute to the code that po
 <script>
 import { mapGetters } from "vuex"
 import Btn from "@nylira/vue-button"
-import Page from "@/components/common/NiPage"
-import Part from "@/components/common/NiPart"
-import TextContainer from "@/components/common/NiTextContainer"
+import Page from "common/NiPage"
+import Part from "common/NiPart"
+import TextContainer from "common/NiTextContainer"
 export default {
   name: "page-developers-index",
   metaInfo: { title: "Overview - Developers" },
