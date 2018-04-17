@@ -1,7 +1,7 @@
 <template lang="pug">
 .page
   page-menu
-    a(href="assets/cosmos-whitepaper.pdf" target="_blank") Download PDF #[i.material-icons file_download]
+    a(href="/cosmos-whitepaper.pdf" target="_blank") Download PDF #[i.material-icons file_download]
   toc-page(:toc-visible="whitepaperTocVisible")
     nav-contents(slot="nav" text-id="whitepaper")
     text-ko(v-if="$route.params.locale === 'ko'")
