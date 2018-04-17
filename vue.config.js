@@ -5,7 +5,6 @@ function resolve(dir) {
 }
 
 let markdown = require("markdown-it")({
-  // markdown-it config
   preset: "default",
   html: true,
   typographer: true,

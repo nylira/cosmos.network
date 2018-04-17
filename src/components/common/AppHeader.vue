@@ -5,7 +5,7 @@ header.app-header
       i.material-icons(v-if='!activeMenuApp') menu
       i.material-icons(v-else='') close
     router-link.header-item.header-item-link(to='/')
-      img(src='images/logos/cosmos-logo.png', alt='Cosmos Logo')
+      img(src='~images/logos/cosmos-logo.png', alt='Cosmos Logo')
     .header-item(v-if='!desktop')
     menu.menu-popup.menu-app(v-if='activeMenuApp || desktop')
       nav

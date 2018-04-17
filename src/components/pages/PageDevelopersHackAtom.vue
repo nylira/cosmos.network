@@ -139,7 +139,7 @@ export default {
       color dim
 
     &.grand i.material-icons
-      background url(../../assets/images/hackatom/atom-avatar.png) center center no-repeat
+      background url('~images/hackatom/atom-avatar.png') center center no-repeat
       background-size cover
       color transparent
       box-shadow inset bc 0 0 0 1px

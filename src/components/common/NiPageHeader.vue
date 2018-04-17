@@ -1,9 +1,9 @@
 <template lang='pug'>
 header.ni-page-header
-  .ni-page-header-backdrop: img(src="images/logos/cosmos-logo.png")
+  .ni-page-header-backdrop: img(src="~images/logos/cosmos-logo.png")
   .ni-page-header-splash
     img(v-if="splash === 'validator'"
-      src="images/logos/cosmos-validator.png")
+      src="~images/logos/cosmos-validator.png")
   .ni-page-header-container
     slot(name="votes")
     .text

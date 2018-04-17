@@ -18,7 +18,7 @@
         .project-title Cosmos Hub
         a.project-link(href="https://github.com/cosmos/gaia" target="_blank")
           img.project-logo(
-            src="images/roadmap/cosmos-hub.png"
+            src="~images/roadmap/cosmos-hub.png"
             alt="Cosmos Hub" @load="imageLoaded")
         .project-progress
           .project-progress__outer
@@ -33,7 +33,7 @@
         .project-title Cosmos SDK
         a.project-link(href="https://github.com/cosmos/cosmos-sdk" target="_blank")
           img.project-logo(
-            src="images/roadmap/cosmos-sdk.png"
+            src="~images/roadmap/cosmos-sdk.png"
             alt="Cosmos SDK" @load="imageLoaded")
         .project-progress
           .project-progress__outer
@@ -48,7 +48,7 @@
         .project-title Tendermint
         a.project-link(href="https://github.com/tendermint/tendermint" target="_blank")
           img.project-logo(
-            src="images/roadmap/tendermint-core.png"
+            src="~images/roadmap/tendermint-core.png"
             alt="Tendermint Core" @load="imageLoaded")
         .project-progress
           .project-progress__outer
@@ -63,7 +63,7 @@
         .project-title Cosmos Voyager
         a.project-link(href="https://github.com/cosmos/voyager" target="_blank")
           img.project-logo(
-            src="images/roadmap/cosmos-voyager.png"
+            src="~images/roadmap/cosmos-voyager.png"
             alt="Cosmos Voyager" @load="imageLoaded")
         .project-progress
           .project-progress__outer

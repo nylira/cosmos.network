@@ -3,7 +3,7 @@
   section-social(v-if="!isPageCommunity")
   .footbot: .footbot__container
     .footbot__brandmark
-      img.footbot__img(src="images/logos/cosmos-brandmark.png")
+      img.footbot__img(src="~images/logos/cosmos-brandmark.png")
     .footbot-menu
       .footbot-menu__title About
       .footbot-menu__items
