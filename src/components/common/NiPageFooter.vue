@@ -6,7 +6,7 @@ footer.ni-page-footer
 
 <script>
 export default {
-  name: 'ni-page-footer'
+  name: "ni-page-footer"
 }
 </script>
 

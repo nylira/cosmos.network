@@ -17,7 +17,9 @@
       .project-header
         .project-title Cosmos Hub
         a.project-link(href="https://github.com/cosmos/gaia" target="_blank")
-          img.project-logo(src="~assets/images/roadmap/cosmos-hub.png" alt="Cosmos Hub" @load="imageLoaded")
+          img.project-logo(
+            src="~images/roadmap/cosmos-hub.png"
+            alt="Cosmos Hub" @load="imageLoaded")
         .project-progress
           .project-progress__outer
             .project-progress__inner(:style="hubProgressStyle")
@@ -30,7 +32,9 @@
       .project-header
         .project-title Cosmos SDK
         a.project-link(href="https://github.com/cosmos/cosmos-sdk" target="_blank")
-          img.project-logo(src="~assets/images/roadmap/cosmos-sdk.png" alt="Cosmos SDK" @load="imageLoaded")
+          img.project-logo(
+            src="~images/roadmap/cosmos-sdk.png"
+            alt="Cosmos SDK" @load="imageLoaded")
         .project-progress
           .project-progress__outer
             .project-progress__inner(:style="sdkProgressStyle")
@@ -43,7 +47,9 @@
       .project-header
         .project-title Tendermint
         a.project-link(href="https://github.com/tendermint/tendermint" target="_blank")
-          img.project-logo(src="~assets/images/roadmap/tendermint-core.png" alt="Tendermint Core" @load="imageLoaded")
+          img.project-logo(
+            src="~images/roadmap/tendermint-core.png"
+            alt="Tendermint Core" @load="imageLoaded")
         .project-progress
           .project-progress__outer
             .project-progress__inner(:style="tmcProgressStyle")
@@ -57,7 +63,8 @@
         .project-title Cosmos Voyager
         a.project-link(href="https://github.com/cosmos/voyager" target="_blank")
           img.project-logo(
-            src="~assets/images/roadmap/cosmos-voyager.png" alt="Cosmos Voyager" @load="imageLoaded")
+            src="~images/roadmap/cosmos-voyager.png"
+            alt="Cosmos Voyager" @load="imageLoaded")
         .project-progress
           .project-progress__outer
             .project-progress__inner(:style="guiProgressStyle")
@@ -68,58 +75,76 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-import PageMenu from 'common/NiPageMenu'
-import CardNode from 'cards/CardNode'
+import { mapGetters } from "vuex"
+import PageMenu from "common/NiPageMenu"
+import CardNode from "cards/CardNode"
 export default {
-  name: 'page-roadmap',
-  metaInfo: { title: 'Roadmap' },
+  name: "page-roadmap",
+  metaInfo: { title: "Roadmap" },
   components: {
     PageMenu,
     CardNode
   },
   computed: {
-    ...mapGetters(['roadmap']),
-    nodes () {
+    ...mapGetters(["roadmap"]),
+    nodes() {
       if (this.roadmap) {
         return this.roadmap.nodes
       } else {
         return { hub: [], sdk: [], tmc: [], gui: [] }
       }
     },
-    hubProgressPct () { return this.calcProgress(this.nodes.hub) },
-    hubProgressStyle () { return { width: this.hubProgressPct + '%' } },
-    sdkProgressPct () { return this.calcProgress(this.nodes.sdk) },
-    sdkProgressStyle () { return { width: this.sdkProgressPct + '%' } },
-    tmcProgressPct () { return this.calcProgress(this.nodes.tmc) },
-    tmcProgressStyle () { return { width: this.tmcProgressPct + '%' } },
-    guiProgressPct () { return this.calcProgress(this.nodes.gui) },
-    guiProgressStyle () { return { width: this.guiProgressPct + '%' } },
-    overallProgressPct () {
+    hubProgressPct() {
+      return this.calcProgress(this.nodes.hub)
+    },
+    hubProgressStyle() {
+      return { width: this.hubProgressPct + "%" }
+    },
+    sdkProgressPct() {
+      return this.calcProgress(this.nodes.sdk)
+    },
+    sdkProgressStyle() {
+      return { width: this.sdkProgressPct + "%" }
+    },
+    tmcProgressPct() {
+      return this.calcProgress(this.nodes.tmc)
+    },
+    tmcProgressStyle() {
+      return { width: this.tmcProgressPct + "%" }
+    },
+    guiProgressPct() {
+      return this.calcProgress(this.nodes.gui)
+    },
+    guiProgressStyle() {
+      return { width: this.guiProgressPct + "%" }
+    },
+    overallProgressPct() {
       let value = this.hubProgressPct + this.sdkProgressPct
       value = value + this.tmcProgressPct + this.guiProgressPct
       return Math.round(value / 4)
     },
-    overallProgressStyle () { return { width: this.overallProgressPct + '%' } }
+    overallProgressStyle() {
+      return { width: this.overallProgressPct + "%" }
+    }
   },
   data: () => ({
     imagesLoaded: 0,
     arrows: []
   }),
   methods: {
-    imageLoaded () {
+    imageLoaded() {
       this.imagesLoaded += 1
     },
-    calcProgress (nodes) {
+    calcProgress(nodes) {
       if (nodes) {
         let totalNodes = nodes.length
-        let doneNodes = nodes.filter(n => n.date !== '').length
+        let doneNodes = nodes.filter(n => n.date !== "").length
         return Math.round(doneNodes / totalNodes * 100)
       } else {
         return 0
       }
     },
-    getOffset (el) {
+    getOffset(el) {
       let rect = el.getBoundingClientRect()
       return {
         left: rect.left + window.pageXOffset,
@@ -128,7 +153,7 @@ export default {
         height: rect.height || el.offsetHeight
       }
     },
-    connect (div1, div2) {
+    connect(div1, div2) {
       let thickness = 2
       let off1 = this.getOffset(div1)
       let off2 = this.getOffset(div2)
@@ -142,18 +167,18 @@ export default {
       let y2 = off2.top + off2.height / 2
 
       // distance
-      let length = Math.sqrt(((x2 - x1) * (x2 - x1)) + ((y2 - y1) * (y2 - y1)))
+      let length = Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1))
 
       // center
-      let cx = ((x1 + x2) / 2) - (length / 2)
-      let cy = ((y1 + y2) / 2) - (thickness / 2)
+      let cx = (x1 + x2) / 2 - length / 2
+      let cy = (y1 + y2) / 2 - thickness / 2
 
       // angle
-      let angle = Math.atan2((y1 - y2), (x1 - x2)) * (180 / Math.PI)
+      let angle = Math.atan2(y1 - y2, x1 - x2) * (180 / Math.PI)
 
       // class
-      let from = div1.id.split('-').shift()
-      let to = div2.id.split('-').shift()
+      let from = div1.id.split("-").shift()
+      let to = div2.id.split("-").shift()
       let css = `da-${from}-${to}`
 
       // setup line
@@ -166,8 +191,8 @@ export default {
       }
       this.arrows.push(arrow)
     },
-    async setDependencies () {
-      let $ = (el) => this.$el.querySelector('#' + el)
+    async setDependencies() {
+      let $ = el => this.$el.querySelector("#" + el)
       let connect = this.connect
       let nodes = this.nodes
 
@@ -178,20 +203,20 @@ export default {
       nodes.tmc.map(n => n.children.map(to => connect($(n.id), $(to))))
       nodes.gui.map(n => n.children.map(to => connect($(n.id), $(to))))
     },
-    createDepArrows (nodesLoaded) {
+    createDepArrows(nodesLoaded) {
       if (this.imagesLoaded === 4 && Object.keys(nodesLoaded).length === 4) {
         this.setDependencies()
       }
     }
   },
-  mounted () {
-    this.$store.commit('initializeRoadmap')
+  mounted() {
+    this.$store.commit("initializeRoadmap")
   },
   watch: {
-    imagesLoaded (newImages, oldImages) {
+    imagesLoaded() {
       this.createDepArrows(this.nodes)
     },
-    nodes (newNodes, oldNodes) {
+    nodes(newNodes) {
       this.createDepArrows(newNodes)
     }
   }

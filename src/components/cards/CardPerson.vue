@@ -11,10 +11,10 @@
 </template>
 
 <script>
-import { portrait } from 'scripts/cdn'
-import ModalPerson from 'modals/ModalPerson'
+import ModalPerson from "modals/ModalPerson"
+import { portrait } from "scripts/cdn"
 export default {
-  name: 'ni-card-person',
+  name: "ni-card-person",
   components: {
     ModalPerson
   },
@@ -23,11 +23,11 @@ export default {
     portrait: portrait
   }),
   methods: {
-    setPopup (state) {
+    setPopup(state) {
       this.activePopup = state
     }
   },
-  props: ['person', 'group']
+  props: ["person", "group"]
 }
 </script>
 

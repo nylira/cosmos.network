@@ -3,25 +3,25 @@
 </template>
 
 <script>
-import { Base64 } from 'js-base64'
-import MarkdownIt from 'markdown-it'
-import axios from 'axios'
+import { Base64 } from "js-base64"
+import MarkdownIt from "markdown-it"
+import axios from "axios"
 export default {
-  name: 'ni-md-text',
+  name: "ni-md-text",
   data: () => ({
-    text: '## Loading...\nLoading...'
+    text: "## Loading...\nLoading..."
   }),
   methods: {
-    markdown (text) {
+    markdown(text) {
       let md = new MarkdownIt()
       return md.render(text)
     }
   },
-  async mounted () {
+  async mounted() {
     let data = (await axios.get(this.url)).data
     this.text = Base64.decode(data.content)
   },
-  props: ['url']
+  props: ["url"]
 }
 </script>
 

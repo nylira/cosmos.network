@@ -86,15 +86,15 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-import Btn from '@nylira/vue-button'
-import MenuLocale from 'navigation/MenuLocale'
-import CardLocation from 'cards/CardLocation'
-import ModalAgreement from 'modals/ModalAgreement'
-import PageHeader from '@nylira/vue-page-header'
+import { mapGetters } from "vuex"
+import Btn from "@nylira/vue-button"
+import PageHeader from "@nylira/vue-page-header"
+import MenuLocale from "navigation/MenuLocale"
+import CardLocation from "cards/CardLocation"
+import ModalAgreement from "modals/ModalAgreement"
 export default {
-  name: 'page-hackatom-zh-cn',
-  metaInfo: { title: 'HackAtom (Chinese) - Developers' },
+  name: "page-hackatom-zh-cn",
+  metaInfo: { title: "HackAtom (Chinese) - Developers" },
   components: {
     Btn,
     MenuLocale,
@@ -103,12 +103,14 @@ export default {
     PageHeader
   },
   computed: {
-    ...mapGetters(['allPeople', 'hackatom', 'links'])
+    ...mapGetters(["allPeople", "hackatom", "links"])
   },
   methods: {
-    ppl (tag) { return this.allPeople.filter(p => p.tags.includes(tag)) },
-    setModal (value) {
-      this.$store.commit('setHackAtomModal', value)
+    ppl(tag) {
+      return this.allPeople.filter(p => p.tags.includes(tag))
+    },
+    setModal(value) {
+      this.$store.commit("setHackAtomModal", value)
     }
   }
 }

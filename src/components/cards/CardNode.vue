@@ -12,43 +12,43 @@
 </template>
 
 <script>
-import ModalNode from 'modals/ModalNode'
+import ModalNode from "modals/ModalNode"
 export default {
-  name: 'ni-card-node',
+  name: "ni-card-node",
   components: {
     ModalNode
   },
   computed: {
-    cardClass () {
-      let value = ''
+    cardClass() {
+      let value = ""
       if (this.node.date) {
-        value += 'ni-card-node--done '
+        value += "ni-card-node--done "
       }
       if (this.activePopup) {
-        value += 'ni-card-node--active '
+        value += "ni-card-node--active "
       }
       if (this.type) {
         value += `ni-card-node--${this.type}`
       }
       return value
     },
-    cardStyle () {
+    cardStyle() {
       let offset = this.node.offset
-      let height = (offset * 6) + 0.5
+      let height = offset * 6 + 0.5
       return {
-        marginBottom: height + 'rem'
+        marginBottom: height + "rem"
       }
     },
-    arrowClass () {
+    arrowClass() {
       if (this.node.continues) {
-        return 'ni-card-node__arrow--continues'
+        return "ni-card-node__arrow--continues"
       }
     },
-    arrowStyle () {
+    arrowStyle() {
       let span = this.node.span
       let height = span * 3 + (span - 1) * 3
       return {
-        height: height + 'rem'
+        height: height + "rem"
       }
     }
   },
@@ -56,11 +56,11 @@ export default {
     activePopup: false
   }),
   methods: {
-    setPopup (state) {
+    setPopup(state) {
       this.activePopup = state
     }
   },
-  props: ['node', 'type']
+  props: ["node", "type"]
 }
 </script>
 

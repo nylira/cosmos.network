@@ -9,27 +9,27 @@ modal.modal-agreement(size='fullscreen')
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-import Btn from '@nylira/vue-button'
-import Modal from 'modals/Modal'
-import TextContainer from 'common/NiTextContainer'
+import { mapGetters } from "vuex"
+import Btn from "@nylira/vue-button"
+import Modal from "modals/Modal"
+import TextContainer from "common/NiTextContainer"
 export default {
-  name: 'modal-agreement',
+  name: "modal-agreement",
   components: {
     Btn,
     Modal,
     TextContainer
   },
   computed: {
-    ...mapGetters(['links'])
+    ...mapGetters(["links"])
   },
   methods: {
-    yes () {
-      this.$store.commit('setHackAtomAgreed', true)
+    yes() {
+      this.$store.commit("setHackAtomAgreed", true)
       window.location.href = this.links.cosmos.hackathon.two
     },
-    no () {
-      this.$store.commit('setHackAtomModal', false)
+    no() {
+      this.$store.commit("setHackAtomModal", false)
     }
   }
 }

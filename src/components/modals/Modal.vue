@@ -12,36 +12,32 @@ div(:class='cssClass'): .ni-modal-container
 </template>
 
 <script>
-// import Ps from 'perfect-scrollbar'
 export default {
   computed: {
-    iconCssClass () {
-      let value = 'fa fa-'
+    iconCssClass() {
+      let value = "fa fa-"
       if (this.icon) {
         value += this.icon
-        if (this.icon === 'refresh') {
-          value += ' fa-spin'
+        if (this.icon === "refresh") {
+          value += " fa-spin"
         }
       }
       return value
     },
-    cssClass () {
-      let value = 'ni-modal'
-      if (this.size === 'fullscreen' || this.size === 'fs') {
-        value += ' ni-modal-fullscreen'
+    cssClass() {
+      let value = "ni-modal"
+      if (this.size === "fullscreen" || this.size === "fs") {
+        value += " ni-modal-fullscreen"
       }
       return value
     }
   },
   methods: {
-    close () {
+    close() {
       this.$destroy()
     }
   },
-  mounted () {
-    // Ps.initialize(document.querySelector('.ni-modal-main'))
-  },
-  props: ['size', 'icon']
+  props: ["size", "icon"]
 }
 </script>
 

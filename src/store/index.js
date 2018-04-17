@@ -1,8 +1,8 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
-import * as actions from './actions'
-import * as getters from './getters'
-import modules from './modules'
+import Vue from "vue"
+import Vuex from "vuex"
+import * as actions from "./actions"
+import * as getters from "./getters"
+import modules from "./modules"
 // import createLogger from '../../../src/plugins/logger'
 
 Vue.use(Vuex)

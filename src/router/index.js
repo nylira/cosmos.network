@@ -1,119 +1,191 @@
-import VueRouter from 'vue-router'
-import config from '../store/modules/config.js'
-function r (page) { return require('../components/pages/Page' + page) }
+import VueRouter from "vue-router"
+import config from "../store/modules/config.js"
+
+import PageIndex from "pages/PageIndex"
+import PageAbout from "pages/PageAbout"
+import PageAssets from "pages/PageAssets"
+import PageCommunity from "pages/PageCommunity"
+import PageEvents from "pages/PageEvents"
+import PageFaq from "pages/PageFaq"
+import PageIntro from "pages/PageIntro"
+import PagePlan from "pages/PagePlan"
+import PagePrivacy from "pages/PagePrivacy"
+import PageRoadmap from "pages/PageRoadmap"
+import PageWhitepaper from "pages/PageWhitepaper"
+
+import PageDevelopers from "pages/PageDevelopers"
+import PageDevelopersIndex from "pages/PageDevelopersIndex"
+import PageDevelopersHackAtom from "pages/PageDevelopersHackAtom"
+import PageDevelopersScalingEth from "pages/PageDevelopersScalingEth"
+import PageDevelopersWallet from "pages/PageDevelopersWallet"
+import PageDevelopersAcademy from "pages/PageDevelopersAcademy"
+
+import PageStaking from "pages/PageStaking"
+import PageStakingIndex from "pages/PageStakingIndex"
+import PageStakingDelegators from "pages/PageStakingDelegators"
+import PageStakingValidators from "pages/PageStakingValidators"
+import PageStakingValidatorsFaq from "pages/PageStakingValidatorsFaq"
+
+import PageVoyager from "pages/PageVoyager"
+import PageVoyagerIndex from "pages/PageVoyagerIndex"
+import PageVoyagerFaq from "pages/PageVoyagerFaq"
+import PageVoyagerSupport from "pages/PageVoyagerSupport"
+
+import Page404 from "pages/Page404"
 
 const routes = [
-  { path: '/', name: 'home', component: r('Index') },
-
   // PAGES
-  { path: '/about', name: 'about', component: r('About') },
-  { path: '/assets', name: 'assets', component: r('Assets') },
-  { path: '/community', name: 'community', component: r('Community') },
-  { path: '/events', name: 'events', component: r('Events') },
-  { path: '/faq', name: 'faq', component: r('Faq') },
-  { path: '/intro', name: 'intro', component: r('Intro') },
-  { path: '/plan', name: 'fundraiser-plan', component: r('Plan') },
-  { path: '/privacy', name: 'privacy-policy', component: r('Privacy') },
-  { path: '/roadmap', name: 'roadmap', component: r('Roadmap') },
-  { path: '/whitepaper', name: 'whitepaper', component: r('Whitepaper') },
-  { path: '/whitepaper/:locale', name: 'whitepaper-i18n', component: r('Whitepaper') },
+  { path: "/", name: "index", component: PageIndex },
+  { path: "/about", name: "about", component: PageAbout },
+  { path: "/assets", name: "assets", component: PageAssets },
+  { path: "/community", name: "community", component: PageCommunity },
+  { path: "/events", name: "events", component: PageEvents },
+  { path: "/faq", name: "faq", component: PageFaq },
+  { path: "/intro", name: "intro", component: PageIntro },
+  { path: "/plan", name: "plan", component: PagePlan },
+  { path: "/privacy", name: "privacy", component: PagePrivacy },
+  { path: "/roadmap", name: "roadmap", component: PageRoadmap },
+  { path: "/whitepaper", name: "whitepaper", component: PageWhitepaper },
+  {
+    path: "/whitepaper/:locale",
+    name: "whitepaper-i18n",
+    component: PageWhitepaper
+  },
 
   // DEVELOPERS
-  { path: '/developers',
-    component: r('Developers'),
+  {
+    path: "/developers",
+    component: PageDevelopers,
     children: [
-      { path: '/', name: 'developers', component: r('DevelopersIndex') },
-      { path: 'academy', name: 'academy', component: r('DevelopersAcademy') },
-      { path: 'hackatom', name: 'hackatom', component: r('DevelopersHackAtom') },
-      { path: 'scaling-eth', name: 'scaling-eth', component: r('DevelopersScalingEth') },
-      { path: 'wallet', name: 'wallet', component: r('DevelopersWallet') }
+      { path: "/", name: "developers", component: PageDevelopersIndex },
+      { path: "academy", name: "academy", component: PageDevelopersAcademy },
+      {
+        path: "hackatom",
+        name: "hackatom",
+        component: PageDevelopersHackAtom
+      },
+      {
+        path: "scaling-eth",
+        name: "scaling-eth",
+        component: PageDevelopersScalingEth
+      },
+      { path: "wallet", name: "wallet", component: PageDevelopersWallet }
     ]
   },
 
   // STAKING
-  { path: '/staking',
-    component: r('Staking'),
+  {
+    path: "/staking",
+    component: PageStaking,
     children: [
-      { path: '/', name: 'staking', component: r('StakingIndex') },
-      { path: 'delegators', name: 'delegators', component: r('StakingDelegators') },
-      { path: 'validators', name: 'validators', component: r('StakingValidators') },
-      { path: 'validators-faq', name: 'validators-faq', component: r('StakingValidatorsFaq') }
+      { path: "/", name: "staking", component: PageStakingIndex },
+      {
+        path: "delegators",
+        name: "delegators",
+        component: PageStakingDelegators
+      },
+      {
+        path: "validators",
+        name: "validators",
+        component: PageStakingValidators
+      },
+      {
+        path: "validators-faq",
+        name: "validators-faq",
+        component: PageStakingValidatorsFaq
+      }
     ]
   },
 
   // VOYAGER
-  { path: '/voyager',
-    component: r('Voyager'),
+  {
+    path: "/voyager",
+    component: PageVoyager,
     children: [
-      { path: '/', name: 'voyager', component: r('VoyagerIndex') },
-      { path: 'faq', name: 'voyager-faq', component: r('VoyagerFaq') },
-      { path: 'support', name: 'voyager-support', component: r('VoyagerSupport') }
+      { path: "/", name: "voyager", component: PageVoyagerIndex },
+      { path: "faq", name: "voyager-faq", component: PageVoyagerFaq },
+      {
+        path: "support",
+        name: "voyager-support",
+        component: PageVoyagerSupport
+      }
     ]
   },
 
   // redirects
-  { path: '/about/faq', redirect: '/faq' },
-  { path: '/about/team', redirect: '/about' },
-  { path: '/about/whitepaper', redirect: '/whitepaper' },
-  { path: '/academy', redirect: '/developers/academy' },
-  { path: '/blog/:entry', redirect: '/blog' },
-  { path: '/blog',
-    beforeEnter: () => { window.location.assign('https://blog.cosmos.network') }
+  { path: "/about/faq", redirect: "/faq" },
+  { path: "/about/team", redirect: "/about" },
+  { path: "/about/whitepaper", redirect: "/whitepaper" },
+  { path: "/academy", redirect: "/developers/academy" },
+  { path: "/blog/:entry", redirect: "/blog" },
+  {
+    path: "/blog",
+    beforeEnter: () => {
+      window.location.assign("https://blog.cosmos.network")
+    }
   },
-  { path: '/contact-events',
+  {
+    path: "/contact-events",
     beforeEnter: () => {
       window.location.assign(config.state.CONTACT_EVENTS_URL)
     }
   },
-  { path: '/download', redirect: '/voyager' },
-  { path: '/downloads', redirect: '/voyager' },
-  { path: '/dev', redirect: '/developers' },
-  { path: '/dev/hackatom', redirect: '/developers/hackatom' },
-  { path: '/dev/whitepaper', redirect: '/whitepaper' },
-  { path: '/developers/scaling', redirect: '/developers/scaling-eth' },
-  { path: '/hackatom', redirect: '/developers/hackatom' },
-  { path: '/intro/faq', redirect: '/faq' },
-  { path: '/introduction', redirect: '/intro' },
-  { path: '/matrix',
+  { path: "/download", redirect: "/voyager" },
+  { path: "/downloads", redirect: "/voyager" },
+  { path: "/dev", redirect: "/developers" },
+  { path: "/dev/hackatom", redirect: "/developers/hackatom" },
+  { path: "/dev/whitepaper", redirect: "/whitepaper" },
+  { path: "/developers/scaling", redirect: "/developers/scaling-eth" },
+  { path: "/hackatom", redirect: "/developers/hackatom" },
+  { path: "/intro/faq", redirect: "/faq" },
+  { path: "/introduction", redirect: "/intro" },
+  {
+    path: "/matrix",
     beforeEnter: () => {
-      window.location.assign('https://riot.im/app/#/room/#cosmos:matrix.org')
+      window.location.assign("https://riot.im/app/#/room/#cosmos:matrix.org")
     }
   },
-  { path: '/plan/:locale', redirect: '/plan' },
-  { path: '/riot',
+  { path: "/plan/:locale", redirect: "/plan" },
+  {
+    path: "/riot",
     beforeEnter: () => {
-      window.location.assign('https://riot.im/app/#/room/#cosmos:matrix.org')
+      window.location.assign("https://riot.im/app/#/room/#cosmos:matrix.org")
     }
   },
-  { path: '/scaling-eth', redirect: '/developers/scaling-eth' },
-  { path: '/scalingeth', redirect: '/developers/scaling-eth' },
-  { path: '/scaling', redirect: '/developers/scaling-eth' },
-  { path: '/security',
-    beforeEnter: () => { window.location.assign('https://tendermint.com/security') }
+  { path: "/scaling-eth", redirect: "/developers/scaling-eth" },
+  { path: "/scalingeth", redirect: "/developers/scaling-eth" },
+  { path: "/scaling", redirect: "/developers/scaling-eth" },
+  {
+    path: "/security",
+    beforeEnter: () => {
+      window.location.assign("https://tendermint.com/security")
+    }
   },
-  { path: '/team', redirect: '/about' },
-  { path: '/telegram',
-    beforeEnter: () => { window.location.assign('https://t.me/cosmosproject') }
+  { path: "/team", redirect: "/about" },
+  {
+    path: "/telegram",
+    beforeEnter: () => {
+      window.location.assign("https://t.me/cosmosproject")
+    }
   },
-  { path: '/scaling-eth', redirect: '/developers/scaling-eth' },
-  { path: '/ui', redirect: '/voyager' },
-  { path: '/validator', redirect: '/staking/validators' },
-  { path: '/validators', redirect: '/staking/validators' },
-  { path: '/validators/faq', redirect: '/staking/validators-faq' },
-  { path: '/whitepaper/en-US', redirect: '/whitepaper' },
-  { path: '/wallet', redirect: '/developers/wallet' },
+  { path: "/scaling-eth", redirect: "/developers/scaling-eth" },
+  { path: "/ui", redirect: "/voyager" },
+  { path: "/validator", redirect: "/staking/validators" },
+  { path: "/validators", redirect: "/staking/validators" },
+  { path: "/validators/faq", redirect: "/staking/validators-faq" },
+  { path: "/whitepaper/en-US", redirect: "/whitepaper" },
+  { path: "/wallet", redirect: "/developers/wallet" },
 
   // wildcards
-  { path: '/404', component: r('404') },
-  { path: '*', component: r('404') }
+  { path: "/404", component: Page404 },
+  { path: "*", component: Page404 }
 ]
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: "history",
   routes,
-  scrollBehavior (to, from, savedPosition) {
+  scrollBehavior(to, from, savedPosition) {
     if (to.hash) {
-      console.log('theres a hash')
       return {
         selector: to.hash,
         offset: { x: 0, y: 48 + 3 }

@@ -5,7 +5,7 @@ header.app-header
       i.material-icons(v-if='!activeMenuApp') menu
       i.material-icons(v-else='') close
     router-link.header-item.header-item-link(to='/')
-      img(src='~assets/images/logos/cosmos-logo.png', alt='Cosmos Logo')
+      img(src='~images/logos/cosmos-logo.png', alt='Cosmos Logo')
     .header-item(v-if='!desktop')
     menu.menu-popup.menu-app(v-if='activeMenuApp || desktop')
       nav
@@ -21,45 +21,45 @@ header.app-header
         a(:href='links.cosmos.blog' @click.native='close' target='_blank')
           span.label Blog
           i.fab.fa-medium
-        // a(:href='links.cosmos.github.organization' @click.native='close' target='_blank')
-          span.label GitHub
-          i.fab.fa-github
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-import disableScroll from 'disable-scroll'
+import { mapGetters } from "vuex"
+import disableScroll from "disable-scroll"
 export default {
-  name: 'app-header',
+  name: "app-header",
   computed: {
-    ...mapGetters(['config', 'links'])
+    ...mapGetters(["config", "links"])
   },
   data: () => ({
     activeMenuApp: false,
     desktop: false
   }),
   methods: {
-    close () {
+    close() {
       this.activeMenuApp = false
       this.activeMenuFundraiser = false
       disableScroll.off()
     },
-    goto (route) {
+    goto(route) {
       this.close()
       this.$router.push(route)
     },
-    toggleMenuApp () {
+    toggleMenuApp() {
       this.activeMenuApp = !this.activeMenuApp
       if (this.activeMenuApp) disableScroll.on()
       else disableScroll.off()
     },
-    toggleMenuFundraiser () {
+    toggleMenuFundraiser() {
       this.activeMenuFundraiser = !this.activeMenuFundraiser
       if (this.activeMenuFundraiser) disableScroll.on()
       else disableScroll.off()
     },
-    watchWindowSize () {
-      let w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
+    watchWindowSize() {
+      let w = Math.max(
+        document.documentElement.clientWidth,
+        window.innerWidth || 0
+      )
       if (w >= 1024) {
         this.close()
         this.desktop = true
@@ -68,7 +68,7 @@ export default {
       }
     }
   },
-  mounted () {
+  mounted() {
     this.watchWindowSize()
     window.onresize = this.watchWindowSize
   }

@@ -9,10 +9,10 @@
 </template>
 
 <script>
-import PageMenu from 'common/NiPageMenu'
+import PageMenu from "common/NiPageMenu"
 export default {
-  name: 'page-staking',
-  metaInfo: { title: 'Staking' },
+  name: "page-staking",
+  metaInfo: { title: "Staking" },
   components: {
     PageMenu
   }

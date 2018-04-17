@@ -1,10 +1,13 @@
-export default function () {
+export default function() {
   let body = document.body
   let html = document.documentElement
 
   let height = Math.max(
-    body.scrollHeight, body.offsetHeight,
-    html.clientHeight, html.scrollHeight, html.offsetHeight
+    body.scrollHeight,
+    body.offsetHeight,
+    html.clientHeight,
+    html.scrollHeight,
+    html.offsetHeight
   )
   return height
 }

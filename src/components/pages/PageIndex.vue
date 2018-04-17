@@ -8,14 +8,14 @@
 </template>
 
 <script>
-import SectionBlog from 'sections/SectionBlog'
-import SectionCover from 'sections/SectionCover'
-import SectionEvents from 'sections/SectionEvents'
-import SectionWhat from 'sections/SectionWhat'
-import SectionBenefits from 'sections/SectionBenefits'
+import SectionBlog from "sections/SectionBlog"
+import SectionCover from "sections/SectionCover"
+import SectionEvents from "sections/SectionEvents"
+import SectionWhat from "sections/SectionWhat"
+import SectionBenefits from "sections/SectionBenefits"
 export default {
-  name: 'page-index',
-  metaInfo: { title: 'Internet of Blockchains' },
+  name: "page-index",
+  metaInfo: { title: "Internet of Blockchains" },
   components: {
     SectionBlog,
     SectionCover,

@@ -13,13 +13,13 @@ section.ni-part
 
 <script>
 export default {
-  name: 'ni-part',
-  props: ['title']
+  name: "ni-part",
+  props: ["title"]
 }
 </script>
 
 <style lang="stylus">
-@require '~@/styles/variables.styl'
+@require '~variables'
 
 .ni-part
   position relative

@@ -4,12 +4,12 @@
 
 <script>
 export default {
-  name: 'ni-cards'
+  name: "ni-cards"
 }
 </script>
 
 <style lang="stylus">
-@import '~@/styles/variables.styl'
+@import '~variables'
 
 .ni-cards
   display flex

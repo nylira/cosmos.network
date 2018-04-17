@@ -6,7 +6,8 @@
       .cosmos-panels
         .cosmos-panel
           .cosmos-panel__image
-            img.cosmos-panel__img(src="~assets/images/diagrams/panel-interoperability.png")
+            img.cosmos-panel__img(
+              src="~images/diagrams/panel-interoperability.png")
           .cosmos-panel__text
             .cosmos-panel__title Interoperable
             .cosmos-panel__body The Cosmos Network is built to allow many independent blockchains — public and private — to communicate and exchange value with one another.
@@ -15,7 +16,8 @@
 
         .cosmos-panel
           .cosmos-panel__image
-            img.cosmos-panel__img(src="~assets/images/diagrams/panel-scalability.png")
+            img.cosmos-panel__img(
+              src="~images/diagrams/panel-scalability.png")
           .cosmos-panel__text
             .cosmos-panel__title Scalable
             .cosmos-panel__body By leveraging interoperability and Tendermint’s Proof-of-Stake algorithm, Cosmos provides unprecedented levels of scalability for blockchain networks.
@@ -24,7 +26,8 @@
 
         .cosmos-panel
           .cosmos-panel__image
-            img.cosmos-panel__img(src="~assets/images/diagrams/panel-developer-friendly.png")
+            img.cosmos-panel__img(
+              src="~images/diagrams/panel-developer-friendly.png")
           .cosmos-panel__text
             .cosmos-panel__title Developer Friendly
             .cosmos-panel__body Cosmos was designed with developers in mind. Thanks to Tendermint’s Application Blockchain Interface, it’s easy to build blockchains in any programming language.
@@ -34,7 +37,7 @@
 
 <script>
 export default {
-  name: 'section-benefits'
+  name: "section-benefits"
 }
 </script>
 

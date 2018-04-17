@@ -64,17 +64,17 @@ page(title="HackAtom" subtitle="Alert: HackAtom is currently on hiatus as we foc
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-import Btn from '@nylira/vue-button'
-import MenuLocale from 'navigation/MenuLocale'
-import CardLocation from 'cards/CardLocation'
-import ModalAgreement from 'modals/ModalAgreement'
-import Page from 'common/NiPage'
-import Part from 'common/NiPart'
-import TextContainer from 'common/NiTextContainer'
+import { mapGetters } from "vuex"
+import Btn from "@nylira/vue-button"
+import MenuLocale from "navigation/MenuLocale"
+import CardLocation from "cards/CardLocation"
+import ModalAgreement from "modals/ModalAgreement"
+import Page from "common/NiPage"
+import Part from "common/NiPart"
+import TextContainer from "common/NiTextContainer"
 export default {
-  name: 'page-hackatom',
-  metaInfo: { title: 'HackAtom - Developers' },
+  name: "page-hackatom",
+  metaInfo: { title: "HackAtom - Developers" },
   components: {
     Btn,
     MenuLocale,
@@ -85,12 +85,14 @@ export default {
     TextContainer
   },
   computed: {
-    ...mapGetters(['allPeople', 'hackatom', 'links'])
+    ...mapGetters(["allPeople", "hackatom", "links"])
   },
   methods: {
-    ppl (tag) { return this.allPeople.filter(p => p.groups[tag]) },
-    setModal (value) {
-      this.$store.commit('setHackAtomModal', value)
+    ppl(tag) {
+      return this.allPeople.filter(p => p.groups[tag])
+    },
+    setModal(value) {
+      this.$store.commit("setHackAtomModal", value)
     }
   }
 }
@@ -137,7 +139,7 @@ export default {
       color dim
 
     &.grand i.material-icons
-      background url(../../assets/images/hackatom/atom-avatar.png) center center no-repeat
+      background url('~images/hackatom/atom-avatar.png') center center no-repeat
       background-size cover
       color transparent
       box-shadow inset bc 0 0 0 1px

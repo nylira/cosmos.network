@@ -6,12 +6,12 @@
 </template>
 
 <script>
-import Page from 'common/NiPage'
-import PageMenu from 'common/NiPageMenu'
-import TextContainer from 'common/NiTextContainer'
+import Page from "common/NiPage"
+import PageMenu from "common/NiPageMenu"
+import TextContainer from "common/NiTextContainer"
 export default {
-  name: 'page-faq',
-  metaInfo: { title: 'FAQ' },
+  name: "page-faq",
+  metaInfo: { title: "FAQ" },
   components: {
     Page,
     PageMenu,

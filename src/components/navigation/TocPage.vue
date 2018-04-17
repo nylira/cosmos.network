@@ -7,15 +7,15 @@
 </template>
 
 <script>
-import TocPadding from 'navigation/TocPadding'
-import TextContainer from 'common/NiTextContainer'
+import TocPadding from "navigation/TocPadding"
+import TextContainer from "common/NiTextContainer"
 export default {
-  name: 'toc-page',
+  name: "toc-page",
   components: {
     TextContainer,
     TocPadding
   },
-  props: ['tocVisible']
+  props: ["tocVisible"]
 }
 </script>
 

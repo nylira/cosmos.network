@@ -45,14 +45,14 @@
 </template>
 
 <script>
-import {mapGetters} from 'vuex'
-import Cards from 'common/NiCards'
-import Btn from '@nylira/vue-button'
-import CardSocial from 'cards/CardSocial'
-import FormEmailSignup from 'forms/FormEmailSignup'
-import Part from 'common/NiPart'
+import { mapGetters } from "vuex"
+import Btn from "@nylira/vue-button"
+import Cards from "common/NiCards"
+import CardSocial from "cards/CardSocial"
+import FormEmailSignup from "forms/FormEmailSignup"
+import Part from "common/NiPart"
 export default {
-  name: 'app-footer',
+  name: "app-footer",
   components: {
     Btn,
     Cards,
@@ -61,7 +61,7 @@ export default {
     Part
   },
   computed: {
-    ...mapGetters(['links'])
+    ...mapGetters(["links"])
   }
 }
 </script>

@@ -6,12 +6,12 @@ page(title="Cosmos Academy" subtitle="Participate in the Academy to learn how to
 </template>
 
 <script>
-import Btn from '@nylira/vue-button'
-import Page from 'common/NiPage'
-import TextContainer from 'common/NiTextContainer'
+import Btn from "@nylira/vue-button"
+import Page from "common/NiPage"
+import TextContainer from "common/NiTextContainer"
 export default {
-  name: 'page-academy',
-  metaInfo: { title: 'Academy' },
+  name: "page-academy",
+  metaInfo: { title: "Academy" },
   components: {
     Btn,
     Page,

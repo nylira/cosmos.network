@@ -11,8 +11,8 @@ form.form-email-signup.validate.form(action='//network.us14.list-manage.com/subs
 </template>
 
 <script>
-import Btn from '@nylira/vue-button'
-import Field from '@nylira/vue-field'
+import Btn from "@nylira/vue-button"
+import Field from "@nylira/vue-field"
 export default {
   components: {
     Btn,
@@ -44,4 +44,3 @@ export default {
       .ni-btn-value
         display inline
 </style>
-

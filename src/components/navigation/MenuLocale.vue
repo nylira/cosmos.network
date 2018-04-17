@@ -11,10 +11,10 @@
 </template>
 
 <script>
-import OverlayBtn from 'buttons/OverlayBtn'
-import OverlayBtns from 'buttons/OverlayBtns'
+import OverlayBtn from "buttons/OverlayBtn"
+import OverlayBtns from "buttons/OverlayBtns"
 export default {
-  name: 'menu-locale',
+  name: "menu-locale",
   components: {
     OverlayBtn,
     OverlayBtns
@@ -23,14 +23,14 @@ export default {
     maximized: false
   }),
   methods: {
-    toggle (value) {
+    toggle() {
       this.maximized = !this.maximized
     },
-    set (value) {
+    set(value) {
       this.maximized = value
     }
   },
-  props: ['path', 'langs']
+  props: ["path", "langs"]
 }
 </script>
 

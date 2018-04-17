@@ -1,8 +1,8 @@
-export default function (text) {
-  let hiddenInput = document.createElement('input')
+export default function(text) {
+  let hiddenInput = document.createElement("input")
 
   // set the text to be copied
-  hiddenInput.setAttribute('value', text)
+  hiddenInput.setAttribute("value", text)
 
   // add the element
   document.body.appendChild(hiddenInput)
@@ -12,7 +12,7 @@ export default function (text) {
 
   // copy the text
   try {
-    document.execCommand('copy')
+    document.execCommand("copy")
     // console.log(text, 'copied to clipboard')
   } catch (e) {
     console.log(e)

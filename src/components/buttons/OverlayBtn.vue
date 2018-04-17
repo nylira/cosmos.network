@@ -5,8 +5,8 @@
 
 <script>
 export default {
-  name: 'overlay-btn',
-  props: ['icon']
+  name: "overlay-btn",
+  props: ["icon"]
 }
 </script>
 

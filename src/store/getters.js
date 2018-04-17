@@ -10,5 +10,6 @@ export const roadmap = state => state.roadmap
 // toc
 export const faqElementsVisible = state => state.toc.faq.elementsVisible
 export const faqTocVisible = state => state.toc.faq.tocVisible
-export const whitepaperElementsVisible = state => state.toc.whitepaper.elementsVisible
+export const whitepaperElementsVisible = state =>
+  state.toc.whitepaper.elementsVisible
 export const whitepaperTocVisible = state => state.toc.whitepaper.tocVisible

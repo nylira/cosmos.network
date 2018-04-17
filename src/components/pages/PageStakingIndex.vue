@@ -8,11 +8,11 @@ page(
 </template>
 
 <script>
-import Page from 'common/NiPage'
-import TextContainer from 'common/NiTextContainer'
+import Page from "common/NiPage"
+import TextContainer from "common/NiTextContainer"
 export default {
-  name: 'page-staking-index',
-  metaInfo: { title: 'Overview - Staking' },
+  name: "page-staking-index",
+  metaInfo: { title: "Overview - Staking" },
   components: {
     Page,
     TextContainer

@@ -19,39 +19,39 @@
 </template>
 
 <script>
-import moment from 'moment'
-import { image } from 'scripts/cdn'
+import moment from "moment"
+import { image } from "scripts/cdn"
 export default {
-  name: 'ni-event-sm-container',
+  name: "ni-event-sm-container",
   computed: {
-    location () {
+    location() {
       if (this.event.location) {
         return this.event.location
       } else {
-        return 'TBD'
+        return "TBD"
       }
     },
-    dateStart () {
+    dateStart() {
       let dateStart = this.event.dates.start
       if (dateStart) {
-        if (this.status === 'ended') {
-          return moment(dateStart).format('YYYY MMMM D')
+        if (this.status === "ended") {
+          return moment(dateStart).format("YYYY MMMM D")
         } else {
-          return moment(dateStart).format('MMMM D')
+          return moment(dateStart).format("MMMM D")
         }
       } else {
-        return 'TBD'
+        return "TBD"
       }
     },
-    dateEnd () {
+    dateEnd() {
       let dateEnd = this.event.dates.end
       if (dateEnd) {
-        return moment(dateEnd).format('D')
+        return moment(dateEnd).format("D")
       }
     }
   },
   data: () => ({ image: image }),
-  props: ['event', 'status']
+  props: ["event", "status"]
 }
 </script>
 

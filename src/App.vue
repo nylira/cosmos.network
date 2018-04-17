@@ -7,63 +7,95 @@
 </template>
 
 <script>
-import AppHeader from 'common/AppHeader.vue'
-import AppFooter from 'common/AppFooter.vue'
-import Notifications from '@nylira/vue-notifications'
-import store from './store/index.js'
-import { mapGetters } from 'vuex'
+import AppHeader from "common/AppHeader.vue"
+import AppFooter from "common/AppFooter.vue"
+import Notifications from "@nylira/vue-notifications"
+import store from "@/store/index.js"
+import { mapGetters } from "vuex"
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
     AppHeader,
     AppFooter,
     Notifications
   },
   computed: {
-    ...mapGetters(['notifications'])
+    ...mapGetters(["notifications"])
   },
   metaInfo: {
     link: [
-      { rel: 'apple-touch-icon', sizes: '180x180', href: '../static/apple-touch-icon.png' },
-      { rel: 'icon', type: 'image/png', sizes: '32x32', href: '../static/favicon-32x32.png' },
-      { rel: 'icon', type: 'image/png', sizes: '16x16', href: '../static/favicon-16x16.png' },
-      { rel: 'manifest', href: '../static/manifest.json' },
-      { rel: 'mask-icon', href: '../static/safari-pinned-tab.svg', color: '#15182d' }
+      {
+        rel: "apple-touch-icon",
+        sizes: "180x180",
+        href: "../static/apple-touch-icon.png"
+      },
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "32x32",
+        href: "../static/favicon-32x32.png"
+      },
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "16x16",
+        href: "../static/favicon-16x16.png"
+      },
+      { rel: "manifest", href: "../static/manifest.json" },
+      {
+        rel: "mask-icon",
+        href: "../static/safari-pinned-tab.svg",
+        color: "#15182d"
+      }
     ],
     meta: [
-      { charset: 'utf-8' },
-      { name: 'description', content: 'Website for the Cosmos Network.' },
-      { name: 'viewport', content: 'width=device-width, user-scalable=no' },
+      { charset: "utf-8" },
+      { name: "description", content: "Website for the Cosmos Network." },
+      { name: "viewport", content: "width=device-width, user-scalable=no" },
 
-      { name: 'theme-color', content: '#ffffff' },
+      { name: "theme-color", content: "#ffffff" },
 
-      { name: 'twitter:card', content: 'summary' },
-      { name: 'twitter:site', content: '@cosmos' },
-      { name: 'twitter:title', content: 'Cosmos Network - Internet of Blockchains' },
-      { name: 'twitter:description', content: 'The interoperable, scalable blockchain network. Built for developers.' },
-      { name: 'twitter:creator', content: '@cosmos' },
-      { name: 'twitter:image', content: '../static/media/bg-meta-twitter.jpg' },
-      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: "twitter:card", content: "summary" },
+      { name: "twitter:site", content: "@cosmos" },
+      {
+        name: "twitter:title",
+        content: "Cosmos Network - Internet of Blockchains"
+      },
+      {
+        name: "twitter:description",
+        content:
+          "The interoperable, scalable blockchain network. Built for developers."
+      },
+      { name: "twitter:creator", content: "@cosmos" },
+      { name: "twitter:image", content: "../static/media/bg-meta-twitter.jpg" },
+      { name: "twitter:card", content: "summary_large_image" },
 
-      { property: 'og:title', content: 'Cosmos Network - Internet of Blockchains' },
-      { property: 'og:type', content: 'website' },
-      { property: 'og:url', content: window.location.href },
-      { property: 'og:image', content: '../static/media/bg-meta-facebook.jpg' },
-      { property: 'og:description', content: 'The interoperable, scalable blockchain network. Built for developers.' },
-      { property: 'og:site_name', content: 'Cosmos Network' },
-      { property: 'fb:admins', content: '' }
+      {
+        property: "og:title",
+        content: "Cosmos Network - Internet of Blockchains"
+      },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: window.location.href },
+      { property: "og:image", content: "../static/media/bg-meta-facebook.jpg" },
+      {
+        property: "og:description",
+        content:
+          "The interoperable, scalable blockchain network. Built for developers."
+      },
+      { property: "og:site_name", content: "Cosmos Network" },
+      { property: "fb:admins", content: "" }
     ],
     // if no subcomponents specify a metaInfo.title, this title will be used
-    title: 'Internet of Blockchains',
+    title: "Internet of Blockchains",
     // all titles will be injected into this template
-    titleTemplate: '%s - Cosmos Network'
+    titleTemplate: "%s - Cosmos Network"
   },
-  mounted () {
-    this.$store.commit('initializeLinks')
-    this.$store.commit('initializeEvents')
-    this.$store.commit('initializePeople')
-    this.$store.commit('initializeBlog')
+  mounted() {
+    this.$store.commit("initializeLinks")
+    this.$store.commit("initializeEvents")
+    this.$store.commit("initializePeople")
+    this.$store.commit("initializeBlog")
   },
   store
 }

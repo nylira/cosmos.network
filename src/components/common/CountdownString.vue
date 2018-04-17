@@ -21,46 +21,46 @@
 
 <script>
 export default {
-  name: 'ni-countdown-string',
+  name: "ni-countdown-string",
   computed: {
-    usableDate () {
+    usableDate() {
       return Math.trunc(Date.parse(this.date) / 1000)
     },
-    seconds () {
+    seconds() {
       return (this.usableDate - this.now) % 60
     },
-    minutes () {
+    minutes() {
       return Math.trunc((this.usableDate - this.now) / 60) % 60
     },
-    hours () {
+    hours() {
       return Math.trunc((this.usableDate - this.now) / 60 / 60) % 24
     },
-    days () {
+    days() {
       return Math.trunc((this.usableDate - this.now) / 60 / 60 / 24)
     }
   },
-  data () {
+  data() {
     return {
-      now: Math.trunc((new Date()).getTime() / 1000)
+      now: Math.trunc(new Date().getTime() / 1000)
     }
   },
   methods: {
-    twoDigits (number) {
-      if (number < 10) return '0' + number
+    twoDigits(number) {
+      if (number < 10) return "0" + number
       else return number
     }
   },
-  mounted () {
+  mounted() {
     window.setInterval(() => {
-      this.now = Math.trunc((new Date()).getTime() / 1000)
+      this.now = Math.trunc(new Date().getTime() / 1000)
     }, 1000)
   },
-  props: ['date', 'units']
+  props: ["date", "units"]
 }
 </script>
 
 <style lang="stylus">
-@require '~@/styles/variables.styl'
+@require '~variables'
 
 .ni-countdown-string
   display flex

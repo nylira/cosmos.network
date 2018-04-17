@@ -1,7 +1,7 @@
 <template lang="pug">
 .page
   page-menu
-    a(href="assets/cosmos-whitepaper.pdf" target="_blank") Download PDF #[i.material-icons file_download]
+    a(href="/cosmos-whitepaper.pdf" target="_blank") Download PDF #[i.material-icons file_download]
   toc-page(:toc-visible="whitepaperTocVisible")
     nav-contents(slot="nav" text-id="whitepaper")
     text-ko(v-if="$route.params.locale === 'ko'")
@@ -11,17 +11,17 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-import NavContents from 'navigation/NavContents'
-import PageMenu from 'common/NiPageMenu'
-import TextEnUs from 'content/whitepaper.md'
-import TextKo from 'content/whitepaper-ko.md'
-import TextPt from 'content/whitepaper-pt.md'
-import TextZhCn from 'content/whitepaper-zh-CN.md'
-import TocPage from 'navigation/TocPage'
+import { mapGetters } from "vuex"
+import NavContents from "navigation/NavContents"
+import PageMenu from "common/NiPageMenu"
+import TextEnUs from "content/whitepaper.md"
+import TextKo from "content/whitepaper-ko.md"
+import TextPt from "content/whitepaper-pt.md"
+import TextZhCn from "content/whitepaper-zh-CN.md"
+import TocPage from "navigation/TocPage"
 export default {
-  name: 'page-about-whitepaper',
-  metaInfo: { title: 'Whitepaper - About' },
+  name: "page-about-whitepaper",
+  metaInfo: { title: "Whitepaper - About" },
   components: {
     NavContents,
     PageMenu,
@@ -31,12 +31,11 @@ export default {
     TextZhCn,
     TocPage
   },
-  computed: { ...mapGetters(['whitepaperTocVisible']) },
-  mounted () {
+  computed: { ...mapGetters(["whitepaperTocVisible"]) },
+  mounted() {
     if (document.documentElement.clientWidth >= 1024) {
-      this.$store.commit('setTocVisible', { id: 'whitepaper', visible: true })
+      this.$store.commit("setTocVisible", { id: "whitepaper", visible: true })
     }
   }
 }
 </script>
-

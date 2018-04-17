@@ -55,23 +55,17 @@ page.page-community(
       icon-type="mi"
       icon="chat"
       anchor="https://riot.im/app/#/room/#tendermint:matrix.org")
-    card-social(
-      dt="IRC"
-      dd="Join #cosmos_network on freenode"
-      icon-type="mi"
-      icon="chat"
-      :anchor="links.cosmos.community.irc")
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-import CardSocial from 'cards/CardSocial'
-import Page from 'common/NiPage'
-import Part from 'common/NiPart'
-import TextContainer from 'common/NiTextContainer'
+import { mapGetters } from "vuex"
+import CardSocial from "cards/CardSocial"
+import Page from "common/NiPage"
+import Part from "common/NiPart"
+import TextContainer from "common/NiTextContainer"
 export default {
-  name: 'page-community',
-  metaInfo: { title: 'Community' },
+  name: "page-community",
+  metaInfo: { title: "Community" },
   components: {
     CardSocial,
     Part,
@@ -79,7 +73,7 @@ export default {
     TextContainer
   },
   computed: {
-    ...mapGetters(['links'])
+    ...mapGetters(["links"])
   }
 }
 </script>
@@ -95,4 +89,3 @@ export default {
     .ni-card-social
       flex 0 0 50%
 </style>
-

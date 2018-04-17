@@ -48,13 +48,13 @@ transition(name="proposal")
 
 <script>
 export default {
-  name: 'ni-list-item',
-  props: ['type', 'title', 'subtitle', 'image', 'icon', 'to', 'dt', 'dd']
+  name: "ni-list-item",
+  props: ["type", "title", "subtitle", "image", "icon", "to", "dt", "dd"]
 }
 </script>
 
 <style lang="stylus">
-@require '~@/styles/variables.styl'
+@require '~variables'
 
 .ni-li
   display block

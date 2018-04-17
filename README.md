@@ -6,13 +6,15 @@
 
 Make sure you're running Node 6 LTS or higher.
 
-``` bash
+```bash
 # install dependencies
-yarn install
+yarn
 
-# write some required files
-yarn build
 
-# serve with hot reload at localhost:8700
-yarn dev
+# serve with hot reload at localhost:8080
+yarn serve
 ```
+
+## Production
+
+Run `yarn build` and then serve the generated `./dist` directory
