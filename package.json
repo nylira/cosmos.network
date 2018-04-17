@@ -1,6 +1,9 @@
 {
-  "name": "cosmosnetwork",
-  "version": "0.1.0",
+  "name": "cosmos-network",
+  "version": "1.1.0",
+  "private": true,
+  "description": "The website for Cosmos, Internet of Blockchains",
+  "author": "All In Bits, Inc.",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve --open",
@@ -43,27 +46,18 @@
     "vue-template-compiler": "^2.5.13"
   },
   "babel": {
-    "presets": [
-      "@vue/app"
-    ]
+    "presets": ["@vue/app"]
   },
   "eslintConfig": {
     "root": true,
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ]
+    "extends": ["plugin:vue/essential", "eslint:recommended"]
   },
   "postcss": {
     "plugins": {
       "autoprefixer": {}
     }
   },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 8"
-  ],
+  "browserslist": ["> 1%", "last 2 versions", "not ie <= 8"],
   "prettier": {
     "semi": false
   }
