@@ -44,7 +44,7 @@ const routes = [
   { path: "/intro", name: "intro", component: PageIntro },
   { path: "/plan", name: "plan", component: PagePlan },
   { path: "/privacy", name: "privacy", component: PagePrivacy },
-  { path: "/roadmap", name: "index", component: PageRoadmap },
+  { path: "/roadmap", name: "roadmap", component: PageRoadmap },
   { path: "/whitepaper", name: "whitepaper", component: PageWhitepaper },
   {
     path: "/whitepaper/:locale",

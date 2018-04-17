@@ -36,6 +36,11 @@ module.exports = {
       .set("pages", resolve("src/components/pages"))
       .set("sections", resolve("src/components/sections"))
     config.module
+      .rule("pdf")
+      .test(/\.pdf/)
+      .use("")
+      .loader("file-loader")
+    config.module
       .rule("markdown")
       .test(/\.md/)
       .use("")
