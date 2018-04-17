@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: 'ni-field-addon'
+  name: "ni-field-addon"
 }
 </script>
 

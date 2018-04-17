@@ -9,8 +9,8 @@ a.ni-card-social(:href='anchor' target='_blank')
 
 <script>
 export default {
-  name: 'ni-card-social',
-  props: ['anchor', 'dt', 'dd', 'icon', 'icon-type']
+  name: "ni-card-social",
+  props: ["anchor", "dt", "dd", "icon", "icon-type"]
 }
 </script>
 

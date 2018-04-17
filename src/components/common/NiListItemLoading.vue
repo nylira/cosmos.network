@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: 'li-loading'
+  name: "li-loading"
 }
 </script>
 

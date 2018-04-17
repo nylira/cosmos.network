@@ -4,13 +4,13 @@ const state = {
 }
 
 const mutations = {
-  setHackAtomModal (state, value) {
+  setHackAtomModal(state, value) {
     state.modal = value
-    console.log('HackAtomModal set to', value)
+    console.log("HackAtomModal set to", value)
   },
-  setHackAtomAgreed (state, value) {
+  setHackAtomAgreed(state, value) {
     state.agreed = value
-    console.log('HackAtomAgreed set to', value)
+    console.log("HackAtomAgreed set to", value)
   }
 }
 

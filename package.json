@@ -4,7 +4,6 @@
   "private": true,
   "description": "The website for Cosmos, Internet of Blockchains",
   "author": "All In Bits, Inc.",
-  "private": true,
   "scripts": {
     "serve": "vue-cli-service serve --open",
     "build": "vue-cli-service build",
@@ -43,6 +42,8 @@
     "@vue/cli-plugin-babel": "^3.0.0-beta.6",
     "@vue/cli-plugin-eslint": "^3.0.0-beta.6",
     "@vue/cli-service": "^3.0.0-beta.6",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.6.0",
     "vue-template-compiler": "^2.5.13"
   },
   "babel": {
@@ -50,7 +51,11 @@
   },
   "eslintConfig": {
     "root": true,
-    "extends": ["plugin:vue/essential", "eslint:recommended"]
+    "extends": [
+      "plugin:vue/essential",
+      "plugin:prettier/recommended",
+      "eslint:recommended"
+    ]
   },
   "postcss": {
     "plugins": {

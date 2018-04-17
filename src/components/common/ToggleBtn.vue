@@ -4,13 +4,13 @@
 </template>
 
 <script>
-import Btn from '@nylira/vue-button'
+import Btn from "@nylira/vue-button"
 export default {
-  name: 'toggle-btn',
+  name: "toggle-btn",
   components: {
     Btn
   },
-  props: ['value', 'active']
+  props: ["value", "active"]
 }
 </script>
 

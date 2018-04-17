@@ -10,10 +10,10 @@ const state = {
 }
 
 const mutations = {
-  setElementsVisible (state, { id, els }) {
+  setElementsVisible(state, { id, els }) {
     state[id].elementsVisible = els
   },
-  setTocVisible (state, { id, visible }) {
+  setTocVisible(state, { id, visible }) {
     state[id].tocVisible = visible
   }
 }

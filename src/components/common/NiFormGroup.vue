@@ -6,15 +6,15 @@ div(:class='cssClass')
 
 <script>
 export default {
-  name: 'ni-form-group',
+  name: "ni-form-group",
   computed: {
-    cssClass () {
-      let value = 'ni-form-group'
-      if (this.error) value += ' form-group-error'
+    cssClass() {
+      let value = "ni-form-group"
+      if (this.error) value += " form-group-error"
       return value
     }
   },
-  props: ['error', 'field-id', 'field-label']
+  props: ["error", "field-id", "field-label"]
 }
 </script>
 

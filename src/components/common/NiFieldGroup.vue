@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'ni-field-group'
+  name: "ni-field-group"
 }
 </script>
 

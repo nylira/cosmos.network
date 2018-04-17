@@ -11,25 +11,25 @@
 </template>
 
 <script>
-import moment from 'moment'
-import { mapGetters } from 'vuex'
+import moment from "moment"
+import { mapGetters } from "vuex"
 export default {
-  name: 'section-blog',
+  name: "section-blog",
   computed: {
-    posts () {
+    posts() {
       return this.blog.posts.slice(0, 9)
     },
-    ...mapGetters(['blog'])
+    ...mapGetters(["blog"])
   },
   methods: {
-    imageSrc (txt) {
-      let el = document.createElement('html')
+    imageSrc(txt) {
+      let el = document.createElement("html")
       el.innerHTML = txt
-      let src = el.querySelectorAll('img')[0].src
+      let src = el.querySelectorAll("img")[0].src
       return src
     },
-    humanDate (date) {
-      return moment(date).format('MMMM D, YYYY')
+    humanDate(date) {
+      return moment(date).format("MMMM D, YYYY")
     }
   }
 }

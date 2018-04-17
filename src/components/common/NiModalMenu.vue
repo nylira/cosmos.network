@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: 'ni-modal-menu'
+  name: "ni-modal-menu"
 }
 </script>
 

@@ -48,8 +48,8 @@ transition(name="proposal")
 
 <script>
 export default {
-  name: 'ni-list-item',
-  props: ['type', 'title', 'subtitle', 'image', 'icon', 'to', 'dt', 'dd']
+  name: "ni-list-item",
+  props: ["type", "title", "subtitle", "image", "icon", "to", "dt", "dd"]
 }
 </script>
 

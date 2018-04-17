@@ -1,15 +1,15 @@
-import scrollTo from 'scroll-to'
+import scrollTo from "scroll-to"
 
-export default function (tocVisibility) {
-  function scrollToIt (e) {
+export default function(tocVisibility) {
+  function scrollToIt(e) {
     // console.log('scrolling to it!')
     e.preventDefault()
 
     let scrollSpeed = 666
-    let el = document.querySelector(e.target.getAttribute('href'))
+    let el = document.querySelector(e.target.getAttribute("href"))
     let y
 
-    if (el.id === '#page-top') {
+    if (el.id === "#page-top") {
       y = 0
     } else {
       y = el.offsetTop - 48 - 16
@@ -24,6 +24,6 @@ export default function (tocVisibility) {
     scrollTo(0, y, { duration: scrollSpeed })
   }
 
-  let tocLinks = Array.from(document.querySelectorAll('.minimal-toc a'))
-  tocLinks.map(el => el.addEventListener('click', scrollToIt))
+  let tocLinks = Array.from(document.querySelectorAll(".minimal-toc a"))
+  tocLinks.map(el => el.addEventListener("click", scrollToIt))
 }

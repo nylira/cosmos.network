@@ -5,7 +5,7 @@
 
 <script>
 export default {
-  name: 'ni-tool-bar'
+  name: "ni-tool-bar"
 }
 </script>
 

@@ -6,11 +6,11 @@ page(title='404 - Page Not Found')
 </template>
 
 <script>
-import ListItem from './NiListItem'
-import Page from './NiPage'
-import Part from './NiPart'
+import ListItem from "./NiListItem"
+import Page from "./NiPage"
+import Part from "./NiPart"
 export default {
-  name: 'page-404',
+  name: "page-404",
   components: {
     ListItem,
     Page,

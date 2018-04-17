@@ -19,18 +19,18 @@
 </template>
 
 <script>
-import Btn from '@nylira/vue-button'
-import disableScroll from 'disable-scroll'
+import Btn from "@nylira/vue-button"
+import disableScroll from "disable-scroll"
 export default {
-  name: 'ni-modal-node',
+  name: "ni-modal-node",
   components: {
     Btn
   },
   computed: {
-    modalClass () {
-      let value = ''
+    modalClass() {
+      let value = ""
       if (this.node.date) {
-        value += ' ni-modal-node--done'
+        value += " ni-modal-node--done"
       }
       if (this.type) {
         value += ` ni-modal-node--${this.type}`
@@ -38,13 +38,13 @@ export default {
       return value
     }
   },
-  mounted () {
+  mounted() {
     disableScroll.on()
   },
-  beforeDestroy () {
+  beforeDestroy() {
     disableScroll.off()
   },
-  props: ['node', 'type']
+  props: ["node", "type"]
 }
 </script>
 
