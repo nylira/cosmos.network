@@ -4,7 +4,7 @@
     .voyager-cover__container
       .voyager-cover__title Explore the Cosmos with Voyager.
       .voyager-cover__subtitle The user interface for the Cosmos Network. Built to scale to infinity and beyond.
-      btn.voyager-cover__action(size="lg" icon="get_app" value="Download Alpha" type="anchor" href="https://github.com/cosmos/voyager/releases" color="primary")
+      btn.voyager-cover__action(size="lg" icon="cloud_download" value="Download Alpha" type="anchor" href="https://github.com/cosmos/voyager/releases" color="primary")
 
   .voyager-section.voyager-section-benefits: .voyager-section__container
     .voyager-section__header

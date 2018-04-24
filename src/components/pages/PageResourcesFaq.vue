@@ -1,8 +1,6 @@
 <template lang="pug">
-.page
-  page-menu
-  page(title="Cosmos FAQ" subtitle="Answers to frequently asked questions about the Cosmos Network.")
-    text-container(url="https://api.github.com/repos/tendermint/aib-data/contents/md/cosmos-faq.md")
+page(title="Cosmos FAQ" subtitle="Answers to frequently asked questions about the Cosmos Network.")
+  text-container(url="https://api.github.com/repos/tendermint/aib-data/contents/md/cosmos-faq.md")
 </template>
 
 <script>
