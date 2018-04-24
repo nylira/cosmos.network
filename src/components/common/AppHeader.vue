@@ -9,13 +9,12 @@ header.app-header
     .header-item(v-if='!desktop')
     menu.menu-popup.menu-app(v-if='activeMenuApp || desktop')
       nav
-        router-link(to='/intro' @click.native='close') Intro
-        router-link(to='/faq' @click.native='close') FAQ
-        router-link(to='/whitepaper' @click.native='close') Whitepaper
+        router-link(to='/intro' @click.native='close') Introduction
         router-link(to='/roadmap' @click.native='close') Roadmap
+        router-link(to='/testnet' @click.native='close') Testnet
         router-link(to='/developers' @click.native='close') Developers
-        router-link(to='/staking' @click.native='close') Staking
-        router-link(to='/voyager' @click.native='close') Voyager
+        router-link(to='/validators' @click.native='close') Validators
+        router-link(to='/resources' @click.native='close') Resources
         router-link(to='/about' @click.native='close') About
       nav
         a(:href='links.cosmos.blog' @click.native='close' target='_blank')

@@ -10,6 +10,7 @@ import PageFaq from "pages/PageFaq"
 import PagePlan from "pages/PagePlan"
 import PagePrivacy from "pages/PagePrivacy"
 import PageRoadmap from "pages/PageRoadmap"
+import PageTestnet from "pages/PageTestnet"
 import PageWhitepaper from "pages/PageWhitepaper"
 
 import PageIntro from "pages/PageIntro"
@@ -48,6 +49,7 @@ const routes = [
   { path: "/plan", name: "plan", component: PagePlan },
   { path: "/privacy", name: "privacy", component: PagePrivacy },
   { path: "/roadmap", name: "roadmap", component: PageRoadmap },
+  { path: "/testnet", name: "testnet", component: PageTestnet },
   { path: "/whitepaper", name: "whitepaper", component: PageWhitepaper },
   {
     path: "/whitepaper/:locale",

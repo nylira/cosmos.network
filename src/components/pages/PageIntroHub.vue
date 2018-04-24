@@ -1,5 +1,6 @@
 <template lang="pug">
-page(title="Introduction to the Cosmos Hub" subtitle="The Cosmos Hub is first Hub on the Cosmos Network."): text-container(url="https://api.github.com/repos/tendermint/aib-data/contents/md/intro-hub.md?ref=peng/testnet-refactor")
+page(title="What is the Cosmos Hub?" subtitle="The Cosmos Hub is the first hub zone on the Cosmos Network.")
+  text-container(url="https://api.github.com/repos/tendermint/aib-data/contents/md/intro-hub.md?ref=peng/testnet-refactor")
 </template>
 
 <script>

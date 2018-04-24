@@ -1,5 +1,5 @@
 <template lang="pug">
-page(title="Introduction to Cosmos" subtitle="Get started with an overview of the Cosmos Network.")
+page(title="What is Cosmos?" subtitle="Get started with an overview of the Cosmos Network.")
   text-container(url="https://api.github.com/repos/tendermint/aib-data/contents/md/intro-index.md?ref=peng/testnet-refactor")
 </template>
 
