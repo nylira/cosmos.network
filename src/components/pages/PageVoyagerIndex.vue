@@ -102,7 +102,7 @@
     .voyager-section-main: .card-downloads
       .card-download
         .card-download__title Windows
-        .card-download__subtitle 32-bit
+        .card-download__subtitle 64-bit
         btn(icon="cloud_download" value="Download" color="primary" type="anchor" href="https://github.com/cosmos/voyager/releases")
       .card-download
         .card-download__title macOS

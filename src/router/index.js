@@ -9,7 +9,6 @@ import PageEvents from "pages/PageEvents"
 import PagePrivacy from "pages/PagePrivacy"
 import PageRoadmap from "pages/PageRoadmap"
 import PageTestnet from "pages/PageTestnet"
-import PageValidators from "pages/PageValidators"
 
 import PageIntro from "pages/PageIntro"
 import PageIntroIndex from "pages/PageIntroIndex"
@@ -22,6 +21,10 @@ import PageDevelopersHackAtom from "pages/PageDevelopersHackAtom"
 import PageDevelopersScalingEth from "pages/PageDevelopersScalingEth"
 import PageDevelopersWallet from "pages/PageDevelopersWallet"
 import PageDevelopersAcademy from "pages/PageDevelopersAcademy"
+
+import PageValidators from "pages/PageValidators"
+import PageValidatorsIndex from "pages/PageValidatorsIndex"
+import PageValidatorsTestnet from "pages/PageValidatorsTestnet"
 
 import PageResources from "pages/PageResources"
 import PageResourcesIndex from "pages/PageResourcesIndex"
@@ -48,7 +51,6 @@ const routes = [
   { path: "/privacy", name: "privacy", component: PagePrivacy },
   { path: "/roadmap", name: "roadmap", component: PageRoadmap },
   { path: "/testnet", name: "testnet", component: PageTestnet },
-  { path: "/validators", name: "validators", component: PageValidators },
 
   // INTRO
   {
@@ -83,6 +85,20 @@ const routes = [
         component: PageDevelopersScalingEth
       },
       { path: "wallet", name: "wallet", component: PageDevelopersWallet }
+    ]
+  },
+
+  // VALIDATORS
+  {
+    path: "/validators",
+    component: PageValidators,
+    children: [
+      { path: "/", name: "validators", component: PageValidatorsIndex },
+      {
+        path: "testnet",
+        name: "testnet-tutorial",
+        component: PageValidatorsTestnet
+      }
     ]
   },
 
