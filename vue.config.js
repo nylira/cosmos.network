@@ -24,6 +24,7 @@ module.exports = {
       .set("assets", resolve("src/assets"))
       .set("images", resolve("src/assets/images"))
       .set("content", resolve("src/content"))
+      .set("comp", resolve("src/components"))
       .set("scripts", resolve("src/scripts"))
       .set("variables", resolve("src/styles/variables.styl"))
       .set("buttons", resolve("src/components/buttons"))

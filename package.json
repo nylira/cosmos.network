@@ -3,7 +3,7 @@
   "version": "1.1.0",
   "private": true,
   "description": "The website for Cosmos, Internet of Blockchains",
-  "author": "All In Bits, Inc.",
+  "author": "All In Bits, Inc <inquiries@tendermint.com>",
   "scripts": {
     "serve": "vue-cli-service serve --open",
     "build": "vue-cli-service build",
