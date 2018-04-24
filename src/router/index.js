@@ -7,11 +7,15 @@ import PageAssets from "pages/PageAssets"
 import PageCommunity from "pages/PageCommunity"
 import PageEvents from "pages/PageEvents"
 import PageFaq from "pages/PageFaq"
-import PageIntro from "pages/PageIntro"
 import PagePlan from "pages/PagePlan"
 import PagePrivacy from "pages/PagePrivacy"
 import PageRoadmap from "pages/PageRoadmap"
 import PageWhitepaper from "pages/PageWhitepaper"
+
+import PageIntro from "pages/PageIntro"
+import PageIntroIndex from "pages/PageIntroIndex"
+import PageIntroHub from "pages/PageIntroHub"
+import PageIntroFurther from "pages/PageIntroFurther"
 
 import PageDevelopers from "pages/PageDevelopers"
 import PageDevelopersIndex from "pages/PageDevelopersIndex"
@@ -41,7 +45,6 @@ const routes = [
   { path: "/community", name: "community", component: PageCommunity },
   { path: "/events", name: "events", component: PageEvents },
   { path: "/faq", name: "faq", component: PageFaq },
-  { path: "/intro", name: "intro", component: PageIntro },
   { path: "/plan", name: "plan", component: PagePlan },
   { path: "/privacy", name: "privacy", component: PagePrivacy },
   { path: "/roadmap", name: "roadmap", component: PageRoadmap },
@@ -50,6 +53,21 @@ const routes = [
     path: "/whitepaper/:locale",
     name: "whitepaper-i18n",
     component: PageWhitepaper
+  },
+
+  // INTRO
+  {
+    path: "/intro",
+    component: PageIntro,
+    children: [
+      { path: "/", name: "intro", component: PageIntroIndex },
+      { path: "hub", name: "intro-hub", component: PageIntroHub },
+      {
+        path: "further",
+        name: "intro-further",
+        component: PageIntroFurther
+      }
+    ]
   },
 
   // DEVELOPERS
