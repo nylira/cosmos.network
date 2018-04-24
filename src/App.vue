@@ -28,24 +28,24 @@ export default {
       {
         rel: "apple-touch-icon",
         sizes: "180x180",
-        href: "../static/apple-touch-icon.png"
+        href: "../public/apple-touch-icon.png"
       },
       {
         rel: "icon",
         type: "image/png",
         sizes: "32x32",
-        href: "../static/favicon-32x32.png"
+        href: "../public/favicon-32x32.png"
       },
       {
         rel: "icon",
         type: "image/png",
         sizes: "16x16",
-        href: "../static/favicon-16x16.png"
+        href: "../public/favicon-16x16.png"
       },
-      { rel: "manifest", href: "../static/manifest.json" },
+      { rel: "manifest", href: "../public/manifest.json" },
       {
         rel: "mask-icon",
-        href: "../static/safari-pinned-tab.svg",
+        href: "../public/safari-pinned-tab.svg",
         color: "#15182d"
       }
     ],
@@ -68,7 +68,7 @@ export default {
           "The interoperable, scalable blockchain network. Built for developers."
       },
       { name: "twitter:creator", content: "@cosmos" },
-      { name: "twitter:image", content: "../static/media/bg-meta-twitter.jpg" },
+      { name: "twitter:image", content: "../public/media/bg-meta-twitter.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
 
       {
@@ -77,7 +77,7 @@ export default {
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: window.location.href },
-      { property: "og:image", content: "../static/media/bg-meta-facebook.jpg" },
+      { property: "og:image", content: "../public/media/bg-meta-facebook.jpg" },
       {
         property: "og:description",
         content:
