@@ -2,7 +2,7 @@
 modal.modal-agreement(size='fullscreen')
   div(slot='title') HackAtom Participation Agreement
   text-container(
-    url='https://api.github.com/repos/tendermint/aib-data/contents/md/hackathon-agreement.md')
+    url='https://api.github.com/repos/tendermint/aib-data/contents/md/developers-hackatom-agreement.md?ref=peng/testnet-refactor')
   div(slot='footer')
     btn(value='Cancel', @click.native='no')
     btn(value='Agree', @click.native='yes')

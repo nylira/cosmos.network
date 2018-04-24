@@ -1,34 +1,23 @@
 <template lang='pug'>
 mixin actions(size)
+  .action
+    btn(
+      type="link"
+      :to="{ name: 'testnet' }"
+      icon="group_add"
+      size=size
+      color="primary"
+      value="Join Testnet")
+
   form.action(action="//network.us14.list-manage.com/subscribe/post?u=1b8aeaa81ca615914eb2eb7fc&id=64c73f9f5f" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate="")
-    field#mce-EMAIL(name="EMAIL" type="email" placeholder="name@email.com" size=size)
-    btn#mc-embedded-subscribe(
+    field(name="EMAIL" type="email" placeholder="name@email.com" size=size)
+    btn(
       type="submit"
       icon="email"
-      value="Get Launch Alert"
       size=size
       color="primary")
     div(style="position: absolute; left: -5000px;" aria-hidden="true")
       input(type="text" name="b_1b8aeaa81ca615914eb2eb7fc_64c73f9f5f" tabindex="-1" value="")
-
-  .action
-    btn(
-      type="anchor"
-      href="https://riot.im/app/#/room/#cosmos:matrix.org"
-      icon="developer_board"
-      target="_blank"
-      size=size
-      color="primary"
-      value="Join Developer Chat")
-
-    btn(
-      type="anchor"
-      href="https://t.me/cosmosproject"
-      icon="chat"
-      target="_blank"
-      size=size
-      color="primary"
-      value="Join Community Chat")
 
 .section-cover: .section-cover__container
   .section-cover__actions.desktop: +actions("lg")
@@ -80,11 +69,20 @@ export default {
 
     .ni-field
     .ni-btn
-      width 100%
       margin-bottom 0.25rem
       shadow()
 
+  div.action
+    .ni-btn
+      width 100%
+
+  form.action
+    display flex
+    .ni-btn .ni-btn__container
+      border-radius 0 0.25rem 0.25rem 0
     .ni-field
+      flex 1
+      border-right none
       background alpha(app-bg, 50%)
 
 .section-cover__scroll
@@ -111,6 +109,7 @@ export default {
       .ni-field
       .ni-btn
         margin-bottom 1.5rem
+
   .section-cover__scroll
     right 50%
     margin-right -3rem

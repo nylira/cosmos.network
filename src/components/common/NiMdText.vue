@@ -13,7 +13,11 @@ export default {
   }),
   methods: {
     markdown(text) {
-      let md = new MarkdownIt()
+      let md = new MarkdownIt({
+        html: true,
+        linkify: true,
+        typographer: true
+      })
       return md.render(text)
     }
   },

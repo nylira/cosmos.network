@@ -1,17 +1,19 @@
 <template lang="pug">
-page(title="Wallet Development" subtitle="[Coming Soon] Learn how to develop a custom wallet for the Cosmos Network.")
+page(
+  title="Fundraiser Plan"
+  subtitle="Our original plan and roadmap for the April 2017 fundraiser.")
   div(slot="menu"): btn(icon="chat" value="Community Chat" type="anchor" href="https://riot.im/app/#/group/+cosmos:matrix.org" target="_blank" color="primary")
   text-container(
-    url='https://api.github.com/repos/tendermint/aib-data/contents/md/developers-wallet.md?ref=peng/testnet-refactor')
+    url='https://api.github.com/repos/tendermint/aib-data/contents/md/resources-plan.md?ref=peng/testnet-refactor')
 </template>
 
 <script>
 import Btn from "@nylira/vue-button"
+import TextContainer from "common/NiTextContainer"
 import Page from "common/NiPage"
-import TextContainer from "common/NiTextContainer.vue"
 export default {
-  name: "page-developers-wallet",
-  metaInfo: { title: "Wallet - Developers" },
+  name: "page-plan",
+  metaInfo: { title: "Fundraiser Plan - Resources" },
   components: {
     Btn,
     Page,

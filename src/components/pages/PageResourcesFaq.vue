@@ -1,21 +1,21 @@
 <template lang="pug">
-page(title="Developers" subtitle="Learn about and contribute to the code that powers the Cosmos Network.")
+page(title="Cosmos FAQ" subtitle="Answers to frequently asked questions about the Cosmos Network.")
   div(slot="menu"): btn(icon="chat" value="Community Chat" type="anchor" href="https://riot.im/app/#/group/+cosmos:matrix.org" target="_blank" color="primary")
-  text-container(url="https://api.github.com/repos/tendermint/aib-data/contents/md/developers-index.md?ref=peng/testnet-refactor")
+  text-container(url="https://api.github.com/repos/tendermint/aib-data/contents/md/resources-faq.md?ref=peng/testnet-refactor")
 </template>
 
 <script>
 import Btn from "@nylira/vue-button"
 import Page from "common/NiPage"
-import Part from "common/NiPart"
+import PageMenu from "common/NiPageMenu"
 import TextContainer from "common/NiTextContainer"
 export default {
-  name: "page-developers-index",
-  metaInfo: { title: "Overview - Developers" },
+  name: "page-faq",
+  metaInfo: { title: "Cosmos FAQ - Resources" },
   components: {
     Btn,
     Page,
-    Part,
+    PageMenu,
     TextContainer
   }
 }
