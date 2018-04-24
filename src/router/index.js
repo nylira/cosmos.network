@@ -184,6 +184,7 @@ const routes = [
   { path: "/hackatom", redirect: "/developers/hackatom" },
   { path: "/intro/faq", redirect: "/resource/faq" },
   { path: "/introduction", redirect: "/intro" },
+  { path: "/join-testnet", redirect: "/validators/tutorial" },
   {
     path: "/matrix",
     beforeEnter: () => {

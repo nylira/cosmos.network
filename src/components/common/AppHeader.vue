@@ -10,11 +10,11 @@ header.app-header
     menu.menu-popup.menu-app(v-if='activeMenuApp || desktop')
       nav
         router-link(to='/intro' @click.native='close') Introduction
+        router-link(to='/testnet' @click.native='close') Testnet
         router-link(to='/roadmap' @click.native='close') Roadmap
         router-link(to='/developers' @click.native='close') Developers
         router-link(to='/validators' @click.native='close') Validators
         router-link(to='/resources' @click.native='close') Resources
-        router-link(to='/testnet' @click.native='close') Testnet
         router-link(to='/about' @click.native='close') About
       nav
         a(:href='links.cosmos.blog' @click.native='close' target='_blank')
@@ -213,7 +213,7 @@ export default {
           cursor default
           user-select none
           color bright
-          border-color accent
+          border-color var(--accent)
           background app-fg
           &:hover
             color bright
