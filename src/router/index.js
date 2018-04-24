@@ -134,8 +134,8 @@ const routes = [
         component: PageResourcesDelegators
       },
       {
-        path: "validators-faq",
-        name: "validators-faq",
+        path: "validator-faq",
+        name: "validator-faq",
         component: PageResourcesValidators
       }
     ]
@@ -209,7 +209,7 @@ const routes = [
   },
   { path: "/staking", redirect: "/intro/hub" },
   { path: "/staking/validators", redirect: "/validators" },
-  { path: "/staking/validators-faq", redirect: "/resources/validators-faq" },
+  { path: "/staking/validators-faq", redirect: "/resources/validator-faq" },
   { path: "/staking/delegators", redirect: "/resources/delegators" },
   { path: "/team", redirect: "/about" },
   {
@@ -222,7 +222,8 @@ const routes = [
   { path: "/ui", redirect: "/voyager" },
   { path: "/validate", redirect: "/validators/tutorial" },
   { path: "/validator", redirect: "/staking/validators" },
-  { path: "/validators/faq", redirect: "/resources/validators-faq" },
+  { path: "/validators/faq", redirect: "/resources/validator-faq" },
+  { path: "/validators-faq", redirect: "/resources/validator-faq" },
   { path: "/whitepaper/en-US", redirect: "/resources/whitepaper" },
   { path: "/whitepaper", redirect: "/resources/whitepaper" },
   { path: "/wallet", redirect: "/developers/wallet" },

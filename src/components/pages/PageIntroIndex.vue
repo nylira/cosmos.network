@@ -1,19 +1,20 @@
 <template lang="pug">
 page(title="What is Cosmos?" subtitle="Get started with an overview of the Cosmos Network.")
+  div(slot="menu"): btn(icon="chat" value="Community Chat" type="anchor" href="https://riot.im/app/#/group/+cosmos:matrix.org" target="_blank" color="primary")
   text-container(url="https://api.github.com/repos/tendermint/aib-data/contents/md/intro-index.md?ref=peng/testnet-refactor")
 </template>
 
 <script>
-import { mapGetters } from "vuex"
+import Btn from "@nylira/vue-button"
 import Page from "common/NiPage"
 import TextContainer from "common/NiTextContainer"
 export default {
   name: "page-intro",
   metaInfo: { title: "Overview - Intro" },
   components: {
+    Btn,
     Page,
     TextContainer
-  },
-  computed: { ...mapGetters(["links"]) }
+  }
 }
 </script>
