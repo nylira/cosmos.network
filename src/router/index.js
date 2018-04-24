@@ -95,7 +95,7 @@ const routes = [
     children: [
       { path: "/", name: "validators", component: PageValidatorsIndex },
       {
-        path: "testnet",
+        path: "tutorial",
         name: "testnet-tutorial",
         component: PageValidatorsTestnet
       }
@@ -218,7 +218,9 @@ const routes = [
       window.location.assign("https://t.me/cosmosproject")
     }
   },
+  { path: "/testnet-tutorial", redirect: "/validators/tutorial" },
   { path: "/ui", redirect: "/voyager" },
+  { path: "/validate", redirect: "/validators/tutorial" },
   { path: "/validator", redirect: "/staking/validators" },
   { path: "/validators/faq", redirect: "/resources/validators-faq" },
   { path: "/whitepaper/en-US", redirect: "/resources/whitepaper" },

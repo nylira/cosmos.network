@@ -1,9 +1,5 @@
 <template lang='pug'>
 header.ni-page-header
-  .ni-page-header-backdrop: img(src="~images/logos/cosmos-logo.png")
-  .ni-page-header-splash
-    img(v-if="splash === 'validator'"
-      src="~images/logos/cosmos-validator.png")
   .ni-page-header-container
     slot(name="votes")
     .text
@@ -19,7 +15,7 @@ header.ni-page-header
 <script>
 export default {
   name: "ni-page-header",
-  props: ["icon", "splash"]
+  props: ["icon"]
 }
 </script>
 
@@ -33,16 +29,6 @@ export default {
   align-items center
   position relative
   overflow hidden
-
-.ni-page-header-splash
-  position absolute
-  top 50%
-  margin-top -12.5vw
-  right 0
-  img
-    width 25vw
-    height 25vw
-    opacity 0.25
 
 .ni-page-header-container
   display flex
@@ -75,21 +61,9 @@ export default {
   .ni-page-header
     padding 3rem 1rem
 
-  .ni-page-header-splash
-    top 50%
-    margin-top -3.5rem + 0.5rem
-    right 1.5rem
-    img
-      opacity 1
-      width 7rem
-      height 7rem
-
 @media screen and (max-width: 1023px)
   .ni-page-header
     border-bottom 1px solid bc
-
-  .ni-page-header-backdrop
-    display none
 
   .ni-page-header-menu
     margin-top 1rem
@@ -108,13 +82,4 @@ export default {
     display block
     .ni-btn
       margin-left 0.5rem
-
-  .ni-page-header-backdrop img
-    position fixed
-    bottom -5vw
-    left -5vw
-    opacity 0.02
-    width 66.66vw
-    height 66.66vw
-    z-index -1
 </style>
