@@ -119,9 +119,11 @@ export default {
       return { width: this.guiProgressPct + "%" }
     },
     overallProgressPct() {
-      let value = this.hubProgressPct + this.sdkProgressPct
-      value = value + this.tmcProgressPct + this.guiProgressPct
-      return Math.round(value / 4)
+      let totalNodes = this.nodes.hub.concat(this.nodes.sdk)
+      totalNodes = totalNodes.concat(this.nodes.tmc)
+      totalNodes = totalNodes.concat(this.nodes.gui)
+      let doneNodes = totalNodes.filter(n => n.date !== "")
+      return Math.round(doneNodes.length / totalNodes.length * 100)
     },
     overallProgressStyle() {
       return { width: this.overallProgressPct + "%" }
