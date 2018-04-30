@@ -17,8 +17,8 @@ import TextPt from "content/whitepaper-pt.md"
 import TextZhCn from "content/whitepaper-zh-CN.md"
 import TocPage from "navigation/TocPage"
 export default {
-  name: "page-about-whitepaper",
-  metaInfo: { title: "Whitepaper - About" },
+  name: "page-resources-whitepaper",
+  metaInfo: { title: "Whitepaper - Resources" },
   components: {
     NavContents,
     PageMenu,

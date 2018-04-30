@@ -4,10 +4,10 @@
     overlay-btn(@click.native='toggle(true)', icon='close', v-if='maximized')
     overlay-btn(@click.native='toggle(true)', icon='language', v-else='')
   menu.menu-locale(v-show='maximized')
-    router-link(to='/about/whitepaper' exact) English
-    router-link(to='/about/whitepaper/zh-CN') 简体中文
-    router-link(to='/about/whitepaper/pt') Portuguese
-    router-link(to='/about/whitepaper/ko') Korean
+    router-link(to='/resources/whitepaper' exact) English
+    router-link(to='/resources/whitepaper/zh-CN') 简体中文
+    router-link(to='/resources/whitepaper/pt') Portuguese
+    router-link(to='/resources/whitepaper/ko') Korean
 </template>
 
 <script>

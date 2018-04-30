@@ -16,7 +16,7 @@
     .project.project-hub
       .project-header
         .project-title Cosmos Hub
-        a.project-link(href="https://github.com/cosmos/gaia" target="_blank")
+        a.project-link(href="http://explorer.cosmos.network" target="_blank")
           img.project-logo(
             src="~images/roadmap/cosmos-hub.png"
             alt="Cosmos Hub" @load="imageLoaded")
@@ -119,11 +119,15 @@ export default {
       return { width: this.guiProgressPct + "%" }
     },
     overallProgressPct() {
-      let totalNodes = this.nodes.hub.concat(this.nodes.sdk)
-      totalNodes = totalNodes.concat(this.nodes.tmc)
-      totalNodes = totalNodes.concat(this.nodes.gui)
-      let doneNodes = totalNodes.filter(n => n.date !== "")
-      return Math.round(doneNodes.length / totalNodes.length * 100)
+      if (this.nodes && this.nodes.hub) {
+        let totalNodes = this.nodes.hub.concat(this.nodes.sdk)
+        totalNodes = totalNodes.concat(this.nodes.tmc)
+        totalNodes = totalNodes.concat(this.nodes.gui)
+        let doneNodes = totalNodes.filter(n => n.date !== "")
+        return Math.round(doneNodes.length / totalNodes.length * 100)
+      } else {
+        return 0
+      }
     },
     overallProgressStyle() {
       return { width: this.overallProgressPct + "%" }

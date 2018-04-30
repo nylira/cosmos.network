@@ -114,8 +114,8 @@ const routes = [
         component: PageResourcesWhitepaper
       },
       {
-        path: "/whitepaper/:locale",
-        name: "whitepaper-i18n",
+        path: "whitepaper/:locale",
+        name: "whitepaper",
         component: PageResourcesWhitepaper
       },
       {
