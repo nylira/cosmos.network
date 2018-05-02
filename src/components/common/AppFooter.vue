@@ -36,10 +36,20 @@ export default {
     SectionSocial
   },
   computed: {
-    isPageCommunity() {
-      return this.$router.currentRoute.name === "community"
-    },
-    ...mapGetters(["links", "config"])
+    ...mapGetters(["config"])
+  },
+  data: () => ({
+    isPageCommunity: false
+  }),
+  methods: {
+    getRouteName() {
+      return this.$router.currentRoute.name
+    }
+  },
+  watch: {
+    $route() {
+      this.isPageCommunity = this.$route.name === "community"
+    }
   }
 }
 </script>
