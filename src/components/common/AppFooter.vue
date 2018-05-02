@@ -5,26 +5,26 @@
     .footbot__brandmark
       img.footbot__img(src="~images/logos/cosmos-brandmark.png")
     .footbot-menu
-      .footbot-menu__title About
+      .footbot-menu__title Foundation
       .footbot-menu__items
-        router-link(:to="{ name: 'about'}").footbot-menu__item Team
+        router-link(:to="{ name: 'about'}").footbot-menu__item About
         router-link(:to="{ name: 'events'}").footbot-menu__item Events
         router-link(:to="{ name: 'assets'}").footbot-menu__item Media Assets
         a(:href="config.FUNDRAISER_URL" target="_blank").footbot-menu__item Fundraiser
     .footbot-menu
       .footbot-menu__title Learn
       .footbot-menu__items
-        router-link(:to="{ name: 'intro'}").footbot-menu__item Introduction
-        router-link(:to="{ name: 'faq'}").footbot-menu__item FAQ
+        router-link(:to="{ name: 'resources'}").footbot-menu__item Resources
+        router-link(:to="{ name: 'academy'}").footbot-menu__item Academy
         router-link(:to="{ name: 'whitepaper'}").footbot-menu__item Whitepaper
-        router-link(:to="{ name: 'validators'}").footbot-menu__item Validators
+        router-link(:to="{ name: 'faq'}").footbot-menu__item FAQ
     .footbot-menu
       .footbot-menu__title Develop
       .footbot-menu__items
-        router-link(:to="{ name: 'developers'}").footbot-menu__item Developers
-        router-link(:to="{ name: 'community'}").footbot-menu__item Community
         a(href="https://github.com/cosmos/cosmos-sdk" target="_blank").footbot-menu__item Cosmos SDK
-        a(href="https://tendermint.com" target="_blank").footbot-menu__item Tendermint
+        a(href="https://github.com/cosmos/voyager" target="_blank").footbot-menu__item Cosmos Voyager
+        a(href="https://github.com/tendermint/tendermint" target="_blank").footbot-menu__item Tendermint Core
+        a(href="https://github.com/keppel/lotion" target="_blank").footbot-menu__item Lotion
 </template>
 
 <script>
