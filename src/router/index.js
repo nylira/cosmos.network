@@ -98,6 +98,11 @@ const routes = [
         path: "tutorial",
         name: "testnet-tutorial",
         component: PageValidatorsTestnet
+      },
+      {
+        path: "faq",
+        name: "validator-faq",
+        component: PageResourcesValidators
       }
     ]
   },
@@ -115,7 +120,7 @@ const routes = [
       },
       {
         path: "whitepaper/:locale",
-        name: "whitepaper",
+        name: "whitepaper-i18n",
         component: PageResourcesWhitepaper
       },
       {
@@ -132,11 +137,6 @@ const routes = [
         path: "delegators",
         name: "delegators",
         component: PageResourcesDelegators
-      },
-      {
-        path: "validator-faq",
-        name: "validator-faq",
-        component: PageResourcesValidators
       }
     ]
   },
@@ -193,6 +193,7 @@ const routes = [
   },
   { path: "/plan", redirect: "/resources/plan" },
   { path: "/plan/:locale", redirect: "/resources/plan" },
+  { path: "/resources/validator-faq", redirect: "/validators/faq" },
   {
     path: "/riot",
     beforeEnter: () => {
@@ -210,7 +211,7 @@ const routes = [
   },
   { path: "/staking", redirect: "/intro/hub" },
   { path: "/staking/validators", redirect: "/validators" },
-  { path: "/staking/validators-faq", redirect: "/resources/validator-faq" },
+  { path: "/staking/validators-faq", redirect: "/validators/faq" },
   { path: "/staking/delegators", redirect: "/resources/delegators" },
   { path: "/team", redirect: "/about" },
   {
@@ -223,8 +224,6 @@ const routes = [
   { path: "/ui", redirect: "/voyager" },
   { path: "/validate", redirect: "/validators/tutorial" },
   { path: "/validator", redirect: "/staking/validators" },
-  { path: "/validators/faq", redirect: "/resources/validator-faq" },
-  { path: "/validators-faq", redirect: "/resources/validator-faq" },
   { path: "/whitepaper/en-US", redirect: "/resources/whitepaper" },
   { path: "/whitepaper", redirect: "/resources/whitepaper" },
   { path: "/wallet", redirect: "/developers/wallet" },

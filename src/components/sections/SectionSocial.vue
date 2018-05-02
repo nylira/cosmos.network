@@ -1,31 +1,35 @@
 <template lang="pug">
 .section-social: .section-social__container
   .app-footer__row.app-footer__row-actions
-    part(title="Get Started")
+    part(title="Testnet Status: LIVE")
       btn(
-        type="link"
-        :to="{ name: 'whitepaper'}"
+        type="anchor"
+        href="http://explorer.cosmos.network"
+        icon="wifi_tethering"
         size="lg"
-        icon="description"
-        value="Read Whitepaper")
+        target="_blank"
+        value="Testnet Explorer")
     part(title="Get Newsletter"): form-email-signup
   .app-footer__row
     part(title='Discuss & Chat'): .community-cards
       card-social(
-        dt='Community Chat'
-        dd='Join cosmosproject on Telegram'
-        icon='telegram'
-        :anchor='links.cosmos.community.telegram')
+        dt="Community Chat"
+        dd="Join #cosmos:matrix.org"
+        icon-type="mi"
+        icon="chat"
+        :anchor="links.cosmos.community.matrix")
       card-social(
-        dt='Developer Chat'
-        dd='Join #cosmos:matrix.org with Riot'
-        icon='rocketchat'
-        :anchor='links.cosmos.community.matrix')
+        dt="Cosmos SDK Chat"
+        dd="Join #cosmos-sdk:matrix.org"
+        icon-type="mi"
+        icon="chat"
+        anchor="https://riot.im/app/#/room/#cosmos-sdk:matrix.org")
       card-social(
-        dt='Forum'
-        dd='Discuss the Cosmos Network'
-        icon='discourse'
-        :anchor='links.cosmos.community.discourse')
+        dt="Cosmos Validator Chat"
+        dd="Join #cosmos_validators:matrix.org"
+        icon-type="mi"
+        icon="chat"
+        anchor="https://riot.im/app/#/room/#cosmos_validators:matrix.org")
     part(title='Social Media'): .community-cards
       card-social(
         dt='Medium'

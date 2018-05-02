@@ -3,17 +3,42 @@ page.page-community(
   title="Community"
   subtitle="These are the only official Cosmos communication channels.")
 
-  part(title="Social Media"): .community-cards
+  part(title="Chat"): .community-cards
     card-social(
-      dt="Twitter"
-      dd="Follow @cosmos, our official account"
-      icon="twitter"
-      :anchor="links.cosmos.community.twitter")
+      dt="Community Chat"
+      dd="Join #cosmos:matrix.org"
+      icon-type="mi"
+      icon="chat"
+      :anchor="links.cosmos.community.matrix")
     card-social(
-      dt="Medium"
-      dd="Read the latest on the Cosmos Blog"
-      icon="medium"
-      :anchor="links.cosmos.blog")
+      dt="Cosmos SDK Chat"
+      dd="Join #cosmos-sdk:matrix.org"
+      icon-type="mi"
+      icon="chat"
+      anchor="https://riot.im/app/#/room/#cosmos-sdk:matrix.org")
+    card-social(
+      dt="Cosmos Validator Chat"
+      dd="Join #cosmos_validators:matrix.org"
+      icon-type="mi"
+      icon="chat"
+      anchor="https://riot.im/app/#/room/#cosmos_validators:matrix.org")
+    card-social(
+      dt="Tendermint Chat"
+      dd="Join #tendermint:matrix.org"
+      icon-type="mi"
+      icon="chat"
+      anchor="https://riot.im/app/#/room/#tendermint:matrix.org")
+    card-social(
+      dt="Ethermint Chat"
+      dd="Join #ethermint:matrix.org"
+      icon-type="mi"
+      icon="chat"
+      anchor="https://riot.im/app/#/room/#ethermint:matrix.org")
+    card-social(
+      dt="Telegram"
+      dd="Join cosmosproject on Telegram"
+      icon="telegram"
+      :anchor="links.cosmos.community.telegram")
   part(title="Forums"): .community-cards
     card-social(
       dt="Official Forum"
@@ -25,36 +50,17 @@ page.page-community(
       dd="Subscribe to /r/cosmosnetwork"
       icon="reddit"
       :anchor="links.cosmos.community.reddit")
-  part(title="Chat"): .community-cards
+  part(title="Social Media"): .community-cards
     card-social(
-      dt="Community Chat"
-      dd="Join cosmosproject on Telegram"
-      icon="telegram"
-      :anchor="links.cosmos.community.telegram")
+      dt="Twitter"
+      dd="Follow @cosmos, our official account"
+      icon="twitter"
+      :anchor="links.cosmos.community.twitter")
     card-social(
-      dt="Developer Chat"
-      dd="Join #cosmos:matrix.org"
-      icon-type="mi"
-      icon="chat"
-      :anchor="links.cosmos.community.matrix")
-    card-social(
-      dt="Cosmos-SDK Chat"
-      dd="Join #cosmos-sdk:matrix.org"
-      icon-type="mi"
-      icon="chat"
-      anchor="https://riot.im/app/#/room/#cosmos-sdk:matrix.org")
-    card-social(
-      dt="Validator Chat"
-      dd="Join #cosmos_validators:matrix.org"
-      icon-type="mi"
-      icon="chat"
-      anchor="https://riot.im/app/#/room/#cosmos_validators:matrix.org")
-    card-social(
-      dt="Tendermint Chat"
-      dd="Join #tendermint:matrix.org"
-      icon-type="mi"
-      icon="chat"
-      anchor="https://riot.im/app/#/room/#tendermint:matrix.org")
+      dt="Medium"
+      dd="Read the latest on the Cosmos Blog"
+      icon="medium"
+      :anchor="links.cosmos.blog")
 </template>
 
 <script>

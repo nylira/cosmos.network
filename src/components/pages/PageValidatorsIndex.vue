@@ -7,6 +7,9 @@ page(
     btn(icon="chat" value="Validator Forum" type="anchor" href="https://forum.cosmos.network/c/validating" target="_blank")
   text-container(
     url='https://api.github.com/repos/tendermint/aib-data/contents/md/validators-index.md?ref=peng/testnet-refactor')
+  text-container
+    h4 Next&hellip;
+    btn(value="Validator FAQ" type="link" :to="{ name: 'validator-faq' }" icon="chevron_right" icon-pos="right" color="primary" size="lg")
 </template>
 
 <script>
