@@ -1,13 +1,14 @@
 <template lang="pug">
 .section-social: .section-social__container
   .app-footer__row.app-footer__row-actions
-    part(title="Get Started")
+    part(title="Testnet Status: LIVE")
       btn(
-        type="link"
-        :to="{ name: 'whitepaper'}"
+        type="anchor"
+        href="http://explorer.cosmos.network"
+        icon="assessment"
         size="lg"
-        icon="description"
-        value="Read Whitepaper")
+        target="_blank"
+        value="Testnet Explorer")
     part(title="Get Newsletter"): form-email-signup
   .app-footer__row
     part(title='Discuss & Chat'): .community-cards

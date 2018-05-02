@@ -3,17 +3,6 @@ page.page-community(
   title="Community"
   subtitle="These are the only official Cosmos communication channels.")
 
-  part(title="Social Media"): .community-cards
-    card-social(
-      dt="Twitter"
-      dd="Follow @cosmos, our official account"
-      icon="twitter"
-      :anchor="links.cosmos.community.twitter")
-    card-social(
-      dt="Medium"
-      dd="Read the latest on the Cosmos Blog"
-      icon="medium"
-      :anchor="links.cosmos.blog")
   part(title="Chat"): .community-cards
     card-social(
       dt="Community Chat"
@@ -61,6 +50,17 @@ page.page-community(
       dd="Subscribe to /r/cosmosnetwork"
       icon="reddit"
       :anchor="links.cosmos.community.reddit")
+  part(title="Social Media"): .community-cards
+    card-social(
+      dt="Twitter"
+      dd="Follow @cosmos, our official account"
+      icon="twitter"
+      :anchor="links.cosmos.community.twitter")
+    card-social(
+      dt="Medium"
+      dd="Read the latest on the Cosmos Blog"
+      icon="medium"
+      :anchor="links.cosmos.blog")
 </template>
 
 <script>
