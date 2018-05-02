@@ -8,6 +8,13 @@ mixin actions(size)
       size=size
       color="primary"
       value="Join Testnet")
+    btn(
+      type="anchor"
+      href="http://explorer.cosmos.network"
+      icon="wifi_tethering"
+      size="lg"
+      target="_blank"
+      value="Testnet LIVE")
 
   form.action(action="//network.us14.list-manage.com/subscribe/post?u=1b8aeaa81ca615914eb2eb7fc&id=64c73f9f5f" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate="")
     field(name="EMAIL" type="email" placeholder="name@email.com" size=size)
@@ -15,7 +22,7 @@ mixin actions(size)
       type="submit"
       icon="email"
       size=size
-      color="primary")
+      value="Get Launch Alert")
     div(style="position: absolute; left: -5000px;" aria-hidden="true")
       input(type="text" name="b_1b8aeaa81ca615914eb2eb7fc_64c73f9f5f" tabindex="-1" value="")
 
@@ -72,18 +79,8 @@ export default {
       margin-bottom 0.25rem
       shadow()
 
-  div.action
     .ni-btn
       width 100%
-
-  form.action
-    display flex
-    .ni-btn .ni-btn__container
-      border-radius 0 0.25rem 0.25rem 0
-    .ni-field
-      flex 1
-      border-right none
-      background alpha(app-bg, 50%)
 
 .section-cover__scroll
   position absolute

@@ -5,7 +5,7 @@
       btn(
         type="anchor"
         href="http://explorer.cosmos.network"
-        icon="assessment"
+        icon="wifi_tethering"
         size="lg"
         target="_blank"
         value="Testnet Explorer")
