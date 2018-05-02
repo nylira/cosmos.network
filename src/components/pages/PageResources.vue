@@ -6,7 +6,6 @@
     router-link(:to="{name: 'faq'}") FAQ
     router-link(:to="{name: 'plan'}") Plan
     router-link(:to="{name: 'delegators'}") Delegators
-    router-link(:to="{name: 'validator-faq'}") Validators
   router-view
 </template>
 
