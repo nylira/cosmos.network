@@ -107,7 +107,7 @@ export default {
   .ni-asset__thumbnail-container
     padding-left 1rem
     padding-right 0.5rem
-    flex 0 0 16rem + 1.5rem
+    flex 0 0 24rem + 1.5rem
 
   .ni-asset__header
   .ni-asset__body

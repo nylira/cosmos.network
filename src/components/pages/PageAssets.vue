@@ -13,7 +13,7 @@ page(title="Visual Assets" subtitle="An overview of Cosmos-related logos, diagra
 <script>
 import { orderBy } from "lodash"
 import moment from "moment"
-import CardAsset from "cards/CardAsset"
+import CardAsset from "cards/NiCardAsset"
 import Btn from "@nylira/vue-button"
 import Page from "common/NiPage"
 import Part from "common/NiPart"
