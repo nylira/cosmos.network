@@ -1,6 +1,6 @@
 <template lang="pug">
 .app-footer
-  section-social(v-if="!isPageCommunity")
+  section-social
   .footbot: .footbot__container
     .footbot__brandmark
       img.footbot__img(src="~images/logos/cosmos-brandmark.png")
@@ -37,19 +37,6 @@ export default {
   },
   computed: {
     ...mapGetters(["config"])
-  },
-  data: () => ({
-    isPageCommunity: false
-  }),
-  methods: {
-    getRouteName() {
-      return this.$router.currentRoute.name
-    }
-  },
-  watch: {
-    $route() {
-      this.isPageCommunity = this.$route.name === "community"
-    }
   }
 }
 </script>

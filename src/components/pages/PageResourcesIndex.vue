@@ -5,10 +5,14 @@ page(title="Resources" subtitle="A curated list of resources about the Cosmos Ne
     list-item(:to="{ name: 'whitepaper' }" title="Cosmos Whitepaper" icon="description")
     list-item(:to="{ name: 'faq' }" title="Cosmos FAQ" icon="description")
     list-item(:to="{ name: 'plan' }" title="Cosmos Fundraiser Plan" icon="description")
+    list-item(:to="{ name: 'academy' }" title="Cosmos Academy" icon="school")
   part(title="Cosmos Hub")
     list-item(:to="{ name: 'delegators' }" title="Delegator Guide" icon="description")
     list-item(:to="{ name: 'validator-faq' }" title="Validator FAQ" icon="description")
     list-item(href="https://github.com/cosmos/cosmos/raw/master/Cosmos_Token_Model.pdf" title="Cosmos Token Model (PDF)" icon="cloud_download")
+  part(title="Unofficial Resources")
+    list-item(href="https://medium.com/@JesseLivermore/basic-notable-cosmos-resources-aff336febe15" title="Basic Notable Cosmos Resources" icon="link" target="_blank")
+
 </template>
 
 <script>

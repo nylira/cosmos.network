@@ -20,7 +20,6 @@ import PageDevelopersIndex from "pages/PageDevelopersIndex"
 import PageDevelopersHackAtom from "pages/PageDevelopersHackAtom"
 import PageDevelopersScalingEth from "pages/PageDevelopersScalingEth"
 import PageDevelopersWallet from "pages/PageDevelopersWallet"
-import PageDevelopersAcademy from "pages/PageDevelopersAcademy"
 
 import PageValidators from "pages/PageValidators"
 import PageValidatorsIndex from "pages/PageValidatorsIndex"
@@ -28,8 +27,9 @@ import PageValidatorsTestnet from "pages/PageValidatorsTestnet"
 
 import PageResources from "pages/PageResources"
 import PageResourcesIndex from "pages/PageResourcesIndex"
-import PageResourcesFaq from "pages/PageResourcesFaq"
+import PageResourcesAcademy from "pages/PageResourcesAcademy"
 import PageResourcesDelegators from "pages/PageResourcesDelegators"
+import PageResourcesFaq from "pages/PageResourcesFaq"
 import PageResourcesPlan from "pages/PageResourcesPlan"
 import PageResourcesValidators from "pages/PageResourcesValidators"
 import PageResourcesWhitepaper from "pages/PageResourcesWhitepaper"
@@ -73,7 +73,6 @@ const routes = [
     component: PageDevelopers,
     children: [
       { path: "/", name: "developers", component: PageDevelopersIndex },
-      { path: "academy", name: "academy", component: PageDevelopersAcademy },
       {
         path: "hackatom",
         name: "hackatom",
@@ -133,6 +132,7 @@ const routes = [
         name: "plan",
         component: PageResourcesPlan
       },
+      { path: "academy", name: "academy", component: PageResourcesAcademy },
       {
         path: "delegators",
         name: "delegators",

@@ -10,42 +10,6 @@
         target="_blank"
         value="Testnet Explorer")
     part(title="Get Newsletter"): form-email-signup
-  .app-footer__row
-    part(title='Discuss & Chat'): .community-cards
-      card-social(
-        dt="Community Chat"
-        dd="Join #cosmos:matrix.org"
-        icon-type="mi"
-        icon="chat"
-        :anchor="links.cosmos.community.matrix")
-      card-social(
-        dt="Cosmos SDK Chat"
-        dd="Join #cosmos-sdk:matrix.org"
-        icon-type="mi"
-        icon="chat"
-        anchor="https://riot.im/app/#/room/#cosmos-sdk:matrix.org")
-      card-social(
-        dt="Cosmos Validator Chat"
-        dd="Join #cosmos_validators:matrix.org"
-        icon-type="mi"
-        icon="chat"
-        anchor="https://riot.im/app/#/room/#cosmos_validators:matrix.org")
-    part(title='Social Media'): .community-cards
-      card-social(
-        dt='Medium'
-        dd='Read the latest on the Cosmos Blog'
-        icon='medium'
-        :anchor='links.cosmos.blog')
-      card-social(
-        dt='Twitter'
-        dd='Follow @cosmos, our official account'
-        icon='twitter'
-        :anchor='links.cosmos.community.twitter')
-      card-social(
-        dt='Reddit'
-        dd='Subscribe to /r/cosmosnetwork'
-        icon='reddit'
-        :anchor='links.cosmos.community.reddit')
 </template>
 
 <script>

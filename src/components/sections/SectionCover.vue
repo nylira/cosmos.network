@@ -4,27 +4,26 @@ mixin actions(size)
     btn(
       type="link"
       :to="{ name: 'testnet' }"
-      icon="group_add"
+      icon="wifi_tethering"
       size=size
       color="primary"
       value="Join Testnet")
-    btn(
+    // btn(
       type="anchor"
       href="http://explorer.cosmos.network"
       icon="wifi_tethering"
-      size="lg"
+      size=size
       target="_blank"
       value="Testnet LIVE")
 
-  form.action(action="//network.us14.list-manage.com/subscribe/post?u=1b8aeaa81ca615914eb2eb7fc&id=64c73f9f5f" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate="")
-    field(name="EMAIL" type="email" placeholder="name@email.com" size=size)
+  .action
     btn(
-      type="submit"
-      icon="email"
+      type="link"
+      :to="{ name: 'community' }"
+      icon="people"
       size=size
-      value="Get Launch Alert")
-    div(style="position: absolute; left: -5000px;" aria-hidden="true")
-      input(type="text" name="b_1b8aeaa81ca615914eb2eb7fc_64c73f9f5f" tabindex="-1" value="")
+      color="primary"
+      value="Join Community")
 
 .section-cover: .section-cover__container
   .section-cover__actions.desktop: +actions("lg")
