@@ -9,7 +9,7 @@
       .footbot-menu__items
         router-link(:to="{ name: 'about'}").footbot-menu__item About
         router-link(:to="{ name: 'events'}").footbot-menu__item Events
-        router-link(:to="{ name: 'assets'}").footbot-menu__item Media Assets
+        router-link(:to="{ name: 'assets'}").footbot-menu__item Visual Assets
         a(:href="config.FUNDRAISER_URL" target="_blank").footbot-menu__item Fundraiser
     .footbot-menu
       .footbot-menu__title Learn
