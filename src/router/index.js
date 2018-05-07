@@ -160,7 +160,7 @@ const routes = [
   { path: "/about/faq", redirect: "/resources/faq" },
   { path: "/about/team", redirect: "/about" },
   { path: "/about/whitepaper", redirect: "/resources/whitepaper" },
-  { path: "/academy", redirect: "/developers/academy" },
+  { path: "/academy", redirect: "/resources/academy" },
   { path: "/blog/:entry", redirect: "/blog" },
   {
     path: "/blog",
@@ -180,6 +180,7 @@ const routes = [
   { path: "/dev/hackatom", redirect: "/developers/hackatom" },
   { path: "/dev/whitepaper", redirect: "/resources/whitepaper" },
   { path: "/developers/scaling", redirect: "/developers/scaling-eth" },
+  { path: "/developers/academy", redirect: "/resources/academy" },
   { path: "/faq", redirect: "/resources/faq" },
   { path: "/hackatom", redirect: "/developers/hackatom" },
   { path: "/intro/faq", redirect: "/resource/faq" },
