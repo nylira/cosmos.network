@@ -156,6 +156,8 @@ export default {
 
 .ni-event__title
   font-size h3
+  line-height 1
+  padding 0.375rem 0
   font-weight 500
 
 .ni-event__subtitle
