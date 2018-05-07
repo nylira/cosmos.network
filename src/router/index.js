@@ -23,6 +23,7 @@ import PageDevelopersWallet from "pages/PageDevelopersWallet"
 
 import PageValidators from "pages/PageValidators"
 import PageValidatorsIndex from "pages/PageValidatorsIndex"
+import PageValidatorsFaq from "pages/PageValidatorsFaq"
 import PageValidatorsTestnet from "pages/PageValidatorsTestnet"
 
 import PageResources from "pages/PageResources"
@@ -31,7 +32,6 @@ import PageResourcesAcademy from "pages/PageResourcesAcademy"
 import PageResourcesDelegators from "pages/PageResourcesDelegators"
 import PageResourcesFaq from "pages/PageResourcesFaq"
 import PageResourcesPlan from "pages/PageResourcesPlan"
-import PageResourcesValidators from "pages/PageResourcesValidators"
 import PageResourcesWhitepaper from "pages/PageResourcesWhitepaper"
 
 import PageVoyager from "pages/PageVoyager"
@@ -101,7 +101,7 @@ const routes = [
       {
         path: "faq",
         name: "validator-faq",
-        component: PageResourcesValidators
+        component: PageValidatorsFaq
       }
     ]
   },

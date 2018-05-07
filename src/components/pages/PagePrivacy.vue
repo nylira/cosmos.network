@@ -3,7 +3,7 @@ page(
   title="Privacy Policy"
   subtitle="Learn about our strict privacy policy.")
   text-container(
-    url='https://api.github.com/repos/tendermint/aib-data/contents/md/privacy-policy-icf.md?ref=peng/testnet-refactor')
+    url='https://api.github.com/repos/tendermint/aib-data/contents/md/privacy-policy-icf.md')
 </template>
 
 <script>

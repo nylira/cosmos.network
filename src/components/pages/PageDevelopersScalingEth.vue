@@ -2,7 +2,7 @@
 page(title="Scaling Ethereum" subtitle="Held back by Ethereum performance? Here are different approaches to scaling your Dapp on the Cosmos stack.")
   div(slot="menu"): btn(icon="chat" value="Community Chat" type="anchor" href="https://riot.im/app/#/group/+cosmos:matrix.org" target="_blank" color="primary")
   text-container(
-    url='https://api.github.com/repos/tendermint/aib-data/contents/md/developers-scaling-eth.md?ref=peng/testnet-refactor')
+    url='https://api.github.com/repos/tendermint/aib-data/contents/md/developers-scaling-eth.md')
 </template>
 
 <script>
