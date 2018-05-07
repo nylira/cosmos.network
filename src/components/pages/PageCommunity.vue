@@ -5,6 +5,12 @@ page.page-community(
 
   part(title="Chat"): .community-cards
     card-social(
+      dt="All Matrix Chats"
+      dd="View +cosmos:matrix.org"
+      icon-type="mi"
+      icon="chat"
+      anchor="https://riot.im/app/#/group/+cosmos:matrix.org")
+    card-social(
       dt="Community Chat"
       dd="Join #cosmos:matrix.org"
       icon-type="mi"
@@ -61,6 +67,11 @@ page.page-community(
       dd="Read the latest on the Cosmos Blog"
       icon="medium"
       :anchor="links.cosmos.blog")
+    card-social(
+      dt="YouTube"
+      dd="Watch videos on our official channel"
+      icon="youtube"
+      anchor="https://www.youtube.com/c/CosmosProject")
 </template>
 
 <script>

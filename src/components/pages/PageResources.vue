@@ -5,6 +5,7 @@
     router-link(:to="{name: 'whitepaper'}") Whitepaper
     router-link(:to="{name: 'faq'}") FAQ
     router-link(:to="{name: 'plan'}") Plan
+    router-link(:to="{name: 'academy'}") Academy
     router-link(:to="{name: 'delegators'}") Delegators
   router-view
 </template>

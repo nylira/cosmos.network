@@ -20,18 +20,18 @@ import PageDevelopersIndex from "pages/PageDevelopersIndex"
 import PageDevelopersHackAtom from "pages/PageDevelopersHackAtom"
 import PageDevelopersScalingEth from "pages/PageDevelopersScalingEth"
 import PageDevelopersWallet from "pages/PageDevelopersWallet"
-import PageDevelopersAcademy from "pages/PageDevelopersAcademy"
 
 import PageValidators from "pages/PageValidators"
 import PageValidatorsIndex from "pages/PageValidatorsIndex"
+import PageValidatorsFaq from "pages/PageValidatorsFaq"
 import PageValidatorsTestnet from "pages/PageValidatorsTestnet"
 
 import PageResources from "pages/PageResources"
 import PageResourcesIndex from "pages/PageResourcesIndex"
-import PageResourcesFaq from "pages/PageResourcesFaq"
+import PageResourcesAcademy from "pages/PageResourcesAcademy"
 import PageResourcesDelegators from "pages/PageResourcesDelegators"
+import PageResourcesFaq from "pages/PageResourcesFaq"
 import PageResourcesPlan from "pages/PageResourcesPlan"
-import PageResourcesValidators from "pages/PageResourcesValidators"
 import PageResourcesWhitepaper from "pages/PageResourcesWhitepaper"
 
 import PageVoyager from "pages/PageVoyager"
@@ -73,7 +73,6 @@ const routes = [
     component: PageDevelopers,
     children: [
       { path: "/", name: "developers", component: PageDevelopersIndex },
-      { path: "academy", name: "academy", component: PageDevelopersAcademy },
       {
         path: "hackatom",
         name: "hackatom",
@@ -102,7 +101,7 @@ const routes = [
       {
         path: "faq",
         name: "validator-faq",
-        component: PageResourcesValidators
+        component: PageValidatorsFaq
       }
     ]
   },
@@ -133,6 +132,7 @@ const routes = [
         name: "plan",
         component: PageResourcesPlan
       },
+      { path: "academy", name: "academy", component: PageResourcesAcademy },
       {
         path: "delegators",
         name: "delegators",
@@ -160,7 +160,7 @@ const routes = [
   { path: "/about/faq", redirect: "/resources/faq" },
   { path: "/about/team", redirect: "/about" },
   { path: "/about/whitepaper", redirect: "/resources/whitepaper" },
-  { path: "/academy", redirect: "/developers/academy" },
+  { path: "/academy", redirect: "/resources/academy" },
   { path: "/blog/:entry", redirect: "/blog" },
   {
     path: "/blog",
@@ -180,6 +180,7 @@ const routes = [
   { path: "/dev/hackatom", redirect: "/developers/hackatom" },
   { path: "/dev/whitepaper", redirect: "/resources/whitepaper" },
   { path: "/developers/scaling", redirect: "/developers/scaling-eth" },
+  { path: "/developers/academy", redirect: "/resources/academy" },
   { path: "/faq", redirect: "/resources/faq" },
   { path: "/hackatom", redirect: "/developers/hackatom" },
   { path: "/intro/faq", redirect: "/resource/faq" },

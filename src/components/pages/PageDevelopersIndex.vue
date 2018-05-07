@@ -1,7 +1,7 @@
 <template lang="pug">
 page(title="Developers" subtitle="Learn about and contribute to the code that powers the Cosmos Network.")
   div(slot="menu"): btn(icon="chat" value="Community Chat" type="anchor" href="https://riot.im/app/#/group/+cosmos:matrix.org" target="_blank" color="primary")
-  text-container(url="https://api.github.com/repos/tendermint/aib-data/contents/md/developers-index.md?ref=peng/testnet-refactor")
+  text-container(url="https://api.github.com/repos/tendermint/aib-data/contents/md/developers-index.md")
 </template>
 
 <script>
