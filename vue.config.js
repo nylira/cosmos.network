@@ -1,7 +1,25 @@
-let path = require("path")
+const path = require("path")
+const transliteration = require("transliteration")
+let markdownItAnchorSlugCache = {}
+let markdownItTableOfContentsSlugCache = {}
 
 function resolve(dir) {
   return path.join(__dirname, dir)
+}
+
+// custom slugify to support asian languages
+function slugify(s, cache) {
+  var slug = transliteration.slugify(s, {
+    lowercase: true,
+    separator: "-",
+    ignore: []
+  })
+  if (cache[slug]) {
+    slug += "-" + cache[slug]++
+  } else {
+    cache[slug] = 1
+  }
+  return slug
 }
 
 let markdown = require("markdown-it")({
@@ -11,11 +29,13 @@ let markdown = require("markdown-it")({
   linkify: true,
   preprocess: (markdownIt, source) => source
 })
-
-markdown.use(require("markdown-it-anchor"))
+markdown.use(require("markdown-it-anchor"), {
+  slugify: s => slugify(s, markdownItAnchorSlugCache)
+})
 markdown.use(require("markdown-it-table-of-contents"), {
   includeLevel: [2, 3, 4, 5],
-  containerClass: "minimal-toc"
+  containerClass: "minimal-toc",
+  slugify: s => slugify(s, markdownItTableOfContentsSlugCache)
 })
 
 module.exports = {
