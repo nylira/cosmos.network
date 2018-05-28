@@ -91,6 +91,13 @@ export default {
         date: "2018-01-03",
         url:
           "https://drive.google.com/open?id=1s1gXL2AJpGyeY1i-33bdMT3cis_eWTg9"
+      },
+      {
+        id: "cosmos-devcorn",
+        title: "Cosmos DevCorn",
+        date: "2017-10-14",
+        url:
+          "https://drive.google.com/open?id=0Bz0mZENfm-j8cDlSdDJ0VlVEWkE"
       }
     ]
   })
