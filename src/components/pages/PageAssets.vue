@@ -94,10 +94,9 @@ export default {
       },
       {
         id: "cosmos-devcorn",
-        title: "Cosmos DevCorn",
+        title: "Cosmos DevCorn Mural",
         date: "2017-10-14",
-        url:
-          "https://drive.google.com/open?id=0Bz0mZENfm-j8cDlSdDJ0VlVEWkE"
+        url: "https://drive.google.com/open?id=0Bz0mZENfm-j8cDlSdDJ0VlVEWkE"
       }
     ]
   })
