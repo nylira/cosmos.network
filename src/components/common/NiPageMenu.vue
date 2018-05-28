@@ -17,6 +17,7 @@ export default {
   overflow auto
   width 100vw
   display flex
+  max-width 100%
   align-items center
   padding 0 0.25rem
 
