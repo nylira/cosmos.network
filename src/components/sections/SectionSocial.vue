@@ -1,11 +1,11 @@
 <template lang="pug">
 .section-social: .section-social__container
   .app-footer__row.app-footer__row-actions
-    part(title="Testnet Status: LIVE")
+    part(title="View Network Status")
       btn(
         type="anchor"
-        href="http://explorer.cosmos.network"
-        icon="wifi_tethering"
+        href="http://explorecosmos.network"
+        icon="equalizer"
         size="lg"
         target="_blank"
         value="Testnet Explorer")
