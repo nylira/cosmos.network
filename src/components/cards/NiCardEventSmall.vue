@@ -9,11 +9,12 @@
       v-if="event.images.logo"
       :src="image('events/logos', event.images.logo, 'png')")
     .ni-event-sm__meta
-      .ni-event-sm__date
+      .ni-event-sm__note
         i.material-icons date_range
         | {{ dateStart }}
         template(v-if="event.dates.end")  - {{ dateEnd }}
-      .ni-event-sm__location
+        span(v-if="ended") (Ended)
+      .ni-event-sm__note
         i.material-icons room
         | {{ location }}
 </template>
@@ -29,6 +30,15 @@ export default {
         return this.event.location
       } else {
         return "TBD"
+      }
+    },
+    ended() {
+      let dateStart = this.event.dates.start
+      let dateEnd = this.event.dates.end
+      if (dateEnd) {
+        return moment(dateEnd).isBefore()
+      } else {
+        return moment(dateStart).isBefore()
       }
     },
     dateStart() {
@@ -111,18 +121,20 @@ export default {
   align-items center
   justify-content center
 
-.ni-event-sm__date
-.ni-event-sm__location
+.ni-event-sm__meta > div
+
+.ni-event-sm__note
   font-size sm
   display flex
   align-items center
   color bright
+  padding 0 0.375rem
   i
     color link
     margin-right 0.25rem
-
-.ni-event-sm__date
-  margin-right 0.75rem
+  span
+    margin-left 0.25rem
+    color dim
 
 @media screen and (min-width:768px)
   .ni-event-sm__container + .ni-event-sm__container

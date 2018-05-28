@@ -1,12 +1,12 @@
 <template lang="pug">
-part#section-events.ni-section-events(title="Upcoming Events")
+part#section-events.ni-section-events(title="Recent & Upcoming Events")
   div(slot="menu"): router-link(:to="{ name: 'events' }") [All Events]
-  card-event-small(v-for="e in upcomingEvents" :event="e" :key="e.id")
+  card-event-small(v-for="e in filteredEvents" :event="e" :key="e.id")
 </template>
 
 <script>
 import moment from "moment"
-import { orderBy } from "lodash"
+import { orderBy, reverse } from "lodash"
 import { mapGetters } from "vuex"
 import CardEventSmall from "cards/NiCardEventSmall"
 import Part from "common/NiPart"
@@ -17,12 +17,8 @@ export default {
     Part
   },
   computed: {
-    upcomingEvents() {
+    filteredEvents() {
       let events = this.events.filter(e => e.dates.start !== undefined)
-      // fuzz search to current and future events within three days of today
-      events = events.filter(
-        e => moment(e.dates.start).add(3, "days") >= moment()
-      )
       events = orderBy(
         events,
         [
@@ -30,9 +26,9 @@ export default {
             return moment(e.dates.start)
           }
         ],
-        "asc"
+        "desc"
       )
-      return events.slice(0, 4)
+      return reverse(events.slice(0, 4))
     },
     ...mapGetters(["events"])
   }

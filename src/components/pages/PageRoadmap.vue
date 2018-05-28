@@ -16,7 +16,7 @@
     .project.project-hub
       .project-header
         .project-title Cosmos Hub
-        a.project-link(href="http://explorer.cosmos.network" target="_blank")
+        a.project-link(:href="urls.explorer" target="_blank")
           img.project-logo(
             src="~images/roadmap/cosmos-hub.png"
             alt="Cosmos Hub" @load="imageLoaded")
@@ -31,7 +31,7 @@
     .project.project-sdk
       .project-header
         .project-title Cosmos SDK
-        a.project-link(href="https://github.com/cosmos/cosmos-sdk" target="_blank")
+        a.project-link(:href="urls.gh.cosmosSdk" target="_blank")
           img.project-logo(
             src="~images/roadmap/cosmos-sdk.png"
             alt="Cosmos SDK" @load="imageLoaded")
@@ -46,7 +46,7 @@
     .project.project-tmc
       .project-header
         .project-title Tendermint
-        a.project-link(href="https://github.com/tendermint/tendermint" target="_blank")
+        a.project-link(:href="urls.gh.tendermint" target="_blank")
           img.project-logo(
             src="~images/roadmap/tendermint-core.png"
             alt="Tendermint Core" @load="imageLoaded")
@@ -61,7 +61,7 @@
     .project.project-gui
       .project-header
         .project-title Cosmos Voyager
-        a.project-link(href="https://github.com/cosmos/voyager" target="_blank")
+        a.project-link(:href="urls.gh.voyager" target="_blank")
           img.project-logo(
             src="~images/roadmap/cosmos-voyager.png"
             alt="Cosmos Voyager" @load="imageLoaded")
@@ -86,7 +86,7 @@ export default {
     CardNode
   },
   computed: {
-    ...mapGetters(["roadmap"]),
+    ...mapGetters(["roadmap", "urls"]),
     nodes() {
       if (this.roadmap) {
         return this.roadmap.nodes

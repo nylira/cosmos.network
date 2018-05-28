@@ -1,7 +1,7 @@
 <template lang="pug">
 page(title="Events")
   div(slot="menu")
-    btn(icon="event" value="Contact Cosmos Events" type="anchor" :href="config.CONTACT_EVENTS_URL" target="_blank" color="primary")
+    btn(icon="event" value="Contact Cosmos Events" type="anchor" :href="urls.contactEvents" target="_blank" color="primary")
   .card-event
     part(title="Upcoming Events" v-if="upcomingEvents.length > 0"): .ni-events
     card-event(v-for="e in upcomingEvents" :event="e" :key="e.id")
@@ -29,6 +29,7 @@ export default {
     TextContainer
   },
   computed: {
+    ...mapGetters(["events", "urls"]),
     upcomingEvents() {
       let tbdEvents = this.events.filter(e => e.dates.start === undefined)
       let datedEvents = this.events.filter(e => e.dates.start !== undefined)
@@ -61,8 +62,7 @@ export default {
         ],
         "desc"
       )
-    },
-    ...mapGetters(["events", "config"])
+    }
   }
 }
 </script>
