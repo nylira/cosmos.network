@@ -1,5 +1,5 @@
 import VueRouter from "vue-router"
-import config from "../store/modules/config.js"
+import urls from "../store/modules/urls.js"
 
 import PageIndex from "pages/PageIndex"
 import PageAbout from "pages/PageAbout"
@@ -171,7 +171,7 @@ const routes = [
   {
     path: "/contact-events",
     beforeEnter: () => {
-      window.location.assign(config.state.CONTACT_EVENTS_URL)
+      window.location.assign(urls.contactEvents)
     }
   },
   { path: "/download", redirect: "/voyager" },

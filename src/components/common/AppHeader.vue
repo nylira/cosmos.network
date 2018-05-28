@@ -28,7 +28,7 @@ import disableScroll from "disable-scroll"
 export default {
   name: "app-header",
   computed: {
-    ...mapGetters(["config", "links"])
+    ...mapGetters(["links"])
   },
   data: () => ({
     activeMenuApp: false,

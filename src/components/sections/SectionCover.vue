@@ -8,13 +8,6 @@ mixin actions(size)
       size=size
       color="primary"
       value="Join Testnet")
-    // btn(
-      type="anchor"
-      href="http://explorer.cosmos.network"
-      icon="wifi_tethering"
-      size=size
-      target="_blank"
-      value="Testnet LIVE")
 
   .action
     btn(

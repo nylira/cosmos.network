@@ -1,5 +1,5 @@
 export const blog = state => state.blog
-export const config = state => state.config
+export const urls = state => state.urls
 export const events = state => state.events.all
 export const hackatom = state => state.hackatom
 export const links = state => state.links.data

@@ -10,7 +10,7 @@
         router-link(:to="{ name: 'about'}").footbot-menu__item About
         router-link(:to="{ name: 'events'}").footbot-menu__item Events
         router-link(:to="{ name: 'assets'}").footbot-menu__item Visual Assets
-        a(:href="config.FUNDRAISER_URL" target="_blank").footbot-menu__item Fundraiser
+        a(:href="urls.fundraiser" target="_blank").footbot-menu__item Fundraiser
     .footbot-menu
       .footbot-menu__title Learn
       .footbot-menu__items
@@ -21,10 +21,10 @@
     .footbot-menu
       .footbot-menu__title Develop
       .footbot-menu__items
-        a(href="https://github.com/cosmos/cosmos-sdk" target="_blank").footbot-menu__item Cosmos SDK
-        a(href="https://github.com/cosmos/voyager" target="_blank").footbot-menu__item Cosmos Voyager
-        a(href="https://github.com/tendermint/tendermint" target="_blank").footbot-menu__item Tendermint Core
-        a(href="https://github.com/keppel/lotion" target="_blank").footbot-menu__item Lotion
+        a(:href="urls.gh.cosmosSdk" target="_blank").footbot-menu__item Cosmos SDK
+        a(:href="urls.gh.voyager" target="_blank").footbot-menu__item Cosmos Voyager
+        a(:href="urls.gh.tendermint" target="_blank").footbot-menu__item Tendermint Core
+        a(:href="urls.gh.lotion" target="_blank").footbot-menu__item Lotion
 </template>
 
 <script>
@@ -36,7 +36,7 @@ export default {
     SectionSocial
   },
   computed: {
-    ...mapGetters(["config"])
+    ...mapGetters(["urls"])
   }
 }
 </script>

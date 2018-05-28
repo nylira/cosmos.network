@@ -4,7 +4,7 @@
     part(title="View Network Status")
       btn(
         type="anchor"
-        href="http://explorecosmos.network"
+        :href="urls.explorer"
         icon="equalizer"
         size="lg"
         target="_blank"
@@ -29,7 +29,7 @@ export default {
     Part
   },
   computed: {
-    ...mapGetters(["links"])
+    ...mapGetters(["urls"])
   }
 }
 </script>
