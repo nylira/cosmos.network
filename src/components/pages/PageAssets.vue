@@ -5,7 +5,7 @@ page(title="Visual Assets" subtitle="An overview of Cosmos-related logos, diagra
     btn(icon="apps" value="All Assets" type="anchor" href="https://drive.google.com/open?id=1IjsubJvkUIZ47Bvy4FNv8ggxbxTPXSyr" target="_blank")
   part(title="Cosmos Brand")
     text-container
-      p We have an open approach towards the use of the Cosmos branding that is community-friendly and supports the greater Cosmos and crypto ecosystem. All current Cosmos branding is under Creative Commons attribution 3.0. Please read and follow the #[a(href="https://drive.google.com/open?id=1eUyb1mJ5XGFbgoi57ATrbhN9IZVR_Y_s") Visual&nbsp;Identity&nbsp;Guide]. Download the #[a(href="https://drive.google.com/open?id=1cFqcFCtmIKpCFW2a0Y8lexMwmRIoZZ36") Logo&nbsp;Assets] to get access to our logo in vector, alpha, and high resolution formats.
+      p We have an open approach towards the use of the Cosmos branding that is community-friendly and supports the greater Cosmos and crypto ecosystem. All current Cosmos branding is under Creative Commons attribution 3.0. Please read and follow the #[a(href="http://drive.google.com/uc?export=view&id=1eUyb1mJ5XGFbgoi57ATrbhN9IZVR_Y_s") Visual&nbsp;Identity&nbsp;Guide]. Download the #[a(href="http://drive.google.com/uc?export=view&id=1cFqcFCtmIKpCFW2a0Y8lexMwmRIoZZ36") Logo&nbsp;Assets] to get access to our logo in vector, alpha, and high resolution formats.
     part(title="Cosmos Assets")
     card-asset(v-for="asset in orderedAssets" :asset="asset" :key="asset.id")
 </template>
