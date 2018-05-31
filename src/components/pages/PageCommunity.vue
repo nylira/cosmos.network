@@ -45,17 +45,6 @@ page.page-community(
       dd="Join cosmosproject on Telegram"
       icon="telegram"
       :anchor="links.cosmos.community.telegram")
-  part(title="Forums"): .community-cards
-    card-social(
-      dt="Official Forum"
-      dd="Discuss the Cosmos Network"
-      icon="discourse"
-      :anchor="links.cosmos.community.discourse")
-    card-social(
-      dt="Reddit"
-      dd="Subscribe to /r/cosmosnetwork"
-      icon="reddit"
-      :anchor="links.cosmos.community.reddit")
   part(title="Social Media"): .community-cards
     card-social(
       dt="Twitter"
@@ -67,6 +56,11 @@ page.page-community(
       dd="Read the latest on the Cosmos Blog"
       icon="medium"
       :anchor="links.cosmos.blog")
+    card-social(
+      dt="Reddit"
+      dd="Subscribe to /r/cosmosnetwork"
+      icon="reddit"
+      :anchor="links.cosmos.community.reddit")
     card-social(
       dt="YouTube"
       dd="Watch videos on our official channel"
