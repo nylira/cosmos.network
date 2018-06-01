@@ -8,7 +8,7 @@
     "serve": "vue-cli-service serve --open",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "docs:dev": "vuepress dev docs",
+    "docs:dev": "vuepress dev src/docs",
     "docs:build": "vuepress build docs"
   },
   "dependencies": {
