@@ -6,12 +6,13 @@
   "author": "All In Bits, Inc <inquiries@tendermint.com>",
   "scripts": {
     "serve": "vue-cli-service serve --open",
-    "build": "vue-cli-service build",
+    "build:site": "vue-cli-service build",
+    "serve:docs": "vuepress dev docs",
+    "build:docs": "vuepress build docs",
+    "build": "yarn build:site && yarn build:docs",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit",
-    "test:e2e": "vue-cli-service test:e2e",
-    "docs:dev": "vuepress dev src/docs",
-    "docs:build": "vuepress build src/docs"
+    "test:e2e": "vue-cli-service test:e2e"
   },
   "dependencies": {
     "@nylira/vue-button": "^4.4.3",
@@ -107,7 +108,7 @@
     ]
   },
   "gitHooks": {
-    "pre-commit": "lint-staged"
+    "precommit": "lint-staged"
   },
   "lint-staged": {
     "*.js": [

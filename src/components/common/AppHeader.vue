@@ -15,7 +15,7 @@ header.app-header
         router-link(to='/community' @click.native='close') Community
         router-link(to='/developers' @click.native='close') Developers
         router-link(to='/validators' @click.native='close') Validators
-        router-link(to='/resources' @click.native='close') Resources
+        a(href='/docs') Documentation
       nav
         a(:href='links.cosmos.blog' @click.native='close' target='_blank')
           span.label Blog
