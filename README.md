@@ -7,6 +7,7 @@
 ```bash
 # checkout
 git clone https://github.com/cosmos/cosmos.network
+cd cosmos.network && git submodule init && git submodule update
 
 # install dependencies
 yarn
