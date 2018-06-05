@@ -11,8 +11,7 @@ module.exports = {
         children: ["/", "/two"]
       },
       {
-        title: "Cosmos Academy",
-        children: ["cosmos-academy/content/introduction.rst"]
+        title: "Cosmos Academy"
       },
       {
         title: "Cosmos SDK",
