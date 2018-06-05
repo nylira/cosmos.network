@@ -1,6 +1,0 @@
-[submodule "git_modules/cosmos-academy"]
-	path = git_modules/cosmos-academy
-	url = https://github.com/cosmos/cosmos-academy.git
-[submodule "git_modules/cosmos-sdk"]
-	path = git_modules/cosmos-sdk
-	url = https://github.com/cosmos/cosmos-sdk.git
