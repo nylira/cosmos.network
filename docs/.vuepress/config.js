@@ -21,7 +21,8 @@ module.exports = {
       },
       {
         title: "Cosmos SDK Spec",
-        collapsable: false
+        collapsable: false,
+        children: ["cosmos-sdk/spec/"]
       }
     ]
   }
