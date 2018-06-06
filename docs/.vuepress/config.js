@@ -11,12 +11,17 @@ module.exports = {
         children: ["/", "/two"]
       },
       {
-        title: "Cosmos Academy"
+        title: "Cosmos Academy",
+        collapsable: false
       },
       {
-        title: "Cosmos SDK",
+        title: "Cosmos SDK Guide",
         collapsable: false,
-        children: ["cosmos-sdk/guide.md"]
+        children: ["cosmos-sdk/guides/guide.md"]
+      },
+      {
+        title: "Cosmos SDK Spec",
+        collapsable: false
       }
     ]
   }

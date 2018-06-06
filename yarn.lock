@@ -823,7 +823,7 @@
   version "3.0.0-beta.15"
   resolved "https://registry.yarnpkg.com/@vue/cli-overlay/-/cli-overlay-3.0.0-beta.15.tgz#e4b477bcbeaede138ce191e27d2222fac09078ed"
 
-"@vue/cli-plugin-babel@^3.0.0-beta.11":
+"@vue/cli-plugin-babel@^3.0.0-beta.15":
   version "3.0.0-beta.15"
   resolved "https://registry.yarnpkg.com/@vue/cli-plugin-babel/-/cli-plugin-babel-3.0.0-beta.15.tgz#95becf4a1b4ff6e1f1ac865bcf6e354d0f48924e"
   dependencies:
@@ -831,7 +831,7 @@
     "@vue/babel-preset-app" "^3.0.0-beta.15"
     babel-loader "^8.0.0-0"
 
-"@vue/cli-plugin-e2e-nightwatch@^3.0.0-beta.11":
+"@vue/cli-plugin-e2e-nightwatch@^3.0.0-beta.15":
   version "3.0.0-beta.15"
   resolved "https://registry.yarnpkg.com/@vue/cli-plugin-e2e-nightwatch/-/cli-plugin-e2e-nightwatch-3.0.0-beta.15.tgz#9c3b881b5952c7bb07826d20205b666798b3c8d0"
   dependencies:
@@ -842,7 +842,7 @@
     nightwatch "^0.9.21"
     selenium-server "^3.12.0"
 
-"@vue/cli-plugin-eslint@^3.0.0-beta.11":
+"@vue/cli-plugin-eslint@^3.0.0-beta.15":
   version "3.0.0-beta.15"
   resolved "https://registry.yarnpkg.com/@vue/cli-plugin-eslint/-/cli-plugin-eslint-3.0.0-beta.15.tgz#857d2f0f539f9853484d78a5104ad06077ab4dc9"
   dependencies:
@@ -852,7 +852,7 @@
     eslint-loader "^2.0.0"
     eslint-plugin-vue "^4.5.0"
 
-"@vue/cli-plugin-unit-jest@^3.0.0-beta.11":
+"@vue/cli-plugin-unit-jest@^3.0.0-beta.15":
   version "3.0.0-beta.15"
   resolved "https://registry.yarnpkg.com/@vue/cli-plugin-unit-jest/-/cli-plugin-unit-jest-3.0.0-beta.15.tgz#acf342cfe119ea3d737a112fb3e8208c73e1e950"
   dependencies:
@@ -862,7 +862,7 @@
     jest-transform-stub "^1.0.0"
     vue-jest "^2.6.0"
 
-"@vue/cli-service@^3.0.0-beta.11":
+"@vue/cli-service@^3.0.0-beta.15":
   version "3.0.0-beta.15"
   resolved "https://registry.yarnpkg.com/@vue/cli-service/-/cli-service-3.0.0-beta.15.tgz#5779ab045414ac7b0ba6b88725bc65a483a7975d"
   dependencies:
@@ -944,7 +944,7 @@
     source-map "^0.5.6"
     vue-template-es2015-compiler "^1.6.0"
 
-"@vue/eslint-config-prettier@^3.0.0-beta.11":
+"@vue/eslint-config-prettier@^3.0.0-beta.15":
   version "3.0.0-beta.15"
   resolved "https://registry.yarnpkg.com/@vue/eslint-config-prettier/-/eslint-config-prettier-3.0.0-beta.15.tgz#bdd8803a2484240c8c9ea076ed9e0dfef4d86731"
   dependencies:
