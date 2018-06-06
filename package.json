@@ -109,7 +109,7 @@
     ]
   },
   "gitHooks": {
-    "precommit": "lint-staged"
+    "pre-commit": "lint-staged"
   },
   "lint-staged": {
     "*.js": [

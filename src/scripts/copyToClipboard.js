@@ -11,12 +11,7 @@ export default function(text) {
   hiddenInput.select()
 
   // copy the text
-  try {
-    document.execCommand("copy")
-    // console.log(text, 'copied to clipboard')
-  } catch (e) {
-    console.log(e)
-  }
+  document.execCommand("copy")
 
   // remove the element
   document.body.removeChild(hiddenInput)
