@@ -43,7 +43,7 @@ export default {
     this.text = Base64.decode(data.content)
 
     await this.$nextTick()
-    let inlineLinks = this.$el.querySelectorAll("a")
+    let inlineLinks = this.$el.querySelectorAll("[href^='#']")
     Array.from(inlineLinks).forEach(link => {
       link.addEventListener("click", event => this.scrollToIt(event))
     })
