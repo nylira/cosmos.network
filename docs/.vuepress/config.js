@@ -1,72 +1,79 @@
 module.exports = {
   title: "Cosmos Network",
-  description: "Welcome to Cosmos Documentation.",
+  description: "Documentation for the Cosmos Network.",
   dest: "./dist/docs",
   base: "/docs/",
   themeConfig: {
     lastUpdated: 'Last Updated',
     nav: [
-      { text: 'About', link: '/about' },
-      { text: 'Roadmap', link: '/roadmap' },
-      { text: 'Testnet', link: '/testnet' },
-      { text: 'Documentation', link: '/docs' },
-      { text: 'Blog', link: 'https://blog.cosmos.network' },
+      { text: 'Back to Cosmos', link: 'https://cosmos.network' },
     ],
     sidebar: [
       {
-        title: "Installation",
+        title: "Introduction",
+        collapsable: false,
+        children: [
+          ["cosmos-academy/docs/content/introduction", 'What is Cosmos?'],
+          ["cosmos-academy/docs/content/introduction", 'Intro to Tendermint'],
+        ]
+      },
+      {
+        title: "Getting Started",
+        collapsable: false,
+        children: [
+          "cosmos-sdk/docs/guides/sdk/install",
+          ["cosmos-academy/docs/content/app-development", "How to run a full node"],
+          ["cosmos-academy/docs/content/app-development", "How to connect to the testnet"],
+          ["cosmos-academy/docs/content/app-development", "How to use Voyager"],
+        ]
+      },
+      {
+        title: "Cosmos SDK",
+        collapsable: false,
+        children: [
+          ["cosmos-sdk/docs/guides/guide", 'Overview'],
+          ["cosmos-sdk/docs/guides/guide", 'Security'],
+          ["cosmos-sdk/docs/guides/guide", 'Modules (x)'],
+          ["cosmos-sdk/docs/guides/guide", 'Key Management'],
+          ["cosmos-sdk/docs/guides/guide", 'The LCD'],
+          ["cosmos-sdk/docs/guides/guide", 'Building an app'],
+          ["cosmos-sdk/docs/spec/", 'Specifications'],
+          ["cosmos-academy/docs/content/app-development", "How to build a wallet"],
+        ]
+      },
+      {
+        title: "Lotion JS",
+        collapsable: false,
+        children: [
+          ["cosmos-sdk/docs/spec/", 'Overview'],
+          ["cosmos-sdk/docs/spec/", 'Resources'],
+        ]
+      },
+      {
+        title: "Validators",
+        collapsable: true,
+        children: [
+          ["cosmos-academy/docs/content/app-development", "Overview"],
+          ["cosmos-academy/docs/content/app-development", "How to become a validator"],
+          ["cosmos-academy/docs/content/app-development", "Security"],
+          ["cosmos-academy/docs/content/app-development", "FAQs"],
+          ["cosmos-academy/docs/content/app-development", "Sentry Nodes"],
+        ]
+      },
+      {
+        title: "Glossary",
         collapsable: true,
         children: [
           "cosmos-sdk/docs/guides/sdk/install",
         ]
       },
       {
-        title: "Introduction",
-        collapsable: true,
-        children: [
-          "cosmos-academy/docs/content/introduction",
-          "cosmos-academy/docs/content/concepts",
-          "cosmos-academy/docs/content/app-development",
-          "cosmos-academy/docs/content/concepts",
-          "cosmos-academy/docs/content/community",
-          "cosmos-academy/docs/content/media",
-          "cosmos-academy/docs/content/research",
-          "cosmos-academy/docs/content/external-resources",
-        ]
-      },
-      {
-        title: "Getting Started",
-        collapsable: true,
-        children: [
-          "cosmos-sdk/docs/guides/guide",
-        ]
-      },
-      {
-        title: "Cosmos SDK",
-        collapsable: true,
-        children: [
-          "cosmos-sdk/docs/spec/",
-        ]
-      },
-      {
-        title: "Lotion",
-        collapsable: true,
-      },
-      {
-        title: "Validators",
-        collapsable: true,
-      },
-      {
-        title: "Wallets",
-        collapsable: true,
-      },
-      {
-        title: "Glossary",
-        collapsable: true,
-      },
-      {
         title: "Resources",
         collapsable: true,
+        children: [
+          ["cosmos-sdk/docs/spec/", 'Whitepaper'],
+          ["cosmos-sdk/docs/spec/", 'Fundraiser'],
+        ]
       },
     ]
   }
