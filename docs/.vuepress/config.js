@@ -3,6 +3,9 @@ module.exports = {
   description: "Documentation for the Cosmos Network.",
   dest: "./dist/docs",
   base: "/docs/",
+  markdown: {
+    lineNumbers: true
+  },
   themeConfig: {
     lastUpdated: 'Last Updated',
     nav: [
@@ -38,7 +41,17 @@ module.exports = {
           "/sdk/basecoin",
           "/sdk/building-an-app",
           "/sdk/building-a-wallet",
-          "/sdk/specifications",
+        ]
+      },
+      {
+        title: "Specifications",
+        collapsable: false,
+        children: [
+          "/specs/overview",
+          "/specs/governance",
+          "/specs/ibc",
+          "/specs/staking",
+          "/specs/icts",
         ]
       },
       {
@@ -46,7 +59,7 @@ module.exports = {
         collapsable: false,
         children: [
           "/lotion/overview",
-          // "/lotion/simple-app",
+          "/lotion/building-an-app",
         ]
       },
       {
