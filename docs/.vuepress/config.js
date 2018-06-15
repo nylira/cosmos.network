@@ -13,40 +13,40 @@ module.exports = {
         title: "Introduction",
         collapsable: false,
         children: [
-          ["cosmos-academy/docs/content/introduction", 'What is Cosmos?'],
-          ["cosmos-academy/docs/content/introduction", 'Intro to Tendermint'],
+          "/introduction/what-is-the-hub",
+          "/introduction/tendermint",
         ]
       },
       {
         title: "Getting Started",
         collapsable: false,
         children: [
-          "cosmos-sdk/docs/guides/sdk/install",
-          ["cosmos-academy/docs/content/app-development", "How to run a full node"],
-          ["cosmos-academy/docs/content/app-development", "How to connect to the testnet"],
-          ["cosmos-academy/docs/content/app-development", "How to use Voyager"],
+          "/getting-started/installation",
+          "/getting-started/full-node",
+          "/getting-started/voyager",
         ]
       },
       {
         title: "Cosmos SDK",
         collapsable: false,
         children: [
-          ["cosmos-sdk/docs/guides/guide", 'Overview'],
-          ["cosmos-sdk/docs/guides/guide", 'Security'],
-          ["cosmos-sdk/docs/guides/guide", 'Modules (x)'],
-          ["cosmos-sdk/docs/guides/guide", 'Key Management'],
-          ["cosmos-sdk/docs/guides/guide", 'The LCD'],
-          ["cosmos-sdk/docs/guides/guide", 'Building an app'],
-          ["cosmos-sdk/docs/spec/", 'Specifications'],
-          ["cosmos-academy/docs/content/app-development", "How to build a wallet"],
+          "/sdk/overview",
+          "/sdk/security",
+          "/sdk/core",
+          "/sdk/modules",
+          "/sdk/the-lcd",
+          "/sdk/basecoin",
+          "/sdk/building-an-app",
+          "/sdk/building-a-wallet",
+          "/sdk/specifications",
         ]
       },
       {
         title: "Lotion JS",
         collapsable: false,
         children: [
-          ["cosmos-sdk/docs/spec/", 'Overview'],
-          ["cosmos-sdk/docs/spec/", 'Resources'],
+          "/lotion/overview",
+          // "/lotion/simple-app",
         ]
       },
       {
