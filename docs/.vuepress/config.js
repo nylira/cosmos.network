@@ -64,28 +64,26 @@ module.exports = {
       },
       {
         title: "Validators",
-        collapsable: true,
+        collapsable: false,
         children: [
-          ["cosmos-academy/docs/content/app-development", "Overview"],
-          ["cosmos-academy/docs/content/app-development", "How to become a validator"],
-          ["cosmos-academy/docs/content/app-development", "Security"],
-          ["cosmos-academy/docs/content/app-development", "FAQs"],
-          ["cosmos-academy/docs/content/app-development", "Sentry Nodes"],
+          "/validators/overview",
+          "/validators/security",
+          "/validators/faqs",
+          "/validators/becoming-a-validator",
         ]
       },
-      {
-        title: "Glossary",
-        collapsable: true,
-        children: [
-          "cosmos-sdk/docs/guides/sdk/install",
-        ]
-      },
+      // {
+      //   title: "Glossary",
+      //   collapsable: true,
+      //   children: [
+      //     "",
+      //   ]
+      // },
       {
         title: "Resources",
         collapsable: true,
         children: [
-          ["cosmos-sdk/docs/spec/", 'Whitepaper'],
-          ["cosmos-sdk/docs/spec/", 'Fundraiser'],
+          "/resources/whitepaper",
         ]
       },
     ]
