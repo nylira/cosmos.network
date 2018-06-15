@@ -53,6 +53,7 @@ a.blog-post
   flex 1
   display flex
   flex-flow column nowrap
+  lightShadow()
 
 .blog-post__image
   display block

@@ -1,6 +1,5 @@
 <template lang="pug">
 .app-footer
-  section-social
   .footbot: .footbot__container
     .footbot__brandmark
       img.footbot__img(src="~images/logos/cosmos-brandmark.png")
@@ -19,12 +18,21 @@
         router-link(:to="{ name: 'whitepaper'}").footbot-menu__item Whitepaper
         router-link(:to="{ name: 'faq'}").footbot-menu__item FAQ
     .footbot-menu
-      .footbot-menu__title Develop
+      .footbot-menu__title Products
       .footbot-menu__items
         a(:href="urls.gh.cosmosSdk" target="_blank").footbot-menu__item Cosmos SDK
-        a(:href="urls.gh.voyager" target="_blank").footbot-menu__item Cosmos Voyager
-        a(:href="urls.gh.tendermint" target="_blank").footbot-menu__item Tendermint Core
-        a(:href="urls.gh.lotion" target="_blank").footbot-menu__item Lotion
+        a(:href="urls.gh.tendermint" target="_blank").footbot-menu__item Tendermint
+        a(:href="urls.gh.lotion" target="_blank").footbot-menu__item Lotion JS
+        a(:href="urls.gh.voyager" target="_blank").footbot-menu__item Voyager
+    .footbot-menu
+      .footbot-menu__title Social
+      .footbot-menu__items
+        a(:href="urls.gh.cosmosSdk" target="_blank").footbot-menu__item Riot
+        a(:href="urls.gh.voyager" target="_blank").footbot-menu__item Telegram
+        a(:href="urls.gh.tendermint" target="_blank").footbot-menu__item Reddit
+        a(:href="urls.gh.lotion" target="_blank").footbot-menu__item Twitter
+        a(:href="urls.gh.lotion" target="_blank").footbot-menu__item YouTube
+    section-social
 </template>
 
 <script>
@@ -54,7 +62,13 @@ export default {
   margin 0 auto
 
 .footbot
-  background app-fg
+  background app-bg
+
+  .ni-part-header
+    background inherit
+
+  .ni-part-title
+    font-size 1rem
 
 .footbot__container
   display flex
@@ -64,7 +78,7 @@ export default {
 
 .footbot__brandmark
   padding 0
-  flex 0 0 50%
+  flex 0 0 30%
 
 .footbot__img
   max-width 50vw
@@ -89,7 +103,7 @@ export default {
     padding 3.5rem 0
 
   .footbot__brandmark
-    flex 0 0 50%
+    flex 0 0 30%
 
   .footbot__img
     max-width 14rem
