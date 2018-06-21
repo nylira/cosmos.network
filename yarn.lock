@@ -628,23 +628,23 @@
     call-me-maybe "^1.0.1"
     glob-to-regexp "^0.3.0"
 
-"@nylira/vue-button@^4.4.3":
+"@nylira/vue-button@4.4.3":
   version "4.4.3"
   resolved "https://registry.yarnpkg.com/@nylira/vue-button/-/vue-button-4.4.3.tgz#068252a7e39beff9e35589bc1071a8a94379e212"
 
-"@nylira/vue-field@^1.4.0":
+"@nylira/vue-field@1.4.0":
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/@nylira/vue-field/-/vue-field-1.4.0.tgz#660a8fea621005b1c393c6b20488f6c3d7f6c5e5"
 
-"@nylira/vue-notifications@^1.5.0":
+"@nylira/vue-notifications@1.5.0":
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/@nylira/vue-notifications/-/vue-notifications-1.5.0.tgz#a6f027c4ecd8ca99ed7dbbcc04d5b67288d8d0f6"
 
-"@nylira/vue-page-header@^2.3.0":
+"@nylira/vue-page-header@2.3.0":
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/@nylira/vue-page-header/-/vue-page-header-2.3.0.tgz#89cc18374c19bb659c9169f327e69a91b0093fbf"
 
-"@tendermint/ui@^0.2.6":
+"@tendermint/ui@0.2.6":
   version "0.2.6"
   resolved "https://registry.yarnpkg.com/@tendermint/ui/-/ui-0.2.6.tgz#8c173a6abcbddec53bccc75fba05e86f2d467957"
   dependencies:
@@ -680,7 +680,7 @@
   version "3.0.0-beta.6"
   resolved "https://registry.yarnpkg.com/@vue/cli-overlay/-/cli-overlay-3.0.0-beta.6.tgz#bc11b99e8b6550b43326305ee11f27d07ceaeec0"
 
-"@vue/cli-plugin-babel@^3.0.0-beta.6":
+"@vue/cli-plugin-babel@3.0.0-beta.6":
   version "3.0.0-beta.6"
   resolved "https://registry.yarnpkg.com/@vue/cli-plugin-babel/-/cli-plugin-babel-3.0.0-beta.6.tgz#4b8b887f2151a2c505adb0ddb2ea145a3b2d60f3"
   dependencies:
@@ -688,7 +688,7 @@
     "@vue/babel-preset-app" "^3.0.0-beta.6"
     babel-loader "^8.0.0-0"
 
-"@vue/cli-plugin-eslint@^3.0.0-beta.6":
+"@vue/cli-plugin-eslint@3.0.0-beta.6":
   version "3.0.0-beta.6"
   resolved "https://registry.yarnpkg.com/@vue/cli-plugin-eslint/-/cli-plugin-eslint-3.0.0-beta.6.tgz#92e2e3801a70199374edefdd1051aed6b4464824"
   dependencies:
@@ -697,7 +697,7 @@
     eslint-loader "^2.0.0"
     eslint-plugin-vue "^4.3.0"
 
-"@vue/cli-service@^3.0.0-beta.6":
+"@vue/cli-service@3.0.0-beta.6":
   version "3.0.0-beta.6"
   resolved "https://registry.yarnpkg.com/@vue/cli-service/-/cli-service-3.0.0-beta.6.tgz#b229b5fd3c5db33f0df9824f0b99ca081fa38d20"
   dependencies:
@@ -1094,7 +1094,7 @@ aws4@^1.2.1, aws4@^1.6.0:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/aws4/-/aws4-1.7.0.tgz#d4d0e9b9dbfca77bf08eeb0a8a471550fe39e289"
 
-axios@^0.18.0:
+axios@0.18.0:
   version "0.18.0"
   resolved "https://registry.yarnpkg.com/axios/-/axios-0.18.0.tgz#32d53e4851efdc0a11993b6cd000789d70c05102"
   dependencies:
@@ -2271,7 +2271,7 @@ dir-glob@^2.0.0:
     arrify "^1.0.1"
     path-type "^3.0.0"
 
-disable-scroll@^0.4.0:
+disable-scroll@0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/disable-scroll/-/disable-scroll-0.4.0.tgz#9dfd1656837ee85e45240707067782a67eac6eb4"
   dependencies:
@@ -2541,7 +2541,7 @@ escope@^3.6.0:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
-eslint-config-prettier@^2.9.0:
+eslint-config-prettier@2.9.0:
   version "2.9.0"
   resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-2.9.0.tgz#5ecd65174d486c22dff389fe036febf502d468a3"
   dependencies:
@@ -2557,7 +2557,7 @@ eslint-loader@^2.0.0:
     object-hash "^1.1.4"
     rimraf "^2.6.1"
 
-eslint-plugin-prettier@^2.6.0:
+eslint-plugin-prettier@2.6.0:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-prettier/-/eslint-plugin-prettier-2.6.0.tgz#33e4e228bdb06142d03c560ce04ec23f6c767dd7"
   dependencies:
@@ -3632,7 +3632,7 @@ interpret@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/interpret/-/interpret-1.1.0.tgz#7ed1b1410c6a0e0f78cf95d3b8440c63f78b8614"
 
-intersection-observer@^0.5.0:
+intersection-observer@0.5.0:
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/intersection-observer/-/intersection-observer-0.5.0.tgz#9fe8bee3953c755b1485c38efd9633d535775ea6"
 
@@ -4293,20 +4293,20 @@ map-visit@^1.0.0:
   dependencies:
     object-visit "^1.0.0"
 
-markdown-it-anchor@^4.0.0:
+markdown-it-anchor@4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/markdown-it-anchor/-/markdown-it-anchor-4.0.0.tgz#e87fb5543e01965adf71506c6bf7b0491841b7e3"
   dependencies:
     string "^3.3.3"
 
-markdown-it-table-of-contents@^0.3.3:
+markdown-it-table-of-contents@0.3.3:
   version "0.3.3"
   resolved "https://registry.yarnpkg.com/markdown-it-table-of-contents/-/markdown-it-table-of-contents-0.3.3.tgz#b62e943c32de2c4a27d3e7c83cd63acbc2a9c4a2"
   dependencies:
     lodash.assign "~4.2.0"
     string "~3.3.3"
 
-markdown-it@^8.4.0, markdown-it@^8.4.1:
+markdown-it@8.4.1, markdown-it@^8.4.0:
   version "8.4.1"
   resolved "https://registry.yarnpkg.com/markdown-it/-/markdown-it-8.4.1.tgz#206fe59b0e4e1b78a7c73250af9b34a4ad0aaf44"
   dependencies:
@@ -4316,7 +4316,7 @@ markdown-it@^8.4.0, markdown-it@^8.4.1:
     mdurl "^1.0.1"
     uc.micro "^1.0.5"
 
-markdown-loader@^2.0.2:
+markdown-loader@2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/markdown-loader/-/markdown-loader-2.0.2.tgz#1cdcf11307658cd611046d7db34c2fe80542af7c"
   dependencies:
@@ -4505,7 +4505,7 @@ mkdirp@0.5.1, mkdirp@0.5.x, "mkdirp@>=0.5 0", mkdirp@^0.5.1, mkdirp@~0.5.0, mkdi
   dependencies:
     minimist "0.0.8"
 
-moment@^2.22.1:
+moment@2.22.1:
   version "2.22.1"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.22.1.tgz#529a2e9bf973f259c9643d237fda84de3a26e8ad"
 
@@ -4580,7 +4580,7 @@ next-tick@1:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
 
-nib@^1.1.2:
+nib@1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/nib/-/nib-1.1.2.tgz#6a69ede4081b95c0def8be024a4c8ae0c2cbb6c7"
   dependencies:
@@ -5025,7 +5025,7 @@ pbkdf2@^3.0.3:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
-perfect-scrollbar@^1.3.0:
+perfect-scrollbar@1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/perfect-scrollbar/-/perfect-scrollbar-1.3.0.tgz#61da56f94b58870d8e0a617bce649cee17d1e3b2"
 
@@ -5519,7 +5519,7 @@ pug-walk@^1.1.7:
   version "1.1.7"
   resolved "https://registry.yarnpkg.com/pug-walk/-/pug-walk-1.1.7.tgz#c00d5c5128bac5806bec15d2b7e7cdabe42531f3"
 
-pug@^2.0.3:
+pug@2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/pug/-/pug-2.0.3.tgz#71cba82537c95a5eab7ed04696e4221f53aa878e"
   dependencies:
@@ -5973,7 +5973,7 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
     hash-base "^2.0.0"
     inherits "^2.0.1"
 
-rss-parser@^3.1.2:
+rss-parser@3.1.2:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/rss-parser/-/rss-parser-3.1.2.tgz#f029873e667f7007788e3cf27ad11967c848c121"
   dependencies:
@@ -6037,7 +6037,7 @@ schema-utils@^0.4.0, schema-utils@^0.4.2, schema-utils@^0.4.3, schema-utils@^0.4
     ajv "^6.1.0"
     ajv-keywords "^3.1.0"
 
-scroll-to@^0.0.2:
+scroll-to@0.0.2:
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/scroll-to/-/scroll-to-0.0.2.tgz#936d398a9133660a2492145c2c0081dfcb0728f3"
   dependencies:
@@ -6493,7 +6493,7 @@ strip-json-comments@~2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
 
-stylus-loader@^3.0.2:
+stylus-loader@3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/stylus-loader/-/stylus-loader-3.0.2.tgz#27a706420b05a38e038e7cacb153578d450513c6"
   dependencies:
@@ -6501,7 +6501,7 @@ stylus-loader@^3.0.2:
     lodash.clonedeep "^4.5.0"
     when "~3.6.x"
 
-stylus@0.54.5, stylus@^0.54.5:
+stylus@0.54.5:
   version "0.54.5"
   resolved "https://registry.yarnpkg.com/stylus/-/stylus-0.54.5.tgz#42b9560931ca7090ce8515a798ba9e6aa3d6dc79"
   dependencies:
@@ -6691,7 +6691,7 @@ tr46@~0.0.1:
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/tr46/-/tr46-0.0.3.tgz#8184fd347dac9cdc185992f3a6622e14b9d9ab6a"
 
-transliteration@^1.6.2:
+transliteration@1.6.2:
   version "1.6.2"
   resolved "https://registry.yarnpkg.com/transliteration/-/transliteration-1.6.2.tgz#335c91bf70f3b211bb81e8d03992b2078c0dac96"
   dependencies:
@@ -6976,7 +6976,7 @@ void-elements@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/void-elements/-/void-elements-2.0.1.tgz#c066afb582bb1cb4128d60ea92392e94d5e9dbec"
 
-vue-analytics@^5.10.2:
+vue-analytics@5.10.2:
   version "5.10.2"
   resolved "https://registry.yarnpkg.com/vue-analytics/-/vue-analytics-5.10.2.tgz#0536bbb6fafe3dc111683143fc5d3347506c151f"
 
@@ -7013,7 +7013,7 @@ vue-loader@^14.1.1:
     vue-style-loader "^4.0.1"
     vue-template-es2015-compiler "^1.6.0"
 
-vue-markdown-loader@^2.4.1:
+vue-markdown-loader@2.4.1:
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/vue-markdown-loader/-/vue-markdown-loader-2.4.1.tgz#324e730e21cfe2ab37f415ff7eaf4ca36696165f"
   dependencies:
@@ -7022,7 +7022,7 @@ vue-markdown-loader@^2.4.1:
     loader-utils "^1.1.0"
     markdown-it "^8.4.0"
 
-vue-meta@^1.5.0:
+vue-meta@1.5.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/vue-meta/-/vue-meta-1.5.0.tgz#02a9f166a1e87763a87bfd47431122ed575bcdde"
   dependencies:
@@ -7030,11 +7030,11 @@ vue-meta@^1.5.0:
     lodash.isplainobject "^4.0.6"
     object-assign "^4.1.1"
 
-vue-router@^3.0.1:
+vue-router@3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-3.0.1.tgz#d9b05ad9c7420ba0f626d6500d693e60092cc1e9"
 
-vue-scrollto@^2.11.0:
+vue-scrollto@2.11.0:
   version "2.11.0"
   resolved "https://registry.yarnpkg.com/vue-scrollto/-/vue-scrollto-2.11.0.tgz#0657f127faded60a71fbcc841f393279a49aed55"
   dependencies:
@@ -7047,6 +7047,13 @@ vue-style-loader@^4.0.1:
     hash-sum "^1.0.2"
     loader-utils "^1.0.2"
 
+vue-template-compiler@2.5.13:
+  version "2.5.13"
+  resolved "https://registry.yarnpkg.com/vue-template-compiler/-/vue-template-compiler-2.5.13.tgz#12a2aa0ecd6158ac5e5f14d294b0993f399c3d38"
+  dependencies:
+    de-indent "^1.0.2"
+    he "^1.1.0"
+
 vue-template-compiler@^2.5.13:
   version "2.5.16"
   resolved "https://registry.yarnpkg.com/vue-template-compiler/-/vue-template-compiler-2.5.16.tgz#93b48570e56c720cdf3f051cc15287c26fbd04cb"
@@ -7058,15 +7065,15 @@ vue-template-es2015-compiler@^1.6.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.6.0.tgz#dc42697133302ce3017524356a6c61b7b69b4a18"
 
-vue@^2.5.16:
+vue@2.5.16, vue@^2.5.16:
   version "2.5.16"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.5.16.tgz#07edb75e8412aaeed871ebafa99f4672584a0085"
 
-vuex-router-sync@^5.0.0:
+vuex-router-sync@5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/vuex-router-sync/-/vuex-router-sync-5.0.0.tgz#1a225c17a1dd9e2f74af0a1b2c62072e9492b305"
 
-vuex@^3.0.1:
+vuex@3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/vuex/-/vuex-3.0.1.tgz#e761352ebe0af537d4bb755a9b9dc4be3df7efd2"
 
