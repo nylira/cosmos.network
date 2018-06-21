@@ -644,7 +644,7 @@
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/@nylira/vue-page-header/-/vue-page-header-2.3.0.tgz#89cc18374c19bb659c9169f327e69a91b0093fbf"
 
-"@tendermint/ui@^0.2.5":
+"@tendermint/ui@^0.2.6":
   version "0.2.6"
   resolved "https://registry.yarnpkg.com/@tendermint/ui/-/ui-0.2.6.tgz#8c173a6abcbddec53bccc75fba05e86f2d467957"
   dependencies:
