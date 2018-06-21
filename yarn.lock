@@ -644,9 +644,9 @@
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/@nylira/vue-page-header/-/vue-page-header-2.3.0.tgz#89cc18374c19bb659c9169f327e69a91b0093fbf"
 
-"@tendermint/ui@^0.2.4":
-  version "0.2.5"
-  resolved "https://registry.yarnpkg.com/@tendermint/ui/-/ui-0.2.5.tgz#bf679d6d279bf575f2f25974851fdfddc6f252b2"
+"@tendermint/ui@^0.2.5":
+  version "0.2.6"
+  resolved "https://registry.yarnpkg.com/@tendermint/ui/-/ui-0.2.6.tgz#8c173a6abcbddec53bccc75fba05e86f2d467957"
   dependencies:
     cookieconsent "^3.0.6"
     moment "^2.22.2"
