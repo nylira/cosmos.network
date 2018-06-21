@@ -4,9 +4,9 @@ page(
   subtitle="Learn how to run a validator node on the latest Cosmos testnet.")
   div(slot="menu")
     btn(icon="chat" value="Validator Chat" type="anchor" href="https://riot.im/app/#/room/#cosmos_validators:matrix.org" target="_blank" color="primary")
-    btn(icon="chat" value="Validator Forum" type="anchor" href="https://forum.cosmos.network/c/validating" target="_blank")
+    btn(icon="chat" value="Testnet Faucet" type="anchor" href="https://faucetcosmos.network" target="_blank")
   text-container(
-    url='https://api.github.com/repos/cosmos/testnet/contents/README.md')
+    url='https://api.github.com/repos/cosmos/cosmos-sdk/contents/cmd/gaia/testnets/README.md')
 </template>
 
 <script>
