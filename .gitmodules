@@ -1,8 +1,0 @@
-[submodule "docs/cosmos-sdk"]
-	path = docs/cosmos-sdk
-	url = https://github.com/cosmos/cosmos-sdk.git
-  branch = rigel/spec-staking
-[submodule "docs/cosmos-academy"]
-	path = docs/cosmos-academy
-	url = https://github.com/cosmos/cosmos-academy.git
-  branch = master

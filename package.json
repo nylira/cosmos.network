@@ -15,8 +15,7 @@
     "lint:md": "remark .",
     "lint:fix": "remark . -o",
     "test:unit": "vue-cli-service test:unit",
-    "test:e2e": "vue-cli-service test:e2e",
-    "postinstall": "git submodule update --remote -i"
+    "test:e2e": "vue-cli-service test:e2e"
   },
   "dependencies": {
     "@nylira/vue-button": "4.4.3",
