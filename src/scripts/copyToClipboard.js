@@ -13,9 +13,8 @@ export default function(text) {
   // copy the text
   try {
     document.execCommand("copy")
-    // console.log(text, 'copied to clipboard')
   } catch (e) {
-    console.log(e)
+    return e
   }
 
   // remove the element

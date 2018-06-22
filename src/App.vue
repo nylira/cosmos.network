@@ -1,5 +1,6 @@
 <template lang="pug">
 #app
+  tm-cookie-consent
   app-header
   #app-content: router-view
   app-footer
@@ -12,13 +13,15 @@ import AppFooter from "common/AppFooter.vue"
 import Notifications from "@nylira/vue-notifications"
 import store from "@/store/index.js"
 import { mapGetters } from "vuex"
+import { TmCookieConsent } from "@tendermint/ui"
 
 export default {
   name: "app",
   components: {
     AppHeader,
     AppFooter,
-    Notifications
+    Notifications,
+    TmCookieConsent
   },
   computed: {
     ...mapGetters(["notifications"])
