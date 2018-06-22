@@ -1,4 +1,4 @@
-# FAQs
+# Validator FAQ
 
 ## General Concepts
 

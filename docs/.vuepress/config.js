@@ -16,7 +16,7 @@ module.exports = {
         title: "Introduction",
         collapsable: false,
         children: [
-          "/introduction/what-is-the-hub",
+          "/introduction/cosmos-hub",
           "/introduction/tendermint",
         ]
       },
@@ -33,27 +33,23 @@ module.exports = {
         title: "Cosmos SDK",
         collapsable: false,
         children: [
-          "/sdk/overview",
-          "/sdk/security",
-          "/sdk/core",
+          ["/sdk/overview", "Overview"],
+          ["/sdk/core", "Core"],
           "/sdk/modules",
-          "/sdk/the-lcd",
-          "/sdk/basecoin",
-          "/sdk/building-an-app",
-          "/sdk/building-a-wallet",
+          "/sdk/clients",
         ]
       },
-      {
-        title: "Specifications",
-        collapsable: false,
-        children: [
-          "/specs/overview",
-          "/specs/governance",
-          "/specs/ibc",
-          "/specs/staking",
-          "/specs/icts",
-        ]
-      },
+      // {
+      //   title: "Specifications",
+      //   collapsable: false,
+      //   children: [
+      //     ["/specs/overview", "Overview"],
+      //     "/specs/governance",
+      //     "/specs/ibc",
+      //     "/specs/staking",
+      //     "/specs/icts",
+      //   ]
+      // },
       {
         title: "Lotion JS",
         collapsable: false,
@@ -66,10 +62,10 @@ module.exports = {
         title: "Validators",
         collapsable: false,
         children: [
-          "/validators/overview",
-          "/validators/security",
-          "/validators/faqs",
-          "/validators/becoming-a-validator",
+          ["/validators/overview", "Overview"],
+          ["/validators/security", "Security"],
+          ["/validators/validator-setup", "Validator Setup"],
+          "/validators/validator-faq",
         ]
       },
       // {
@@ -84,6 +80,7 @@ module.exports = {
         collapsable: true,
         children: [
           "/resources/whitepaper",
+          "/resources/delegator-faq",
         ]
       },
     ]

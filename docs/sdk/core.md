@@ -1,11 +1,9 @@
-# Core Components
+# Core SDK
 
-## Tx & Msg
+## Messages
 
 The SDK distinguishes between transactions (Tx) and messages
-(Msg).  A Tx is a Msg wrapped with authentication and fee data.
-
-### Messages
+(Msg). A Tx is a Msg wrapped with authentication and fee data.
 
 Users can create messages containing arbitrary information by
 implementing the `Msg` interface:
@@ -78,7 +76,288 @@ func (msg MsgIssue) GetSigners() []sdk.Address {
 }
 ```
 
-### Transactions
+## Handlers
+
+### Context
+
+The SDK uses a `Context` to propogate common information across functions. The
+`Context` is modeled after the Golang `context.Context` object, which has
+become ubiquitous in networking middleware and routing applications as a means
+to easily propogate request context through handler functions.
+
+The main information stored in the `Context` includes the application
+MultiStore, the last block header, and the transaction bytes.
+Effectively, the context contains all data that may be necessary for processing
+a transaction.
+
+Many methods on SDK objects receive a context as the first argument.
+
+### Message Handler
+
+Message processing in the SDK is defined through `Handler` functions:
+
+```go
+type Handler func(ctx Context, msg Msg) Result
+```
+
+A handler takes a context and a message and returns a result.  All
+information necessary for processing a message should be available in the
+context.
+
+While the context holds the entire application state (ie. the
+MultiStore), handlers are restricted in what they can do based on the
+capabilities they were given when the application was set up.
+
+For instance, suppose we have a `newFooHandler`:
+
+```go
+func newFooHandler(key sdk.StoreKey) sdk.Handler {
+    return func(ctx sdk.Context, msg sdk.Msg) sdk.Result {
+        store := ctx.KVStore(key)
+        // ...
+    }
+}
+```
+
+This handler can only access one store based on whichever key its given.
+So when we register the handler for the `foo` message type, we make sure
+to give it the `fooKey`:
+
+```go
+app.Router().AddRoute("foo", newFooHandler(fooKey))
+```
+
+Now it can only access the `foo` store, but not the `bar` or `cat` stores!
+
+## BaseApp
+
+The BaseApp is an abstraction over the [Tendermint
+ABCI](https://github.com/tendermint/abci) that
+simplifies application development by handling common low-level concerns.
+It serves as the mediator between the two key components of an SDK app: the store
+and the message handlers.
+
+The BaseApp implements the
+[`abci.Application`](https://godoc.org/github.com/tendermint/abci/types#Application) interface.
+It uses a `MultiStore` to manage the state, a `Router` for transaction handling, and
+`Set` methods to specify functions to run at the beginning and end of every
+block.
+
+Every SDK app begins with a BaseApp:
+
+```go
+app := baseapp.NewBaseApp(appName, cdc, logger, db),
+```
+
+## MultiStore
+
+The Cosmos-SDK provides a special Merkle database called a `MultiStore` to be used for all application
+storage. The MultiStore consists of multiple Stores that must be mounted to the
+MultiStore during application setup. Stores are mounted to the MultiStore using a capabilities key,
+ensuring that only parts of the program with access to the key can access the store.
+
+The goals of the MultiStore are as follows:
+
+- Enforce separation of concerns at the storage level
+- Restrict access to storage using capabilities
+- Support multiple Store implementations in a single MultiStore, for instance the Tendermint IAVL tree and
+  the Ethereum Patricia Trie
+- Merkle proofs for various queries (existence, absence, range, etc.) on current and retained historical state
+- Allow for iteration within Stores
+- Provide caching for intermediate state during execution of blocks and transactions (including for iteration)
+- Support historical state pruning and snapshotting
+
+Currently, all Stores in the MultiStore must satisfy the `KVStore` interface,
+which defines a simple key-value store. In the future,
+we may support more kinds of stores, such as a HeapStore
+or a NDStore for multidimensional storage.
+
+### Mounting Stores
+
+Stores are mounted during application setup. To mount some stores, first create
+their capability-keys:
+
+```go
+fooKey := sdk.NewKVStoreKey("foo")
+barKey := sdk.NewKVStoreKey("bar")
+catKey := sdk.NewKVStoreKey("cat")
+```
+
+Stores are mounted directly on the BaseApp.
+They can either specify their own database, or share the primary one already
+passed to the BaseApp.
+
+In this example, `foo` and `bar` will share the primary database, while `cat` will
+specify its own:
+
+```go
+catDB := dbm.NewMemDB()
+app.MountStore(fooKey, sdk.StoreTypeIAVL)
+app.MountStore(barKey, sdk.StoreTypeIAVL)
+app.MountStoreWithDB(catKey, sdk.StoreTypeIAVL, catDB)
+```
+
+### Accessing Stores
+
+In the Cosmos-SDK, the only way to access a store is with a capability-key.
+Only modules given explicit access to the capability-key will
+be able to access the corresponding store. Access to the MultiStore is mediated
+through the `Context`.
+
+### Notes
+
+In the example above, all IAVL nodes (inner and leaf) will be stored
+in mainDB with the prefix of `s/k:foo/` and `s/k:bar/` respectively,
+thus sharing the mainDB.  All IAVL nodes (inner and leaf) for the
+cat KVStore are stored separately in catDB with the prefix of
+`s/\_/`.  The `s/k:KEY/` and `s/\_/` prefixes are there to
+disambiguate store items from other items of non-storage concern.
+
+# Amino
+
+The SDK is flexible about serialization - application developers can use any
+serialization scheme to encode transactions and state. However, the SDK provides
+a native serialization format called
+[Amino](https://github.com/tendermint/go-amino).
+
+The goal of Amino is to improve over the latest version of Protocol Buffers,
+`proto3`. To that end, Amino is compatible with the subset of `proto3` that
+excludes the `oneof` keyword.
+
+While `oneof` provides union types, Amino aims to provide interfaces.
+The main difference being that with union types, you have to know all the types
+up front. But anyone can implement an interface type whenever and however
+they like.
+
+To implement interface types, Amino allows any concrete implementation of an
+interface to register a globally unique name that is carried along whenever the
+type is serialized. This allows Amino to seamlessly deserialize into interface
+types!
+
+The primary use for Amino in the SDK is for messages that implement the
+`Msg` interface. By registering each message with a distinct name, they are each
+given a distinct Amino prefix, allowing them to be easily distinguished in
+transactions.
+
+Amino can also be used for persistent storage of interfaces.
+
+To use Amino, simply create a codec, and then register types:
+
+```go
+cdc := wire.NewCodec()
+
+cdc.RegisterConcrete(MsgSend{}, "cosmos-sdk/Send", nil)
+cdc.RegisterConcrete(MsgIssue{}, "cosmos-sdk/Issue", nil)
+```
+
+## Accounts
+
+### auth.Account
+
+```go
+// Account is a standard account using a sequence number for replay protection
+// and a pubkey for authentication.
+type Account interface {
+	GetAddress() sdk.Address
+	SetAddress(sdk.Address) error // errors if already set.
+
+	GetPubKey() crypto.PubKey // can return nil.
+	SetPubKey(crypto.PubKey) error
+
+	GetAccountNumber() int64
+	SetAccountNumber(int64) error
+
+	GetSequence() int64
+	SetSequence(int64) error
+
+	GetCoins() sdk.Coins
+	SetCoins(sdk.Coins) error
+}
+```
+
+Accounts are the standard way for an application to keep track of addresses and their associated balances.
+
+### auth.BaseAccount
+
+```go
+// BaseAccount - base account structure.
+// Extend this by embedding this in your AppAccount.
+// See the examples/basecoin/types/account.go for an example.
+type BaseAccount struct {
+	Address       sdk.Address   `json:"address"`
+	Coins         sdk.Coins     `json:"coins"`
+	PubKey        crypto.PubKey `json:"public_key"`
+	AccountNumber int64         `json:"account_number"`
+	Sequence      int64         `json:"sequence"`
+}
+```
+
+The `auth.BaseAccount` struct provides a standard implementation of the Account interface with replay protection.
+BaseAccount can be extended by embedding it in your own Account struct.
+
+### auth.AccountMapper
+
+```go
+// This AccountMapper encodes/decodes accounts using the
+// go-amino (binary) encoding/decoding library.
+type AccountMapper struct {
+
+	// The (unexposed) key used to access the store from the Context.
+	key sdk.StoreKey
+
+	// The prototypical Account concrete type.
+	proto Account
+
+	// The wire codec for binary encoding/decoding of accounts.
+	cdc *wire.Codec
+}
+```
+
+The AccountMapper is responsible for managing and storing the state of all accounts in the application.
+
+Example Initialization:
+
+```go
+// File: examples/basecoin/app/app.go
+// Define the accountMapper.
+app.accountMapper = auth.NewAccountMapper(
+	cdc,
+	app.keyAccount,      // target store
+	&types.AppAccount{}, // prototype
+)
+```
+
+The accountMapper allows you to retrieve the current account state by `GetAccount(ctx Context, addr auth.Address)` and change the state by
+`SetAccount(ctx Context, acc Account)`.
+
+Note: To update an account you will first have to get the account, update the appropriate fields with its associated setter method, and then call
+`SetAccount(ctx Context, acc updatedAccount)`.
+
+Updating accounts is made easier by using the `Keeper` struct in the `x/bank` module.
+
+Example Initialization:
+
+```go
+// File: examples/basecoin/app/app.go
+app.coinKeeper = bank.NewKeeper(app.accountMapper)
+```
+
+Example Usage:
+
+```go
+// Finds account with addr in accountmapper
+// Adds coins to account's coin array
+// Sets updated account in accountmapper
+app.coinKeeper.AddCoins(ctx, addr, coins)
+```
+
+## Transactions
+
+A message is a set of instructions for a state transition.
+
+For a message to be valid, it must be accompanied by at least one
+digital signature. The signatures required are determined solely
+by the contents of the message.
 
 A transaction is a message with additional information for authentication:
 
@@ -193,113 +472,8 @@ Ex:
 app.SetTxDecoder(CustomTxDecodeFn)
 ```
 
-## Storage
 
-### MultiStore
-
-MultiStore is like a root filesystem of an operating system, except
-all the entries are fully Merkleized.  You mount onto a MultiStore
-any number of Stores.  Currently only KVStores are supported, but in
-the future we may support more kinds of stores, such as a HeapStore
-or a NDStore for multidimensional storage.
-
-The MultiStore as well as all mounted stores provide caching (aka
-cache-wrapping) for intermediate state (aka software transactional
-memory) during the execution of transactions.  In the case of the
-KVStore, this also works for iterators.  For example, after running
-the app's AnteHandler, the MultiStore is cache-wrapped (and each
-store is also cache-wrapped) so that should processing of the
-transaction fail, at least the transaction fees are paid and
-sequence incremented.
-
-The MultiStore as well as all stores support (or will support)
-historical state pruning and snapshotting and various kinds of
-queries with proofs.
-
-### KVStore
-
-Here we'll focus on the IAVLStore, which is a kind of KVStore.
-
-IAVLStore is a fast balanced dynamic Merkle store that also supports
-iteration, and of course cache-wrapping, state pruning, and various
-queries with proofs, such as proofs of existence, absence, range,
-and so on.
-
-Here's how you mount them to a MultiStore.
-
-```go
-mainDB, catDB := dbm.NewMemDB(), dbm.NewMemDB()
-fooKey := sdk.NewKVStoreKey("foo")
-barKey := sdk.NewKVStoreKey("bar")
-catKey := sdk.NewKVStoreKey("cat")
-ms := NewCommitMultiStore(mainDB)
-ms.MountStoreWithDB(fooKey, sdk.StoreTypeIAVL, nil)
-ms.MountStoreWithDB(barKey, sdk.StoreTypeIAVL, nil)
-ms.MountStoreWithDB(catKey, sdk.StoreTypeIAVL, catDB)
-```
-
-In the example above, all IAVL nodes (inner and leaf) will be stored
-in mainDB with the prefix of "s/k:foo/" and "s/k:bar/" respectively,
-thus sharing the mainDB.  All IAVL nodes (inner and leaf) for the
-cat KVStore are stored separately in catDB with the prefix of
-"s/\_/".  The "s/k:KEY/" and "s/\_/" prefixes are there to
-disambiguate store items from other items of non-storage concern.
-
-
-## Context
-
-The SDK uses a `Context` to propogate common information across functions. The
-`Context` is modeled after the Golang `context.Context` object, which has
-become ubiquitous in networking middleware and routing applications as a means
-to easily propogate request context through handler functions.
-
-The main information stored in the `Context` includes the application
-MultiStore (see below), the last block header, and the transaction bytes.
-Effectively, the context contains all data that may be necessary for processing
-a transaction.
-
-Many methods on SDK objects receive a context as the first argument.
-
-## Handler
-
-Message processing in the SDK is defined through `Handler` functions:
-
-```go
-type Handler func(ctx Context, msg Msg) Result
-```
-
-A handler takes a context and a message and returns a result.  All
-information necessary for processing a message should be available in the
-context.
-
-While the context holds the entire application state (all referenced from the
-root MultiStore), a particular handler only needs a particular kind of access
-to a particular store (or two or more). Access to stores is managed using
-capabilities keys and mappers.  When a handler is initialized, it is passed a
-key or mapper that gives it access to the relevant stores.
-
-```go
-// File: cosmos-sdk/examples/basecoin/app/init_stores.go
-app.BaseApp.MountStore(app.capKeyMainStore, sdk.StoreTypeIAVL)
-app.accountMapper = auth.NewAccountMapper(
-	app.capKeyMainStore, // target store
-	&types.AppAccount{}, // prototype
-)
-
-// File: cosmos-sdk/examples/basecoin/app/init_handlers.go
-app.router.AddRoute("bank", bank.NewHandler(app.accountMapper))
-
-// File: cosmos-sdk/x/bank/handler.go
-// NOTE: Technically, NewHandler only needs a CoinMapper
-func NewHandler(am sdk.AccountMapper) sdk.Handler {
-	return func(ctx sdk.Context, msg sdk.Msg) sdk.Result {
-		cm := CoinMapper{am}
-		...
-	}
-}
-```
-
-## AnteHandler
+### AnteHandler
 
 The AnteHandler is used to do all transaction-level processing (i.e. Fee payment, signature verification)
 before passing the message to its respective handler.
@@ -331,3 +505,24 @@ app.SetAnteHandler(auth.NewAnteHandler(app.accountMapper, app.feeCollectionKeepe
 The antehandler is responsible for handling all authentication of a transaction before passing the message onto its handler.
 This generally involves signature verification. The antehandler should check that all of the addresses that are returned in
 `tx.GetMsg().GetSigners()` signed the message and that they signed over `tx.GetMsg().GetSignBytes()`.
+
+## Keepers
+
+::: tip Keepers are the interfaces between handlers.
+
+🚧 We are actively working on documentation for Keepers.
+:::
+
+## Clients
+
+::: tip Hook up your app to standard CLI and REST interfaces for clients to use!
+
+🚧 We are actively working on documentation for Clients.
+:::
+
+## Advanced
+
+::: tip Trigger logic on a timer, use custom serialization formats, advanced Merkle proofs, and more!
+
+🚧 We are actively working on documentation for advanced use cases.
+:::
