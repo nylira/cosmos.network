@@ -124,7 +124,7 @@ export default {
         totalNodes = totalNodes.concat(this.nodes.tmc)
         totalNodes = totalNodes.concat(this.nodes.gui)
         let doneNodes = totalNodes.filter(n => n.date !== "")
-        return Math.round(doneNodes.length / totalNodes.length * 100)
+        return Math.round((doneNodes.length / totalNodes.length) * 100)
       } else {
         return 0
       }
@@ -145,7 +145,7 @@ export default {
       if (nodes) {
         let totalNodes = nodes.length
         let doneNodes = nodes.filter(n => n.date !== "").length
-        return Math.round(doneNodes / totalNodes * 100)
+        return Math.round((doneNodes / totalNodes) * 100)
       } else {
         return 0
       }
@@ -204,10 +204,38 @@ export default {
 
       await this.$nextTick()
 
-      nodes.hub.map(n => n.children.map(to => connect($(n.id), $(to))))
-      nodes.sdk.map(n => n.children.map(to => connect($(n.id), $(to))))
-      nodes.tmc.map(n => n.children.map(to => connect($(n.id), $(to))))
-      nodes.gui.map(n => n.children.map(to => connect($(n.id), $(to))))
+      nodes.hub.map(n =>
+        n.children.map(to =>
+          connect(
+            $(n.id),
+            $(to)
+          )
+        )
+      )
+      nodes.sdk.map(n =>
+        n.children.map(to =>
+          connect(
+            $(n.id),
+            $(to)
+          )
+        )
+      )
+      nodes.tmc.map(n =>
+        n.children.map(to =>
+          connect(
+            $(n.id),
+            $(to)
+          )
+        )
+      )
+      nodes.gui.map(n =>
+        n.children.map(to =>
+          connect(
+            $(n.id),
+            $(to)
+          )
+        )
+      )
     },
     createDepArrows(nodesLoaded) {
       if (this.imagesLoaded === 4 && Object.keys(nodesLoaded).length === 4) {
