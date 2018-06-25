@@ -4,8 +4,8 @@ mixin user-btns(size)
   btn(value="Learn More" type="link" :to="{ name: 'voyager' }" size=size)
 
 mixin validator-btns(size)
-  btn(value="Follow Testnet Tutorial" icon="description" color="primary" type="link" :to="{ name: 'testnet-tutorial' }" size=size)
-  btn(value="Learn More" type="link" :to="{ name: 'validators' }" size=size)
+  btn(value="Follow Testnet Tutorial" icon="description" color="primary" type="link" to="/docs/getting-started/installation.html" size=size)
+  btn(value="Learn More" type="link" to="/docs/validators/overview.html" size=size)
 
 .page-testnet
   .testnet-header
