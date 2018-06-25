@@ -1,6 +1,6 @@
 # Gaia CLI
 
-`gaiacli` is the command line interface to manage accounts and transactions on the `gaia` testnets.
+`gaiacli` is the command line interface to manage accounts and transactions on Cosmos testnets. Here is a list of useful `gaiacli` commands, including usage examples.
 
 ## Key Types
 
@@ -20,7 +20,7 @@ There are three types of key representations that are used:
   * Get this value with `gaiad tendermint show_validator`
   * e.g. `cosmosvalpub1zcjduc3qcyj09qc03elte23zwshdx92jm6ce88fgc90rtqhjx8v0608qh5ssp0w94c`
 
-### Generate Keys
+## Generate Keys
 
 You'll need an account private and public key pair \(a.k.a. `sk, pk` respectively\) to be able to receive funds, send txs, bond tx, etc.
 
