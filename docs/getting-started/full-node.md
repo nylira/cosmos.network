@@ -1,6 +1,6 @@
 # Full Node Setup
 
-Please ensure you have the [Cosmos SDK](/getting-started/installation.html) installed. If you ran a full node on a previous testnet, please skip to [Upgrading From Previous Testnet](#upgrading-from-previous-testnet).
+Please ensure you have the [Cosmos SDK](/getting-started/installation.md) installed. If you ran a full node on a previous testnet, please skip to [Upgrading From Previous Testnet](#upgrading-from-previous-testnet).
 
 ## Setting Up a New Node
 
@@ -101,4 +101,4 @@ View the status of the network with the [Cosmos Explorer](https://explorecosmos.
 
 ## Upgrade to Validator Node
 
-You now have an active full node. What's the next step? You can upgrade your full node to become a Cosmos Validator. The top 100 validators have the ability to propose new blocks to the Cosmos Hub. Continue onto [the Validator Setup](../validators/validator-setup.html).
+You now have an active full node. What's the next step? You can upgrade your full node to become a Cosmos Validator. The top 100 validators have the ability to propose new blocks to the Cosmos Hub. Continue onto [the Validator Setup](../validators/validator-setup.md).

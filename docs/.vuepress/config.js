@@ -19,10 +19,10 @@ module.exports = {
         title: "Getting Started",
         collapsable: false,
         children: [
+          "/getting-started/voyager",
           "/getting-started/installation",
           "/getting-started/full-node",
-          "/getting-started/gaiacli",
-          "/getting-started/voyager"
+          "/getting-started/gaiacli"
         ]
       },
       {
