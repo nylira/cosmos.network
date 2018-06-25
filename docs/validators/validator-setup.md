@@ -1,6 +1,8 @@
+# Validator Setup
+
 ## Running a Validator Node
 
-Before starting to setup your validator node, make sure you've already gone through the [Setting Up a Full Node](/getting-started/full-node.md#setting-up-a-full-node) guide.
+Before setting up your validator node, make sure you've already gone through the [Full Node Setup](/getting-started/full-node.md) guide.
 
 [Validators](/validators/overview.md) are responsible for committing new blocks to the blockchain through voting. A validator's stake is slashed if they become unavailable, double sign a transaction, or don't cast their votes. Please read about [Sentry Node Architecture](/validators/validator-faq.md#how-can-validators-protect-themselves-from-denial-of-service-attacks) to protect your node from DDOS attacks and to ensure high-availability.
 

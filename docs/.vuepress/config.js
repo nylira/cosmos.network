@@ -7,18 +7,13 @@ module.exports = {
     lineNumbers: true
   },
   themeConfig: {
-    lastUpdated: 'Last Updated',
-    nav: [
-      { text: 'Back to Cosmos', link: 'https://cosmos.network' },
-    ],
+    lastUpdated: "Last Updated",
+    nav: [{ text: "Back to Cosmos", link: "https://cosmos.network" }],
     sidebar: [
       {
         title: "Introduction",
         collapsable: false,
-        children: [
-          "/introduction/cosmos-hub",
-          "/introduction/tendermint",
-        ]
+        children: ["/introduction/cosmos-hub", "/introduction/tendermint"]
       },
       {
         title: "Getting Started",
@@ -26,7 +21,8 @@ module.exports = {
         children: [
           "/getting-started/installation",
           "/getting-started/full-node",
-          "/getting-started/voyager",
+          "/getting-started/gaiacli",
+          "/getting-started/voyager"
         ]
       },
       {
@@ -36,7 +32,7 @@ module.exports = {
           ["/sdk/overview", "Overview"],
           ["/sdk/core", "Core"],
           "/sdk/modules",
-          "/sdk/clients",
+          "/sdk/clients"
         ]
       },
       // {
@@ -53,10 +49,7 @@ module.exports = {
       {
         title: "Lotion JS",
         collapsable: false,
-        children: [
-          "/lotion/overview",
-          "/lotion/building-an-app",
-        ]
+        children: ["/lotion/overview", "/lotion/building-an-app"]
       },
       {
         title: "Validators",
@@ -65,7 +58,7 @@ module.exports = {
           ["/validators/overview", "Overview"],
           ["/validators/security", "Security"],
           ["/validators/validator-setup", "Validator Setup"],
-          "/validators/validator-faq",
+          "/validators/validator-faq"
         ]
       },
       // {
@@ -78,11 +71,8 @@ module.exports = {
       {
         title: "Resources",
         collapsable: true,
-        children: [
-          "/resources/whitepaper",
-          "/resources/delegator-faq",
-        ]
-      },
+        children: ["/resources/whitepaper", "/resources/delegator-faq"]
+      }
     ]
   }
 }

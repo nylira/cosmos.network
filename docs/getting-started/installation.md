@@ -1,12 +1,9 @@
 # Installation
 
-::: tip
-**Go 1.10+** is required for the Cosmos SDK.
-:::
 
 ## Install Go
 
-Install `go` by following the [official docs](https://golang.org/doc/install). Remember to properly setup your `$GOPATH`, `$GOBIN`, and `$PATH` variables, for example:
+Install `go` by following the [official docs](https://golang.org/doc/install). Remember to set your `$GOPATH`, `$GOBIN`, and `$PATH` environment variables, for example:
 
 ```bash
 mkdir -p $HOME/go/bin
@@ -14,6 +11,10 @@ echo "export GOPATH=$HOME/go" >> ~/.bash_profile
 echo "export GOBIN=$GOPATH/bin" >> ~/.bash_profile
 echo "export PATH=$PATH:$GOBIN" >> ~/.bash_profile
 ```
+
+::: tip
+**Go 1.10+** is required for the Cosmos SDK.
+:::
 
 ## Install Cosmos SDK
 
@@ -36,3 +37,7 @@ $ gaiad version
 $ gaiacli version
 0.19.0-c6711810
 ```
+
+## Run a Full Node
+
+With Cosmos SDK installed, you can run [a full node on the latest testnet](full-node.html).
