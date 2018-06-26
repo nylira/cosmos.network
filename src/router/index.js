@@ -167,15 +167,20 @@ const routes = [
     path: "/validators/tutorial",
     redirect: "/docs/getting-started/installation.html"
   },
-  { path: "/voyager", redirect: "/docs/getting-started/voyager.html" },
-  { path: "/voyager/*", redirect: "/docs/getting-started/voyager.html" },
-  { path: "/whitepaper/en-US", redirect: "/docs/resources/whitepaper.html" },
+  { path: "/voyager", beforeEnter: () => d("getting-started/voyager.html") },
+  { path: "/voyager/*", beforeEnter: () => d("getting-started/voyager.html") },
+  {
+    path: "/whitepaper/en-US",
+    beforeEnter: () => d("resources/whitepaper")
+  },
   {
     path: "/whitepaper",
     beforeEnter: () => d("resources/whitepaper")
   },
-  { path: "/wallet", redirect: "/docs/getting-started/installation.html" },
-
+  {
+    path: "/wallet",
+    beforeEnter: () => d("getting-started/installation")
+  },
   // WILDROUTES
   { path: "/404", component: Page404 },
   { path: "*", component: Page404 }
