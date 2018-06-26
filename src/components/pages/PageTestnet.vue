@@ -1,7 +1,7 @@
 <template lang="pug">
 mixin user-btns(size)
   btn(value="Download Voyager (Alpha)" icon="cloud_download" color="primary" type="anchor" href="https://github.com/cosmos/voyager/releases" size=size)
-  btn(value="Learn More" type="link" :to="{ name: 'voyager' }" size=size)
+  btn(value="Learn More" type="link" to="/docs" size=size)
 
 mixin validator-btns(size)
   btn(value="Follow Testnet Tutorial" icon="description" color="primary"
