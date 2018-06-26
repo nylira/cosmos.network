@@ -44,14 +44,9 @@ const routes = [
       window.location.assign(urls.contactEvents)
     }
   },
-  {
-    path: "/docs",
-    beforeEnter: () => {
-      window.location.assign("https://cosmos.network/docs")
-    }
-  },
-  { path: "/download", redirect: "/voyager" },
-  { path: "/downloads", redirect: "/voyager" },
+  { path: "/docs", redirect: "/docs" },
+  { path: "/download", redirect: "/testnet" },
+  { path: "/downloads", redirect: "/testnet" },
   { path: "/dev", redirect: "/docs" },
   { path: "/dev/*", redirect: "/docs" },
   { path: "/developers", redirect: "/docs" },
