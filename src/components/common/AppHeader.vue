@@ -9,7 +9,7 @@ header.app-header
     .header-item(v-if='!desktop')
     menu.menu-popup.menu-app(v-if='activeMenuApp || desktop')
       nav
-        router-link(to='/about' @click.native='close') About
+        router-link(to='/whitepaper' @click.native='close') Whitepaper
         router-link(to='/roadmap' @click.native='close') Roadmap
         router-link(to='/testnet' @click.native='close') Testnet
         a(href='/docs' @click.native='close') Documentation

@@ -157,7 +157,13 @@ const routes = [
   { path: "/voyager", redirect: "/docs/getting-started/voyager.html" },
   { path: "/voyager/*", redirect: "/docs/getting-started/voyager.html" },
   { path: "/whitepaper/en-US", redirect: "/docs/resources/whitepaper.html" },
-  { path: "/whitepaper", redirect: "/docs/resources/whitepaper.html" },
+  {
+    path: "/whitepaper",
+    beforeEnter: () =>
+      window.location.assign(
+        window.location.hostname + "/docs/resources/whitepaper.html"
+      )
+  },
   { path: "/wallet", redirect: "/docs/getting-started/installation.html" },
 
   // WILDROUTES
