@@ -12,10 +12,20 @@ import PageTestnet from "pages/PageTestnet"
 
 import Page404 from "pages/Page404"
 
-function docs(doc) {
-  return window.location.assign(
-    `${window.location.protocol}//${window.location.hostname}/docs/${doc}.html`
-  )
+function d(doc) {
+  if ([0, 80, 443].includes(window.location.port)) {
+    return window.location.assign(
+      `${window.location.protocol}//${
+        window.location.hostname
+      }/docs/${doc}.html`
+    )
+  } else {
+    return window.location.assign(
+      `${window.location.protocol}//${window.location.hostname}:${
+        window.location.port
+      }/docs/${doc}.html`
+    )
+  }
 }
 
 const routes = [
@@ -150,7 +160,7 @@ const routes = [
   { path: "/validator", redirect: "/docs/validators/overview.html" },
   {
     path: "/validators",
-    beforeEnter: () => docs("validators/overview")
+    beforeEnter: () => d("validators/overview")
   },
   { path: "/validators/faq", redirect: "/docs/validators/validator-faq.html" },
   {
@@ -162,10 +172,7 @@ const routes = [
   { path: "/whitepaper/en-US", redirect: "/docs/resources/whitepaper.html" },
   {
     path: "/whitepaper",
-    beforeEnter: () =>
-      window.location.assign(
-        window.location.hostname + "/docs/resources/whitepaper.html"
-      )
+    beforeEnter: () => d("resources/whitepaper")
   },
   { path: "/wallet", redirect: "/docs/getting-started/installation.html" },
 
