@@ -4,10 +4,10 @@ const state = {
   fundraiser: "https://fundraiser.cosmos.network",
   careers: "https://tendermint.com/careers",
   faucet: "https://faucetcosmos.network",
-  whitepaper: "https://cosmos.network/docs/resources/whitepaper.html",
+  whitepaper: "/docs/resources/whitepaper.html",
   tendermint: "https://tendermint.readthedocs.io/",
-  hub: "https://cosmos.network/docs/cosmos-hub.html",
-  faqs: "https://cosmos.network/docs/resources/delegator-faq.html",
+  hub: "/docs/cosmos-hub.html",
+  faqs: "/docs/resources/delegator-faq.html",
   gh: {
     cosmosSdk: "https://github.com/cosmos/cosmos-sdk",
     lotion: "https://github.com/keppel/lotion",

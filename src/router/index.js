@@ -4,6 +4,7 @@ import urls from "../store/modules/urls.js"
 import PageIndex from "pages/PageIndex"
 import PageAbout from "pages/PageAbout"
 import PageAssets from "pages/PageAssets"
+import PageCommunity from "pages/PageCommunity"
 import PageEvents from "pages/PageEvents"
 import PagePrivacy from "pages/PagePrivacy"
 import PageRoadmap from "pages/PageRoadmap"
@@ -16,6 +17,7 @@ const routes = [
   { path: "/", name: "index", component: PageIndex },
   { path: "/about", name: "about", component: PageAbout },
   { path: "/assets", name: "assets", component: PageAssets },
+  { path: "/community", name: "community", component: PageCommunity },
   { path: "/events", name: "events", component: PageEvents },
   { path: "/privacy", name: "privacy", component: PagePrivacy },
   { path: "/roadmap", name: "roadmap", component: PageRoadmap },

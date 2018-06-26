@@ -17,8 +17,8 @@
         a(:href="urls.gh.voyager" target="_blank").footbot-menu__item Voyager
         a(:href="urls.gh.cosmosSdk" target="_blank").footbot-menu__item Cosmos SDK
         a(:href="urls.gh.lotion" target="_blank").footbot-menu__item Lotion JS
-        a(:href="urls.gh.explorer" target="_blank").footbot-menu__item Explorer
-        a(:href="urls.gh.faucet" target="_blank").footbot-menu__item Faucet
+        a(:href="urls.explorer" target="_blank").footbot-menu__item Explorer
+        a(:href="urls.faucet" target="_blank").footbot-menu__item Faucet
     .footbot-menu
       .footbot-menu__title Learn
       .footbot-menu__items
@@ -30,11 +30,11 @@
     .footbot-menu
       .footbot-menu__title Social
       .footbot-menu__items
-        a(:href="urls.gh.riot" target="_blank").footbot-menu__item Riot
-        a(:href="urls.gh.reddit" target="_blank").footbot-menu__item Reddit
-        a(:href="urls.gh.telegram" target="_blank").footbot-menu__item Telegram
-        a(:href="urls.gh.twitter" target="_blank").footbot-menu__item Twitter
-        a(:href="urls.gh.youtube" target="_blank").footbot-menu__item YouTube
+        a(:href="urls.riot" target="_blank").footbot-menu__item Riot
+        a(:href="urls.reddit" target="_blank").footbot-menu__item Reddit
+        a(:href="urls.telegram" target="_blank").footbot-menu__item Telegram
+        a(:href="urls.twitter" target="_blank").footbot-menu__item Twitter
+        a(:href="urls.youtube" target="_blank").footbot-menu__item YouTube
     section-social
 </template>
 
