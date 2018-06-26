@@ -1,6 +1,6 @@
 <template lang="pug">
 page(title="Roadmap to 1,000,000 Blocks")
-  div(slot="subtitle") Launch is not a binary event&mdash;it's already started. #[a(href="https://explorecosmos.network" target="_blank") Each testnet] gets us that much closer to mainnet. After each launch, we review the failures and upgrade the codebase. Then we launch again. Follow our interstellar voyage #[a(href="https://blog.cosmos.network" target="_blank") on the blog.]
+  div(slot="subtitle") Launch is not a binary event&mdash;it's already started. #[a(href="https://explorecosmos.network" target="_blank") Each test launch] gets us that much closer to mainnet. Each testnet lets us improve the quality of our code. Then we launch again. Follow our interstellar voyage #[a(href="https://blog.cosmos.network" target="_blank") on the blog.]
   div(slot="menu"): btn(icon="chat" value="Community Chat" type="anchor" href="https://riot.im/app/#/group/+cosmos:matrix.org" target="_blank" color="primary")
   part(title="Milestones")
     card-milestone(
