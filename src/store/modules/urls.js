@@ -7,7 +7,7 @@ const state = {
   whitepaper: "/docs/resources/whitepaper.html",
   tendermint: "https://tendermint.readthedocs.io/",
   hub: "/docs/cosmos-hub.html",
-  faqs: "/docs/resources/delegator-faq.html",
+  faqs: "/docs/resources/faq.html",
   gh: {
     cosmosSdk: "https://github.com/cosmos/cosmos-sdk",
     lotion: "https://github.com/keppel/lotion",
