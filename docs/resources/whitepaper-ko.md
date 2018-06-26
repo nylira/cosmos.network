@@ -13,8 +13,6 @@ For discussions, [join our community chat](https://riot.im/app/#/room/#cosmos:ma
 
 한승환, 이승민, 김기현, 윤승완, HJ Kim(금마), 김석현
 
-\[[toc]]
-
 ## 서 론 (Introduction)
 
 오픈 소스 생태계, 탈중앙화 파일 공유, 퍼블릭 암호화폐 등이 연달아 성공하면서 탈중앙화 인터넷 프로토콜들이 사회경제적 인프라를 근본적으로 개선하는데 사용될 수 있다는 것을 알게 되었다. 비트코인[\[1\]](https://bitcoin.org/bitcoin.pdf)(암호화폐)과 제로캐시[\[2\]](http://zerocash-project.org/paper)(프라이버시용 암호화폐) 같은 특화된 블록체인 어플리케이션들이 있었고, Augur(예측 시장)와 TheDAO[\[4\]](https://download.slock.it/public/DAO/WhitePaper.pdf)(투자 클럽) 같은 무수한 분산 애플리케이션들을 가진 이더리움(Ethereum)[\[3\]](https://github.com/ethereum/wiki/wiki/White-Paper) 같은 범용 스마트 컨트랙트 플랫폼들이 있었다.

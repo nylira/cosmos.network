@@ -9,8 +9,6 @@ Para discussões, [entre no nosso Matrix](https://riot.im/app/#/room/#cosmos:mat
 
 _NOTA: Se você pode ler isso no GitHub, então ainda estamos desenvolvendo este documento ativamente. Por favor, cheque regularmente as atualizações!_
 
-\[[toc]]
-
 O sucesso combinado do ecossistema de código aberto, compartilhamento
 de arquivos descentralizado e criptomoedas públicas tem inspirado um conhecimento sobre
 protocolos descentralizados na Internet que podem ser utilizados para melhorar radicalmente
