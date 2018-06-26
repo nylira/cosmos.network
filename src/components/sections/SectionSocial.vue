@@ -9,7 +9,7 @@
         size="lg"
         target="_blank"
         value="Testnet Explorer")
-    part(title="Get Newsletter"): form-email-signup
+    part(title="Sign Up For Our Newsletter"): form-email-signup
 </template>
 
 <script>
@@ -36,6 +36,9 @@ export default {
 
 <style lang="stylus">
 @require '~variables'
+.section-social
+  width 100%
+  padding 3rem 0 0
 
 .section-social__container
   max-width 1024px
@@ -45,7 +48,6 @@ export default {
   margin-bottom 1rem
   .ni-part-main
     padding 1rem
-    margin-top 0.25rem
 
     .ni-btn:only-child
       width 100%

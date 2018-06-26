@@ -27,7 +27,7 @@
         .cosmos-diagram__label
           | #[router-link(:to="{ name: 'faq' }") Atoms] are a license for holders to stake and vote on the Cosmos Hub.
     .section-home__action
-      router-link(:to="{ name: 'intro'}") Introduction to Cosmos &rsaquo;
+      a(href="/docs/introduction/cosmos-hub.html") Introduction to Cosmos &rsaquo;
 </template>
 
 <script>
@@ -39,8 +39,8 @@ export default {
 <style lang="stylus">
 @require '~variables'
 
-.section-home
-  background linear-gradient(to bottom, app-bg, app-fg)
+.section-home:nth-child(odd)
+  background linear-gradient(top, app-bg, app-fg)
 
 .section-home__container
   padding 3rem 1rem
@@ -94,6 +94,7 @@ export default {
   flex-flow row nowrap
   align-items center
   margin 0.5rem
+  lightShadow()
 
 .cosmos-diagram__image
   flex 1

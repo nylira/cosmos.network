@@ -1,8 +1,7 @@
 <template lang="pug">
 page(title="Visual Assets" subtitle="An overview of Cosmos-related logos, diagrams, and other media.")
   div(slot="menu")
-    btn(icon="chat" value="Community Chat" type="anchor" href="https://riot.im/app/#/group/+cosmos:matrix.org" target="_blank" color="primary")
-    btn(icon="apps" value="All Assets" type="anchor" href="https://drive.google.com/open?id=1IjsubJvkUIZ47Bvy4FNv8ggxbxTPXSyr" target="_blank")
+    btn(icon="open_in_new" value="All Assets" icon-pos="right" type="anchor" href="https://drive.google.com/open?id=1IjsubJvkUIZ47Bvy4FNv8ggxbxTPXSyr" target="_blank")
   part(title="Cosmos Brand")
     text-container
       p We have an open approach towards the use of the Cosmos branding that is community-friendly and supports the greater Cosmos and crypto ecosystem. All current Cosmos branding is under Creative Commons attribution 3.0. Please read and follow the #[a(href="https://drive.google.com/open?id=1eUyb1mJ5XGFbgoi57ATrbhN9IZVR_Y_s") Visual&nbsp;Identity&nbsp;Guide]. Download the #[a(href="https://drive.google.com/open?id=1cFqcFCtmIKpCFW2a0Y8lexMwmRIoZZ36") Logo&nbsp;Assets] to get access to our logo in vector, alpha, and high resolution formats.

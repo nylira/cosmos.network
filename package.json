@@ -1,13 +1,19 @@
 {
   "name": "cosmos-network",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "private": true,
   "description": "The website for Cosmos, Internet of Blockchains",
   "author": "All In Bits, Inc <inquiries@tendermint.com>",
   "scripts": {
+    "build:site": "vue-cli-service build",
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
+    "serve:docs": "vuepress dev docs",
+    "build:docs": "vuepress build docs",
+    "build": "yarn build:site && yarn build:docs",
+    "lint": "vue-cli-service lint && yarn lint:json && yarn lint:md",
+    "lint:json": "jsonlint-cli json/*.json",
+    "lint:md": "remark .",
+    "lint:fix": "remark . -o",
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e"
   },
@@ -20,6 +26,7 @@
     "axios": "0.18.0",
     "disable-scroll": "0.4.0",
     "intersection-observer": "0.5.0",
+    "jsonlint-cli": "^1.0.1",
     "markdown-it": "8.4.1",
     "markdown-it-anchor": "4.0.0",
     "markdown-it-table-of-contents": "0.3.3",
@@ -29,6 +36,9 @@
     "perfect-scrollbar": "1.3.0",
     "pug": "2.0.3",
     "pug-plain-loader": "^1.0.0",
+    "remark-cli": "^5.0.0",
+    "remark-lint-no-dead-urls": "^0.3.0",
+    "remark-preset-lint-recommended": "^3.0.1",
     "rss-parser": "3.1.2",
     "scroll-to": "0.0.2",
     "transliteration": "1.6.2",
@@ -54,7 +64,8 @@
     "lint-staged": "^6.0.0",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
-    "vue-template-compiler": "^2.5.16"
+    "vue-template-compiler": "^2.5.16",
+    "vuepress": "^0.10.2"
   },
   "eslintConfig": {
     "root": true,
@@ -113,6 +124,12 @@
     "*.vue": [
       "vue-cli-service lint",
       "git add"
+    ]
+  },
+  "remarkConfig": {
+    "plugins": [
+      "remark-preset-lint-recommended",
+      "remark-lint-no-dead-urls"
     ]
   },
   "prettier": {
