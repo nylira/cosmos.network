@@ -14,9 +14,12 @@
       .ni-milestone__title {{ milestone.title }}
     .ni-milestone__details(v-if="details")
       .ni-milestone__description {{ milestone.description }}
-      .ni-milestone__footer(v-if="milestone.date")
+      .ni-milestone__footer.mobile-only(v-if="milestone.date")
         .ni-milestone__date {{ milestone.date }}
         .ni-milestone__network {{ milestone.network }}
+    .ni-milestone__footer.desktop-only
+      .ni-milestone__date {{ msDate }}
+      .ni-milestone__network {{ msNetwork }}
 </template>
 
 <script>
@@ -38,6 +41,20 @@ export default {
       let height = offset * 6 + 0.5
       return {
         marginBottom: height + "rem"
+      }
+    },
+    msDate() {
+      if (this.milestone.date) {
+        return this.milestone.date
+      } else {
+        return "future"
+      }
+    },
+    msNetwork() {
+      if (this.milestone.network) {
+        return this.milestone.network
+      } else {
+        return "tbd"
       }
     }
   },
@@ -67,13 +84,10 @@ export default {
     .ni-milestone__header
       cursor pointer
     &:hover
-      .ni-milestone__header
-        background var(--app-fg)
       .ni-milestone__action i.material-icons
         color var(--hover)
 
 .ni-milestone__container
-  max-width 40rem
   border 1px solid var(--bc)
   background var(--app-fg)
 
@@ -85,6 +99,7 @@ export default {
   background var(--app-bg)
 
 .ni-milestone__icon
+.ni-milestone__action
   i.material-icons
     width 2rem
     height 2rem
@@ -92,6 +107,9 @@ export default {
     align-items center
     justify-content center
     color var(--dim)
+
+.ni-milestone__icon
+  i.material-icons
     border-right 1px solid var(--bc)
     color var(--bright)
     background var(--bc)
@@ -105,15 +123,6 @@ export default {
   padding 0 0.5rem
   color var(--bright)
   font-weight 500
-
-.ni-milestone__action
-  i.material-icons
-    width 2rem
-    height 2rem
-    display flex
-    align-items center
-    justify-content center
-    color var(--dim)
 
 .ni-milestone__header + .ni-milestone__details
   border-top 1px solid var(--bc)
@@ -139,8 +148,67 @@ export default {
   color var(--accent)
 
 @media screen and (min-width: 768px)
-  .ni-milestone__key
+  .ni-milestone__header
+    height 3rem
+  .ni-milestone__icon
+  .ni-milestone__action
+    i.material-icons
+      width 3rem
+      height 3rem
+      font-size 1.5rem
+  .ni-milestone__title
     font-size 1.25rem
     font-weight 400
+    padding 0 0.75rem
+
+  .ni-milestone__description
+    font-size 1rem
+    padding 0.875rem 1rem
+    max-width 40rem
+
+  .ni-milestone__footer
+    height 3rem
+    font-size 1rem
+
+@media screen and (max-width: 1023px)
+  .mobile-only
+    display flex
+  .desktop-only
+    display none
+
+@media screen and (min-width: 1024px)
+  .mobile-only
+    display none
+  .desktop-only
+    display flex
+
+  .ni-milestone
+    position relative
+    margin 1rem 0
+
+  .ni-milestone__container
+    max-width 40rem
+    margin 0 auto
+
+  .ni-milestone__footer
+    height 0
+
+  .ni-milestone__date
+  .ni-milestone__network
+    position absolute
+    top 0
+    border-top 1px solid var(--bc-dim)
+    width 10rem
+
     line-height 3rem
+    font-size 1rem
+    font-weight 500
+    padding 0 0.75rem
+
+  .ni-milestone__date
+    left 0
+
+  .ni-milestone__network
+    right 0
+    text-align right
 </style>
