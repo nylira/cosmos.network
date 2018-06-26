@@ -27,7 +27,7 @@
         .cosmos-diagram__label
           | #[router-link(:to="{ name: 'faq' }") Atoms] are a license for holders to stake and vote on the Cosmos Hub.
     .section-home__action
-      a(href="https://docs.cosmos.network") Introduction to Cosmos &rsaquo;
+      a(href="/docs/introduction/cosmos-hub.html") Introduction to Cosmos &rsaquo;
 </template>
 
 <script>
