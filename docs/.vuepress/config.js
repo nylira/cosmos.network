@@ -22,7 +22,6 @@ module.exports = {
           "/getting-started/voyager",
           "/getting-started/installation",
           "/getting-started/full-node",
-          "/getting-started/gaiacli"
         ]
       },
       {
@@ -32,7 +31,7 @@ module.exports = {
           ["/sdk/overview", "Overview"],
           ["/sdk/core", "Core"],
           "/sdk/modules",
-          "/sdk/clients"
+          "/sdk/clients",
         ]
       },
       // {

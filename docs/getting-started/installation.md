@@ -1,4 +1,4 @@
-# Installation
+# Install the SDK
 
 This guide will explain how to install the [Cosmos SDK](/sdk/overview.md) onto your system. With the SDK installed on a server, you can participate in the latest testnet as either a [Full Node](full-node.md) or a [Validator](/validators/validator-setup.md).
 
