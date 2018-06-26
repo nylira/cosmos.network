@@ -6,7 +6,7 @@ const state = {
   faucet: "https://faucetcosmos.network",
   whitepaper: "/docs/resources/whitepaper.html",
   tendermint: "https://tendermint.readthedocs.io/",
-  hub: "/docs/cosmos-hub.html",
+  hub: "/docs/introduction/cosmos-hub.html",
   faqs: "/docs/introduction/faq.html",
   gh: {
     cosmosSdk: "https://github.com/cosmos/cosmos-sdk",

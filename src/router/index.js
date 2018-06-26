@@ -142,7 +142,13 @@ const routes = [
   { path: "/ui", redirect: "/docs/getting-started/voyager.html" },
   { path: "/validate", redirect: "/docs/validators/overview.html" },
   { path: "/validator", redirect: "/docs/validators/overview.html" },
-  { path: "/validators", redirect: "/docs/validators/overview.html" },
+  {
+    path: "/validators",
+    beforeEnter: () =>
+      window.location.assign(
+        window.location.hostname + "/docs/validators/overview.html"
+      )
+  },
   { path: "/validators/faq", redirect: "/docs/validators/validator-faq.html" },
   {
     path: "/validators/tutorial",
