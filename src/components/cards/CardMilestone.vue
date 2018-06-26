@@ -188,7 +188,6 @@ export default {
 
   .ni-milestone__container
     max-width 40rem
-    margin 0 auto
 
   .ni-milestone__footer
     height 0
@@ -198,7 +197,7 @@ export default {
     position absolute
     top 0
     border-top 1px solid var(--bc-dim)
-    width 10rem
+    width 11rem
 
     line-height 3rem
     font-size 1rem
@@ -206,9 +205,8 @@ export default {
     padding 0 0.75rem
 
   .ni-milestone__date
-    left 0
+    right 12rem
 
   .ni-milestone__network
     right 0
-    text-align right
 </style>

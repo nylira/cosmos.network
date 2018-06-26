@@ -3,8 +3,8 @@ page(title="Launch Roadmap")
   div(slot="subtitle") Launch isn't a binary event&mdash;it's already begun. We iterate on our code. Then we launch again. Each #[a(href="https://explorecosmos.network" target="_blank") test launch] gets us closer to mainnet. Follow our interstellar voyage #[a(href="https://blog.cosmos.network" target="_blank") on the blog.]
   div(slot="menu"): btn(icon="chat" value="Community Chat" type="anchor" href="https://riot.im/app/#/group/+cosmos:matrix.org" target="_blank" color="primary")
   .ms-labels
-    .ms-label.ms-label--date.h5 Date
     .ms-label.h5 Milestone
+    .ms-label.ms-label--date.h5 Date
     .ms-label.ms-label--testnet.h5 Network
   card-milestone(
     v-for="milestone in interchainMilestones"
@@ -83,19 +83,15 @@ export default {
     display flex
     justify-content space-between
     align-items center
-    height 3rem
     background var(--app-fg)
 
   .ms-label
     flex 0 0 40rem
-    font-weight 500
-    color var(--bright)
+    padding 0 0.75rem
+    line-height 3rem
 
   .ms-label.ms-label--date
   .ms-label.ms-label--testnet
-    flex 0 0 10rem
-    padding 0 0.75rem
-  .ms-label.ms-label--testnet
-    text-align right
+    flex 0 0 11rem
 
 </style>
