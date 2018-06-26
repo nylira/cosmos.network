@@ -13,7 +13,11 @@ module.exports = {
       {
         title: "Introduction",
         collapsable: false,
-        children: ["/introduction/cosmos-hub", "/introduction/tendermint"]
+        children: [
+          "/introduction/cosmos-hub",
+          "/introduction/tendermint",
+          "/introduction/faq"
+        ]
       },
       {
         title: "Getting Started",
@@ -21,7 +25,7 @@ module.exports = {
         children: [
           "/getting-started/voyager",
           "/getting-started/installation",
-          "/getting-started/full-node",
+          "/getting-started/full-node"
         ]
       },
       {
@@ -31,7 +35,7 @@ module.exports = {
           ["/sdk/overview", "Overview"],
           ["/sdk/core", "Core"],
           "/sdk/modules",
-          "/sdk/clients",
+          "/sdk/clients"
         ]
       },
       // {
@@ -48,10 +52,7 @@ module.exports = {
       {
         title: "Lotion JS",
         collapsable: false,
-        children: [
-          ["/lotion/overview", "Overview"],
-          "/lotion/building-an-app"
-        ]
+        children: [["/lotion/overview", "Overview"], "/lotion/building-an-app"]
       },
       {
         title: "Validators",
@@ -65,13 +66,13 @@ module.exports = {
       },
       {
         title: "Resources",
-        collapsable: true,
+        collapsable: false,
         children: [
-          "/resources/faq",
+          "/resources/delegator-faq",
           ["/resources/whitepaper", "Whitepaper - English"],
           ["/resources/whitepaper-ko", "Whitepaper - 한국어"],
           ["/resources/whitepaper-zh-CN", "Whitepaper - 中文"],
-          ["/resources/whitepaper-pt", "Whitepaper - Português"],
+          ["/resources/whitepaper-pt", "Whitepaper - Português"]
         ]
       }
     ]

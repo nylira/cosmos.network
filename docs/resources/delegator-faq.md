@@ -1,4 +1,4 @@
-# FAQs
+# Delegator FAQ
 
 ## What is a delegator?
 

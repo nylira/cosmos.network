@@ -12,7 +12,7 @@ header.app-header
         router-link(to='/about' @click.native='close') About
         router-link(to='/roadmap' @click.native='close') Roadmap
         router-link(to='/testnet' @click.native='close') Testnet
-        a(href='/docs' target="_blank" @click.native='close') Documentation
+        a(href='/docs' @click.native='close') Documentation
       nav
         a(:href='links.cosmos.blog' @click.native='close' target='_blank')
           span.label Blog
