@@ -7,31 +7,34 @@
       .footbot-menu__title Foundation
       .footbot-menu__items
         router-link(:to="{ name: 'about'}").footbot-menu__item About
-        router-link(:to="{ name: 'events'}").footbot-menu__item Events
+        router-link(:to="{ name: 'privacy'}").footbot-menu__item Privacy Policy
         router-link(:to="{ name: 'assets'}").footbot-menu__item Visual Assets
         a(:href="urls.fundraiser" target="_blank").footbot-menu__item Fundraiser
-    .footbot-menu
-      .footbot-menu__title Learn
-      .footbot-menu__items
-        router-link(:to="{ name: 'resources'}").footbot-menu__item Resources
-        router-link(:to="{ name: 'academy'}").footbot-menu__item Academy
-        router-link(:to="{ name: 'whitepaper'}").footbot-menu__item Whitepaper
-        router-link(:to="{ name: 'faq'}").footbot-menu__item FAQ
+        a(:href="urls.careers" target="_blank").footbot-menu__item Careers
     .footbot-menu
       .footbot-menu__title Products
       .footbot-menu__items
-        a(:href="urls.gh.cosmosSdk" target="_blank").footbot-menu__item Cosmos SDK
-        a(:href="urls.gh.tendermint" target="_blank").footbot-menu__item Tendermint
-        a(:href="urls.gh.lotion" target="_blank").footbot-menu__item Lotion JS
         a(:href="urls.gh.voyager" target="_blank").footbot-menu__item Voyager
+        a(:href="urls.gh.cosmosSdk" target="_blank").footbot-menu__item Cosmos SDK
+        a(:href="urls.gh.lotion" target="_blank").footbot-menu__item Lotion JS
+        a(:href="urls.gh.explorer" target="_blank").footbot-menu__item Explorer
+        a(:href="urls.gh.faucet" target="_blank").footbot-menu__item Faucet
+    .footbot-menu
+      .footbot-menu__title Learn
+      .footbot-menu__items
+        a(:href="urls.gh.academy" target="_blank").footbot-menu__item Academy
+        a(:href="urls.whitepaper" target="_blank").footbot-menu__item Whitepaper
+        a(:href="urls.tendermint" target="_blank").footbot-menu__item Tendermint
+        a(:href="urls.hub" target="_blank").footbot-menu__item Cosmos Hub
+        a(:href="urls.faqs" target="_blank").footbot-menu__item FAQs
     .footbot-menu
       .footbot-menu__title Social
       .footbot-menu__items
-        a(:href="urls.gh.cosmosSdk" target="_blank").footbot-menu__item Riot
-        a(:href="urls.gh.voyager" target="_blank").footbot-menu__item Telegram
-        a(:href="urls.gh.tendermint" target="_blank").footbot-menu__item Reddit
-        a(:href="urls.gh.lotion" target="_blank").footbot-menu__item Twitter
-        a(:href="urls.gh.lotion" target="_blank").footbot-menu__item YouTube
+        a(:href="urls.gh.riot" target="_blank").footbot-menu__item Riot
+        a(:href="urls.gh.reddit" target="_blank").footbot-menu__item Reddit
+        a(:href="urls.gh.telegram" target="_blank").footbot-menu__item Telegram
+        a(:href="urls.gh.twitter" target="_blank").footbot-menu__item Twitter
+        a(:href="urls.gh.youtube" target="_blank").footbot-menu__item YouTube
     section-social
 </template>
 
@@ -84,7 +87,7 @@ export default {
   max-width 50vw
 
 .footbot-menu
-  padding 1.5rem
+  padding 1rem
   flex 0 0 50%
 
 .footbot-menu__title
@@ -95,8 +98,16 @@ export default {
   display flex
   flex-flow column nowrap
 
+  i
+    position relative
+    top -1px
+    left 5px
+    font-size 14px
+    color var(--dim)
+
 .footbot-menu__item
-  line-height 2rem
+  line-height 26px
+  font-size 14px
 
 @media screen and (min-width: 768px)
   .footbot__container

@@ -1,11 +1,11 @@
 <template lang="pug">
 mixin user-btns(size)
   btn(value="Download Voyager (Alpha)" icon="cloud_download" color="primary" type="anchor" href="https://github.com/cosmos/voyager/releases" size=size)
-  btn(value="Learn More" type="link" :to="{ name: 'voyager' }" size=size)
+  btn(value="Learn More" type="anchor" href="https://cosmos.network/docs" size=size)
 
 mixin validator-btns(size)
-  btn(value="Follow Testnet Tutorial" icon="description" color="primary" type="link" :to="{ name: 'testnet-tutorial' }" size=size)
-  btn(value="Learn More" type="link" :to="{ name: 'validators' }" size=size)
+  btn(value="Follow Testnet Tutorial" icon="description" color="primary" type="anchor" href="https://cosmos.network/docs" size=size)
+  btn(value="Learn More" type="anchor" href="https://cosmos.network/docs" size=size)
 
 .page-testnet
   .testnet-header
