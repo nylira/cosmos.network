@@ -1,6 +1,6 @@
 <template lang="pug">
 part#section-events.ni-section-events(title="Recent & Upcoming Events")
-  div(slot="menu"): router-link(:to="{ name: 'events' }") [All Events]
+  div(slot="menu"): router-link(:to="{ name: 'events' }") All Events
   card-event-small(v-for="e in filteredEvents" :event="e" :key="e.id")
 </template>
 

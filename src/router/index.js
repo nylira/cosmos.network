@@ -10,35 +10,6 @@ import PagePrivacy from "pages/PagePrivacy"
 import PageRoadmap from "pages/PageRoadmap"
 import PageTestnet from "pages/PageTestnet"
 
-import PageIntro from "pages/PageIntro"
-import PageIntroIndex from "pages/PageIntroIndex"
-import PageIntroHub from "pages/PageIntroHub"
-import PageIntroFurther from "pages/PageIntroFurther"
-
-import PageDevelopers from "pages/PageDevelopers"
-import PageDevelopersIndex from "pages/PageDevelopersIndex"
-import PageDevelopersHackAtom from "pages/PageDevelopersHackAtom"
-import PageDevelopersScalingEth from "pages/PageDevelopersScalingEth"
-import PageDevelopersWallet from "pages/PageDevelopersWallet"
-
-import PageValidators from "pages/PageValidators"
-import PageValidatorsIndex from "pages/PageValidatorsIndex"
-import PageValidatorsFaq from "pages/PageValidatorsFaq"
-import PageValidatorsTestnet from "pages/PageValidatorsTestnet"
-
-import PageResources from "pages/PageResources"
-import PageResourcesIndex from "pages/PageResourcesIndex"
-import PageResourcesAcademy from "pages/PageResourcesAcademy"
-import PageResourcesDelegators from "pages/PageResourcesDelegators"
-import PageResourcesFaq from "pages/PageResourcesFaq"
-import PageResourcesPlan from "pages/PageResourcesPlan"
-import PageResourcesWhitepaper from "pages/PageResourcesWhitepaper"
-
-import PageVoyager from "pages/PageVoyager"
-import PageVoyagerIndex from "pages/PageVoyagerIndex"
-import PageVoyagerFaq from "pages/PageVoyagerFaq"
-import PageVoyagerSupport from "pages/PageVoyagerSupport"
-
 import Page404 from "pages/Page404"
 
 const routes = [
@@ -52,115 +23,14 @@ const routes = [
   { path: "/roadmap", name: "roadmap", component: PageRoadmap },
   { path: "/testnet", name: "testnet", component: PageTestnet },
 
-  // INTRO
+  // REDIRECTS
+  { path: "/about/*", redirect: "/about" },
   {
-    path: "/intro",
-    component: PageIntro,
-    children: [
-      { path: "/", name: "intro", component: PageIntroIndex },
-      { path: "hub", name: "intro-hub", component: PageIntroHub },
-      {
-        path: "further",
-        name: "intro-further",
-        component: PageIntroFurther
-      }
-    ]
+    path: "/academy",
+    beforeEnter: () => {
+      window.location.assign("https://github.com/cosmos/cosmos-academy")
+    }
   },
-
-  // DEVELOPERS
-  {
-    path: "/developers",
-    component: PageDevelopers,
-    children: [
-      { path: "/", name: "developers", component: PageDevelopersIndex },
-      {
-        path: "hackatom",
-        name: "hackatom",
-        component: PageDevelopersHackAtom
-      },
-      {
-        path: "scaling-eth",
-        name: "scaling-eth",
-        component: PageDevelopersScalingEth
-      },
-      { path: "wallet", name: "wallet", component: PageDevelopersWallet }
-    ]
-  },
-
-  // VALIDATORS
-  {
-    path: "/validators",
-    component: PageValidators,
-    children: [
-      { path: "/", name: "validators", component: PageValidatorsIndex },
-      {
-        path: "tutorial",
-        name: "testnet-tutorial",
-        component: PageValidatorsTestnet
-      },
-      {
-        path: "faq",
-        name: "validator-faq",
-        component: PageValidatorsFaq
-      }
-    ]
-  },
-
-  // RESOURCES
-  {
-    path: "/resources",
-    component: PageResources,
-    children: [
-      { path: "/", name: "resources", component: PageResourcesIndex },
-      {
-        path: "whitepaper",
-        name: "whitepaper",
-        component: PageResourcesWhitepaper
-      },
-      {
-        path: "whitepaper/:locale",
-        name: "whitepaper-i18n",
-        component: PageResourcesWhitepaper
-      },
-      {
-        path: "faq",
-        name: "faq",
-        component: PageResourcesFaq
-      },
-      {
-        path: "plan",
-        name: "plan",
-        component: PageResourcesPlan
-      },
-      { path: "academy", name: "academy", component: PageResourcesAcademy },
-      {
-        path: "delegators",
-        name: "delegators",
-        component: PageResourcesDelegators
-      }
-    ]
-  },
-
-  // VOYAGER
-  {
-    path: "/voyager",
-    component: PageVoyager,
-    children: [
-      { path: "/", name: "voyager", component: PageVoyagerIndex },
-      { path: "faq", name: "voyager-faq", component: PageVoyagerFaq },
-      {
-        path: "support",
-        name: "voyager-support",
-        component: PageVoyagerSupport
-      }
-    ]
-  },
-
-  // redirects
-  { path: "/about/faq", redirect: "/resources/faq" },
-  { path: "/about/team", redirect: "/about" },
-  { path: "/about/whitepaper", redirect: "/resources/whitepaper" },
-  { path: "/academy", redirect: "/resources/academy" },
   { path: "/blog/:entry", redirect: "/blog" },
   {
     path: "/blog",
@@ -174,46 +44,90 @@ const routes = [
       window.location.assign(urls.contactEvents)
     }
   },
-  { path: "/download", redirect: "/voyager" },
-  { path: "/downloads", redirect: "/voyager" },
-  { path: "/dev", redirect: "/developers" },
-  { path: "/dev/hackatom", redirect: "/developers/hackatom" },
-  { path: "/dev/whitepaper", redirect: "/resources/whitepaper" },
-  { path: "/developers/scaling", redirect: "/developers/scaling-eth" },
-  { path: "/developers/academy", redirect: "/resources/academy" },
-  { path: "/faq", redirect: "/resources/faq" },
-  { path: "/hackatom", redirect: "/developers/hackatom" },
-  { path: "/intro/faq", redirect: "/resource/faq" },
-  { path: "/introduction", redirect: "/intro" },
-  { path: "/join-testnet", redirect: "/validators/tutorial" },
+  { path: "/download", redirect: "/testnet" },
+  { path: "/downloads", redirect: "/testnet" },
+  { path: "/dev", redirect: "/docs/sdk/overview.html" },
+  { path: "/dev/hackatom", redirect: "/events" },
+  {
+    path: "/dev/scaling-eth",
+    redirect: "/docs/resources/whitepaper.html#use-cases"
+  },
+  { path: "/dev/wallet", redirect: "/docs/getting-started/installation.html" },
+  { path: "/developers", redirect: "/docs/sdk/overview.html" },
+  { path: "/developers/hackatom", redirect: "/events" },
+  {
+    path: "/developers/scaling-eth",
+    redirect: "/docs/resources/whitepaper.html#use-cases"
+  },
+  {
+    path: "/developers/wallet",
+    redirect: "/docs/getting-started/installation.html"
+  },
+  { path: "/faq", redirect: "/docs/introduction/faq.html" },
+  { path: "/hackatom", redirect: "/events" },
+  { path: "/intro", redirect: "/docs/introduction/cosmos-hub.html" },
+  { path: "/intro/*", redirect: "/docs/introduction/cosmos-hub.html" },
+  { path: "/introduction", redirect: "/docs/introduction/cosmos-hub.html" },
+  {
+    path: "/join-testnet",
+    redirect: "/docs/getting-started/installation.html"
+  },
   {
     path: "/matrix",
     beforeEnter: () => {
       window.location.assign("https://riot.im/app/#/room/#cosmos:matrix.org")
     }
   },
-  { path: "/plan", redirect: "/resources/plan" },
-  { path: "/plan/:locale", redirect: "/resources/plan" },
-  { path: "/resources/validator-faq", redirect: "/validators/faq" },
+  { path: "/plan", redirect: "/roadmap" },
+  { path: "/plan/:locale", redirect: "/roadmap" },
+  { path: "/resources", redirect: "/docs" },
+  {
+    path: "/resources/academy",
+    beforeEnter: () => {
+      window.location.assign("https://github.com/cosmos/cosmos-academy")
+    }
+  },
+  {
+    path: "/resources/delegators",
+    redirect: "/docs/resources/delegator-faq.html"
+  },
+  { path: "/resources/faq", redirect: "/docs/introduction/faq.html" },
+  { path: "/resources/plan", redirect: "/roadmap" },
+  {
+    path: "/resources/whitepaper",
+    redirect: "/docs/resources/whitepaper.html"
+  },
   {
     path: "/riot",
     beforeEnter: () => {
       window.location.assign("https://riot.im/app/#/room/#cosmos:matrix.org")
     }
   },
-  { path: "/scaling-eth", redirect: "/developers/scaling-eth" },
-  { path: "/scalingeth", redirect: "/developers/scaling-eth" },
-  { path: "/scaling", redirect: "/developers/scaling-eth" },
+  {
+    path: "/scaling-eth",
+    redirect: "/docs/resources/whitepaper.html#use-cases"
+  },
+  {
+    path: "/scalingeth",
+    redirect: "/docs/resources/whitepaper.html#use-cases"
+  },
+  { path: "/scaling", redirect: "/docs/resources/whitepaper.html#use-cases" },
   {
     path: "/security",
     beforeEnter: () => {
       window.location.assign("https://tendermint.com/security")
     }
   },
-  { path: "/staking", redirect: "/intro/hub" },
-  { path: "/staking/validators", redirect: "/validators" },
-  { path: "/staking/validators-faq", redirect: "/validators/faq" },
-  { path: "/staking/delegators", redirect: "/resources/delegators" },
+  { path: "/staking", redirect: "/docs/validators/overview.html" },
+  { path: "/staking/validators", redirect: "/docs/validators/overview.html" },
+  {
+    path: "/staking/validators-faq",
+    redirect: "/docs/validators/validator-faq.html"
+  },
+  {
+    path: "/staking/delegators",
+    redirect: "/docs/resources/delegator-faq.html"
+  },
   { path: "/team", redirect: "/about" },
   {
     path: "/telegram",
@@ -221,15 +135,26 @@ const routes = [
       window.location.assign("https://t.me/cosmosproject")
     }
   },
-  { path: "/testnet-tutorial", redirect: "/validators/tutorial" },
-  { path: "/ui", redirect: "/voyager" },
-  { path: "/validate", redirect: "/validators/tutorial" },
-  { path: "/validator", redirect: "/staking/validators" },
-  { path: "/whitepaper/en-US", redirect: "/resources/whitepaper" },
-  { path: "/whitepaper", redirect: "/resources/whitepaper" },
-  { path: "/wallet", redirect: "/developers/wallet" },
+  {
+    path: "/testnet-tutorial",
+    redirect: "/docs/getting-started/installation.html"
+  },
+  { path: "/ui", redirect: "/docs/getting-started/voyager.html" },
+  { path: "/validate", redirect: "/docs/validators/overview.html" },
+  { path: "/validator", redirect: "/docs/validators/overview.html" },
+  { path: "/validators", redirect: "/docs/validators/overview.html" },
+  { path: "/validators/faq", redirect: "/docs/validators/validator-faq.html" },
+  {
+    path: "/validators/tutorial",
+    redirect: "/docs/getting-started/installation.html"
+  },
+  { path: "/voyager", redirect: "/docs/getting-started/voyager.html" },
+  { path: "/voyager/*", redirect: "/docs/getting-started/voyager.html" },
+  { path: "/whitepaper/en-US", redirect: "/docs/resources/whitepaper.html" },
+  { path: "/whitepaper", redirect: "/docs/resources/whitepaper.html" },
+  { path: "/wallet", redirect: "/docs/getting-started/installation.html" },
 
-  // wildcards
+  // WILDROUTES
   { path: "/404", component: Page404 },
   { path: "*", component: Page404 }
 ]
