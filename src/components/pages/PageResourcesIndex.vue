@@ -10,7 +10,6 @@ page(title="Resources" subtitle="A curated list of resources about the Cosmos Ne
   part(title="Cosmos Hub")
     list-item(:to="{ name: 'delegators' }" title="Delegator Guide" icon="description")
     list-item(:to="{ name: 'validator-faq' }" title="Validator FAQ" icon="description")
-    list-item(href="https://github.com/cosmos/cosmos/raw/master/Cosmos_Token_Model.pdf" title="Cosmos Token Model (PDF)" icon="cloud_download")
   part(title="Unofficial Resources")
     list-item(href="https://medium.com/@JesseLivermore/basic-notable-cosmos-resources-aff336febe15" title="Basic Notable Cosmos Resources" icon="link" target="_blank")
 </template>

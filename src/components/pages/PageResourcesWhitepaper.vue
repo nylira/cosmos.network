@@ -1,38 +1,28 @@
 <template lang="pug">
-toc-page(:toc-visible="whitepaperTocVisible")
-  nav-contents(slot="nav" text-id="whitepaper")
-  text-ko(v-if="$route.params.locale === 'ko'")
-  text-pt(v-else-if="$route.params.locale === 'pt'")
-  text-zh-cn(v-else-if="$route.params.locale === 'zh-CN'")
-  text-en-us(v-else)
+page(title="Whitepaper" subtitle="Read the current version of the Cosmos whitepaper.")
+  div(slot="menu"): btn(icon="chat" value="Community Chat" type="anchor" href="https://riot.im/app/#/group/+cosmos:matrix.org" target="_blank" color="primary")
+  part(title="Cosmos Whitepaper")
+    list-item(href="https://github.com/tendermint/aib-data/blob/develop/md/whitepaper.md" title="Cosmos Whitepaper - English" icon="description" target="_blank")
+    list-item(href="https://github.com/tendermint/aib-data/blob/develop/md/whitepaper-pt.md" title="Cosmos Whitepaper - Português" icon="description" target="_blank")
+    list-item(href="https://github.com/tendermint/aib-data/blob/develop/md/whitepaper-kr.md" title="Cosmos Whitepaper - 한국어" icon="description" target="_blank")
+    list-item(href="https://github.com/tendermint/aib-data/blob/develop/md/whitepaper-zh-CN.md" title="Cosmos Whitepaper - 中文" icon="description" target="_blank")
+  part(title="Csomos Token Model")
+    list-item(href="https://github.com/cosmos/cosmos/raw/master/Cosmos_Token_Model.pdf" title="Cosmos Token Model - English" icon="description" target="_blank")
 </template>
 
 <script>
-import { mapGetters } from "vuex"
-import NavContents from "navigation/NavContents"
-import PageMenu from "common/NiPageMenu"
-import TextEnUs from "content/whitepaper.md"
-import TextKo from "content/whitepaper-ko.md"
-import TextPt from "content/whitepaper-pt.md"
-import TextZhCn from "content/whitepaper-zh-CN.md"
-import TocPage from "navigation/TocPage"
+import Btn from "@nylira/vue-button"
+import ListItem from "common/NiListItem"
+import Part from "common/NiPart"
+import Page from "common/NiPage"
 export default {
   name: "page-resources-whitepaper",
   metaInfo: { title: "Whitepaper - Resources" },
   components: {
-    NavContents,
-    PageMenu,
-    TextEnUs,
-    TextKo,
-    TextPt,
-    TextZhCn,
-    TocPage
-  },
-  computed: { ...mapGetters(["whitepaperTocVisible"]) },
-  mounted() {
-    if (document.documentElement.clientWidth >= 1024) {
-      this.$store.commit("setTocVisible", { id: "whitepaper", visible: true })
-    }
+    Btn,
+    ListItem,
+    Page,
+    Part
   }
 }
 </script>
