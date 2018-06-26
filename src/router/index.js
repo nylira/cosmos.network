@@ -167,8 +167,8 @@ const routes = [
     path: "/validators/tutorial",
     redirect: "/docs/getting-started/installation.html"
   },
-  { path: "/voyager", beforeEnter: () => d("getting-started/voyager.html") },
-  { path: "/voyager/*", beforeEnter: () => d("getting-started/voyager.html") },
+  { path: "/voyager", beforeEnter: () => d("getting-started/voyager") },
+  { path: "/voyager/*", beforeEnter: () => d("getting-started/voyager") },
   {
     path: "/whitepaper/en-US",
     beforeEnter: () => d("resources/whitepaper")
