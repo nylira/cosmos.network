@@ -49,7 +49,10 @@ module.exports = {
       {
         title: "Lotion JS",
         collapsable: false,
-        children: ["/lotion/overview", "/lotion/building-an-app"]
+        children: [
+          ["/lotion/overview", "Overview"],
+          "/lotion/building-an-app"
+        ]
       },
       {
         title: "Validators",
@@ -61,17 +64,16 @@ module.exports = {
           "/validators/validator-faq"
         ]
       },
-      // {
-      //   title: "Glossary",
-      //   collapsable: true,
-      //   children: [
-      //     "",
-      //   ]
-      // },
       {
         title: "Resources",
         collapsable: true,
-        children: ["/resources/whitepaper", "/resources/delegator-faq"]
+        children: [
+          "/resources/faq",
+          ["/resources/whitepaper", "Whitepaper - English"],
+          ["/resources/whitepaper-ko", "Whitepaper - 한국어"],
+          ["/resources/whitepaper-zh-CN", "Whitepaper - 中文"],
+          ["/resources/whitepaper-pt", "Whitepaper - Português"],
+        ]
       }
     ]
   }

@@ -1,12 +1,14 @@
 # Validator FAQ
 
-## General Concepts
+::: warning Disclaimer
+This is work in progress. Mechanisms and values are susceptible to change.
+:::
 
-_Disclaimer: This is work in progress. Mechanisms and values are susceptible to change_
+## General Concepts
 
 ### What is a validator?
 
-The [Cosmos Hub](/developers) is based on [Tendermint](https://tendermint.com), which relies on a set of [validators](/validators) to secure the network. The role of validators is to run a full-node and participate in consensus by broadcasting votes which contain cryptographic signatures signed by their private key. Validators commit new blocks in the blockchain and receive revenue in exchange for their work. They must also participate in governance by voting on proposals. Validators are weighted according to their total stake.
+The [Cosmos Hub](/introduction/cosmos-hub.md) is based on [Tendermint](/introduction/tendermint.md), which relies on a set of [validators](/validators/overview.md) to secure the network. The role of validators is to run a full-node and participate in consensus by broadcasting votes which contain cryptographic signatures signed by their private key. Validators commit new blocks in the blockchain and receive revenue in exchange for their work. They must also participate in governance by voting on proposals. Validators are weighted according to their total stake.
 
 ### What is 'staking'?
 
@@ -24,9 +26,9 @@ Of course, it is possible and encouraged for any user to run full-nodes even if 
 
 ### What is a delegator?
 
-[Delegators](/resources/delegators) are Atom holders who cannot, or do not want to run validator operations themselves. Through [Cosmos Voyager](/voyager), a user can delegate Atoms to a validator and obtain a part of its revenue in exchange (for more detail on how revenue is distributed, see **What is the incentive to stake?** and **What is a validator's commission?** sections below).
+Delegators are Atom holders who cannot, or do not want to run validator operations themselves. Through [Cosmos Voyager](/getting-started/voyager.md), a user can delegate Atoms to a validator and obtain a part of its revenue in exchange (for more detail on how revenue is distributed, see **What is the incentive to stake?** and **What is a validator's commission?** sections below).
 
-Because they share revenue with their validators, delegators also share responsiblity. Should a validator misbehave, each of its delegators will be partially slashed in proportion to their stake. This is why delegators should perform due diligence on validator candidates before delegating, as well as spreading their stake over multiple validators.
+Because they share revenue with their validators, delegators also share responsibility. Should a validator misbehave, each of its delegators will be partially slashed in proportion to their stake. This is why delegators should perform due diligence on validator candidates before delegating, as well as spreading their stake over multiple validators.
 
 Delegators play a critical role in the system, as they are responsible for choosing validators. Being a delegator is not a passive role: Delegators should actively monitor the actions of their validators and participate in governance.
 
@@ -66,11 +68,11 @@ Out of all the candidates that signaled themselves, the 100 with the most stake 
 
 The Testnet is a great environment to test your validator setup before launch.
 
-We view testnet participation as a great way to signal to the community that you are ready and able to operate a validator. You can find all relevant information about the [testnet and more here](/validators/tutorial).
+We view testnet participation as a great way to signal to the community that you are ready and able to operate a validator. You can find all relevant information about the [testnet and more here](/getting-started/full-node.md).
 
 ### Is there a faucet?
 
-If you want to obtain coins, you can do so by using [this faucet (maintained by community)](https://www.cosmosvalidators.com/)
+If you want to obtain coins for the testnet, you can do so by using [this faucet](https://faucetcosmos.network)
 
 ### Is there a minimum amount of Atoms that must be staked to be a validator?
 

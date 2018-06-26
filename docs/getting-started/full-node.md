@@ -1,4 +1,4 @@
-# Full Node Setup
+# Join the Testnet
 
 Please ensure you have the [Cosmos SDK](/getting-started/installation.md) installed. If you ran a full node on a previous testnet, please skip to [Upgrading From Previous Testnet](#upgrading-from-previous-testnet).
 

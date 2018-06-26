@@ -1,4 +1,5 @@
-# Whitepaper
+### Cosmos
+
 A Network of Distributed Ledgers
 
 Jae Kwon [jae@tendermint.com](mailto:jae@tendermint.com)<br/>
