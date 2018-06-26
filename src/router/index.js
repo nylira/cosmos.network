@@ -12,6 +12,10 @@ import PageTestnet from "pages/PageTestnet"
 
 import Page404 from "pages/Page404"
 
+function docs(doc) {
+  return window.location.assign(`${window.location.hostname}/docs/${doc}.html`)
+}
+
 const routes = [
   // PAGES
   { path: "/", name: "index", component: PageIndex },
@@ -144,10 +148,7 @@ const routes = [
   { path: "/validator", redirect: "/docs/validators/overview.html" },
   {
     path: "/validators",
-    beforeEnter: () =>
-      window.location.assign(
-        window.location.hostname + "/docs/validators/overview.html"
-      )
+    beforeEnter: docs("validators/overview")
   },
   { path: "/validators/faq", redirect: "/docs/validators/validator-faq.html" },
   {
