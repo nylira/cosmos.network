@@ -12,6 +12,24 @@ import PageTestnet from "pages/PageTestnet"
 
 import Page404 from "pages/Page404"
 
+// this function lets developers easily create redirects from
+// the website app to the documentation app
+function d(doc) {
+  if ([0, 80, 443].includes(window.location.port)) {
+    return window.location.assign(
+      `${window.location.protocol}//${
+        window.location.hostname
+      }/docs/${doc}.html`
+    )
+  } else {
+    return window.location.assign(
+      `${window.location.protocol}//${window.location.hostname}:${
+        window.location.port
+      }/docs/${doc}.html`
+    )
+  }
+}
+
 const routes = [
   // PAGES
   { path: "/", name: "index", component: PageIndex },
@@ -46,31 +64,31 @@ const routes = [
   },
   { path: "/download", redirect: "/testnet" },
   { path: "/downloads", redirect: "/testnet" },
-  { path: "/dev", redirect: "/docs/sdk/overview.html" },
+  { path: "/dev", beforeEnter: () => d("sdk/overview") },
   { path: "/dev/hackatom", redirect: "/events" },
   {
     path: "/dev/scaling-eth",
-    redirect: "/docs/resources/whitepaper.html#use-cases"
+    beforeEnter: () => d("resources/whitepaper#use-cases")
   },
-  { path: "/dev/wallet", redirect: "/docs/getting-started/installation.html" },
-  { path: "/developers", redirect: "/docs/sdk/overview.html" },
+  { path: "/dev/wallet", beforeEnter: () => d("getting-started/installation") },
+  { path: "/developers", beforeEnter: () => d("sdk/overview") },
   { path: "/developers/hackatom", redirect: "/events" },
   {
     path: "/developers/scaling-eth",
-    redirect: "/docs/resources/whitepaper.html#use-cases"
+    beforeEnter: () => d("resources/whitepaper#use-cases")
   },
   {
     path: "/developers/wallet",
-    redirect: "/docs/getting-started/installation.html"
+    beforeEnter: () => d("getting-started/installation")
   },
-  { path: "/faq", redirect: "/docs/introduction/faq.html" },
+  { path: "/faq", beforeEnter: () => d("introduction/faq") },
   { path: "/hackatom", redirect: "/events" },
-  { path: "/intro", redirect: "/docs/introduction/cosmos-hub.html" },
-  { path: "/intro/*", redirect: "/docs/introduction/cosmos-hub.html" },
-  { path: "/introduction", redirect: "/docs/introduction/cosmos-hub.html" },
+  { path: "/intro", beforeEnter: () => d("introduction/cosmos-hub") },
+  { path: "/intro/*", beforeEnter: () => d("introduction/cosmos-hub") },
+  { path: "/introduction", beforeEnter: () => d("introduction/cosmos-hub") },
   {
     path: "/join-testnet",
-    redirect: "/docs/getting-started/installation.html"
+    beforeEnter: () => d("getting-started/installation")
   },
   {
     path: "/matrix",
@@ -89,13 +107,13 @@ const routes = [
   },
   {
     path: "/resources/delegators",
-    redirect: "/docs/resources/delegator-faq.html"
+    beforeEnter: () => d("resources/delegator-faq")
   },
-  { path: "/resources/faq", redirect: "/docs/introduction/faq.html" },
+  { path: "/resources/faq", beforeEnter: () => d("introduction/faq") },
   { path: "/resources/plan", redirect: "/roadmap" },
   {
     path: "/resources/whitepaper",
-    redirect: "/docs/resources/whitepaper.html"
+    beforeEnter: () => d("resources/whitepaper")
   },
   {
     path: "/riot",
@@ -105,28 +123,28 @@ const routes = [
   },
   {
     path: "/scaling-eth",
-    redirect: "/docs/resources/whitepaper.html#use-cases"
+    beforeEnter: () => d("resources/whitepaper#use-cases")
   },
   {
     path: "/scalingeth",
-    redirect: "/docs/resources/whitepaper.html#use-cases"
+    beforeEnter: () => d("resources/whitepaper#use-cases")
   },
-  { path: "/scaling", redirect: "/docs/resources/whitepaper.html#use-cases" },
+  { path: "/scaling", beforeEnter: () => d("resources/whitepaper#use-cases") },
   {
     path: "/security",
     beforeEnter: () => {
       window.location.assign("https://tendermint.com/security")
     }
   },
-  { path: "/staking", redirect: "/docs/validators/overview.html" },
-  { path: "/staking/validators", redirect: "/docs/validators/overview.html" },
+  { path: "/staking", beforeEnter: () => d("validators/overview") },
+  { path: "/staking/validators", beforeEnter: () => d("validators/overview") },
   {
     path: "/staking/validators-faq",
-    redirect: "/docs/validators/validator-faq.html"
+    beforeEnter: () => d("validators/validator-faq")
   },
   {
     path: "/staking/delegators",
-    redirect: "/docs/resources/delegator-faq.html"
+    beforeEnter: () => d("resources/delegator-faq")
   },
   { path: "/team", redirect: "/about" },
   {
@@ -137,23 +155,34 @@ const routes = [
   },
   {
     path: "/testnet-tutorial",
-    redirect: "/docs/getting-started/installation.html"
+    beforeEnter: () => d("getting-started/installation")
   },
-  { path: "/ui", redirect: "/docs/getting-started/voyager.html" },
-  { path: "/validate", redirect: "/docs/validators/overview.html" },
-  { path: "/validator", redirect: "/docs/validators/overview.html" },
-  { path: "/validators", redirect: "/docs/validators/overview.html" },
-  { path: "/validators/faq", redirect: "/docs/validators/validator-faq.html" },
+  { path: "/ui", beforeEnter: () => d("getting-started/voyager") },
+  { path: "/validate", beforeEnter: () => d("validators/overview") },
+  { path: "/validator", beforeEnter: () => d("validators/overview") },
+  {
+    path: "/validators",
+    beforeEnter: () => d("validators/overview")
+  },
+  { path: "/validators/faq", beforeEnter: () => d("validators/validator-faq") },
   {
     path: "/validators/tutorial",
-    redirect: "/docs/getting-started/installation.html"
+    beforeEnter: () => d("getting-started/installation")
   },
-  { path: "/voyager", redirect: "/docs/getting-started/voyager.html" },
-  { path: "/voyager/*", redirect: "/docs/getting-started/voyager.html" },
-  { path: "/whitepaper/en-US", redirect: "/docs/resources/whitepaper.html" },
-  { path: "/whitepaper", redirect: "/docs/resources/whitepaper.html" },
-  { path: "/wallet", redirect: "/docs/getting-started/installation.html" },
-
+  { path: "/voyager", beforeEnter: () => d("getting-started/voyager") },
+  { path: "/voyager/*", beforeEnter: () => d("getting-started/voyager") },
+  {
+    path: "/whitepaper/en-US",
+    beforeEnter: () => d("resources/whitepaper")
+  },
+  {
+    path: "/whitepaper",
+    beforeEnter: () => d("resources/whitepaper")
+  },
+  {
+    path: "/wallet",
+    beforeEnter: () => d("getting-started/installation")
+  },
   // WILDROUTES
   { path: "/404", component: Page404 },
   { path: "*", component: Page404 }
