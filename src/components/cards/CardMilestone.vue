@@ -13,7 +13,10 @@
         i.material-icons hourglass_empty
       .ni-milestone__title {{ milestone.title }}
     .ni-milestone__details(v-if="details")
-      .ni-milestone__description {{ milestone.description }}
+      .ni-milestone__description
+        | {{ milestone.description }}
+        | 
+        a(v-if="milestone.url" :href="milestone.url" target="_blank") Read more &raquo;
       .ni-milestone__footer.mobile-only(v-if="milestone.date")
         .ni-milestone__date {{ milestone.date }}
         .ni-milestone__network {{ milestone.network }}
