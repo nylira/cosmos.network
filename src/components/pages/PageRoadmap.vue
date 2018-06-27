@@ -56,7 +56,7 @@ export default {
   data: () => ({}),
   methods: {},
   mounted() {
-    this.$store.commit("initializeMilestones")
+    this.$store.dispatch("initializeMilestones")
   }
 }
 </script>

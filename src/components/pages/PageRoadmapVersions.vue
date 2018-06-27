@@ -244,7 +244,7 @@ export default {
     }
   },
   mounted() {
-    this.$store.commit("initializeRoadmap")
+    this.$store.dispatch("initializeRoadmap")
   },
   watch: {
     imagesLoaded() {

@@ -12,6 +12,8 @@ import PageTestnet from "pages/PageTestnet"
 
 import Page404 from "pages/Page404"
 
+// this function lets developers easily create redirects from
+// the website app to the documentation app
 function d(doc) {
   if ([0, 80, 443].includes(window.location.port)) {
     return window.location.assign(

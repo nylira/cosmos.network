@@ -5,17 +5,28 @@ const state = {
   milestones: []
 }
 
-const mutations = {
-  async initializeRoadmap(state) {
+const actions = {
+  async initializeRoadmap({ commit }) {
     let url =
       "https://api.github.com/repos/tendermint/aib-data/contents/json/roadmap.json"
-    state.nodes = await getJson(url)
+    commit("setNodes", await getJson(url))
+    return Promise.resolve()
   },
-  async initializeMilestones(state) {
+  async initializeMilestones({ commit }) {
     let url =
       "https://api.github.com/repos/tendermint/aib-data/contents/json/roadmap-milestones.json"
-    state.milestones = await getJson(url)
+    commit("setMilestones", await getJson(url))
+    return Promise.resolve()
   }
 }
 
-export default { state, mutations }
+const mutations = {
+  setNodes(state, value) {
+    state.nodes = value
+  },
+  setMilestones(state, value) {
+    state.milestones = value
+  }
+}
+
+export default { state, actions, mutations }
