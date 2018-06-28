@@ -9,9 +9,9 @@ header.app-header
     .header-item(v-if='!desktop')
     menu.menu-popup.menu-app(v-if='activeMenuApp || desktop')
       nav
-        router-link(to='/about' @click.native='close') About
         router-link(to='/roadmap' @click.native='close') Roadmap
         router-link(to='/testnet' @click.native='close') Testnet
+        router-link(to='/faq' @click.native='close') FAQ
         a(href='/docs' @click.native='close') Documentation
       nav
         a(:href='links.cosmos.blog' @click.native='close' target='_blank')

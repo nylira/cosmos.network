@@ -40,7 +40,7 @@ export default {
 @require '~variables'
 
 .section-home:nth-child(odd)
-  background linear-gradient(top, app-bg, app-fg)
+  background linear-gradient(to bottom, app-bg, app-fg)
 
 .section-home__container
   padding 3rem 1rem
