@@ -62,6 +62,7 @@ const routes = [
       window.location.assign(urls.contactEvents)
     }
   },
+  { path: "/docs", beforeEnter: () => d("index") },
   { path: "/download", redirect: "/testnet" },
   { path: "/downloads", redirect: "/testnet" },
   { path: "/dev", beforeEnter: () => d("sdk/overview") },
